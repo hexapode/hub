@@ -116,7 +116,7 @@ def build_registration_payload(
     challenge_dir: Path,
     external_repo: str | None = None,
 ) -> dict[str, Any]:
-    """Generate the `registry/<slug>.toml` content and PR body for `sar register`."""
+    """Generate the `registry/<slug>.toml` content and self-referencing PR body for `sar register`."""
     today_str = datetime.date.today().isoformat()
 
     if external_repo:
@@ -143,8 +143,15 @@ def build_registration_payload(
         toml_str = dumps(entry_dict)
         pr_body = (
             f"## Register External Challenge: `{slug}`\n\n"
+            f"Launched via the **superAutoResearch** workflow (`https://github.com/{HUB_REPO}/blob/main/launch.md`).\n\n"
             f"- **Repository:** `https://github.com/{external_repo}`\n"
-            f"- **Kind:** `external`\n"
+            f"- **Hub Registry Path:** `registry/{slug}.toml` in `https://github.com/{HUB_REPO}`\n"
+            f"- **Hub Leaderboard Page:** `https://superautoresearch.github.io/hub/#/c/{slug}`\n"
+            f"- **Kind:** `external`\n\n"
+            f"### Donate Prompt\n"
+            f"```text\n"
+            f"Read https://github.com/{HUB_REPO}/blob/main/donate.md and follow it. challenge: {slug}\n"
+            f"```\n"
         )
         return {
             "slug": slug,
@@ -173,11 +180,18 @@ def build_registration_payload(
     toml_str = dumps(entry_dict)
     pr_body = (
         f"## Register Challenge: {spec['title']} (`{slug}`)\n\n"
-        f"- **Repository:** `https://github.com/{repo}`\n"
+        f"Scaffolded and verified via the **superAutoResearch** launch prompt (`https://github.com/{HUB_REPO}/blob/main/launch.md`).\n\n"
+        f"- **Challenge Repository:** `https://github.com/{repo}`\n"
+        f"- **Hub Registry Entry:** `registry/{slug}.toml` in `https://github.com/{HUB_REPO}`\n"
+        f"- **Hub Leaderboard URL (once merged):** `https://superautoresearch.github.io/hub/#/c/{slug}`\n"
         f"- **Kind:** `native` (`{spec['verifier']['type']}` verifier)\n"
-        f"- **Metric:** `{spec['metric']['name']}` ({spec['metric']['direction']})\n"
+        f"- **Metric:** `{spec['metric']['name']}` (`{spec['metric']['direction']}`)\n"
         f"- **Baseline:** `{spec['baseline']['value']}` ({spec['baseline']['label']})\n"
-        f"- **Statement Hash:** `{stmt_hash}`\n"
+        f"- **Frozen Statement Hash:** `{stmt_hash}`\n\n"
+        f"### Donate Prompt for Contributors\n"
+        f"```text\n"
+        f"Read https://github.com/{HUB_REPO}/blob/main/donate.md and follow it. challenge: {slug}\n"
+        f"```\n"
     )
     return {
         "slug": slug,
@@ -202,9 +216,10 @@ def register_challenge(
         print(payload["pr_body"].rstrip())
         return payload
 
+    branch_name = f"register-{payload['slug']}"
     plan = [
         f"Fork {HUB_REPO} (if not already forked)",
-        f"Add {payload['registry_path']} to branch register-{payload['slug']}",
+        f"Add {payload['registry_path']} to branch {branch_name}",
         f"Open a Pull Request to {HUB_REPO} registering '{payload['slug']}'",
     ]
     if not _confirm_action(plan, assume_yes=assume_yes):
@@ -213,6 +228,49 @@ def register_challenge(
 
     if not shutil.which("gh"):
         raise RuntimeError("GitHub CLI ('gh') is required to open a hub registration PR")
+
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmp:
+        clone_dir = Path(tmp) / "hub-fork"
+        subprocess.run(
+            ["gh", "repo", "fork", HUB_REPO, "--clone=true", str(clone_dir)],
+            check=True,
+        )
+        subprocess.run(
+            ["git", "checkout", "-b", branch_name],
+            cwd=str(clone_dir),
+            check=True,
+        )
+        reg_file = clone_dir / payload["registry_path"]
+        reg_file.parent.mkdir(parents=True, exist_ok=True)
+        reg_file.write_text(payload["toml"], encoding="utf-8")
+        subprocess.run(["git", "add", payload["registry_path"]], cwd=str(clone_dir), check=True)
+        subprocess.run(
+            ["git", "commit", "-m", f"feat(registry): register {payload['slug']}"],
+            cwd=str(clone_dir),
+            check=True,
+        )
+        subprocess.run(["git", "push", "-u", "origin", branch_name], cwd=str(clone_dir), check=True)
+        pr_proc = subprocess.run(
+            [
+                "gh",
+                "pr",
+                "create",
+                "--repo",
+                HUB_REPO,
+                "--title",
+                f"Register challenge: {payload['slug']}",
+                "--body",
+                payload["pr_body"],
+            ],
+            cwd=str(clone_dir),
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        payload["pr_url"] = pr_proc.stdout.strip()
+        print(f"Opened Hub Registration PR: {payload['pr_url']}")
 
     return payload
 

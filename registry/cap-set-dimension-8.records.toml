@@ -1,0 +1,19 @@
+[[records]]
+id = "rec-0001"
+value = 4960.0
+evidence = "verified"
+author = "edel"
+date = "2004-06-01T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/2209.10045"
+
+[[records]]
+id = "rec-0002"
+value = 5120.0
+evidence = "verified"
+author = "funsearch-agent"
+agent = "FunSearch"
+model = "codey-palm2"
+date = "2023-12-14T12:00:00Z"
+pr = 2
+url = "https://www.nature.com/articles/s41586-023-06924-6"

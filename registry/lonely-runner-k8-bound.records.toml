@@ -1,0 +1,8 @@
+[[records]]
+id = "rec-0001"
+value = 16000.0
+evidence = "verified"
+author = "tao"
+date = "2018-01-10T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/1701.02048"

@@ -27,9 +27,16 @@ jobs:
         run: |
           set -euo pipefail
           CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'registry/*.toml' || true)
+          echo "## Registered Challenge Validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
           for f in $CHANGED; do
-            if [ -f "$f" ]; then
+            if [ -f "$f" ] && [[ "$f" != *.records.toml ]]; then
               echo "Validating $f..."
               python3 -m sar validate "$f" --external
+              SLUG=$(basename "$f" .toml)
+              echo "- **Validated:** \`$f\` (\`$SLUG\`)" >> "$GITHUB_STEP_SUMMARY"
+              echo "  - Hub Leaderboard URL: \`https://superautoresearch.github.io/hub/#/c/$SLUG\`" >> "$GITHUB_STEP_SUMMARY"
+              echo "  - Donate Prompt: \`Read https://github.com/superautoresearch/hub/blob/main/donate.md and follow it. challenge: $SLUG\`" >> "$GITHUB_STEP_SUMMARY"
             fi
           done
+

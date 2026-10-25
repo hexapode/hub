@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "zarankiewicz-bipartite-k44",
+  "metric": {
+    "name": "bipartite_edges",
+    "unit": "edges",
+    "direction": "max",
+    "scale": "linear",
+    "display": "z(31;4) \\ge {value}"
+  },
+  "baseline": {
+    "value": 300.0,
+    "label": "Projective plane sub-incidence construction (300 edges)",
+    "source": "https://www.combinatorics.org/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 310.0,
+      "evidence": "verified",
+      "author": "collins-reiman",
+      "date": "2014-06-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://www.combinatorics.org/"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

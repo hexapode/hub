@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "corners-theorem-f3-d6",
+  "metric": {
+    "name": "corner_free_points",
+    "unit": "points",
+    "direction": "max",
+    "scale": "linear",
+    "display": "|S| \\ge {value}"
+  },
+  "baseline": {
+    "value": 1458.0,
+    "label": "Subspace coset diagonal construction (1458 points)",
+    "source": "https://arxiv.org/abs/2405.04481"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 1890.0,
+      "evidence": "verified",
+      "author": "mandal-chakraborty",
+      "date": "2024-05-08T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/2405.04481"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

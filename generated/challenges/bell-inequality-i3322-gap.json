@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "bell-inequality-i3322-gap",
+  "metric": {
+    "name": "quantum_violation",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "I_{3322} \\ge {value}"
+  },
+  "baseline": {
+    "value": 0.25,
+    "label": "Two-qubit maximally entangled state violation (0.250000, Collins & Gisin 2004)",
+    "source": "https://arxiv.org/abs/1006.3032"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 0.250875,
+      "evidence": "verified",
+      "author": "pal-vertesi",
+      "date": "2010-06-15T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1006.3032"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

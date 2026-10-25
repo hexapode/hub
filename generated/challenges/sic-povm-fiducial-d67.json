@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "sic-povm-fiducial-d67",
+  "metric": {
+    "name": "frame_residual",
+    "unit": "",
+    "direction": "min",
+    "scale": "log",
+    "display": "\\text{res} \\le {value}"
+  },
+  "baseline": {
+    "value": 0.0001,
+    "label": "Random Zauner subspace initialization after 500 L-BFGS steps (1e-4)",
+    "source": "https://arxiv.org/abs/0911.0545"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 1e-15,
+      "evidence": "verified",
+      "author": "scott-grassl",
+      "date": "2010-02-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/0911.0545"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

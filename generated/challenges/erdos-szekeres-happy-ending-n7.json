@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "erdos-szekeres-happy-ending-n7",
+  "metric": {
+    "name": "convex_free_points",
+    "unit": "points",
+    "direction": "max",
+    "scale": "linear",
+    "display": "ES(7) > {value}"
+  },
+  "baseline": {
+    "value": 30.0,
+    "label": "Double-cup recursive construction subset (30 points)",
+    "source": "https://anziamj.austms.org.au/ojs/index.php/ANZIAMJ/article/view/35"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 32.0,
+      "evidence": "verified",
+      "author": "szekeres-peters",
+      "date": "2006-08-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://anziamj.austms.org.au/ojs/index.php/ANZIAMJ/article/view/35"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

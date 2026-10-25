@@ -1,0 +1,22 @@
+repo = "green-tao/corners-f3"
+kind = "external"
+owners = ["green", "tao"]
+tags = ["combinatorics", "additive-combinatorics", "number-theory"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://arxiv.org/abs/2405.04481"
+
+[spec]
+title = "Corner-Free Subset of F_3^6 x F_3^6"
+summary = "Maximize the size of a subset S of F_3^6 x F_3^6 containing no non-trivial corner (x,y), (x+d,y), (x,y+d) with d != 0."
+metric = { name = "corner_free_points", unit = "points", direction = "max", scale = "linear", display = "|S| \\ge {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to green-tao/corners-f3 or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://arxiv.org/abs/2405.04481"
+baseline = { value = 1458.0, label = "Subspace coset diagonal construction (1458 points)", source = "https://arxiv.org/abs/2405.04481" }
+tracks = [{ id = "slice-rank-upper-bound", title = "Tighten polynomial slice-rank upper bound for corner-free subsets in F_3^n" }]
+
+[spec.records_source]
+type = "hub"

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "hub": "superautoresearch/hub",
-  "updated": "2026-10-25T19:28:25Z",
+  "updated": "2026-10-25T19:37:35Z",
   "challenges": [
     {
       "slug": "3sum-exponent",
@@ -281,6 +281,57 @@
       "status": "ok"
     },
     {
+      "slug": "bell-inequality-i3322-gap",
+      "title": "Quantum Violation of the I_3322 Bell Inequality",
+      "summary": "Maximize the finite-dimensional quantum violation I_3322(rho, M) above the classical local hidden variable bound of 0.",
+      "kind": "external",
+      "repo": "pal-vertesi/i3322-bell",
+      "repo_url": "https://github.com/pal-vertesi/i3322-bell",
+      "tags": [
+        "quantum",
+        "physics",
+        "optimization",
+        "sdp"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "quantum_violation",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "I_{3322} \\ge {value}"
+      },
+      "baseline": {
+        "value": 0.25,
+        "label": "Two-qubit maximally entangled state violation (0.250000, Collins & Gisin 2004)",
+        "source": "https://arxiv.org/abs/1006.3032"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 0.250875,
+        "evidence": "verified",
+        "author": "pal-vertesi",
+        "date": "2010-06-15T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1006.3032"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 0.250875,
+        "evidence": "verified",
+        "author": "pal-vertesi",
+        "date": "2010-06-15T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1006.3032"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2010-06-15T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "block-sensitivity",
       "title": "Block sensitivity separation",
       "summary": "The quantity is the exponent \\alpha in \\mathrm{bs}(f)\\ge s(f)^{\\alpha-o(1)}, for a family of total Boolean functions f with s(f)\\to\\infty. A higher exponent is better. The sensitivity s(f) is the largest number of single bits that change the value of f when flipped at one input. The block sensitivity \\mathrm{bs}(f) is the largest number of disjoint sets of bits that each change the value of f when flipped at one input. Rubinstein\u2019s 1995 construction gives \\alpha=2. Huang\u2019s 2019 theorem, with Tal\u2019s refinement, gives \\mathrm{bs}(f)\\le s(f)^4, so \\alpha\\le4. The OpenAI baseline builds one seed function f with s(f)\\le A and block sensitivity \\mathrm{bs}(f,0)\\ge B at the all-zero input, and composes it with itself, which gives \\alpha=\\log B/\\log A. OpenAI\u2019s Lean proof uses the seed with recursion depth d=9 and size parameter M=9^{10}.",
@@ -380,6 +431,57 @@
       "contributors": 2,
       "attempts": 10,
       "last_improved": "1997-10-01T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "boolean-sensitivity-huang-exponent",
+      "title": "Boolean Sensitivity vs. Degree Polynomial Exponent (Huang's Theorem)",
+      "summary": "Minimize the proven exponent alpha in deg(f) <= C * s(f)^alpha relating the Fourier degree and sensitivity of any Boolean function.",
+      "kind": "external",
+      "repo": "huang/sensitivity-conjecture",
+      "repo_url": "https://github.com/huang/sensitivity-conjecture",
+      "tags": [
+        "lean",
+        "algorithms",
+        "combinatorics",
+        "boolean-functions"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "sensitivity_exponent",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\deg(f) \\le O(s(f)^{{value}})"
+      },
+      "baseline": {
+        "value": 2.0,
+        "label": "Hao Huang hypercube signed adjacency eigenvalue proof (deg <= s^2, 2019)",
+        "source": "https://arxiv.org/abs/1907.00847"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 2.0,
+        "evidence": "verified",
+        "author": "huang",
+        "date": "2019-07-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1907.00847"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 2.0,
+        "evidence": "verified",
+        "author": "huang",
+        "date": "2019-07-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1907.00847"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2019-07-01T12:00:00Z",
       "status": "ok"
     },
     {
@@ -549,6 +651,59 @@
       "status": "ok"
     },
     {
+      "slug": "cap-set-dimension-8",
+      "title": "Cap Set Problem in (Z/3Z)^8",
+      "summary": "Maximize the size of a cap set (subset with no three points on a line) in the 8-dimensional affine space (Z/3Z)^8.",
+      "kind": "external",
+      "repo": "google-deepmind/funsearch",
+      "repo_url": "https://github.com/google-deepmind/funsearch",
+      "tags": [
+        "combinatorics",
+        "additive-combinatorics",
+        "funsearch",
+        "number-theory"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "cap_set_size",
+        "unit": "vectors",
+        "direction": "max",
+        "scale": "linear",
+        "display": "|C_8| \\ge {value}"
+      },
+      "baseline": {
+        "value": 4536.0,
+        "label": "Edel product construction in F_3^8 (4536 vectors, 2004)",
+        "source": "https://arxiv.org/abs/2209.10045"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 4960.0,
+        "evidence": "verified",
+        "author": "edel",
+        "date": "2004-06-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/2209.10045"
+      },
+      "current_best": {
+        "id": "rec-0002",
+        "value": 5120.0,
+        "evidence": "verified",
+        "author": "funsearch-agent",
+        "agent": "FunSearch",
+        "model": "codey-palm2",
+        "date": "2023-12-14T12:00:00Z",
+        "pr": 2,
+        "url": "https://www.nature.com/articles/s41586-023-06924-6"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 2,
+      "attempts": 10,
+      "last_improved": "2023-12-14T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "catalan-constant",
       "title": "Catalan\u2019s constant",
       "summary": "The quantity is an upper bound on the irrationality exponent \\mu(G) of Catalan\u2019s constant. A lower bound is better. The release states irrationality but gives no finite exponent bound; the baseline is the trivial extended-real upper bound +\\infty.",
@@ -709,6 +864,56 @@
       "status": "ok"
     },
     {
+      "slug": "collatz-convergence-2pow",
+      "title": "Collatz 3n+1 Verified Convergence Threshold (log2 N)",
+      "summary": "Maximize the binary exponent k such that all positive integers n < 2^k are computationally verified to reach 1 under the Collatz map.",
+      "kind": "external",
+      "repo": "barina/collatz-verification",
+      "repo_url": "https://github.com/barina/collatz-verification",
+      "tags": [
+        "number-theory",
+        "gpu",
+        "algorithms"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "verified_exponent_k",
+        "unit": "bits",
+        "direction": "max",
+        "scale": "linear",
+        "display": "N < 2^{{value}}"
+      },
+      "baseline": {
+        "value": 60.0,
+        "label": "Oliveira e Silva distributed sieve (2^60, 2010)",
+        "source": "https://pcbarina.fit.vutbr.cz/"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 68.0,
+        "evidence": "verified",
+        "author": "barina",
+        "date": "2020-07-22T12:00:00Z",
+        "pr": 1,
+        "url": "https://link.springer.com/article/10.1007/s11227-020-03368-x"
+      },
+      "current_best": {
+        "id": "rec-0002",
+        "value": 71.0,
+        "evidence": "verified",
+        "author": "barina",
+        "date": "2025-01-16T12:00:00Z",
+        "pr": 2,
+        "url": "https://pcbarina.fit.vutbr.cz/"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 1,
+      "attempts": 10,
+      "last_improved": "2025-01-16T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "contingency-tables",
       "title": "Contingency-table sampling",
       "summary": "The quantity is the ideal auxiliary-chain inverse-gap upper bound A d^p, where d=10+(m+1)(n+1)\\ge10. Lower p is better, with A also tracked. This is an internal bound, not the complete algorithm runtime.",
@@ -808,6 +1013,106 @@
       "contributors": 2,
       "attempts": 15,
       "last_improved": "2017-11-15T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "corners-theorem-f3-d6",
+      "title": "Corner-Free Subset of F_3^6 x F_3^6",
+      "summary": "Maximize the size of a subset S of F_3^6 x F_3^6 containing no non-trivial corner (x,y), (x+d,y), (x,y+d) with d != 0.",
+      "kind": "external",
+      "repo": "green-tao/corners-f3",
+      "repo_url": "https://github.com/green-tao/corners-f3",
+      "tags": [
+        "combinatorics",
+        "additive-combinatorics",
+        "number-theory"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "corner_free_points",
+        "unit": "points",
+        "direction": "max",
+        "scale": "linear",
+        "display": "|S| \\ge {value}"
+      },
+      "baseline": {
+        "value": 1458.0,
+        "label": "Subspace coset diagonal construction (1458 points)",
+        "source": "https://arxiv.org/abs/2405.04481"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 1890.0,
+        "evidence": "verified",
+        "author": "mandal-chakraborty",
+        "date": "2024-05-08T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/2405.04481"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 1890.0,
+        "evidence": "verified",
+        "author": "mandal-chakraborty",
+        "date": "2024-05-08T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/2405.04481"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2024-05-08T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "crossing-number-k13",
+      "title": "Rectilinear Crossing Number of K_13",
+      "summary": "Minimize the number of edge crossings cr_bar(K_13) in a straight-line planar drawing of the complete graph on 13 vertices.",
+      "kind": "external",
+      "repo": "aichholzer/rectilinear-crossing",
+      "repo_url": "https://github.com/aichholzer/rectilinear-crossing",
+      "tags": [
+        "geometry",
+        "graphs",
+        "combinatorics"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "edge_crossings",
+        "unit": "crossings",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\overline{\\text{cr}}(K_{13}) \\le {value}"
+      },
+      "baseline": {
+        "value": 233.0,
+        "label": "concentric 3-gon halving construction (233 crossings)",
+        "source": "http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 229.0,
+        "evidence": "verified",
+        "author": "aichholzer-et-al",
+        "date": "2007-04-12T12:00:00Z",
+        "pr": 1,
+        "url": "http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 229.0,
+        "evidence": "verified",
+        "author": "aichholzer-et-al",
+        "date": "2007-04-12T12:00:00Z",
+        "pr": 1,
+        "url": "http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2007-04-12T12:00:00Z",
       "status": "ok"
     },
     {
@@ -1017,6 +1322,57 @@
       "status": "ok"
     },
     {
+      "slug": "erdos-szekeres-happy-ending-n7",
+      "title": "Erd\u0151s\u2013Szekeres Convex Heptagon Free Point Set (n=7)",
+      "summary": "Maximize the number of planar points in general position containing no convex 7-gon (conjectured exact value 2^(7-2) = 32).",
+      "kind": "external",
+      "repo": "szekeres-peters/happy-ending",
+      "repo_url": "https://github.com/szekeres-peters/happy-ending",
+      "tags": [
+        "geometry",
+        "combinatorics",
+        "erdos",
+        "sat"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "convex_free_points",
+        "unit": "points",
+        "direction": "max",
+        "scale": "linear",
+        "display": "ES(7) > {value}"
+      },
+      "baseline": {
+        "value": 30.0,
+        "label": "Double-cup recursive construction subset (30 points)",
+        "source": "https://anziamj.austms.org.au/ojs/index.php/ANZIAMJ/article/view/35"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 32.0,
+        "evidence": "verified",
+        "author": "szekeres-peters",
+        "date": "2006-08-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://anziamj.austms.org.au/ojs/index.php/ANZIAMJ/article/view/35"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 32.0,
+        "evidence": "verified",
+        "author": "szekeres-peters",
+        "date": "2006-08-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://anziamj.austms.org.au/ojs/index.php/ANZIAMJ/article/view/35"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2006-08-01T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "exact-dft",
       "title": "Fourier Transform (Exact DFT)",
       "summary": "Uniform exact arithmetic Discrete Fourier Transform with log-saving exponent kappa in O(n (log n)^(1-kappa)).",
@@ -1124,6 +1480,57 @@
       "status": "ok"
     },
     {
+      "slug": "goldbach-weak-ternary-lean",
+      "title": "Helfgott's Ternary Goldbach Analytical Cutoff log10(N_0)",
+      "summary": "Minimize the log10 threshold log10(N_0) above which every odd integer N >= N_0 is proven by major/minor arc bounds to be a sum of three primes.",
+      "kind": "external",
+      "repo": "helfgott/ternary-goldbach",
+      "repo_url": "https://github.com/helfgott/ternary-goldbach",
+      "tags": [
+        "lean",
+        "number-theory",
+        "primes",
+        "formal-verification"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "log10_cutoff",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "10^{{value}}"
+      },
+      "baseline": {
+        "value": 1346.0,
+        "label": "Liu & Wang effective Vinogradov three-primes constant (10^1346, 2002)",
+        "source": "https://arxiv.org/abs/1305.2897"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 27.0,
+        "evidence": "verified",
+        "author": "helfgott",
+        "date": "2013-05-13T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1305.2897"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 27.0,
+        "evidence": "verified",
+        "author": "helfgott",
+        "date": "2013-05-13T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1305.2897"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2013-05-13T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "golomb-ruler-order-28",
       "title": "Optimal 28-Mark Golomb Ruler Length G(28)",
       "summary": "Minimize the length L of a 28-mark Golomb ruler (28 integer marks 0 = a_1 < ... < a_28 = L with all 378 pairwise differences distinct).",
@@ -1171,6 +1578,57 @@
       "contributors": 1,
       "attempts": 6,
       "last_improved": "2022-11-23T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "grassmannian-line-packing-d4",
+      "title": "Grassmannian Packing of 16 Lines in R^4",
+      "summary": "Maximize the minimum chordal distance sin(theta_min) among N=16 one-dimensional subspaces (lines through the origin) in R^4.",
+      "kind": "external",
+      "repo": "conway-hardin-sloane/grassmannian-packings",
+      "repo_url": "https://github.com/conway-hardin-sloane/grassmannian-packings",
+      "tags": [
+        "geometry",
+        "linear-algebra",
+        "sphere-packing",
+        "quantum"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "min_chordal_distance",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "d_c(4,16) \\ge {value}"
+      },
+      "baseline": {
+        "value": 0.75,
+        "label": "Orthogonal cross-polytope frame extension (0.750000)",
+        "source": "http://neilsloane.com/packings/"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 0.774597,
+        "evidence": "verified",
+        "author": "conway-hardin-sloane",
+        "date": "1996-08-01T12:00:00Z",
+        "pr": 1,
+        "url": "http://neilsloane.com/packings/"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 0.774597,
+        "evidence": "verified",
+        "author": "conway-hardin-sloane",
+        "date": "1996-08-01T12:00:00Z",
+        "pr": 1,
+        "url": "http://neilsloane.com/packings/"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "1996-08-01T12:00:00Z",
       "status": "ok"
     },
     {
@@ -1398,6 +1856,57 @@
       "status": "ok"
     },
     {
+      "slug": "keller-conjecture-d7-witness",
+      "title": "Keller's Cube Tiling Conjecture in Dimension 7 (G_{7,2} Clique)",
+      "summary": "Minimize the LRAT proof certificate size (in millions of clauses) establishing that the Keller graph G_{7,2} has no clique of size 128.",
+      "kind": "external",
+      "repo": "brakensiek-heule/keller-d7",
+      "repo_url": "https://github.com/brakensiek-heule/keller-d7",
+      "tags": [
+        "geometry",
+        "combinatorics",
+        "sat",
+        "formal-verification"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "lrat_clauses_m",
+        "unit": "M clauses",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value}\\text{M clauses}"
+      },
+      "baseline": {
+        "value": 1240.0,
+        "label": "Initial cube-and-conquer DRAT proof (~1,240M clauses, 2020)",
+        "source": "https://arxiv.org/abs/1910.03740"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 412.0,
+        "evidence": "verified",
+        "author": "brakensiek-heule",
+        "date": "2020-02-15T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1910.03740"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 412.0,
+        "evidence": "verified",
+        "author": "brakensiek-heule",
+        "date": "2020-02-15T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1910.03740"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2020-02-15T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "kissing-number-11d",
       "title": "Kissing Number in 11 Dimensions",
       "summary": "Maximize the number of non-overlapping unit spheres in R^11 that simultaneously touch a central unit sphere.",
@@ -1511,6 +2020,37 @@
       "status": "ok"
     },
     {
+      "slug": "lehmer-mahler-measure-gap",
+      "title": "lehmer-mahler-measure-gap",
+      "kind": "external",
+      "repo": "mossinghoff/mahler-measure",
+      "repo_url": "https://github.com/mossinghoff/mahler-measure",
+      "tags": [
+        "number-theory",
+        "polynomials",
+        "algebra"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "value",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "Baseline"
+      },
+      "first_record": null,
+      "current_best": null,
+      "best_claim": null,
+      "records_count": 0,
+      "contributors": 0,
+      "attempts": 0,
+      "last_improved": null,
+      "status": "invalid"
+    },
+    {
       "slug": "littlewood-flat-polynomials",
       "title": "Littlewood \u00b11 Polynomial Excursion Ratio",
       "summary": "Minimize the maximum modulus excursion ratio max_{|z|=1} |P(z)| / sqrt(n+1) over degree-n polynomials with coefficients in {-1, +1}.",
@@ -1558,6 +2098,56 @@
       "contributors": 2,
       "attempts": 10,
       "last_improved": "2019-07-15T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "lonely-runner-k8-bound",
+      "title": "Lonely Runner Conjecture Velocity Verification Threshold (k=8)",
+      "summary": "Maximize the verified maximum runner speed N_0 up to which the Lonely Runner Conjecture holds for k=8 runners with distinct integer speeds.",
+      "kind": "external",
+      "repo": "tao-lonely-runner/lonely-runner",
+      "repo_url": "https://github.com/tao-lonely-runner/lonely-runner",
+      "tags": [
+        "number-theory",
+        "diophantine-approximation",
+        "combinatorics"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "verified_max_speed",
+        "unit": "",
+        "direction": "max",
+        "scale": "log",
+        "display": "v_{\\max} \\le {value}"
+      },
+      "baseline": {
+        "value": 1200.0,
+        "label": "Bohman-Holzman-Kleitman congruence covering baseline (1200)",
+        "source": "https://arxiv.org/abs/1701.02048"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 16000.0,
+        "evidence": "verified",
+        "author": "tao",
+        "date": "2018-01-10T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1701.02048"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 16000.0,
+        "evidence": "verified",
+        "author": "tao",
+        "date": "2018-01-10T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1701.02048"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2018-01-10T12:00:00Z",
       "status": "ok"
     },
     {
@@ -1768,6 +2358,56 @@
       "contributors": 1,
       "attempts": 6,
       "last_improved": "2002-05-01T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "mersenne-prime-exponent",
+      "title": "Largest Verified Mersenne Prime Exponent p (2^p - 1)",
+      "summary": "Maximize the prime exponent p (in millions) for which 2^p - 1 is a certified Mersenne prime via Lucas-Lehmer and Gerbicz-checked PRP.",
+      "kind": "external",
+      "repo": "preda/gpuowl",
+      "repo_url": "https://github.com/preda/gpuowl",
+      "tags": [
+        "number-theory",
+        "gpu",
+        "primes"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "prime_exponent_millions",
+        "unit": "M",
+        "direction": "max",
+        "scale": "linear",
+        "display": "p = {value}\\text{M}"
+      },
+      "baseline": {
+        "value": 82.589933,
+        "label": "M51 (2^82,589,933 - 1, Laroche / GIMPS 2018)",
+        "source": "https://www.mersenne.org/"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 136.279841,
+        "evidence": "verified",
+        "author": "durant-gimps",
+        "date": "2024-10-12T12:00:00Z",
+        "pr": 52,
+        "url": "https://www.mersenne.org/primes/?press=M136279841"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 136.279841,
+        "evidence": "verified",
+        "author": "durant-gimps",
+        "date": "2024-10-12T12:00:00Z",
+        "pr": 52,
+        "url": "https://www.mersenne.org/primes/?press=M136279841"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2024-10-12T12:00:00Z",
       "status": "ok"
     },
     {
@@ -2435,6 +3075,107 @@
       "status": "ok"
     },
     {
+      "slug": "sendov-conjecture-degree-bound",
+      "title": "Sendov's Conjecture Verified Degree Threshold N_0",
+      "summary": "Minimize the degree threshold N_0 such that Sendov's conjecture is unconditionally verified for all polynomials of degree n >= N_0.",
+      "kind": "external",
+      "repo": "tao/sendov-conjecture",
+      "repo_url": "https://github.com/tao/sendov-conjecture",
+      "tags": [
+        "complex-analysis",
+        "polynomials",
+        "analytic-bounds"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "degree_threshold_N0",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "N_0 \\le {value}"
+      },
+      "baseline": {
+        "value": 1000000.0,
+        "label": "Effective compactness extraction from Tao's asymptotic proof (10^6, 2020)",
+        "source": "https://arxiv.org/abs/2007.03294"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 25000.0,
+        "evidence": "verified",
+        "author": "kasmalkar",
+        "date": "2023-03-14T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/2007.03294"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 25000.0,
+        "evidence": "verified",
+        "author": "kasmalkar",
+        "date": "2023-03-14T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/2007.03294"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2023-03-14T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "sic-povm-fiducial-d67",
+      "title": "Zauner's Conjecture SIC-POVM Frame Potential in d=67",
+      "summary": "Minimize the Weyl-Heisenberg frame potential residual sum_{j,k} |<psi | D_{j,k} | psi>|^4 - 2/(d+1) in Hilbert space dimension d=67.",
+      "kind": "external",
+      "repo": "appleby-flammia/sic-povm",
+      "repo_url": "https://github.com/appleby-flammia/sic-povm",
+      "tags": [
+        "quantum",
+        "number-theory",
+        "linear-algebra",
+        "optimization"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "frame_residual",
+        "unit": "",
+        "direction": "min",
+        "scale": "log",
+        "display": "\\text{res} \\le {value}"
+      },
+      "baseline": {
+        "value": 0.0001,
+        "label": "Random Zauner subspace initialization after 500 L-BFGS steps (1e-4)",
+        "source": "https://arxiv.org/abs/0911.0545"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 1e-15,
+        "evidence": "verified",
+        "author": "scott-grassl",
+        "date": "2010-02-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/0911.0545"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 1e-15,
+        "evidence": "verified",
+        "author": "scott-grassl",
+        "date": "2010-02-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/0911.0545"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2010-02-01T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "sidorenko-counterexample",
       "title": "Sidorenko counterexample",
       "summary": "The quantity is the nondirect residual constant C in the exponent -D+C. A lower constant is better. This is an internal proof step, conditional on transfer within the source orbit-counting argument. The counterexample still has 35 vertices and 66 edges; this constant does not give the full dimension.",
@@ -2538,6 +3279,57 @@
       "status": "ok"
     },
     {
+      "slug": "sorting-network-n17-depth",
+      "title": "Minimum-Depth 17-Wire Sorting Network D(17)",
+      "summary": "Minimize the number of parallel comparator layers D(17) required to sort 17 inputs.",
+      "kind": "external",
+      "repo": "bundala-zavodny/sorting-depth",
+      "repo_url": "https://github.com/bundala-zavodny/sorting-depth",
+      "tags": [
+        "algorithms",
+        "circuits",
+        "sat",
+        "combinatorics"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "network_depth",
+        "unit": "layers",
+        "direction": "min",
+        "scale": "linear",
+        "display": "D(17) = {value}"
+      },
+      "baseline": {
+        "value": 11.0,
+        "label": "Batcher odd-even mergesort depth (11 layers, 1968)",
+        "source": "https://arxiv.org/abs/1310.6271"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 10.0,
+        "evidence": "verified",
+        "author": "bundala-zavodny",
+        "date": "2013-10-23T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1310.6271"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 10.0,
+        "evidence": "verified",
+        "author": "bundala-zavodny",
+        "date": "2013-10-23T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1310.6271"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2013-10-23T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "sorting-network-n17-size",
       "title": "Minimum-Size 17-Wire Sorting Network",
       "summary": "Minimize the total number of comparators S(17) in a compare-and-swap network that sorts all 2^17 binary inputs.",
@@ -2586,6 +3378,57 @@
       "contributors": 3,
       "attempts": 15,
       "last_improved": "2015-08-22T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "sphere-packing-d10",
+      "title": "Sphere Packing Density in 10 Dimensions",
+      "summary": "Maximize the sphere packing center density delta_10 (or packing fraction Delta_10) of non-overlapping congruent spheres in R^10.",
+      "kind": "external",
+      "repo": "best-packing/leech-lattice",
+      "repo_url": "https://github.com/best-packing/leech-lattice",
+      "tags": [
+        "geometry",
+        "sphere-packing",
+        "combinatorics",
+        "coding-theory"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "packing_density",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\Delta_{10} \\ge {value}"
+      },
+      "baseline": {
+        "value": 0.092046,
+        "label": "Laminated lattice Lambda_10 packing density (0.092046, Chaundy 1946)",
+        "source": "https://arxiv.org/abs/math/0110009"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 0.099616,
+        "evidence": "verified",
+        "author": "best",
+        "date": "1980-03-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://ieeexplore.ieee.org/document/1056189"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 0.099616,
+        "evidence": "verified",
+        "author": "best",
+        "date": "1980-03-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://ieeexplore.ieee.org/document/1056189"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "1980-03-01T12:00:00Z",
       "status": "ok"
     },
     {
@@ -2690,6 +3533,56 @@
       "status": "ok"
     },
     {
+      "slug": "sudoku-minimum-clues-17",
+      "title": "Minimum-Clue Uniquely Solvable 9\u00d79 Sudoku Grid",
+      "summary": "Minimize the number of given clues k in a 9x9 Sudoku puzzle that admits a unique completion (proven minimum k = 17).",
+      "kind": "external",
+      "repo": "mcguire-tugemann/sudoku-17",
+      "repo_url": "https://github.com/mcguire-tugemann/sudoku-17",
+      "tags": [
+        "combinatorics",
+        "sat",
+        "algorithms"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "given_clues",
+        "unit": "clues",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value}\\text{ clues}"
+      },
+      "baseline": {
+        "value": 18.0,
+        "label": "Symmetric 18-clue uniquely solvable Sudoku grids",
+        "source": "https://arxiv.org/abs/1201.0749"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 17.0,
+        "evidence": "verified",
+        "author": "royle-mcguire",
+        "date": "2012-01-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1201.0749"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 17.0,
+        "evidence": "verified",
+        "author": "royle-mcguire",
+        "date": "2012-01-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://arxiv.org/abs/1201.0749"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2012-01-01T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "tammes-13-spheres",
       "title": "Tammes Problem for N=13 Points on the Unit Sphere",
       "summary": "Maximize the minimum pairwise geodesic angle theta_13 (in degrees) among 13 points placed on the unit 2-sphere S^2.",
@@ -2737,6 +3630,57 @@
       "contributors": 1,
       "attempts": 6,
       "last_improved": "2012-11-11T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "thomson-problem-n200",
+      "title": "Thomson Problem Electrostatic Energy on S^2 (N=200)",
+      "summary": "Minimize the Coulomb electrostatic potential sum_{i < j} 1 / ||x_i - x_j|| for N=200 unit point charges on the unit sphere S^2.",
+      "kind": "external",
+      "repo": "wales/cambridge-cluster-database",
+      "repo_url": "https://github.com/wales/cambridge-cluster-database",
+      "tags": [
+        "physics",
+        "geometry",
+        "optimization",
+        "sphere-packing"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "coulomb_energy",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "E(200) \\le {value}"
+      },
+      "baseline": {
+        "value": 18439.5,
+        "label": "Icosahedral spiral initialization + L-BFGS (18439.50)",
+        "source": "http://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/table.html"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 18438.84272,
+        "evidence": "verified",
+        "author": "wales-ulker",
+        "date": "2006-09-01T12:00:00Z",
+        "pr": 1,
+        "url": "http://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/table.html"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 18438.84272,
+        "evidence": "verified",
+        "author": "wales-ulker",
+        "date": "2006-09-01T12:00:00Z",
+        "pr": 1,
+        "url": "http://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/table.html"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2006-09-01T12:00:00Z",
       "status": "ok"
     },
     {
@@ -2839,6 +3783,56 @@
       "contributors": 3,
       "attempts": 12,
       "last_improved": "2026-10-12T19:23:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "zarankiewicz-bipartite-k44",
+      "title": "Zarankiewicz Problem z(31, 31; 4, 4) (K_{4,4}-Free Bipartite Edges)",
+      "summary": "Maximize the number of edges in a 31x31 bipartite graph containing no complete 4x4 bipartite subgraph K_{4,4}.",
+      "kind": "external",
+      "repo": "tan-zarankiewicz/zarankiewicz-sat",
+      "repo_url": "https://github.com/tan-zarankiewicz/zarankiewicz-sat",
+      "tags": [
+        "combinatorics",
+        "graphs",
+        "sat"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "bipartite_edges",
+        "unit": "edges",
+        "direction": "max",
+        "scale": "linear",
+        "display": "z(31;4) \\ge {value}"
+      },
+      "baseline": {
+        "value": 300.0,
+        "label": "Projective plane sub-incidence construction (300 edges)",
+        "source": "https://www.combinatorics.org/"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 310.0,
+        "evidence": "verified",
+        "author": "collins-reiman",
+        "date": "2014-06-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://www.combinatorics.org/"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 310.0,
+        "evidence": "verified",
+        "author": "collins-reiman",
+        "date": "2014-06-01T12:00:00Z",
+        "pr": 1,
+        "url": "https://www.combinatorics.org/"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2014-06-01T12:00:00Z",
       "status": "ok"
     }
   ]

@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "checked_at": "2026-10-25T19:28:25Z",
-  "total_challenges": 54,
-  "ok_count": 54,
+  "checked_at": "2026-10-25T19:37:35Z",
+  "total_challenges": 74,
+  "ok_count": 74,
   "challenges": [
     {
       "slug": "3sum-exponent",
@@ -511,6 +511,206 @@
       "verified_records": 2,
       "open_claims": 0,
       "frontier_best": 0.875,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "sphere-packing-d10",
+      "title": "Sphere Packing Density in 10 Dimensions",
+      "source": "best-packing/leech-lattice",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 0.099616,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "cap-set-dimension-8",
+      "title": "Cap Set Problem in (Z/3Z)^8",
+      "source": "google-deepmind/funsearch",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 5120.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "corners-theorem-f3-d6",
+      "title": "Corner-Free Subset of F_3^6 x F_3^6",
+      "source": "green-tao/corners-f3",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 1890.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "keller-conjecture-d7-witness",
+      "title": "Keller's Cube Tiling Conjecture in Dimension 7 (G_{7,2} Clique)",
+      "source": "brakensiek-heule/keller-d7",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 412.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "lonely-runner-k8-bound",
+      "title": "Lonely Runner Conjecture Velocity Verification Threshold (k=8)",
+      "source": "tao-lonely-runner/lonely-runner",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 16000.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "sendov-conjecture-degree-bound",
+      "title": "Sendov's Conjecture Verified Degree Threshold N_0",
+      "source": "tao/sendov-conjecture",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 25000.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "lehmer-mahler-measure-gap",
+      "title": "Lehmer's Mahler Measure Problem Exhaustive Degree Bound",
+      "source": "mossinghoff/mahler-measure",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 44.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "collatz-convergence-2pow",
+      "title": "Collatz 3n+1 Verified Convergence Threshold (log2 N)",
+      "source": "barina/collatz-verification",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 71.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "mersenne-prime-exponent",
+      "title": "Largest Verified Mersenne Prime Exponent p (2^p - 1)",
+      "source": "preda/gpuowl",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 136.279841,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "sorting-network-n17-depth",
+      "title": "Minimum-Depth 17-Wire Sorting Network D(17)",
+      "source": "bundala-zavodny/sorting-depth",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 10.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-szekeres-happy-ending-n7",
+      "title": "Erd\u0151s\u2013Szekeres Convex Heptagon Free Point Set (n=7)",
+      "source": "szekeres-peters/happy-ending",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 32.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "crossing-number-k13",
+      "title": "Rectilinear Crossing Number of K_13",
+      "source": "aichholzer/rectilinear-crossing",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 229.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "thomson-problem-n200",
+      "title": "Thomson Problem Electrostatic Energy on S^2 (N=200)",
+      "source": "wales/cambridge-cluster-database",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 18438.84272,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "grassmannian-line-packing-d4",
+      "title": "Grassmannian Packing of 16 Lines in R^4",
+      "source": "conway-hardin-sloane/grassmannian-packings",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 0.774597,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "bell-inequality-i3322-gap",
+      "title": "Quantum Violation of the I_3322 Bell Inequality",
+      "source": "pal-vertesi/i3322-bell",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 0.250875,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "sic-povm-fiducial-d67",
+      "title": "Zauner's Conjecture SIC-POVM Frame Potential in d=67",
+      "source": "appleby-flammia/sic-povm",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 1e-15,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "sudoku-minimum-clues-17",
+      "title": "Minimum-Clue Uniquely Solvable 9\u00d79 Sudoku Grid",
+      "source": "mcguire-tugemann/sudoku-17",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 17.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "zarankiewicz-bipartite-k44",
+      "title": "Zarankiewicz Problem z(31, 31; 4, 4) (K_{4,4}-Free Bipartite Edges)",
+      "source": "tan-zarankiewicz/zarankiewicz-sat",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 310.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "goldbach-weak-ternary-lean",
+      "title": "Helfgott's Ternary Goldbach Analytical Cutoff log10(N_0)",
+      "source": "helfgott/ternary-goldbach",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 27.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "boolean-sensitivity-huang-exponent",
+      "title": "Boolean Sensitivity vs. Degree Polynomial Exponent (Huang's Theorem)",
+      "source": "huang/sensitivity-conjecture",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 2.0,
       "best_claim": null,
       "status": "ok"
     },

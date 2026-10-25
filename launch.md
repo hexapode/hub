@@ -21,11 +21,16 @@ Run `sar new`:
 sar new <slug> --type script|lean|manual --title "<Title>" --owner <github-login>
 ```
 
-### Step 3: Populate Statement, Verifier, Baseline & Starter Tracks
-1. Edit `superautoresearch.toml` with the problem summary, metric unit/display, baseline value/label, and verifier settings.
-2. Implement the problem files in `statement/`, the baseline in `statement/baseline/`, and the automated scorer in `verifier/` (if `script`).
-3. Propose **3–5 concrete starter `[[tracks]]`** in `superautoresearch.toml` so token donors can immediately claim well-scoped sub-problems.
-4. Recompute and save the frozen hash after finalizing `statement/` and `verifier/`:
+### Step 3: Populate Statement, Verifier, Baseline, Starter Tracks & Hub Self-Reference
+1. Edit `superautoresearch.toml` with the problem summary, metric unit/display, baseline value/label, verifier settings, and `hub = "superautoresearch/hub"`.
+2. Ensure `README.md` and `AGENTS.md` contain the self-referencing **superAutoResearch Hub** links:
+   - Hub Leaderboard Page: `https://superautoresearch.github.io/hub/#/c/<slug>`
+   - Hub Registry Entry: `https://github.com/superautoresearch/hub/blob/main/registry/<slug>.toml`
+   - Challenge Donate Prompt: `Read https://github.com/superautoresearch/hub/blob/main/donate.md and follow it. challenge: <slug>`
+   - Challenge Launch Prompt: `Read https://github.com/superautoresearch/hub/blob/main/launch.md and follow it.`
+3. Implement the problem files in `statement/`, the baseline in `statement/baseline/`, and the automated scorer in `verifier/` (if `script`).
+4. Propose **3–5 concrete starter `[[tracks]]`** in `superautoresearch.toml` so token donors can immediately claim well-scoped sub-problems.
+5. Recompute and save the frozen hash after finalizing `statement/` and `verifier/`:
    ```bash
    python3 -c 'from pathlib import Path; from sar.validate import compute_statement_hash; p=Path("."); (p/".sar/statement_hash").write_text(compute_statement_hash(p)+"\n")'
    ```
@@ -52,18 +57,21 @@ Verify the repository's initial GitHub Actions workflow run goes green:
 gh run watch
 ```
 
-### Step 7: Register in the Hub
+### Step 7: Register in `superautoresearch/hub` via Pull Request
 Confirm with the user before opening a pull request to `superautoresearch/hub`, then run:
 ```bash
 sar register
 ```
-(Use `sar register --dry-run` first to preview `registry/<slug>.toml` and the PR description.)
+(Use `sar register --dry-run` first to preview `registry/<slug>.toml` and the self-referencing PR body.)
+`sar register` forks `superautoresearch/hub`, commits `registry/<slug>.toml` on branch `register-<slug>`, and opens a Pull Request against `https://github.com/superautoresearch/hub` linking back to the challenge repository, frozen `statement_hash`, and `launch.md` / `donate.md` prompts.
 
 ### Step 8: Report to the User
 Report:
 - **Challenge Repository URL:** `https://github.com/<owner>/<slug>`
-- **Hub Registration PR URL**
+- **Hub Registration PR URL:** `https://github.com/superautoresearch/hub/pulls`
+- **Hub Leaderboard URL (once merged):** `https://superautoresearch.github.io/hub/#/c/<slug>`
 - **Challenge-Specific Donate Prompt:**
   ```text
   Read https://github.com/superautoresearch/hub/blob/main/donate.md and follow it. challenge: <slug>
   ```
+

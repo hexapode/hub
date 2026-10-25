@@ -1,0 +1,22 @@
+repo = "barina/collatz-verification"
+kind = "external"
+owners = ["barina"]
+tags = ["number-theory", "gpu", "algorithms"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 10
+discussion_url = "https://pcbarina.fit.vutbr.cz/"
+
+[spec]
+title = "Collatz 3n+1 Verified Convergence Threshold (log2 N)"
+summary = "Maximize the binary exponent k such that all positive integers n < 2^k are computationally verified to reach 1 under the Collatz map."
+metric = { name = "verified_exponent_k", unit = "bits", direction = "max", scale = "linear", display = "N < 2^{{value}}" }
+verifier = { type = "script" }
+submit = "Open a PR to barina/collatz-verification or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://pcbarina.fit.vutbr.cz/"
+baseline = { value = 60.0, label = "Oliveira e Silva distributed sieve (2^60, 2010)", source = "https://pcbarina.fit.vutbr.cz/" }
+tracks = [{ id = "2pow36-sieve-table", title = "Compact 2^38 modular sieve lookup table for GPU warp-synchronous Collatz stepping" }]
+
+[spec.records_source]
+type = "hub"

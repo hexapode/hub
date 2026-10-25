@@ -1,0 +1,22 @@
+repo = "tao-lonely-runner/lonely-runner"
+kind = "external"
+owners = ["tao", "perarnau"]
+tags = ["number-theory", "diophantine-approximation", "combinatorics"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://arxiv.org/abs/1701.02048"
+
+[spec]
+title = "Lonely Runner Conjecture Velocity Verification Threshold (k=8)"
+summary = "Maximize the verified maximum runner speed N_0 up to which the Lonely Runner Conjecture holds for k=8 runners with distinct integer speeds."
+metric = { name = "verified_max_speed", unit = "", direction = "max", scale = "log", display = "v_{\\max} \\le {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to tao-lonely-runner/lonely-runner or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://arxiv.org/abs/1701.02048"
+baseline = { value = 1200.0, label = "Bohman-Holzman-Kleitman congruence covering baseline (1200)", source = "https://arxiv.org/abs/1701.02048" }
+tracks = [{ id = "gcd-covering-sieve", title = "Accelerate prime-divisor covering check for 8-runner tuples in Lean 4" }]
+
+[spec.records_source]
+type = "hub"

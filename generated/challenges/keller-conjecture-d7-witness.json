@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "keller-conjecture-d7-witness",
+  "metric": {
+    "name": "lrat_clauses_m",
+    "unit": "M clauses",
+    "direction": "min",
+    "scale": "linear",
+    "display": "{value}\\text{M clauses}"
+  },
+  "baseline": {
+    "value": 1240.0,
+    "label": "Initial cube-and-conquer DRAT proof (~1,240M clauses, 2020)",
+    "source": "https://arxiv.org/abs/1910.03740"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 412.0,
+      "evidence": "verified",
+      "author": "brakensiek-heule",
+      "date": "2020-02-15T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1910.03740"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

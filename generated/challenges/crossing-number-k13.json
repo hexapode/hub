@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "crossing-number-k13",
+  "metric": {
+    "name": "edge_crossings",
+    "unit": "crossings",
+    "direction": "min",
+    "scale": "linear",
+    "display": "\\overline{\\text{cr}}(K_{13}) \\le {value}"
+  },
+  "baseline": {
+    "value": 233.0,
+    "label": "concentric 3-gon halving construction (233 crossings)",
+    "source": "http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 229.0,
+      "evidence": "verified",
+      "author": "aichholzer-et-al",
+      "date": "2007-04-12T12:00:00Z",
+      "pr": 1,
+      "url": "http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "grassmannian-line-packing-d4",
+  "metric": {
+    "name": "min_chordal_distance",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "d_c(4,16) \\ge {value}"
+  },
+  "baseline": {
+    "value": 0.75,
+    "label": "Orthogonal cross-polytope frame extension (0.750000)",
+    "source": "http://neilsloane.com/packings/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 0.774597,
+      "evidence": "verified",
+      "author": "conway-hardin-sloane",
+      "date": "1996-08-01T12:00:00Z",
+      "pr": 1,
+      "url": "http://neilsloane.com/packings/"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

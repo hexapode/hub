@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "sphere-packing-d10",
+  "metric": {
+    "name": "packing_density",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\Delta_{10} \\ge {value}"
+  },
+  "baseline": {
+    "value": 0.092046,
+    "label": "Laminated lattice Lambda_10 packing density (0.092046, Chaundy 1946)",
+    "source": "https://arxiv.org/abs/math/0110009"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 0.099616,
+      "evidence": "verified",
+      "author": "best",
+      "date": "1980-03-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://ieeexplore.ieee.org/document/1056189"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

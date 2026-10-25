@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "goldbach-weak-ternary-lean",
+  "metric": {
+    "name": "log10_cutoff",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "10^{{value}}"
+  },
+  "baseline": {
+    "value": 1346.0,
+    "label": "Liu & Wang effective Vinogradov three-primes constant (10^1346, 2002)",
+    "source": "https://arxiv.org/abs/1305.2897"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 27.0,
+      "evidence": "verified",
+      "author": "helfgott",
+      "date": "2013-05-13T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1305.2897"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

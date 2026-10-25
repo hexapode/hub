@@ -1,0 +1,8 @@
+[[records]]
+id = "rec-0001"
+value = 17.0
+evidence = "verified"
+author = "royle-mcguire"
+date = "2012-01-01T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/1201.0749"

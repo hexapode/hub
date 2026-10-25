@@ -343,14 +343,14 @@ export default function App() {
     setTimeout(() => setCopiedId((prev) => (prev === id ? null : prev)), 1600);
   };
 
-  const runCliAction = async (action: string, label: string) => {
+  const runCliAction = async (action: string, label: string, extra?: Record<string, any>) => {
     setCliRunning(true);
     setLastActionLabel(label);
     try {
       const res = await fetch('/api/sar/action', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action }),
+        body: JSON.stringify({ action, ...(extra || {}) }),
       });
       const data = await res.json();
       setCliOutput(
@@ -1319,6 +1319,24 @@ export default function App() {
                       dark ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'
                     }`}
                   >{`sar new ${newSlug || 'my-challenge'} --type ${newType} --owner ${newOwner}\ncd ${newSlug || 'my-challenge'}\nsar validate .\nsar verify statement/baseline\nsar init-github --public\nsar register`}</pre>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveTab('sandbox');
+                      runCliAction(
+                        'register-preview',
+                        `sar register --dry-run (${newSlug || 'matrix-rank-bound'})`,
+                        { slug: newSlug || 'matrix-rank-bound', type: newType, owner: newOwner }
+                      );
+                    }}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded border cursor-pointer ${
+                      dark
+                        ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
+                        : 'border-slate-200 bg-white hover:bg-slate-50'
+                    }`}
+                  >
+                    <Play className="w-3.5 h-3.5" /> Preview Hub Registration PR (sar register --dry-run)
+                  </button>
                 </div>
               </div>
             </div>
@@ -1414,6 +1432,24 @@ export default function App() {
                       }`}
                     >
                       <Play className="w-3.5 h-3.5" /> sar attempt --dry-run
+                    </button>
+                    <button
+                      type="button"
+                      disabled={cliRunning}
+                      onClick={() =>
+                        runCliAction(
+                          'register-preview',
+                          `sar register --dry-run (${newSlug || 'matrix-rank-bound'})`,
+                          { slug: newSlug || 'matrix-rank-bound', type: newType, owner: newOwner }
+                        )
+                      }
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
+                        dark
+                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
+                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
+                      }`}
+                    >
+                      <Play className="w-3.5 h-3.5" /> sar register --dry-run
                     </button>
                     <button
                       type="button"

@@ -1,0 +1,22 @@
+repo = "huang/sensitivity-conjecture"
+kind = "external"
+owners = ["huang", "aaronson"]
+tags = ["lean", "algorithms", "combinatorics", "boolean-functions"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://arxiv.org/abs/1907.00847"
+
+[spec]
+title = "Boolean Sensitivity vs. Degree Polynomial Exponent (Huang's Theorem)"
+summary = "Minimize the proven exponent alpha in deg(f) <= C * s(f)^alpha relating the Fourier degree and sensitivity of any Boolean function."
+metric = { name = "sensitivity_exponent", unit = "", direction = "min", scale = "linear", display = "\\deg(f) \\le O(s(f)^{{value}})" }
+verifier = { type = "lean" }
+submit = "Open a PR to huang/sensitivity-conjecture or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://arxiv.org/abs/1907.00847"
+baseline = { value = 2.0, label = "Hao Huang hypercube signed adjacency eigenvalue proof (deg <= s^2, 2019)", source = "https://arxiv.org/abs/1907.00847" }
+tracks = [{ id = "leading-constant-tightening", title = "Improve the leading multiplicative constant in deg(f) <= c * s(f)^2 via Chebyshev signed subgraphs" }]
+
+[spec.records_source]
+type = "hub"

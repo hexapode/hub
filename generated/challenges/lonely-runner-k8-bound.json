@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "lonely-runner-k8-bound",
+  "metric": {
+    "name": "verified_max_speed",
+    "unit": "",
+    "direction": "max",
+    "scale": "log",
+    "display": "v_{\\max} \\le {value}"
+  },
+  "baseline": {
+    "value": 1200.0,
+    "label": "Bohman-Holzman-Kleitman congruence covering baseline (1200)",
+    "source": "https://arxiv.org/abs/1701.02048"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 16000.0,
+      "evidence": "verified",
+      "author": "tao",
+      "date": "2018-01-10T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1701.02048"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

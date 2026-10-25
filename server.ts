@@ -175,6 +175,24 @@ async function startServer() {
         );
         return res.json(out);
       }
+      if (action === 'register-preview') {
+        const slug = String(req.body?.slug || 'matrix-rank-bound').replace(/[^a-z0-9-]/g, '') || 'matrix-rank-bound';
+        const vtype = ['script', 'lean', 'manual'].includes(req.body?.type) ? req.body.type : 'lean';
+        const owner = String(req.body?.owner || 'alice').replace(/[^a-zA-Z0-9-]/g, '') || 'alice';
+        const tmpBase = fs.mkdtempSync(path.join(os.tmpdir(), 'sar-reg-preview-'));
+        try {
+          await runCmd(
+            'python3',
+            ['-m', 'sar', 'new', slug, '--type', vtype, '--dir', tmpBase, '--owner', owner],
+            __dirname
+          );
+          const chalDir = path.join(tmpBase, slug);
+          const out = await runCmd('python3', ['-m', 'sar', 'register', '--dry-run'], chalDir);
+          return res.json(out);
+        } finally {
+          fs.rmSync(tmpBase, { recursive: true, force: true });
+        }
+      }
       if (action === 'push-github') {
         const token = process.env.GITHUB_TOKEN?.trim();
         if (!token || token === 'MY_GITHUB_TOKEN') {

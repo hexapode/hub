@@ -149,16 +149,28 @@ class TestMilestone5HubSync(unittest.TestCase):
         self.assertEqual(open_ids, ["track-b", "track-c"])
 
     def test_all_listed_challenges_and_frontier_workflow(self) -> None:
+        from sar.github_ops import build_registration_payload
+
         hub_root = Path(__file__).resolve().parent.parent
         reg_files = [
             p for p in sorted((hub_root / "registry").glob("*.toml"))
             if not p.name.endswith(".records.toml")
         ]
-        self.assertEqual(len(reg_files), 54)
+        self.assertEqual(len(reg_files), 74)
         global_json = json.loads((hub_root / "generated" / "global.json").read_text(encoding="utf-8"))
         self.assertEqual(len(global_json["challenges"]), len(reg_files))
         wf_path = hub_root / ".github" / "workflows" / "check-frontier.yml"
         self.assertTrue(wf_path.exists())
+
+        with tempfile.TemporaryDirectory() as tmp:
+            chal_dir = create_challenge("self-ref-test", "script", target_dir=Path(tmp), owner="alice")
+            readme_txt = (chal_dir / "README.md").read_text(encoding="utf-8")
+            self.assertIn("https://superautoresearch.github.io/hub/#/c/self-ref-test", readme_txt)
+            self.assertIn("registry/self-ref-test.toml", readme_txt)
+            payload = build_registration_payload(chal_dir)
+            self.assertIn("launch.md", payload["pr_body"])
+            self.assertIn("donate.md", payload["pr_body"])
+            self.assertIn("registry/self-ref-test.toml", payload["pr_body"])
 
 
 if __name__ == "__main__":

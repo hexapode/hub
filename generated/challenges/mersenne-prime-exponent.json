@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "mersenne-prime-exponent",
+  "metric": {
+    "name": "prime_exponent_millions",
+    "unit": "M",
+    "direction": "max",
+    "scale": "linear",
+    "display": "p = {value}\\text{M}"
+  },
+  "baseline": {
+    "value": 82.589933,
+    "label": "M51 (2^82,589,933 - 1, Laroche / GIMPS 2018)",
+    "source": "https://www.mersenne.org/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 136.279841,
+      "evidence": "verified",
+      "author": "durant-gimps",
+      "date": "2024-10-12T12:00:00Z",
+      "pr": 52,
+      "url": "https://www.mersenne.org/primes/?press=M136279841"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

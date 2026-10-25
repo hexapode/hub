@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "sendov-conjecture-degree-bound",
+  "metric": {
+    "name": "degree_threshold_N0",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "N_0 \\le {value}"
+  },
+  "baseline": {
+    "value": 1000000.0,
+    "label": "Effective compactness extraction from Tao's asymptotic proof (10^6, 2020)",
+    "source": "https://arxiv.org/abs/2007.03294"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 25000.0,
+      "evidence": "verified",
+      "author": "kasmalkar",
+      "date": "2023-03-14T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/2007.03294"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

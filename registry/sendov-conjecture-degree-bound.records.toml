@@ -1,0 +1,8 @@
+[[records]]
+id = "rec-0001"
+value = 25000.0
+evidence = "verified"
+author = "kasmalkar"
+date = "2023-03-14T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/2007.03294"

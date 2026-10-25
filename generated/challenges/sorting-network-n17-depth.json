@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "sorting-network-n17-depth",
+  "metric": {
+    "name": "network_depth",
+    "unit": "layers",
+    "direction": "min",
+    "scale": "linear",
+    "display": "D(17) = {value}"
+  },
+  "baseline": {
+    "value": 11.0,
+    "label": "Batcher odd-even mergesort depth (11 layers, 1968)",
+    "source": "https://arxiv.org/abs/1310.6271"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 10.0,
+      "evidence": "verified",
+      "author": "bundala-zavodny",
+      "date": "2013-10-23T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1310.6271"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "sudoku-minimum-clues-17",
+  "metric": {
+    "name": "given_clues",
+    "unit": "clues",
+    "direction": "min",
+    "scale": "linear",
+    "display": "{value}\\text{ clues}"
+  },
+  "baseline": {
+    "value": 18.0,
+    "label": "Symmetric 18-clue uniquely solvable Sudoku grids",
+    "source": "https://arxiv.org/abs/1201.0749"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 17.0,
+      "evidence": "verified",
+      "author": "royle-mcguire",
+      "date": "2012-01-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1201.0749"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

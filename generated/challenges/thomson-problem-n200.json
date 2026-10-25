@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "thomson-problem-n200",
+  "metric": {
+    "name": "coulomb_energy",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "E(200) \\le {value}"
+  },
+  "baseline": {
+    "value": 18439.5,
+    "label": "Icosahedral spiral initialization + L-BFGS (18439.50)",
+    "source": "http://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/table.html"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 18438.84272,
+      "evidence": "verified",
+      "author": "wales-ulker",
+      "date": "2006-09-01T12:00:00Z",
+      "pr": 1,
+      "url": "http://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/table.html"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:37:35Z"
+}

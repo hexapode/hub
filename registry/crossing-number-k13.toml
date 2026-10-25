@@ -1,0 +1,22 @@
+repo = "aichholzer/rectilinear-crossing"
+kind = "external"
+owners = ["aichholzer", "abrego"]
+tags = ["geometry", "graphs", "combinatorics"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/"
+
+[spec]
+title = "Rectilinear Crossing Number of K_13"
+summary = "Minimize the number of edge crossings cr_bar(K_13) in a straight-line planar drawing of the complete graph on 13 vertices."
+metric = { name = "edge_crossings", unit = "crossings", direction = "min", scale = "linear", display = "\\overline{\\text{cr}}(K_{13}) \\le {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to aichholzer/rectilinear-crossing or submit a reproducible witness to superautoresearch/hub."
+rules_url = "http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/"
+baseline = { value = 233.0, label = "concentric 3-gon halving construction (233 crossings)", source = "http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/" }
+tracks = [{ id = "order-type-k30", title = "Improve upper bound on the rectilinear crossing constant nu_bar <= 0.380445" }]
+
+[spec.records_source]
+type = "hub"
