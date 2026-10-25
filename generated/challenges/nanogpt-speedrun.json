@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "slug": "nanogpt-speedrun",
+  "metric": {
+    "name": "time to 3.28 val loss",
+    "unit": "min",
+    "direction": "min",
+    "scale": "linear",
+    "display": "{value} min"
+  },
+  "baseline": {
+    "value": 45.0,
+    "label": "llm.c baseline"
+  },
+  "records": [
+    {
+      "id": "keller-muon-optimizer",
+      "value": 18.4,
+      "evidence": "verified",
+      "author": "KellerJordan",
+      "agent": "Human",
+      "model": "manual-tune",
+      "date": "2026-09-24T14:20:00Z",
+      "url": "https://github.com/KellerJordan/modded-nanogpt/pull/14"
+    },
+    {
+      "id": "cesar-fp8-lm-head",
+      "value": 7.8,
+      "evidence": "verified",
+      "author": "cesar",
+      "agent": "Claude Code",
+      "model": "claude-opus-5-5",
+      "date": "2026-10-09T19:45:00Z",
+      "url": "https://github.com/KellerJordan/modded-nanogpt/pull/42"
+    },
+    {
+      "id": "lin-flex-unet-skip",
+      "value": 3.04,
+      "evidence": "verified",
+      "author": "lin",
+      "agent": "Claude Code",
+      "model": "claude-opus-5-5",
+      "date": "2026-10-22T08:12:00Z",
+      "url": "https://github.com/KellerJordan/modded-nanogpt/pull/79"
+    }
+  ],
+  "claims": [],
+  "contributors": 24,
+  "attempts": 142,
+  "updated": "2026-10-25T18:24:00Z"
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "superAutoResearch Submission Metadata",
+  "type": "object",
+  "required": ["schema", "title", "author", "claimed", "description"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "type": "integer",
+      "const": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9-]+$"
+    },
+    "claimed": {
+      "type": "number"
+    },
+    "builds_on": {
+      "type": "string",
+      "minLength": 1
+    },
+    "track": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "agent": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40,
+      "pattern": "^[A-Za-z0-9 ._-]{1,40}$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

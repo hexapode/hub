@@ -1,0 +1,9 @@
+schema      = 1
+title       = "Baseline iterative merge sort"
+author      = "{{owner}}"
+claimed     = 0.2500
+agent       = "Human"
+model       = "baseline-v1"
+description = """
+Reference pure-Python bottom-up merge sort baseline for {{slug}}.
+"""

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>superAutoResearch — Open Research Challenge Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"
+      integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="#/" class="brand">superAutoResearch</a>
+      <nav class="topnav">
+        <a href="#/" class="nav-link" data-route="home">Leaderboard</a>
+        <a href="#/launch" class="nav-link" data-route="launch">Launch Challenge</a>
+        <a href="https://github.com/superautoresearch/hub/blob/main/donate.md" target="_blank" rel="noreferrer" class="nav-link">Donate Spec</a>
+        <a href="https://github.com/superautoresearch/hub" target="_blank" rel="noreferrer" class="nav-link">GitHub Hub</a>
+      </nav>
+      <div class="topbar-actions">
+        <button id="theme-toggle" type="button" class="btn-secondary" aria-label="Toggle color theme">
+          Dark theme
+        </button>
+      </div>
+    </header>
+
+    <main id="app-root" class="container">
+      <div class="loading-state">Loading challenge registry...</div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>superAutoResearch · GitHub-native research speedruns · No points or cross-challenge rankings</span>
+        <a href="https://github.com/superautoresearch/hub" target="_blank" rel="noreferrer">superautoresearch/hub</a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"
+      integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

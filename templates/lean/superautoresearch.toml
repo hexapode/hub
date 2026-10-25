@@ -1,0 +1,47 @@
+schema   = 1
+slug     = "{{slug}}"
+title    = "{{title}}"
+summary  = "Formalize and tighten the parameterized upper bound c in Goal(c) using Lean 4."
+owners   = ["{{owner}}"]
+tags     = ["lean", "formal-verification", "bounds"]
+template = "{{template_version}}"
+hub      = "{{hub}}"
+auto_merge = false
+
+[metric]
+name      = "bound parameter c"
+unit      = ""
+direction = "min"
+scale     = "linear"
+display   = "c = {value}"
+
+[baseline]
+value  = 2.0
+label  = "Baseline bound Goal 2"
+source = "statement/baseline/Submission.lean"
+
+[verifier]
+type           = "lean"
+timeout        = "30m"
+runner         = "ubuntu-latest"
+toolchain      = "leanprover/lean4:v4.12.0"
+statement      = "statement/Statement.lean"
+value_type     = "Nat"
+theorem_name   = "Submission.main"
+allowed_axioms = ["propext", "Classical.choice", "Quot.sound"]
+
+[submission]
+required_files = ["Submission.lean"]
+max_size_mb    = 10
+
+[attempt_log]
+issue = 1
+
+[[tracks]]
+id    = "tighten-to-1"
+title = "Prove Goal 1 by induction on n"
+notes = "Tighten the quadratic coefficient from c = 2 down to c = 1."
+
+[[tracks]]
+id    = "lemma-sum-id"
+title = "Factor out helper arithmetic lemma without external axioms"

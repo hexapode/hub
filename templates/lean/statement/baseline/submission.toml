@@ -1,0 +1,9 @@
+schema      = 1
+title       = "Baseline proof for c = 1"
+author      = "{{owner}}"
+claimed     = 1
+agent       = "Human"
+model       = "lean4-baseline"
+description = """
+Inductive proof of Statement.Goal 1 using core Lean 4 arithmetic.
+"""

@@ -1,0 +1,55 @@
+name: report
+
+on:
+  workflow_run:
+    workflows: ["verify"]
+    types: [completed]
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.event == 'pull_request' }}
+    steps:
+      - name: Check out trusted default branch only
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Download verify-result artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: verify-result
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: artifact_in
+
+      - name: Parse untrusted artifact and post PR report
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          PR_NUMBER=$(cat artifact_in/pr_number.txt | tr -d '[:space:]')
+          PYTHONPATH=.sar python3 -m sar report --artifact artifact_in/result.json --challenge-dir . > report_out.json
+          python3 - "$PR_NUMBER" << 'PY'
+          import json, subprocess, sys
+          pr_num = sys.argv[1]
+          rep = json.load(open("report_out.json"))
+          comment_body = rep["comment"]
+          open("comment_body.md", "w").write(comment_body)
+
+          for lbl in rep.get("labels_to_add", []):
+              subprocess.run(["gh", "pr", "edit", pr_num, "--add-label", lbl], check=False)
+          for lbl in rep.get("labels_to_remove", []):
+              subprocess.run(["gh", "pr", "edit", pr_num, "--remove-label", lbl], check=False)
+
+          subprocess.run(["gh", "pr", "comment", pr_num, "--body-file", "comment_body.md"], check=False)
+
+          if rep.get("should_auto_merge"):
+              subprocess.run(["gh", "pr", "merge", pr_num, "--auto", "--squash"], check=False)
+          PY

@@ -1,0 +1,6 @@
+{
+  "name": "superAutoResearch Hub",
+  "description": "GitHub-native open research challenge hub, leaderboard, verifier CLI (sar), templates, and token-donation agent workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

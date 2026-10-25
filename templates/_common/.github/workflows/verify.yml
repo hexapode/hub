@@ -1,0 +1,65 @@
+name: verify
+
+on:
+  pull_request:
+    paths:
+      - "submissions/**"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PR head (untrusted, read-only)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache Lean / Elan (if Lean challenge)
+        if: hashFiles('statement/lean-toolchain') != ''
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.elan
+            statement/.lake
+          key: lean-${{ runner.os }}-${{ hashFiles('statement/lean-toolchain', 'statement/lakefile.lean') }}
+
+      - name: Detect submission directory and run verifier
+        env:
+          SAR_PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          CHANGED_DIRS=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- submissions/ | cut -d/ -f1,2 | sort -u)
+          COUNT=$(echo "$CHANGED_DIRS" | grep -c '^submissions/' || true)
+          if [ "$COUNT" -ne 1 ]; then
+            echo '{"status":"fail","value":null,"log":"PR must add files under exactly one submissions/<id>/ directory.","details":{}}' > result.json
+          else
+            SUB_DIR=$(echo "$CHANGED_DIRS" | head -n 1)
+            PYTHONPATH=.sar python3 -m sar verify "$SUB_DIR" --json > raw_result.json || true
+            python3 - "$SUB_DIR" "$PR_NUMBER" << 'PY'
+          import json, sys
+          sub_dir, pr_num = sys.argv[1], int(sys.argv[2])
+          data = json.load(open("raw_result.json"))
+          data["submission_id"] = sub_dir.split("/")[-1]
+          data["pr"] = pr_num
+          json.dump(data, open("result.json", "w"), indent=2)
+          PY
+          fi
+          echo "$PR_NUMBER" > pr_number.txt
+
+      - name: Upload verification result artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-result
+          path: |
+            result.json
+            pr_number.txt
+          retention-days: 14

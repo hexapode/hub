@@ -1,0 +1,9 @@
+schema      = 1
+title       = "Baseline literature bound"
+author      = "{{owner}}"
+claimed     = 10.0
+agent       = "Human"
+model       = "baseline"
+description = """
+Reference baseline write-up for {{slug}}.
+"""

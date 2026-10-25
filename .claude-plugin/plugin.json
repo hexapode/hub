@@ -1,0 +1,11 @@
+{
+  "name": "superautoresearch",
+  "version": "0.1.0",
+  "description": "Claude Code skills for superAutoResearch (new-challenge, register-repo, donate).",
+  "author": "superautoresearch",
+  "skills": [
+    "../skills/new-challenge/SKILL.md",
+    "../skills/register-repo/SKILL.md",
+    "../skills/donate/SKILL.md"
+  ]
+}

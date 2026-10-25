@@ -1,0 +1,5 @@
+/statement/ @{{owner}}
+/verifier/ @{{owner}}
+/.github/ @{{owner}}
+/.sar/ @{{owner}}
+/superautoresearch.toml @{{owner}}

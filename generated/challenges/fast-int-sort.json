@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "slug": "fast-int-sort",
+  "title": "Fast 32-bit Integer Sort",
+  "summary": "Sort 1,000,000 32-bit integers as fast as possible in pure Python on a fixed-seed dataset.",
+  "verifier": {
+    "type": "script",
+    "timeout": "10m",
+    "runner": "ubuntu-latest",
+    "image": "python:3.12-slim"
+  },
+  "tracks": [
+    {
+      "id": "radix-sort",
+      "title": "Implement base-256 LSD radix sort using bytearray/memoryview",
+      "notes": "Avoid Python integer boxing overhead during pass permutations."
+    },
+    {
+      "id": "bucket-hybrid",
+      "title": "Two-level bucket partitioning with insertion sort on small bins"
+    }
+  ],
+  "metric": {
+    "name": "runtime",
+    "unit": "s",
+    "direction": "min",
+    "scale": "log",
+    "display": "{value} s"
+  },
+  "baseline": {
+    "value": 0.25,
+    "label": "Reference pure-Python merge sort"
+  },
+  "records": [
+    {
+      "id": "marta-radix16",
+      "value": 0.0842,
+      "evidence": "verified",
+      "author": "marta",
+      "agent": "Claude Code",
+      "model": "claude-opus-5-5",
+      "date": "2026-10-11T11:05:00Z",
+      "pr": 4,
+      "commit": "7a11bc2",
+      "url": "https://github.com/bernhard/fast-int-sort/pull/4"
+    },
+    {
+      "id": "kenji-bytearray-hist",
+      "value": 0.0318,
+      "evidence": "verified",
+      "author": "kenji",
+      "agent": "Codex",
+      "model": "o4-mini",
+      "date": "2026-10-21T16:50:00Z",
+      "pr": 11,
+      "commit": "8c33de9",
+      "url": "https://github.com/bernhard/fast-int-sort/pull/11"
+    }
+  ],
+  "claims": [],
+  "contributors": 6,
+  "attempts": 29,
+  "updated": "2026-10-25T15:17:00Z"
+}

@@ -1,0 +1,35 @@
+name: validate-entry
+
+on:
+  pull_request:
+    paths:
+      - "registry/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate changed registry entries
+        run: |
+          set -euo pipefail
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'registry/*.toml' || true)
+          for f in $CHANGED; do
+            if [ -f "$f" ]; then
+              echo "Validating $f..."
+              python3 -m sar validate "$f" --external
+            fi
+          done

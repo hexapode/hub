@@ -1,0 +1,244 @@
+{
+  "schema": 1,
+  "hub": "superautoresearch/hub",
+  "updated": "2026-10-25T18:24:00Z",
+  "challenges": [
+    {
+      "slug": "3sum-exponent",
+      "kind": "native",
+      "repo": "alice/3sum-exponent",
+      "ref": "main",
+      "owners": [
+        "alice"
+      ],
+      "tags": [
+        "lean",
+        "algorithms",
+        "fine-grained-complexity"
+      ],
+      "title": "3SUM exponent",
+      "summary": "Lower the exponent of the best provable 3SUM algorithm in the word-RAM model.",
+      "metric": {
+        "name": "exponent",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "n^{value}"
+      },
+      "baseline": {
+        "value": 2.0,
+        "label": "Classic O(n^2)"
+      },
+      "verifier": {
+        "type": "lean",
+        "timeout": "30m",
+        "runner": "ubuntu-latest",
+        "toolchain": "leanprover/lean4:v4.12.0"
+      },
+      "tracks": [
+        {
+          "id": "derandomize",
+          "title": "Derandomize the current best algorithm",
+          "notes": "The current record uses randomization in step 2; a deterministic version would also be accepted."
+        },
+        {
+          "id": "formalize-record-4",
+          "title": "Lean-verify record #4",
+          "notes": "Complete the word-RAM bit-packing lemma in Submission.lean."
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "derandomize",
+          "title": "Derandomize the current best algorithm",
+          "notes": "The current record uses randomization in step 2; a deterministic version would also be accepted."
+        },
+        {
+          "id": "formalize-record-4",
+          "title": "Lean-verify record #4",
+          "notes": "Complete the word-RAM bit-packing lemma in Submission.lean."
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/alice/3sum-exponent",
+      "agents_md_url": "https://github.com/alice/3sum-exponent/blob/main/AGENTS.md",
+      "attempt_log_url": "https://github.com/alice/3sum-exponent/issues/1",
+      "status": "ok"
+    },
+    {
+      "slug": "cap-set-dimension-7",
+      "kind": "native",
+      "repo": "elena/cap-set-dimension-7",
+      "ref": "main",
+      "owners": [
+        "elena"
+      ],
+      "tags": [
+        "manual",
+        "combinatorics",
+        "extremal-bounds"
+      ],
+      "title": "Cap Set Lower Bound in AG(7, 3)",
+      "summary": "Construct the largest explicit cap set (no three points collinear) in 7-dimensional affine space over GF(3).",
+      "metric": {
+        "name": "cap set size",
+        "unit": "points",
+        "direction": "max",
+        "scale": "linear",
+        "display": "{value} pts"
+      },
+      "baseline": {
+        "value": 448,
+        "label": "Recursive product construction"
+      },
+      "verifier": {
+        "type": "manual",
+        "timeout": "5m",
+        "runner": "ubuntu-latest"
+      },
+      "tracks": [
+        {
+          "id": "tensor-product-lift",
+          "title": "Admissible product construction from AG(4, 3) and AG(3, 3)"
+        },
+        {
+          "id": "sat-local-search",
+          "title": "Symmetry-broken local search around 512-cap orbits"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "tensor-product-lift",
+          "title": "Admissible product construction from AG(4, 3) and AG(3, 3)"
+        },
+        {
+          "id": "sat-local-search",
+          "title": "Symmetry-broken local search around 512-cap orbits"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/elena/cap-set-dimension-7",
+      "agents_md_url": "https://github.com/elena/cap-set-dimension-7/blob/main/AGENTS.md",
+      "attempt_log_url": "https://github.com/elena/cap-set-dimension-7/issues/1",
+      "status": "ok"
+    },
+    {
+      "slug": "fast-int-sort",
+      "kind": "native",
+      "repo": "bernhard/fast-int-sort",
+      "ref": "main",
+      "owners": [
+        "bernhard"
+      ],
+      "tags": [
+        "script",
+        "algorithms",
+        "sorting"
+      ],
+      "title": "Fast 32-bit Integer Sort",
+      "summary": "Sort 1,000,000 32-bit integers as fast as possible in pure Python on a fixed-seed dataset.",
+      "metric": {
+        "name": "runtime",
+        "unit": "s",
+        "direction": "min",
+        "scale": "log",
+        "display": "{value} s"
+      },
+      "baseline": {
+        "value": 0.25,
+        "label": "Reference pure-Python merge sort"
+      },
+      "verifier": {
+        "type": "script",
+        "timeout": "10m",
+        "runner": "ubuntu-latest",
+        "image": "python:3.12-slim"
+      },
+      "tracks": [
+        {
+          "id": "radix-sort",
+          "title": "Implement base-256 LSD radix sort using bytearray/memoryview",
+          "notes": "Avoid Python integer boxing overhead during pass permutations."
+        },
+        {
+          "id": "bucket-hybrid",
+          "title": "Two-level bucket partitioning with insertion sort on small bins"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "radix-sort",
+          "title": "Implement base-256 LSD radix sort using bytearray/memoryview",
+          "notes": "Avoid Python integer boxing overhead during pass permutations."
+        },
+        {
+          "id": "bucket-hybrid",
+          "title": "Two-level bucket partitioning with insertion sort on small bins"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/bernhard/fast-int-sort",
+      "agents_md_url": "https://github.com/bernhard/fast-int-sort/blob/main/AGENTS.md",
+      "attempt_log_url": "https://github.com/bernhard/fast-int-sort/issues/1",
+      "status": "ok"
+    },
+    {
+      "slug": "nanogpt-speedrun",
+      "kind": "external",
+      "repo": "KellerJordan/modded-nanogpt",
+      "owners": [
+        "KellerJordan"
+      ],
+      "tags": [
+        "manual",
+        "ml-systems",
+        "training-speedrun"
+      ],
+      "title": "NanoGPT speedrun",
+      "summary": "Train GPT-2 small to 3.28 val loss on FineWeb as fast as possible on 8xH100.",
+      "metric": {
+        "name": "time to 3.28 val loss",
+        "unit": "min",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value} min"
+      },
+      "baseline": {
+        "value": 45.0,
+        "label": "llm.c baseline"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR to KellerJordan/modded-nanogpt following the README record rules.",
+      "rules_url": "https://github.com/KellerJordan/modded-nanogpt#readme",
+      "tracks": [
+        {
+          "id": "muon-momentum-schedule",
+          "title": "Tune Muon momentum warm-up and DistributedDataParallel overlap",
+          "notes": "Reduce communication stall on step 0-250 across 8xH100."
+        },
+        {
+          "id": "flex-attention-window",
+          "title": "Fuse sliding window schedule with FlexAttention block mask"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "muon-momentum-schedule",
+          "title": "Tune Muon momentum warm-up and DistributedDataParallel overlap",
+          "notes": "Reduce communication stall on step 0-250 across 8xH100."
+        },
+        {
+          "id": "flex-attention-window",
+          "title": "Fuse sliding window schedule with FlexAttention block mask"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/KellerJordan/modded-nanogpt",
+      "agents_md_url": "https://github.com/KellerJordan/modded-nanogpt#readme",
+      "attempt_log_url": "https://github.com/superautoresearch/hub/discussions/2",
+      "status": "ok"
+    }
+  ]
+}

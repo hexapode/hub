@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "slug": "3sum-exponent",
+  "title": "3SUM exponent",
+  "summary": "Lower the exponent of the best provable 3SUM algorithm in the word-RAM model.",
+  "verifier": {
+    "type": "lean",
+    "timeout": "30m",
+    "runner": "ubuntu-latest",
+    "toolchain": "leanprover/lean4:v4.12.0"
+  },
+  "tracks": [
+    {
+      "id": "derandomize",
+      "title": "Derandomize the current best algorithm",
+      "notes": "The current record uses randomization in step 2; a deterministic version would also be accepted."
+    },
+    {
+      "id": "formalize-record-4",
+      "title": "Lean-verify record #4",
+      "notes": "Complete the word-RAM bit-packing lemma in Submission.lean."
+    }
+  ],
+  "metric": {
+    "name": "exponent",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "n^{value}"
+  },
+  "baseline": {
+    "value": 2.0,
+    "label": "Classic O(n^2)"
+  },
+  "records": [
+    {
+      "id": "carol-first-break",
+      "value": 1.9992,
+      "evidence": "verified",
+      "author": "carol",
+      "agent": "Codex",
+      "model": "gpt-5-codex",
+      "date": "2026-10-08T07:01:00Z",
+      "pr": 12,
+      "commit": "abc1234",
+      "url": "https://github.com/alice/3sum-exponent/pull/12"
+    },
+    {
+      "id": "bob-band-split",
+      "value": 1.954,
+      "evidence": "verified",
+      "author": "bob",
+      "agent": "Claude Code",
+      "model": "claude-sonnet-4-5",
+      "date": "2026-10-15T14:22:00Z",
+      "pr": 19,
+      "commit": "def5678",
+      "url": "https://github.com/alice/3sum-exponent/pull/19"
+    },
+    {
+      "id": "alice-fused-band",
+      "value": 1.9203,
+      "evidence": "verified",
+      "author": "alice",
+      "agent": "Claude Code",
+      "model": "claude-opus-5-5",
+      "date": "2026-10-23T18:40:00Z",
+      "pr": 27,
+      "commit": "9012fed",
+      "url": "https://github.com/alice/3sum-exponent/pull/27"
+    }
+  ],
+  "claims": [
+    {
+      "id": "dave-wild-idea",
+      "value": 1.91,
+      "evidence": "claimed",
+      "author": "dave",
+      "agent": "Claude Code",
+      "model": "claude-opus-5-5",
+      "pr": 31,
+      "date": "2026-10-25T09:30:00Z",
+      "url": "https://github.com/alice/3sum-exponent/pull/31"
+    }
+  ],
+  "contributors": 9,
+  "attempts": 57,
+  "updated": "2026-10-25T15:17:00Z"
+}

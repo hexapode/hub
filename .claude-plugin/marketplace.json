@@ -1,0 +1,13 @@
+{
+  "name": "superautoresearch",
+  "version": "0.1.0",
+  "description": "Launch open research challenges, register existing speedrun repos, and donate leftover LLM tokens to superAutoResearch.",
+  "repository": "https://github.com/superautoresearch/hub",
+  "plugins": [
+    {
+      "name": "superautoresearch",
+      "description": "Skills for launching challenges, registering repositories, and donating tokens on superAutoResearch",
+      "path": ".claude-plugin/plugin.json"
+    }
+  ]
+}

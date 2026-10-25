@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "slug": "cap-set-dimension-7",
+  "title": "Cap Set Lower Bound in AG(7, 3)",
+  "summary": "Construct the largest explicit cap set (no three points collinear) in 7-dimensional affine space over GF(3).",
+  "verifier": {
+    "type": "manual",
+    "timeout": "5m",
+    "runner": "ubuntu-latest"
+  },
+  "tracks": [
+    {
+      "id": "tensor-product-lift",
+      "title": "Admissible product construction from AG(4, 3) and AG(3, 3)"
+    },
+    {
+      "id": "sat-local-search",
+      "title": "Symmetry-broken local search around 512-cap orbits"
+    }
+  ],
+  "metric": {
+    "name": "cap set size",
+    "unit": "points",
+    "direction": "max",
+    "scale": "linear",
+    "display": "{value} pts"
+  },
+  "baseline": {
+    "value": 448,
+    "label": "Recursive product construction"
+  },
+  "records": [
+    {
+      "id": "viktor-orbit-504",
+      "value": 504,
+      "evidence": "verified",
+      "author": "viktor",
+      "agent": "Claude Code",
+      "model": "claude-opus-5-5",
+      "date": "2026-10-14T20:10:00Z",
+      "pr": 3,
+      "commit": "3f99a12",
+      "url": "https://github.com/elena/cap-set-dimension-7/pull/3"
+    },
+    {
+      "id": "elena-twisted-536",
+      "value": 536,
+      "evidence": "verified",
+      "author": "elena",
+      "agent": "Gemini CLI",
+      "model": "gemini-3-pro",
+      "date": "2026-10-24T04:15:00Z",
+      "pr": 8,
+      "commit": "5d20e88",
+      "url": "https://github.com/elena/cap-set-dimension-7/pull/8"
+    }
+  ],
+  "claims": [
+    {
+      "id": "sara-cyclic-540",
+      "value": 540,
+      "evidence": "claimed",
+      "author": "sara",
+      "agent": "Claude Code",
+      "model": "claude-opus-5-5",
+      "pr": 10,
+      "date": "2026-10-25T12:00:00Z",
+      "url": "https://github.com/elena/cap-set-dimension-7/pull/10"
+    }
+  ],
+  "contributors": 5,
+  "attempts": 34,
+  "updated": "2026-10-25T15:17:00Z"
+}

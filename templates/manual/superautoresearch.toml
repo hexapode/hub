@@ -1,0 +1,43 @@
+schema   = 1
+slug     = "{{slug}}"
+title    = "{{title}}"
+summary  = "Open mathematical or empirical challenge verified by domain reviewers."
+owners   = ["{{owner}}"]
+tags     = ["manual", "theory", "proof"]
+template = "{{template_version}}"
+hub      = "{{hub}}"
+auto_merge = false
+
+[metric]
+name      = "bound"
+unit      = ""
+direction = "min"
+scale     = "linear"
+display   = "{value}"
+
+[baseline]
+value  = 10.0
+label  = "Known literature bound"
+source = "statement/PROBLEM.md"
+
+[verifier]
+type      = "manual"
+timeout   = "5m"
+runner    = "ubuntu-latest"
+reviewers = ["{{owner}}"]
+
+[submission]
+required_files = ["proof.md"]
+max_size_mb    = 20
+
+[attempt_log]
+issue = 1
+
+[[tracks]]
+id    = "constructive-witness"
+title = "Construct an explicit witness improving the baseline bound"
+notes = "Include verification script or step-by-step derivation in proof.md."
+
+[[tracks]]
+id    = "asymptotic-refinement"
+title = "Tighten the second-order constant term"

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "superAutoResearch Challenge Spec",
+  "type": "object",
+  "required": [
+    "schema",
+    "slug",
+    "title",
+    "summary",
+    "owners",
+    "metric",
+    "baseline",
+    "verifier",
+    "submission"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "type": "integer",
+      "const": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,48}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owners": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9-]+$"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]*$"
+      }
+    },
+    "template": {
+      "type": "string",
+      "pattern": "^(script|lean|manual|custom)@\\d+$"
+    },
+    "hub": {
+      "type": "string",
+      "minLength": 3
+    },
+    "auto_merge": {
+      "type": "boolean"
+    },
+    "metric": {
+      "type": "object",
+      "required": ["name", "direction"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "unit": { "type": "string" },
+        "direction": { "type": "string", "enum": ["min", "max"] },
+        "scale": { "type": "string", "enum": ["linear", "log"] },
+        "display": { "type": "string" }
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "required": ["value", "label"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "number" },
+        "label": { "type": "string", "minLength": 1 },
+        "source": { "type": "string" }
+      }
+    },
+    "verifier": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string", "enum": ["script", "lean", "manual", "custom"] },
+        "timeout": { "type": "string", "minLength": 2 },
+        "runner": { "type": "string", "minLength": 1 },
+        "image": { "type": "string" },
+        "setup": { "type": "string" },
+        "command": { "type": "string" },
+        "repeats": { "type": "integer", "minimum": 1 },
+        "aggregate": { "type": "string", "enum": ["median", "mean", "min", "max"] },
+        "tolerance": { "type": "number", "minimum": 0 },
+        "network": { "type": "boolean" },
+        "toolchain": { "type": "string" },
+        "statement": { "type": "string" },
+        "value_type": { "type": "string", "enum": ["Real", "Rat", "Nat", "Int"] },
+        "theorem_name": { "type": "string" },
+        "allowed_axioms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "reviewers": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "submission": {
+      "type": "object",
+      "required": ["required_files", "max_size_mb"],
+      "additionalProperties": false,
+      "properties": {
+        "required_files": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "max_size_mb": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "attempt_log": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "issue": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "title": { "type": "string", "minLength": 1 },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+schema   = 1
+slug     = "{{slug}}"
+title    = "{{title}}"
+summary  = "Sort 1,000,000 32-bit integers as fast as possible in pure Python on a fixed-seed dataset."
+owners   = ["{{owner}}"]
+tags     = ["algorithms", "sorting", "python"]
+template = "{{template_version}}"
+hub      = "{{hub}}"
+auto_merge = false
+
+[metric]
+name      = "runtime"
+unit      = "s"
+direction = "min"
+scale     = "linear"
+display   = "{value} s"
+
+[baseline]
+value  = 0.2500
+label  = "Reference pure-Python merge sort"
+source = "statement/baseline/solution.py"
+
+[verifier]
+type      = "script"
+timeout   = "10m"
+runner    = "ubuntu-latest"
+image     = "python:3.12-slim"
+setup     = "pip install -r statement/requirements.txt"
+command   = "python verifier/score.py --submission /submission"
+repeats   = 3
+aggregate = "median"
+tolerance = 0.0001
+network   = false
+
+[submission]
+required_files = ["solution.py"]
+max_size_mb    = 10
+
+[attempt_log]
+issue = 1
+
+[[tracks]]
+id    = "radix-sort"
+title = "Implement base-256 LSD radix sort using bytearray/memoryview"
+notes = "Avoid Python integer boxing overhead during pass permutations."
+
+[[tracks]]
+id    = "bucket-hybrid"
+title = "Two-level bucket partitioning with insertion sort on small bins"
+notes = "Exploit uniform distribution of the fixed-seed 32-bit generator."
+
+[[tracks]]
+id    = "counting-histogram"
+title = "16-bit two-pass prefix histogram sort"

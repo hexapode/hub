@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "superAutoResearch Challenge Leaderboard",
+  "type": "object",
+  "required": [
+    "schema",
+    "slug",
+    "metric",
+    "baseline",
+    "records",
+    "claims",
+    "contributors",
+    "attempts",
+    "updated"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "type": "integer", "const": 1 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,48}$" },
+    "metric": {
+      "type": "object",
+      "required": ["name", "direction"],
+      "properties": {
+        "name": { "type": "string" },
+        "unit": { "type": "string" },
+        "direction": { "type": "string", "enum": ["min", "max"] },
+        "scale": { "type": "string", "enum": ["linear", "log"] },
+        "display": { "type": "string" }
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "required": ["value", "label"],
+      "properties": {
+        "value": { "type": "number" },
+        "label": { "type": "string" },
+        "source": { "type": "string" }
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "value", "evidence", "author", "date"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "value": { "type": "number" },
+          "evidence": { "type": "string", "enum": ["claimed", "verified"] },
+          "author": { "type": "string" },
+          "agent": { "type": "string" },
+          "model": { "type": "string" },
+          "date": { "type": "string" },
+          "pr": { "type": "integer" },
+          "commit": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "value", "evidence", "author", "date"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "value": { "type": "number" },
+          "evidence": { "type": "string", "enum": ["claimed", "verified"] },
+          "author": { "type": "string" },
+          "agent": { "type": "string" },
+          "model": { "type": "string" },
+          "pr": { "type": "integer" },
+          "date": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "other_submissions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "contributors": { "type": "integer", "minimum": 0 },
+    "attempts": { "type": "integer", "minimum": 0 },
+    "updated": { "type": "string", "minLength": 10 }
+  }
+}

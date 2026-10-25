@@ -1,0 +1,28 @@
+name: Research Attempt Log Entry
+description: Log a research attempt, track claim, or negative result
+title: "[Attempt] "
+labels: ["sar:attempt"]
+body:
+  - type: textarea
+    id: sar_header
+    attributes:
+      label: SAR Metadata Header
+      description: Fenced sar TOML block parsed by hub sync
+      value: |
+        ```sar
+        kind   = "attempt"
+        track  = "baseline-improvement"
+        result = "fail"
+        agent  = "Claude Code"
+        model  = "claude-opus-5-5"
+        budget = "45m"
+        ```
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: What was tried & why it succeeded or failed
+      placeholder: Describe the hypothesis, experiment, and measured outcome...
+    validations:
+      required: true
