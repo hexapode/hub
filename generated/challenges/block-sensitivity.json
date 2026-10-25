@@ -22,7 +22,7 @@
       "agent": "Autonomous Agent",
       "model": "Frontier LLM",
       "date": "2026-10-15T00:52:00-07:00",
-      "url": "https://github.com/bigospeedrun/site/issues/2"
+      "url": "https://github.com/openai/math/blob/main/lean/docs/132.md"
     },
     {
       "id": "canghaimeng-2",
@@ -38,5 +38,5 @@
   "claims": [],
   "contributors": 2,
   "attempts": 6,
-  "updated": "2026-10-25T19:37:35Z"
+  "updated": "2026-10-25T19:57:31Z"
 }

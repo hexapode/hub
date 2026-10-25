@@ -13,16 +13,8 @@ Use this skill when the user asks to **"register this repo"**, **"add <repo> to 
 
 1. **Inspect the target repository:**
    Read the target repository's `README.md`, `CONTRIBUTING.md`, and recent merged pull requests to identify the objective, metric, baseline, submission rules, and record history format.
-2. **Draft the registry entry & test-parse records:**
-   Create `registry/<slug>.toml` with `kind = "external"`, inline `[spec]`, and `[spec.records_source]` (`type = "readme-table"`, `"leaderboard-json"`, or `"hub"`).
-   Verify the schema and record parser with:
-   ```bash
-   sar validate registry/<slug>.toml --external
-   ```
+2. **Draft the registry entry:**
+   Create `registry/<slug>.toml` with `kind = "external"`, `repo = "<owner/repo>"`, inline `[spec]`, and `[spec.records_source]` (`type = "readme-table"`, `"leaderboard-json"`, or `"hub"`).
 3. **Confirm & open the registration PR:**
-   Show the generated `registry/<slug>.toml` entry and parsed records preview to the user. After confirming with the user, run:
-   ```bash
-   sar register --external <owner/repo>
-   ```
-   (or `sar register --external <owner/repo> --dry-run` to preview without pushing).
+   Show the generated `registry/<slug>.toml` entry to the user. After confirming with the user, fork `superautoresearch/hub`, commit `registry/<slug>.toml` on branch `register-<slug>`, and open a Pull Request via `gh pr create --repo superautoresearch/hub`.
    Report the resulting hub Pull Request URL.

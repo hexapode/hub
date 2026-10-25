@@ -39,13 +39,9 @@ const CURATED_FILES = [
   { path: '.github/workflows/ci.yml', group: 'Hub Workflows' },
   { path: 'site/index.html', group: 'Static Site (site/)' },
   { path: 'site/app.js', group: 'Static Site (site/)' },
-  { path: 'sar/cli.py', group: 'sar Python Package' },
-  { path: 'sar/frontier.py', group: 'sar Python Package' },
-  { path: 'sar/validate.py', group: 'sar Python Package' },
-  { path: 'sar/leaderboard.py', group: 'sar Python Package' },
-  { path: 'sar/report.py', group: 'sar Python Package' },
-  { path: 'sar/sync.py', group: 'sar Python Package' },
-  { path: 'tests/e2e_dry_run.sh', group: 'Tests & E2E' },
+  { path: 'registry/integer-multiplication.toml', group: 'Registry' },
+  { path: 'registry/integer-multiplication.records.toml', group: 'Registry' },
+  { path: 'registry/quasi-riemann.records.toml', group: 'Registry' },
 ];
 
 function runCmd(cmd: string, args: string[], cwd: string): Promise<{ code: number; stdout: string; stderr: string }> {

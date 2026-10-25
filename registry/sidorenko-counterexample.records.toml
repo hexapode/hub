@@ -1,9 +1,21 @@
 [[records]]
-id = "rohanarun-1"
+id = "rohanarun-pr1-active-support"
+value = 978.0
+evidence = "verified"
+author = "rohanarun"
+agent = "Codex"
+model = "Frontier LLM"
+date = "2026-10-09T15:01:59Z"
+pr = 1
+url = "https://github.com/rohanarun/sidorenko-template-refinements/pull/1"
+
+[[records]]
+id = "rohanarun-pr2-sequential-basis"
 value = 189.0
 evidence = "verified"
 author = "rohanarun"
-agent = "Autonomous Agent"
+agent = "Codex"
 model = "Frontier LLM"
-date = "2026-10-09T23:41:00-07:00"
-url = "https://github.com/rohanarun/sidorenko-template-refinements/blob/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d/README.md"
+date = "2026-10-10T12:41:39Z"
+pr = 2
+url = "https://github.com/rohanarun/sidorenko-template-refinements/pull/2"

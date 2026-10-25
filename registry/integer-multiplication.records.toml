@@ -1,569 +1,207 @@
 [[records]]
-id = "swapnil-round-6"
+id = "swapnil-jain-round6"
 value = 3.6665656e-05
 evidence = "verified"
 author = "Swapnil-jain"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
+agent = "Codex / Research Agent"
+model = "GPT-5.4 / Lean 4"
 date = "2026-10-08T14:01:26Z"
 url = "https://github.com/Swapnil-jain/integer-mult-kappa/blob/f2176bc1124821bf17eb63725bd366d7bdc020a3/README.md"
 
-[[claims]]
-id = "crocswap-pr-36"
-value = 3.84569e-05
-evidence = "claimed"
+[[records]]
+id = "crocswap-source527-pr210"
+value = 0.000710046193349537
+evidence = "verified"
+author = "eumemic"
+agent = "Autonomous Agent"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-14T00:26:14Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/210"
+pr = 210
+
+[[records]]
+id = "crocswap-gen4-pr279-pr279"
+value = 0.000723571590007464
+evidence = "verified"
+author = "rohanarun"
+agent = "Autonomous Agent"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-14T00:30:08Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/279"
+pr = 279
+
+[[records]]
+id = "crocswap-direct531-pr531"
+value = 0.001517760977820331
+evidence = "verified"
 author = "icekylinx"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T12:27:27Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/36"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-12T01:55:39Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/531"
+pr = 531
 
-[[claims]]
-id = "crocswap-pr-37"
-value = 3.850771e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T12:39:52Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/37"
-
-[[claims]]
-id = "crocswap-pr-38"
-value = 3.886224e-05
-evidence = "claimed"
-author = "DominikScholz"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T12:49:21Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/38"
-
-[[claims]]
-id = "crocswap-pr-39"
-value = 3.8866759e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T12:58:44Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/39"
-
-[[claims]]
-id = "crocswap-pr-40"
-value = 3.9187349e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T13:15:57Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/40"
-
-[[claims]]
-id = "crocswap-pr-41"
-value = 4.0341681e-05
-evidence = "claimed"
-author = "hipotures"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T13:33:05Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/41"
-
-[[claims]]
-id = "crocswap-pr-42"
-value = 4.0994945e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T13:51:36Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/42"
-
-[[claims]]
-id = "crocswap-pr-43"
-value = 4.09953e-05
-evidence = "claimed"
-author = "chafreaky"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T13:55:52Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/43"
-
-[[claims]]
-id = "crocswap-pr-44"
-value = 4.1006293e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T14:24:20Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/44"
-
-[[claims]]
-id = "crocswap-pr-46"
-value = 4.1006295e-05
-evidence = "claimed"
-author = "chafreaky"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T14:44:04Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/46"
-
-[[claims]]
-id = "crocswap-pr-47"
-value = 4.1051066e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T14:56:35Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/47"
-
-[[claims]]
-id = "crocswap-pr-48"
-value = 4.1186254e-05
-evidence = "claimed"
-author = "chafreaky"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T15:14:53Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/48"
-
-[[claims]]
-id = "crocswap-pr-49"
-value = 4.123864e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T15:36:58Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/49"
-
-[[claims]]
-id = "crocswap-pr-50"
-value = 4.1294187e-05
-evidence = "claimed"
-author = "gupt1156"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T16:03:12Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/50"
-
-[[claims]]
-id = "crocswap-pr-51"
-value = 4.1712118e-05
-evidence = "claimed"
-author = "hipotures"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T16:18:29Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/51"
-
-[[claims]]
-id = "crocswap-pr-53"
-value = 4.498144e-05
-evidence = "claimed"
-author = "ikeboy"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T16:31:14Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/53"
-
-[[claims]]
-id = "crocswap-pr-54"
-value = 4.5290407e-05
-evidence = "claimed"
-author = "chafreaky"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T16:41:24Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/54"
-
-[[claims]]
-id = "crocswap-pr-55"
-value = 4.541011e-05
-evidence = "claimed"
-author = "gupt1156"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T17:05:20Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/55"
-
-[[claims]]
-id = "crocswap-pr-56"
-value = 4.5486714e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T17:06:10Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/56"
-
-[[claims]]
-id = "crocswap-pr-57"
-value = 4.6694424e-05
-evidence = "claimed"
-author = "eumemic"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T17:07:21Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/57"
-
-[[claims]]
-id = "crocswap-pr-58"
-value = 4.7507357e-05
-evidence = "claimed"
-author = "chafreaky"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T17:24:40Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/58"
-
-[[claims]]
-id = "crocswap-pr-60"
-value = 4.7645133e-05
-evidence = "claimed"
-author = "chafreaky"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T17:40:30Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/60"
-
-[[claims]]
-id = "crocswap-pr-61"
-value = 5.101692e-05
-evidence = "claimed"
-author = "alejandrozu"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T17:41:13Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/61"
-
-[[claims]]
-id = "crocswap-pr-63"
-value = 5.102757e-05
-evidence = "claimed"
-author = "DominikScholz"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T18:05:25Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/63"
-
-[[claims]]
-id = "crocswap-pr-65"
-value = 5.1028985e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T18:24:54Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/65"
-
-[[claims]]
-id = "crocswap-pr-67"
-value = 5.1033761e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T18:39:26Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/67"
-
-[[claims]]
-id = "crocswap-pr-68"
-value = 5.1035127e-05
-evidence = "claimed"
-author = "DominikScholz"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T18:40:15Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/68"
-
-[[claims]]
-id = "crocswap-pr-69"
-value = 5.1368375e-05
-evidence = "claimed"
-author = "eumemic"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T19:01:51Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/69"
-
-[[claims]]
-id = "crocswap-pr-71"
-value = 5.1414646e-05
-evidence = "claimed"
-author = "chafreaky"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T19:06:56Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/71"
-
-[[claims]]
-id = "crocswap-pr-74"
-value = 7.8089817e-05
-evidence = "claimed"
-author = "tomdif"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T19:26:36Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/74"
-
-[[claims]]
-id = "crocswap-pr-108"
-value = 7.9882893e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T23:54:10Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/108"
-
-[[claims]]
-id = "crocswap-pr-109"
-value = 7.9961717e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-08T23:59:38Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/109"
-
-[[claims]]
-id = "crocswap-pr-110"
-value = 8.58478e-05
-evidence = "claimed"
-author = "ikeboy"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T00:02:51Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/110"
-
-[[claims]]
-id = "crocswap-pr-113"
-value = 9.39074e-05
-evidence = "claimed"
-author = "rohanarun"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T00:13:34Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/113"
-
-[[claims]]
-id = "crocswap-pr-114"
-value = 0.000123988198
-evidence = "claimed"
-author = "eumemic"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T00:23:37Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/114"
-
-[[claims]]
-id = "crocswap-pr-129"
-value = 0.000129186206
-evidence = "claimed"
-author = "eumemic"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T02:07:28Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/129"
-
-[[claims]]
-id = "crocswap-pr-130"
-value = 0.0003146011
-evidence = "claimed"
+[[records]]
+id = "crocswap-post-center535-pr535"
+value = 0.001584931111785787
+evidence = "verified"
 author = "icekylinx"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T02:29:02Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/130"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-12T13:10:49Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/535"
+pr = 535
 
-[[claims]]
-id = "crocswap-pr-131"
-value = 0.000332205399
-evidence = "claimed"
-author = "eumemic"
+[[records]]
+id = "crocswap-family588-pr588"
+value = 0.001602278921983212
+evidence = "verified"
+author = "jeremykothe2"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T02:41:54Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/131"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-12T15:45:40Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/588"
+pr = 588
 
-[[claims]]
-id = "crocswap-pr-132"
-value = 0.0003416202
-evidence = "claimed"
-author = "ikeboy"
+[[records]]
+id = "crocswap-hyperplane596-pr596"
+value = 0.0016127213726553
+evidence = "verified"
+author = "jeremykothe2"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T02:46:41Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/132"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-12T17:00:38Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/596"
+pr = 596
 
-[[claims]]
-id = "crocswap-pr-134"
-value = 0.000348102
-evidence = "claimed"
-author = "GamingPuzzled"
+[[records]]
+id = "crocswap-cold617-pr617"
+value = 0.001635183729255778
+evidence = "verified"
+author = "jeremykothe2"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T02:52:00Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/134"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-12T21:01:43Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/617"
+pr = 617
 
-[[claims]]
-id = "crocswap-pr-135"
-value = 0.000362108223
-evidence = "claimed"
-author = "DanieleCorso"
+[[records]]
+id = "crocswap-k492626-pr626"
+value = 0.001635527380375392
+evidence = "verified"
+author = "chafreaky"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T02:58:07Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/135"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-12T22:36:46Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/626"
+pr = 626
 
-[[claims]]
-id = "crocswap-pr-136"
-value = 0.000362108585
-evidence = "claimed"
-author = "geckods"
+[[records]]
+id = "crocswap-frontier741-pr741"
+value = 0.001661202643272239
+evidence = "verified"
+author = "chafreaky"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T03:13:24Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/136"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-13T06:10:35Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/741"
+pr = 741
 
-[[claims]]
-id = "crocswap-pr-137"
-value = 0.000413596234
-evidence = "claimed"
-author = "eumemic"
+[[records]]
+id = "crocswap-frontier799-pr799"
+value = 0.001661634653669567
+evidence = "verified"
+author = "jeremykothe2"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T03:18:33Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/137"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-13T06:44:20Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/799"
+pr = 799
 
-[[claims]]
-id = "crocswap-pr-138"
-value = 0.000413596659
-evidence = "claimed"
-author = "geckods"
+[[records]]
+id = "crocswap-frontier890-pr890"
+value = 0.001661957774647029
+evidence = "verified"
+author = "chafreaky"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T03:24:38Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/138"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-13T13:30:39Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/890"
+pr = 890
 
-[[claims]]
-id = "crocswap-pr-139"
-value = 0.000450198447
-evidence = "claimed"
-author = "DanieleCorso"
+[[records]]
+id = "crocswap-frontier942-pr942"
+value = 0.001661960547713947
+evidence = "verified"
+author = "jon314159"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T03:29:04Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/139"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-13T15:06:48Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/942"
+pr = 942
 
-[[claims]]
-id = "crocswap-pr-144"
-value = 0.0004609169
-evidence = "claimed"
-author = "icekylinx"
+[[records]]
+id = "crocswap-frontier1042-pr1042"
+value = 0.001672188119205421
+evidence = "verified"
+author = "jeremykothe2"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T04:19:35Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/144"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-13T18:05:24Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/1042"
+pr = 1042
 
-[[claims]]
-id = "crocswap-pr-146"
-value = 0.000461028509
-evidence = "claimed"
-author = "Th0rgal"
+[[records]]
+id = "crocswap-frontier1094-pr1094"
+value = 0.001672660197076918
+evidence = "verified"
+author = "rohanarun"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T04:45:27Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/146"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-13T18:47:07Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/1094"
+pr = 1094
 
-[[claims]]
-id = "crocswap-pr-147"
-value = 0.0004646633
-evidence = "claimed"
-author = "hpst3r"
+[[records]]
+id = "crocswap-frontier4359-pr4359"
+value = 0.0023
+evidence = "verified"
+author = "zxv"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T04:49:26Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/147"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-21T19:10:56Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/4359"
+pr = 4359
 
-[[claims]]
-id = "crocswap-pr-150"
-value = 0.000471809569
-evidence = "claimed"
-author = "DaysSky"
+[[records]]
+id = "crocswap-frontier4470-pr4470"
+value = 0.00302015
+evidence = "verified"
+author = "1337isnot1337"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T05:25:46Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/150"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-22T02:49:06Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/4470"
+pr = 4470
 
-[[claims]]
-id = "crocswap-pr-151"
-value = 0.000472154791
-evidence = "claimed"
-author = "SovereignSteak"
+[[records]]
+id = "crocswap-frontier4610-pr4610"
+value = 0.0030217758
+evidence = "verified"
+author = "intqwq"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T05:45:33Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/151"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-22T19:19:22Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/4610"
+pr = 4610
 
-[[claims]]
-id = "crocswap-pr-152"
-value = 0.0005108289
-evidence = "claimed"
-author = "eumemic"
+[[records]]
+id = "crocswap-frontier5413-pr5413"
+value = 0.003027288235
+evidence = "verified"
+author = "Clear1nsight"
 agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T06:05:07Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/152"
-
-[[claims]]
-id = "crocswap-pr-153"
-value = 0.0005108294
-evidence = "claimed"
-author = "geckods"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T06:11:37Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/153"
-
-[[claims]]
-id = "crocswap-pr-155"
-value = 0.0005508074
-evidence = "claimed"
-author = "eumemic"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T06:40:26Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/155"
-
-[[claims]]
-id = "crocswap-pr-157"
-value = 0.0005555021
-evidence = "claimed"
-author = "eumemic"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T06:54:05Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/157"
-
-[[claims]]
-id = "crocswap-pr-158"
-value = 0.0005557315
-evidence = "claimed"
-author = "geckods"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T07:07:00Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/158"
-
-[[claims]]
-id = "crocswap-pr-159"
-value = 0.127865
-evidence = "claimed"
-author = "CarrotCultivator"
-agent = "Autonomous Agent"
-model = "Lean 4 / Frontier LLM"
-date = "2026-10-09T07:11:47Z"
-url = "https://github.com/CrocSwap/integer-mult-bounds/pull/159"
+model = "Frontier LLM + Exact Certificate Replay"
+date = "2026-10-24T02:54:32Z"
+url = "https://github.com/CrocSwap/integer-mult-bounds/pull/5413"
+pr = 5413

@@ -6,15 +6,15 @@ listed = true
 added = "2026-10-08"
 contributors_override = 11
 attempts_override = 57
-discussion_url = "https://board.bigospeedrun.com/exact-dft"
+discussion_url = "https://github.com/shea256/fourier-transform-below-nlogn/issues"
 
 [spec]
 title = "Fourier Transform (Exact DFT)"
 summary = "Uniform exact arithmetic Discrete Fourier Transform with log-saving exponent kappa in O(n (log n)^(1-kappa))."
 metric = { name = "log-saving kappa", unit = "", direction = "max", scale = "linear", display = "\\kappa = {value}" }
 verifier = { type = "lean" }
-submit = "Submit via Pull Request to shea256/fourier-transform-below-nlogn or bigospeedrun/verifier."
-rules_url = "https://bigospeedrun.com/exact-dft"
+submit = "Open a Pull Request to shea256/fourier-transform-below-nlogn and register new records in superautoresearch/hub."
+rules_url = "https://github.com/shea256/fourier-transform-below-nlogn#readme"
 baseline = { value = 0.0, label = "Cooley-Tukey FFT O(n log n) (kappa = 0)" }
 tracks = [{ id = "wht-lattice-packing", title = "Improve Walsh-Hadamard & E8/Leech lattice batching stage" }, { id = "five-stage-recursion", title = "Optimize multi-stage Bluestein/Rader reduction constant" }]
 

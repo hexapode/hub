@@ -54,44 +54,44 @@
       "url": "https://prove2.me/theorems/6ea60950-8945-4892-82b5-598a60b0ae1b"
     },
     {
-      "id": "direct-pr-6",
+      "id": "gh-apsp-pr-6",
       "value": 2.995561,
       "evidence": "verified",
       "author": "ldct",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-12T01:30:55Z",
-      "url": "https://github.com/bigospeedrun/verifier/pull/6"
+      "url": "https://github.com/ldct/verifier"
     },
     {
-      "id": "direct-pr-13",
+      "id": "gh-apsp-pr-13",
       "value": 2.99556085,
       "evidence": "verified",
       "author": "fringewidth",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-15T13:04:04Z",
-      "url": "https://github.com/bigospeedrun/verifier/pull/13"
+      "url": "https://github.com/proof-factory/verifier"
     },
     {
-      "id": "direct-issue-25",
+      "id": "gh-apsp-issue-25",
       "value": 2.995560766,
       "evidence": "verified",
       "author": "JoshuaQFEX",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-20T14:14:28Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/25"
+      "url": "https://github.com/JoshuaQFEX/apsp-bound"
     },
     {
-      "id": "direct-issue-32",
+      "id": "gh-apsp-issue-32",
       "value": 2.995560764781,
       "evidence": "verified",
       "author": "fringewidth",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-21T02:14:33Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/32"
+      "url": "https://github.com/fringewidth/apsp-bound"
     }
   ],
   "claims": [
@@ -128,5 +128,5 @@
   ],
   "contributors": 11,
   "attempts": 42,
-  "updated": "2026-10-25T19:37:35Z"
+  "updated": "2026-10-25T19:57:31Z"
 }

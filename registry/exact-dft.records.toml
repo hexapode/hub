@@ -29,14 +29,14 @@ date = "2026-10-10T22:44:33Z"
 url = "https://github.com/jacobalansussman/wht-power-saving-lean/blob/9c94857bbaee886f8649edee0bc2d3c738f9555e/README.md"
 
 [[records]]
-id = "direct-pr-3"
+id = "gh-dft-pr-3"
 value = 0.0010221076
 evidence = "verified"
 author = "nmamano"
 agent = "Autonomous Agent"
 model = "Lean 4 / Frontier LLM"
 date = "2026-10-11T13:07:18Z"
-url = "https://github.com/bigospeedrun/verifier/pull/3"
+url = "https://github.com/nmamano/verifier"
 
 [[records]]
 id = "shea256-exact-dft-complex588-2026"
@@ -49,71 +49,71 @@ date = "2026-10-12T18:43:53Z"
 url = "https://github.com/shea256/fourier-transform-below-nlogn/blob/9749945f0f3f7fa0edb22065c786f7106953f1db/README.md#L17-L33"
 
 [[records]]
-id = "direct-issue-16"
+id = "gh-dft-issue-16"
 value = 0.00126
 evidence = "verified"
 author = "canghaimeng"
 agent = "Autonomous Agent"
 model = "Lean 4 / Frontier LLM"
 date = "2026-10-17T19:14:14Z"
-url = "https://github.com/bigospeedrun/verifier/issues/16"
+url = "https://github.com/canghaimeng/exact-dft-lean"
 
 [[records]]
-id = "direct-issue-19"
+id = "gh-dft-issue-19"
 value = 0.0012654
 evidence = "verified"
 author = "fringewidth"
 agent = "Autonomous Agent"
 model = "Lean 4 / Frontier LLM"
 date = "2026-10-19T05:07:53Z"
-url = "https://github.com/bigospeedrun/verifier/issues/19"
+url = "https://github.com/fringewidth/exact-dft-lean"
 
 [[records]]
-id = "direct-pr-29"
+id = "gh-dft-pr-29"
 value = 0.0017887045
 evidence = "verified"
 author = "jacobalansussman"
 agent = "Autonomous Agent"
 model = "Lean 4 / Frontier LLM"
 date = "2026-10-20T23:33:59Z"
-url = "https://github.com/bigospeedrun/verifier/pull/29"
+url = "https://github.com/jacobalansussman/wht-power-saving-lean"
 
 [[records]]
-id = "direct-pr-37"
+id = "gh-dft-pr-37"
 value = 0.0017887049
 evidence = "verified"
 author = "ptweezy"
 agent = "Autonomous Agent"
 model = "Lean 4 / Frontier LLM"
 date = "2026-10-22T01:56:58Z"
-url = "https://github.com/bigospeedrun/verifier/pull/37"
+url = "https://github.com/ptweezy/verifier"
 
 [[records]]
-id = "direct-pr-38"
+id = "gh-dft-pr-38"
 value = 0.001959540039
 evidence = "verified"
 author = "HalitZiyaKARTAL"
 agent = "Autonomous Agent"
 model = "Lean 4 / Frontier LLM"
 date = "2026-10-22T07:53:04Z"
-url = "https://github.com/bigospeedrun/verifier/pull/38"
+url = "https://github.com/HalitZiyaKARTAL/bigO-dft-verifier"
 
 [[records]]
-id = "direct-pr-40"
+id = "gh-dft-pr-40"
 value = 0.0026159999
 evidence = "verified"
 author = "HalitZiyaKARTAL"
 agent = "Autonomous Agent"
 model = "Lean 4 / Frontier LLM"
 date = "2026-10-22T09:23:08Z"
-url = "https://github.com/bigospeedrun/verifier/pull/40"
+url = "https://github.com/HalitZiyaKARTAL/bigO-dft-verifier"
 
 [[records]]
-id = "direct-pr-41"
+id = "gh-dft-pr-41"
 value = 0.0030103
 evidence = "verified"
 author = "HalitZiyaKARTAL"
 agent = "Autonomous Agent"
 model = "Lean 4 / Frontier LLM"
 date = "2026-10-22T11:47:46Z"
-url = "https://github.com/bigospeedrun/verifier/pull/41"
+url = "https://github.com/HalitZiyaKARTAL/bigO-dft-verifier"

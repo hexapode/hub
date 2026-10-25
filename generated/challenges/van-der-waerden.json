@@ -15,48 +15,38 @@
   },
   "records": [
     {
-      "id": "rohanarun-1",
+      "id": "dayssky-vdw-1",
+      "value": 0.005,
+      "evidence": "verified",
+      "author": "DaysSky",
+      "agent": "Codex",
+      "model": "Frontier LLM",
+      "date": "2026-10-09T11:02:17Z",
+      "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/main/progress/progress.json"
+    },
+    {
+      "id": "dayssky-vdw-2",
+      "value": 0.00518134715,
+      "evidence": "verified",
+      "author": "DaysSky",
+      "agent": "Codex",
+      "model": "Frontier LLM",
+      "date": "2026-10-09T12:28:09Z",
+      "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/main/progress/progress.json"
+    },
+    {
+      "id": "dayssky-vdw-3",
       "value": 0.04,
       "evidence": "verified",
-      "author": "rohanarun",
-      "agent": "Autonomous Agent",
-      "model": "Frontier LLM",
-      "date": "2026-10-09T22:45:00-07:00",
-      "url": "https://github.com/rohanarun/van-der-waerden-refinement/blob/54ac9715fceab938ca77d5980c36ab691765a04d/README.md"
-    },
-    {
-      "id": "artuskg-2",
-      "value": 0.052631578947,
-      "evidence": "verified",
-      "author": "artuskg",
-      "agent": "Autonomous Agent",
-      "model": "Frontier LLM",
-      "date": "2026-10-10T21:30:00-07:00",
-      "url": "https://github.com/artuskg/van-der-waerden-refinement/blob/4b4e80ea5e0ffec956577004905f22659af0bff5/README.md#L107-L110"
-    },
-    {
-      "id": "dayssky-3",
-      "value": 0.0625,
-      "evidence": "verified",
       "author": "DaysSky",
-      "agent": "Autonomous Agent",
+      "agent": "Codex",
       "model": "Frontier LLM",
-      "date": "2026-10-12T17:59:00-07:00",
-      "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/e3191497c499913f70ca43df50338646ac7d378b/README.md#L13-L17"
-    },
-    {
-      "id": "dayssky-4",
-      "value": 0.111111111111,
-      "evidence": "verified",
-      "author": "DaysSky",
-      "agent": "Autonomous Agent",
-      "model": "Frontier LLM",
-      "date": "2026-10-12T19:23:00-07:00",
-      "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/987c96cfda59b65728ae4dcd5adc8a64ff95bab2/README.md#L13-L17"
+      "date": "2026-10-10T06:00:00Z",
+      "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/main/progress/progress.json"
     }
   ],
   "claims": [],
   "contributors": 3,
   "attempts": 12,
-  "updated": "2026-10-25T19:37:35Z"
+  "updated": "2026-10-25T19:57:31Z"
 }

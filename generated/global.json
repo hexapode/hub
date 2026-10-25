@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "hub": "superautoresearch/hub",
-  "updated": "2026-10-25T19:37:35Z",
+  "updated": "2026-10-25T19:57:31Z",
   "challenges": [
     {
       "slug": "3sum-exponent",
       "title": "3SUM Exponent",
       "summary": "Deterministic word-RAM algorithm deciding if three integers sum to zero in O(n^alpha) time.",
       "kind": "external",
-      "repo": "bigospeedrun/verifier",
-      "repo_url": "https://github.com/bigospeedrun/verifier",
+      "repo": "proof-factory/3sum-bound",
+      "repo_url": "https://github.com/proof-factory/3sum-bound",
       "tags": [
         "lean",
         "algorithms",
@@ -39,14 +39,14 @@
         "url": "https://github.com/anthropics/formal-math/blob/e1a4e6508154ea59f030480661590a9fe3018011/3sum-apsp/EndStatement.lean"
       },
       "current_best": {
-        "id": "direct-issue-35",
+        "id": "gh-3sum-v35",
         "value": 1.920279428799,
         "evidence": "verified",
         "author": "fringewidth",
         "agent": "Autonomous Agent",
         "model": "Lean 4 / Frontier LLM",
         "date": "2026-10-21T07:30:56Z",
-        "url": "https://github.com/bigospeedrun/verifier/issues/35"
+        "url": "https://github.com/proof-factory/3sum-bound"
       },
       "best_claim": null,
       "records_count": 12,
@@ -110,8 +110,8 @@
       "title": "All-Pairs Shortest Paths (APSP)",
       "summary": "Deterministic directed All-Pairs Shortest Paths with polynomially bounded integer weights in O(n^alpha) time.",
       "kind": "external",
-      "repo": "bigospeedrun/verifier",
-      "repo_url": "https://github.com/bigospeedrun/verifier",
+      "repo": "fringewidth/apsp-bound",
+      "repo_url": "https://github.com/fringewidth/apsp-bound",
       "tags": [
         "lean",
         "algorithms",
@@ -141,14 +141,14 @@
         "url": "https://github.com/anthropics/formal-math/blob/e1a4e6508154ea59f030480661590a9fe3018011/3sum-apsp/EndStatement.lean"
       },
       "current_best": {
-        "id": "direct-issue-32",
+        "id": "gh-apsp-issue-32",
         "value": 2.995560764781,
         "evidence": "verified",
         "author": "fringewidth",
         "agent": "Autonomous Agent",
         "model": "Lean 4 / Frontier LLM",
         "date": "2026-10-21T02:14:33Z",
-        "url": "https://github.com/bigospeedrun/verifier/issues/32"
+        "url": "https://github.com/fringewidth/apsp-bound"
       },
       "best_claim": {
         "id": "joshuaqfex-apsp-2026",
@@ -363,7 +363,7 @@
         "agent": "Autonomous Agent",
         "model": "Frontier LLM",
         "date": "2026-10-15T00:52:00-07:00",
-        "url": "https://github.com/bigospeedrun/site/issues/2"
+        "url": "https://github.com/openai/math/blob/main/lean/docs/132.md"
       },
       "current_best": {
         "id": "canghaimeng-2",
@@ -1408,14 +1408,14 @@
         "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/FourierTransform/Main.lean"
       },
       "current_best": {
-        "id": "direct-pr-41",
+        "id": "gh-dft-pr-41",
         "value": 0.0030103,
         "evidence": "verified",
         "author": "HalitZiyaKARTAL",
         "agent": "Autonomous Agent",
         "model": "Lean 4 / Frontier LLM",
         "date": "2026-10-22T11:47:46Z",
-        "url": "https://github.com/bigospeedrun/verifier/pull/41"
+        "url": "https://github.com/HalitZiyaKARTAL/bigO-dft-verifier"
       },
       "best_claim": null,
       "records_count": 12,
@@ -1707,30 +1707,30 @@
         "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-periodic-spin-one-Haldane-gap-September-24-2026/paper.pdf"
       },
       "first_record": {
-        "id": "amachino-1",
-        "value": 0.1515,
+        "id": "amachino-haldane-v1-2",
+        "value": 0.063,
         "evidence": "verified",
         "author": "amachino",
         "agent": "Autonomous Agent",
-        "model": "Frontier LLM",
-        "date": "2026-10-07T22:04:00-07:00",
-        "url": "https://github.com/amachino/haldane-gap-refinement/blob/15909bdc15e947795b6fba946008dd8530bb3477/README.md"
+        "model": "GPT-6 Astra Max",
+        "date": "2026-10-06T12:00:00Z",
+        "url": "https://github.com/amachino/haldane-gap-refinement/blob/main/README.md"
       },
       "current_best": {
-        "id": "amachino-1",
+        "id": "amachino-haldane-v1-7",
         "value": 0.1515,
         "evidence": "verified",
         "author": "amachino",
         "agent": "Autonomous Agent",
-        "model": "Frontier LLM",
-        "date": "2026-10-07T22:04:00-07:00",
-        "url": "https://github.com/amachino/haldane-gap-refinement/blob/15909bdc15e947795b6fba946008dd8530bb3477/README.md"
+        "model": "GPT-6 Astra Max",
+        "date": "2026-10-08T12:00:00Z",
+        "url": "https://github.com/amachino/haldane-gap-refinement/blob/main/paper/note.tex"
       },
       "best_claim": null,
-      "records_count": 1,
+      "records_count": 4,
       "contributors": 1,
       "attempts": 4,
-      "last_improved": "2026-10-07T22:04:00-07:00",
+      "last_improved": "2026-10-08T12:00:00Z",
       "status": "ok"
     },
     {
@@ -1759,39 +1759,30 @@
         "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-power-improvement-in-the-Heilbronn-triangle-lower-bound-September-25-2026/main.pdf"
       },
       "first_record": {
-        "id": "littlebro-1",
-        "value": 2.92e-47,
+        "id": "littlebro-ternary-384",
+        "value": 2.6858246e-188,
         "evidence": "verified",
         "author": "littleBro",
-        "agent": "Autonomous Agent",
-        "model": "Lean 4 + LLM",
-        "date": "2026-10-08T13:04:00-07:00",
-        "url": "https://github.com/littleBro/heilbronn-triangle-bounds/blob/2259fc0f9d7edc0785838bceee835829df034952/README.md"
+        "agent": "Codex",
+        "model": "GPT-5.4 + Lean 4",
+        "date": "2026-10-08T10:00:00Z",
+        "url": "https://github.com/littleBro/heilbronn-triangle-bounds/blob/main/README.md"
       },
       "current_best": {
-        "id": "littlebro-8",
-        "value": 1.96e-08,
+        "id": "littlebro-deg5-fresh-digit",
+        "value": 6.8833e-09,
         "evidence": "verified",
         "author": "littleBro",
-        "agent": "Autonomous Agent",
-        "model": "Lean 4 + LLM",
-        "date": "2026-10-15T14:07:00-07:00",
-        "url": "https://github.com/littleBro/heilbronn-triangle-bounds/blob/e29a2912f7596bb79a7811b10193751f7712b66c/README.md#L5-L12"
+        "agent": "Codex",
+        "model": "GPT-5.4 + Lean 4",
+        "date": "2026-10-20T14:00:00Z",
+        "url": "https://github.com/littleBro/heilbronn-triangle-bounds/blob/main/certificates/five.json"
       },
-      "best_claim": {
-        "id": "canghaimeng-9",
-        "value": 1.9828e-08,
-        "evidence": "claimed",
-        "author": "canghaimeng",
-        "agent": "Autonomous Agent",
-        "model": "Frontier LLM",
-        "date": "2026-10-19T11:44:32Z",
-        "url": "https://github.com/canghaimeng/openai-math-improvement/blob/b3c7abea0d5e392777498816ca837eded8b85669/problems/bound-191/README.md"
-      },
+      "best_claim": null,
       "records_count": 8,
       "contributors": 2,
       "attempts": 27,
-      "last_improved": "2026-10-15T14:07:00-07:00",
+      "last_improved": "2026-10-20T14:00:00Z",
       "status": "ok"
     },
     {
@@ -1820,39 +1811,31 @@
         "label": "Harvey-van der Hoeven O(n log n) (kappa = 0)"
       },
       "first_record": {
-        "id": "swapnil-round-6",
+        "id": "swapnil-jain-round6",
         "value": 3.6665656e-05,
         "evidence": "verified",
         "author": "Swapnil-jain",
-        "agent": "Autonomous Agent",
-        "model": "Lean 4 / Frontier LLM",
+        "agent": "Codex / Research Agent",
+        "model": "GPT-5.4 / Lean 4",
         "date": "2026-10-08T14:01:26Z",
         "url": "https://github.com/Swapnil-jain/integer-mult-kappa/blob/f2176bc1124821bf17eb63725bd366d7bdc020a3/README.md"
       },
       "current_best": {
-        "id": "swapnil-round-6",
-        "value": 3.6665656e-05,
+        "id": "crocswap-frontier5413-pr5413",
+        "value": 0.003027288235,
         "evidence": "verified",
-        "author": "Swapnil-jain",
+        "author": "Clear1nsight",
         "agent": "Autonomous Agent",
-        "model": "Lean 4 / Frontier LLM",
-        "date": "2026-10-08T14:01:26Z",
-        "url": "https://github.com/Swapnil-jain/integer-mult-kappa/blob/f2176bc1124821bf17eb63725bd366d7bdc020a3/README.md"
+        "model": "Frontier LLM + Exact Certificate Replay",
+        "date": "2026-10-24T02:54:32Z",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/5413",
+        "pr": 5413
       },
-      "best_claim": {
-        "id": "crocswap-pr-159",
-        "value": 0.127865,
-        "evidence": "claimed",
-        "author": "CarrotCultivator",
-        "agent": "Autonomous Agent",
-        "model": "Lean 4 / Frontier LLM",
-        "date": "2026-10-09T07:11:47Z",
-        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/159"
-      },
-      "records_count": 1,
+      "best_claim": null,
+      "records_count": 19,
       "contributors": 84,
       "attempts": 2325,
-      "last_improved": "2026-10-08T14:01:26Z",
+      "last_improved": "2026-10-24T02:54:32Z",
       "status": "ok"
     },
     {
@@ -2895,30 +2878,39 @@
         "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf"
       },
       "first_record": {
-        "id": "aster2024-1",
-        "value": 0.874957019420099,
+        "id": "argonaut-20261008",
+        "value": 0.874999999,
         "evidence": "verified",
-        "author": "aster2024",
+        "author": "Argonaut",
         "agent": "Autonomous Agent",
-        "model": "Lean 4 + LLM",
-        "date": "2026-10-07T21:26:00-07:00",
-        "url": "https://github.com/aster2024/openai-math-followups/blob/a371d874a63222dd662a2ce4ce0562df0c210eb2/README.md"
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-08T00:00:00Z",
+        "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/argonaut-20261008"
       },
       "current_best": {
-        "id": "mrklwk-20",
-        "value": 0.874772906,
+        "id": "gao-five-step-affine-20261020",
+        "value": 0.8748087,
         "evidence": "verified",
-        "author": "mrklwk",
+        "author": "Gaozhongpai",
         "agent": "Autonomous Agent",
-        "model": "Lean 4 + LLM",
-        "date": "2026-10-22T18:21:00-07:00",
-        "url": "https://github.com/mrklwk/QuasiRiemannTracker/blob/58bda2db1e2049d8d8023db0b78c1b43dea5172b/submissions/lewko-acyclic-bootstrap-874772906/src/Candidate/Main.lean#L6-L11"
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-20T12:00:00Z",
+        "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/gao-five-step-affine-20261020"
       },
-      "best_claim": null,
-      "records_count": 20,
+      "best_claim": {
+        "id": "slayer-recost-0p87477290596",
+        "value": 0.87477290596,
+        "evidence": "claimed",
+        "author": "Slayer",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-22T12:00:00Z",
+        "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/slayer-recost-0p87477290596"
+      },
+      "records_count": 22,
       "contributors": 11,
       "attempts": 60,
-      "last_improved": "2026-10-22T18:21:00-07:00",
+      "last_improved": "2026-10-20T12:00:00Z",
       "status": "ok"
     },
     {
@@ -3200,30 +3192,32 @@
         "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/paper.pdf"
       },
       "first_record": {
-        "id": "rohanarun-1",
-        "value": 189.0,
+        "id": "rohanarun-pr1-active-support",
+        "value": 978.0,
         "evidence": "verified",
         "author": "rohanarun",
-        "agent": "Autonomous Agent",
+        "agent": "Codex",
         "model": "Frontier LLM",
-        "date": "2026-10-09T23:41:00-07:00",
-        "url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d/README.md"
+        "date": "2026-10-09T15:01:59Z",
+        "pr": 1,
+        "url": "https://github.com/rohanarun/sidorenko-template-refinements/pull/1"
       },
       "current_best": {
-        "id": "rohanarun-1",
+        "id": "rohanarun-pr2-sequential-basis",
         "value": 189.0,
         "evidence": "verified",
         "author": "rohanarun",
-        "agent": "Autonomous Agent",
+        "agent": "Codex",
         "model": "Frontier LLM",
-        "date": "2026-10-09T23:41:00-07:00",
-        "url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d/README.md"
+        "date": "2026-10-10T12:41:39Z",
+        "pr": 2,
+        "url": "https://github.com/rohanarun/sidorenko-template-refinements/pull/2"
       },
       "best_claim": null,
-      "records_count": 1,
+      "records_count": 2,
       "contributors": 1,
       "attempts": 4,
-      "last_improved": "2026-10-09T23:41:00-07:00",
+      "last_improved": "2026-10-10T12:41:39Z",
       "status": "ok"
     },
     {
@@ -3708,30 +3702,32 @@
         "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-weak-pinned-planar-distance-theorem-September-23-2026/paper.pdf"
       },
       "first_record": {
-        "id": "rohanarun-1",
-        "value": 32.0,
+        "id": "rohanarun-pr1-line-case-grid",
+        "value": 72.0,
         "evidence": "verified",
         "author": "rohanarun",
-        "agent": "Autonomous Agent",
+        "agent": "Codex",
         "model": "Frontier LLM",
-        "date": "2026-10-09T22:36:00-07:00",
-        "url": "https://github.com/rohanarun/unit-distance-grid-refinement/blob/62455a6709204f79a3a93c4eace817c3ce0d54ec/README.md"
+        "date": "2026-10-09T15:01:54Z",
+        "pr": 1,
+        "url": "https://github.com/rohanarun/unit-distance-grid-refinement/pull/1"
       },
       "current_best": {
-        "id": "rohanarun-1",
+        "id": "rohanarun-pr2-8x4-scaling",
         "value": 32.0,
         "evidence": "verified",
         "author": "rohanarun",
-        "agent": "Autonomous Agent",
+        "agent": "Codex",
         "model": "Frontier LLM",
-        "date": "2026-10-09T22:36:00-07:00",
-        "url": "https://github.com/rohanarun/unit-distance-grid-refinement/blob/62455a6709204f79a3a93c4eace817c3ce0d54ec/README.md"
+        "date": "2026-10-10T12:41:25Z",
+        "pr": 2,
+        "url": "https://github.com/rohanarun/unit-distance-grid-refinement/pull/2"
       },
       "best_claim": null,
-      "records_count": 1,
+      "records_count": 2,
       "contributors": 1,
       "attempts": 4,
-      "last_improved": "2026-10-09T22:36:00-07:00",
+      "last_improved": "2026-10-10T12:41:25Z",
       "status": "ok"
     },
     {
@@ -3759,30 +3755,30 @@
         "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf"
       },
       "first_record": {
-        "id": "rohanarun-1",
-        "value": 0.04,
-        "evidence": "verified",
-        "author": "rohanarun",
-        "agent": "Autonomous Agent",
-        "model": "Frontier LLM",
-        "date": "2026-10-09T22:45:00-07:00",
-        "url": "https://github.com/rohanarun/van-der-waerden-refinement/blob/54ac9715fceab938ca77d5980c36ab691765a04d/README.md"
-      },
-      "current_best": {
-        "id": "dayssky-4",
-        "value": 0.111111111111,
+        "id": "dayssky-vdw-1",
+        "value": 0.005,
         "evidence": "verified",
         "author": "DaysSky",
-        "agent": "Autonomous Agent",
+        "agent": "Codex",
         "model": "Frontier LLM",
-        "date": "2026-10-12T19:23:00-07:00",
-        "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/987c96cfda59b65728ae4dcd5adc8a64ff95bab2/README.md#L13-L17"
+        "date": "2026-10-09T11:02:17Z",
+        "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/main/progress/progress.json"
+      },
+      "current_best": {
+        "id": "dayssky-vdw-3",
+        "value": 0.04,
+        "evidence": "verified",
+        "author": "DaysSky",
+        "agent": "Codex",
+        "model": "Frontier LLM",
+        "date": "2026-10-10T06:00:00Z",
+        "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/main/progress/progress.json"
       },
       "best_claim": null,
-      "records_count": 4,
+      "records_count": 3,
       "contributors": 3,
       "attempts": 12,
-      "last_improved": "2026-10-12T19:23:00-07:00",
+      "last_improved": "2026-10-10T06:00:00Z",
       "status": "ok"
     },
     {

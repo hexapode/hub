@@ -1,216 +1,26 @@
 {
   "schema": 1,
-  "checked_at": "2026-10-25T19:37:35Z",
+  "checked_at": "2026-10-25T19:57:31Z",
   "total_challenges": 74,
   "ok_count": 74,
   "challenges": [
     {
-      "slug": "3sum-exponent",
-      "title": "3SUM Exponent",
-      "source": "bigospeedrun/site:src/data/3sum.json",
-      "verified_records": 12,
-      "open_claims": 0,
-      "frontier_best": 1.920279428799,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "apsp-exponent",
-      "title": "All-Pairs Shortest Paths (APSP)",
-      "source": "bigospeedrun/site:src/data/apsp.json",
-      "verified_records": 8,
-      "open_claims": 3,
-      "frontier_best": 2.995560764781,
-      "best_claim": 2.992947918709,
-      "status": "ok"
-    },
-    {
-      "slug": "exact-dft",
-      "title": "Fourier Transform (Exact DFT)",
-      "source": "bigospeedrun/site:src/data/exact-dft.json",
-      "verified_records": 12,
-      "open_claims": 0,
-      "frontier_best": 0.0030103,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
       "slug": "integer-multiplication",
       "title": "Integer Multiplication",
-      "source": "bigospeedrun/site:src/data/integer-multiplication.json",
-      "verified_records": 1,
-      "open_claims": 56,
-      "frontier_best": 3.6665656e-05,
-      "best_claim": 0.127865,
-      "status": "ok"
-    },
-    {
-      "slug": "matrix-multiplication",
-      "title": "Matrix Multiplication Exponent",
-      "source": "bigospeedrun/site:src/data/matrix-multiplication.json",
-      "verified_records": 1,
+      "source": "CrocSwap/integer-mult-bounds",
+      "verified_records": 19,
       "open_claims": 0,
-      "frontier_best": 2.25,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "subset-sum",
-      "title": "Subset Sum (Randomized Word RAM)",
-      "source": "bigospeedrun/site:src/data/subset-sum.json",
-      "verified_records": 4,
-      "open_claims": 0,
-      "frontier_best": 0.4876723,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "directed-sssp",
-      "title": "Directed SSSP (Sparse Comparison-Addition)",
-      "source": "bigospeedrun/site:src/data/directed-sssp.json",
-      "verified_records": 1,
-      "open_claims": 0,
-      "frontier_best": 0.916666666667,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "quasi-riemann",
-      "title": "Quasi-Riemann hypothesis",
-      "source": "bigospeedrun/site:other-bounds#quasi-riemann",
-      "verified_records": 20,
-      "open_claims": 0,
-      "frontier_best": 0.874772906,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "catalan-constant",
-      "title": "Catalan\u2019s constant",
-      "source": "bigospeedrun/site:other-bounds#catalan",
-      "verified_records": 2,
-      "open_claims": 0,
-      "frontier_best": 590.0,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "primitive-roots",
-      "title": "Primitive-root primes",
-      "source": "bigospeedrun/site:other-bounds#primitive-roots",
-      "verified_records": 1,
-      "open_claims": 0,
-      "frontier_best": 1.0,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "matroid-prophet",
-      "title": "One-sample matroid prophet inequality",
-      "source": "bigospeedrun/site:other-bounds#matroid-prophet",
-      "verified_records": 7,
-      "open_claims": 0,
-      "frontier_best": 5.107488914317048e-10,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "contingency-tables",
-      "title": "Contingency-table sampling",
-      "source": "bigospeedrun/site:other-bounds#contingency-tables",
-      "verified_records": 1,
-      "open_claims": 0,
-      "frontier_best": 17.0,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "average-sensitivity",
-      "title": "Average sensitivity",
-      "source": "bigospeedrun/site:other-bounds#average-sensitivity",
-      "verified_records": 1,
-      "open_claims": 1,
-      "frontier_best": 3.762,
-      "best_claim": 3.192,
-      "status": "ok"
-    },
-    {
-      "slug": "block-sensitivity",
-      "title": "Block sensitivity separation",
-      "source": "bigospeedrun/site:other-bounds#block-sensitivity",
-      "verified_records": 2,
-      "open_claims": 0,
-      "frontier_best": 2.032085561497,
+      "frontier_best": 0.003027288235,
       "best_claim": null,
       "status": "ok"
     },
     {
       "slug": "van-der-waerden",
       "title": "Van der Waerden numbers",
-      "source": "bigospeedrun/site:other-bounds#van-der-waerden",
-      "verified_records": 4,
-      "open_claims": 0,
-      "frontier_best": 0.111111111111,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "sidorenko-counterexample",
-      "title": "Sidorenko counterexample",
-      "source": "bigospeedrun/site:other-bounds#sidorenko",
-      "verified_records": 1,
-      "open_claims": 0,
-      "frontier_best": 189.0,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "unit-distance-grid",
-      "title": "Unit-distance final grid",
-      "source": "bigospeedrun/site:other-bounds#unit-distance-grid",
-      "verified_records": 1,
-      "open_claims": 0,
-      "frontier_best": 32.0,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "snaky",
-      "title": "Snaky",
-      "source": "bigospeedrun/site:other-bounds#snaky",
-      "verified_records": 2,
-      "open_claims": 0,
-      "frontier_best": 19.0,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "ordered-matrix-removal",
-      "title": "Ordered matrix removal",
-      "source": "bigospeedrun/site:other-bounds#ordered-matrix-removal",
+      "source": "DaysSky/van-der-waerden-refinement",
       "verified_records": 3,
       "open_claims": 0,
-      "frontier_best": 9.0,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "heilbronn-triangle",
-      "title": "Heilbronn triangle",
-      "source": "bigospeedrun/site:other-bounds#heilbronn-triangle",
-      "verified_records": 8,
-      "open_claims": 1,
-      "frontier_best": 1.96e-08,
-      "best_claim": 1.9828e-08,
-      "status": "ok"
-    },
-    {
-      "slug": "haldane-gap",
-      "title": "Spin-one Haldane gap",
-      "source": "bigospeedrun/site:other-bounds#haldane-gap",
-      "verified_records": 1,
-      "open_claims": 0,
-      "frontier_best": 0.1515,
+      "frontier_best": 0.04,
       "best_claim": null,
       "status": "ok"
     },
@@ -715,6 +525,46 @@
       "status": "ok"
     },
     {
+      "slug": "3sum-exponent",
+      "title": "3SUM Exponent",
+      "source": "proof-factory/3sum-bound",
+      "verified_records": 12,
+      "open_claims": 0,
+      "frontier_best": 1.920279428799,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "apsp-exponent",
+      "title": "All-Pairs Shortest Paths (APSP)",
+      "source": "fringewidth/apsp-bound",
+      "verified_records": 8,
+      "open_claims": 1,
+      "frontier_best": 2.995560764781,
+      "best_claim": 2.992947918709,
+      "status": "ok"
+    },
+    {
+      "slug": "average-sensitivity",
+      "title": "Average sensitivity",
+      "source": "Anchen0823/average-sensitivity-lean",
+      "verified_records": 1,
+      "open_claims": 1,
+      "frontier_best": 3.762,
+      "best_claim": 3.192,
+      "status": "ok"
+    },
+    {
+      "slug": "block-sensitivity",
+      "title": "Block sensitivity separation",
+      "source": "canghaimeng/openai-math-improvement",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 2.032085561497,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
       "slug": "cap-set-dimension-7",
       "title": "Cap Set Lower Bound in AG(7, 3)",
       "source": "elena/cap-set-dimension-7",
@@ -722,6 +572,46 @@
       "open_claims": 1,
       "frontier_best": 536,
       "best_claim": 540,
+      "status": "ok"
+    },
+    {
+      "slug": "catalan-constant",
+      "title": "Catalan\u2019s constant",
+      "source": "slitsey/catalan-irrationality-measure",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 590.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "contingency-tables",
+      "title": "Contingency-table sampling",
+      "source": "EcoDataLab/contingency-tables",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 17.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "directed-sssp",
+      "title": "Directed SSSP (Sparse Comparison-Addition)",
+      "source": "spicylemonade/c-hd-proof",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 0.916666666667,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "exact-dft",
+      "title": "Fourier Transform (Exact DFT)",
+      "source": "shea256/fourier-transform-below-nlogn",
+      "verified_records": 12,
+      "open_claims": 0,
+      "frontier_best": 0.0030103,
+      "best_claim": null,
       "status": "ok"
     },
     {
@@ -735,12 +625,122 @@
       "status": "ok"
     },
     {
+      "slug": "haldane-gap",
+      "title": "Spin-one Haldane gap",
+      "source": "amachino/haldane-gap-refinement",
+      "verified_records": 4,
+      "open_claims": 0,
+      "frontier_best": 0.1515,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "heilbronn-triangle",
+      "title": "Heilbronn triangle",
+      "source": "littleBro/heilbronn-triangle-bounds",
+      "verified_records": 8,
+      "open_claims": 0,
+      "frontier_best": 6.8833e-09,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "matrix-multiplication",
+      "title": "Matrix Multiplication Exponent",
+      "source": "openai/math",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 2.25,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "matroid-prophet",
+      "title": "One-sample matroid prophet inequality",
+      "source": "shea256/matroid-prophet-inequality",
+      "verified_records": 7,
+      "open_claims": 0,
+      "frontier_best": 5.107488914317048e-10,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
       "slug": "nanogpt-speedrun",
       "title": "NanoGPT speedrun",
       "source": "KellerJordan/modded-nanogpt",
       "verified_records": 3,
       "open_claims": 0,
       "frontier_best": 3.04,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "ordered-matrix-removal",
+      "title": "Ordered matrix removal",
+      "source": "shea256/ordered-binary-matrix-removal",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 9.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "primitive-roots",
+      "title": "Primitive-root primes",
+      "source": "Rogerhu12/openai-math-extensions",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 1.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "quasi-riemann",
+      "title": "Quasi-Riemann hypothesis",
+      "source": "GTimG/QuasiRiemannTracker",
+      "verified_records": 22,
+      "open_claims": 1,
+      "frontier_best": 0.8748087,
+      "best_claim": 0.87477290596,
+      "status": "ok"
+    },
+    {
+      "slug": "sidorenko-counterexample",
+      "title": "Sidorenko counterexample",
+      "source": "rohanarun/sidorenko-template-refinements",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 189.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "snaky",
+      "title": "Snaky",
+      "source": "shjvandekamp/math",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 19.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "subset-sum",
+      "title": "Subset Sum (Randomized Word RAM)",
+      "source": "JoshuaQFEX/subset-sum-bound",
+      "verified_records": 4,
+      "open_claims": 0,
+      "frontier_best": 0.4876723,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "unit-distance-grid",
+      "title": "Unit-distance final grid",
+      "source": "rohanarun/unit-distance-grid-refinement",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 32.0,
       "best_claim": null,
       "status": "ok"
     }

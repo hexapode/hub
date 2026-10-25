@@ -6,15 +6,15 @@ listed = true
 added = "2026-10-08"
 contributors_override = 4
 attempts_override = 15
-discussion_url = "https://board.bigospeedrun.com/subset-sum"
+discussion_url = "https://github.com/JoshuaQFEX/subset-sum-bound/issues"
 
 [spec]
 title = "Subset Sum (Randomized Word RAM)"
 summary = "Minimize the exponential time exponent alpha in O(2^(alpha n)) for exact Subset Sum in the randomized Word RAM model."
 metric = { name = "exponent alpha", unit = "", direction = "min", scale = "linear", display = "O(2^{{value}n})" }
 verifier = { type = "manual" }
-submit = "Submit via Pull Request to JoshuaQFEX/subset-sum-bound or bigospeedrun/verifier."
-rules_url = "https://bigospeedrun.com/subset-sum"
+submit = "Open a Pull Request to JoshuaQFEX/subset-sum-bound and register new records in superautoresearch/hub."
+rules_url = "https://github.com/JoshuaQFEX/subset-sum-bound#readme"
 baseline = { value = 0.5, label = "Horowitz-Sahni meet-in-the-middle O(2^(0.5n)) (1974)" }
 tracks = [{ id = "representation-method-filter", title = "Optimize asymmetric representation filtering entropy" }, { id = "word-ram-bucket-hash", title = "Reduce sub-exponential collision overhead in 3-way split" }]
 

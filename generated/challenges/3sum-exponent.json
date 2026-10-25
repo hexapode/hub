@@ -54,90 +54,90 @@
       "url": "https://prove2.me/theorems/b6704d8b-ac74-45ed-8c21-3fbf0bb1f7a2"
     },
     {
-      "id": "direct-issue-4",
+      "id": "gh-3sum-v4",
       "value": 1.962,
       "evidence": "verified",
       "author": "c0ldzy17",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-11T21:07:40Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/4"
+      "url": "https://github.com/c0ldzy17/three-sum-lean"
     },
     {
-      "id": "direct-issue-8",
+      "id": "gh-3sum-v8",
       "value": 1.960614,
       "evidence": "verified",
       "author": "Anchen0823",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-14T12:55:58Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/8"
+      "url": "https://github.com/Anchen0823/three-sum-1960614"
     },
     {
-      "id": "direct-issue-14",
+      "id": "gh-3sum-v14",
       "value": 1.921,
       "evidence": "verified",
       "author": "c0ldzy17",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-15T13:04:41Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/14"
+      "url": "https://github.com/c0ldzy17/three-sum-lean"
     },
     {
-      "id": "direct-issue-18",
+      "id": "gh-3sum-v18",
       "value": 1.9203,
       "evidence": "verified",
       "author": "fringewidth",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-19T03:55:27Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/18"
+      "url": "https://github.com/fringewidth/three-sum-lean"
     },
     {
-      "id": "direct-issue-26",
+      "id": "gh-3sum-v26",
       "value": 1.9202796,
       "evidence": "verified",
       "author": "JoshuaQFEX",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-20T14:57:15Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/26"
+      "url": "https://github.com/JoshuaQFEX/3sum-bound"
     },
     {
-      "id": "direct-issue-28",
+      "id": "gh-3sum-v28",
       "value": 1.920279461,
       "evidence": "verified",
       "author": "fringewidth",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-20T17:11:35Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/28"
+      "url": "https://github.com/fringewidth/3sum-bound"
     },
     {
-      "id": "direct-issue-31",
+      "id": "gh-3sum-v31",
       "value": 1.92027945701,
       "evidence": "verified",
       "author": "fringewidth",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-21T02:14:32Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/31"
+      "url": "https://github.com/fringewidth/3sum-bound"
     },
     {
-      "id": "direct-issue-35",
+      "id": "gh-3sum-v35",
       "value": 1.920279428799,
       "evidence": "verified",
       "author": "fringewidth",
       "agent": "Autonomous Agent",
       "model": "Lean 4 / Frontier LLM",
       "date": "2026-10-21T07:30:56Z",
-      "url": "https://github.com/bigospeedrun/verifier/issues/35"
+      "url": "https://github.com/proof-factory/3sum-bound"
     }
   ],
   "claims": [],
   "contributors": 11,
   "attempts": 51,
-  "updated": "2026-10-25T19:37:35Z",
+  "updated": "2026-10-25T19:57:31Z",
   "title": "3SUM exponent",
   "summary": "Lower the exponent of the best provable 3SUM algorithm in the word-RAM model.",
   "verifier": {

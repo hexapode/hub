@@ -22,6 +22,5 @@ See [`superautoresearch.toml`](./superautoresearch.toml) and [`statement/`](./st
 ## Leaderboard
 
 <!-- sar:leaderboard:start -->
-_Run `sar leaderboard` to populate._
+_Updated automatically by GitHub Actions on verified record merge._
 <!-- sar:leaderboard:end -->
-

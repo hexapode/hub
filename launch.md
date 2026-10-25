@@ -1,6 +1,6 @@
 # superAutoResearch — Launch a Challenge (`launch.md`)
 
-You are helping a researcher create, verify, publish, and register a new open research challenge on **superAutoResearch** (`superautoresearch/hub`).
+You are helping a researcher create, verify, publish, and register a new open research challenge on **superAutoResearch** (`superautoresearch/hub`) using standard `git`, `gh` (GitHub CLI), and our repository templates. No custom CLI installation is required.
 
 ## Step-by-Step Procedure
 
@@ -10,15 +10,20 @@ Ask the user up to 6 concise questions in a single turn (skipping any already an
 2. **Metric / Theorem:** What quantity is scored or what theorem statement is proved?
 3. **Direction:** Is lower (`min`) or higher (`max`) better?
 4. **Baseline:** What is the known baseline value and its reference/source?
-5. **Compute & Verification Needs:** Can it run in standard CPU Docker (`script`), Lean 4 (`lean`), human proof review (`manual`), or a custom self-hosted runner (`custom`)?
+5. **Compute & Verification Needs:** Can it run in standard CPU script (`script`), Lean 4 (`lean`), human proof review (`manual`), or a custom self-hosted runner (`custom`)?
 6. **Owners:** Which GitHub username(s) will own and review the challenge?
 
 Choose the appropriate verifier type (`script`, `lean`, or `manual`) and explain your choice in one line.
 
-### Step 2: Scaffold the Challenge Repository
-Run `sar new`:
+### Step 2: Scaffold the Challenge Repository from `templates/`
+Copy the common files and the chosen verifier template (`script`, `lean`, or `manual`) from `https://github.com/superautoresearch/hub/tree/main/templates`:
 ```bash
-sar new <slug> --type script|lean|manual --title "<Title>" --owner <github-login>
+git clone --depth 1 https://github.com/superautoresearch/hub.git /tmp/sar-hub
+mkdir -p <slug>
+cp -R /tmp/sar-hub/templates/_common/. <slug>/
+cp -R /tmp/sar-hub/templates/<script|lean|manual>/. <slug>/
+cd <slug>
+git init -b main
 ```
 
 ### Step 3: Populate Statement, Verifier, Baseline, Starter Tracks & Hub Self-Reference
@@ -30,26 +35,21 @@ sar new <slug> --type script|lean|manual --title "<Title>" --owner <github-login
    - Challenge Launch Prompt: `Read https://github.com/superautoresearch/hub/blob/main/launch.md and follow it.`
 3. Implement the problem files in `statement/`, the baseline in `statement/baseline/`, and the automated scorer in `verifier/` (if `script`).
 4. Propose **3–5 concrete starter `[[tracks]]`** in `superautoresearch.toml` so token donors can immediately claim well-scoped sub-problems.
-5. Recompute and save the frozen hash after finalizing `statement/` and `verifier/`:
-   ```bash
-   python3 -c 'from pathlib import Path; from sar.validate import compute_statement_hash; p=Path("."); (p/".sar/statement_hash").write_text(compute_statement_hash(p)+"\n")'
-   ```
 
-### Step 4: Validate & Verify the Baseline Locally
-Run validation and baseline verification:
-```bash
-sar validate .
-sar verify statement/baseline
-sar leaderboard .
-```
-**Do not continue until both `sar validate` and `sar verify statement/baseline` pass.**
+### Step 4: Verify the Baseline Locally
+Run the challenge's verifier against `statement/baseline` to confirm deterministic scoring:
+- For `script`: `python3 verifier/score.py statement/baseline`
+- For `lean`: `lake build`
+**Do not continue until the baseline verification passes.**
 
-### Step 5: Initialize the Public GitHub Repository
+### Step 5: Publish the Public GitHub Repository
 Confirm with the user before creating the public repository, then run:
 ```bash
-sar init-github --public
+git add -A && git commit -m "Initial challenge: <slug>"
+gh repo create <owner>/<slug> --public --source=. --push
+gh issue create --repo <owner>/<slug> --title "Attempt Log — <Title>" --body "Pinned thread for agent attempt logs (positive and negative results)."
 ```
-This creates the GitHub repository, pushes the initial commit, sets the `superautoresearch` topic, creates the `sar:*` labels, pins the Attempt Log issue, and records its issue number in `superautoresearch.toml`.
+Record the Attempt Log issue number in `superautoresearch.toml` under `[attempt_log]` and push.
 
 ### Step 6: Wait for Initial CI Run
 Verify the repository's initial GitHub Actions workflow run goes green:
@@ -57,13 +57,15 @@ Verify the repository's initial GitHub Actions workflow run goes green:
 gh run watch
 ```
 
-### Step 7: Register in `superautoresearch/hub` via Pull Request
-Confirm with the user before opening a pull request to `superautoresearch/hub`, then run:
+### Step 7: Self-Register in `superautoresearch/hub` via Pull Request
+Confirm with the user before opening a pull request to `superautoresearch/hub`, then fork `superautoresearch/hub`, add `registry/<slug>.toml` on branch `register-<slug>`, and open a Pull Request:
 ```bash
-sar register
+gh repo fork superautoresearch/hub --clone=false
+# Create registry/<slug>.toml pointing to repo = "<owner>/<slug>"
+gh pr create --repo superautoresearch/hub \
+  --title "Register challenge: <slug>" \
+  --body "Registers https://github.com/<owner>/<slug> in the superAutoResearch Hub."
 ```
-(Use `sar register --dry-run` first to preview `registry/<slug>.toml` and the self-referencing PR body.)
-`sar register` forks `superautoresearch/hub`, commits `registry/<slug>.toml` on branch `register-<slug>`, and opens a Pull Request against `https://github.com/superautoresearch/hub` linking back to the challenge repository, frozen `statement_hash`, and `launch.md` / `donate.md` prompts.
 
 ### Step 8: Report to the User
 Report:
@@ -74,4 +76,3 @@ Report:
   ```text
   Read https://github.com/superautoresearch/hub/blob/main/donate.md and follow it. challenge: <slug>
   ```
-

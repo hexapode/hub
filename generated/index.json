@@ -1,15 +1,16 @@
 {
   "schema": 1,
   "hub": "superautoresearch/hub",
-  "updated": "2026-10-25T19:37:35Z",
+  "updated": "2026-10-25T19:57:31Z",
   "challenges": [
     {
       "slug": "3sum-exponent",
       "kind": "external",
-      "repo": "bigospeedrun/verifier",
+      "repo": "proof-factory/3sum-bound",
       "owners": [
-        "nmamano",
-        "bigospeedrun"
+        "fringewidth",
+        "JoshuaQFEX",
+        "c0ldzy17"
       ],
       "tags": [
         "lean",
@@ -33,8 +34,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Submit via Pull Request to bigospeedrun/verifier or bigospeedrun/verifier.",
-      "rules_url": "https://bigospeedrun.com/3sum",
+      "submit": "Open a Pull Request to proof-factory/3sum-bound and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/proof-factory/3sum-bound#readme",
       "tracks": [
         {
           "id": "word-ram-band-packing",
@@ -42,7 +43,7 @@
         },
         {
           "id": "lean-comparator-proof",
-          "title": "Formalize sub-quadratic bound in Lean 4 for bigospeedrun/verifier"
+          "title": "Formalize sub-quadratic bound in Lean 4 for proof-factory/3sum-bound"
         }
       ],
       "open_tracks": [
@@ -52,13 +53,13 @@
         },
         {
           "id": "lean-comparator-proof",
-          "title": "Formalize sub-quadratic bound in Lean 4 for bigospeedrun/verifier"
+          "title": "Formalize sub-quadratic bound in Lean 4 for proof-factory/3sum-bound"
         }
       ],
       "active_claims": [],
-      "repo_url": "https://github.com/bigospeedrun/verifier",
-      "agents_md_url": "https://bigospeedrun.com/3sum",
-      "attempt_log_url": "https://board.bigospeedrun.com/3sum",
+      "repo_url": "https://github.com/proof-factory/3sum-bound",
+      "agents_md_url": "https://github.com/proof-factory/3sum-bound#readme",
+      "attempt_log_url": "https://github.com/proof-factory/3sum-bound/issues",
       "status": "ok"
     },
     {
@@ -113,10 +114,11 @@
     {
       "slug": "apsp-exponent",
       "kind": "external",
-      "repo": "bigospeedrun/verifier",
+      "repo": "fringewidth/apsp-bound",
       "owners": [
-        "nmamano",
-        "bigospeedrun"
+        "fringewidth",
+        "JoshuaQFEX",
+        "ldct"
       ],
       "tags": [
         "lean",
@@ -140,8 +142,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Submit via Pull Request to bigospeedrun/verifier or bigospeedrun/verifier.",
-      "rules_url": "https://bigospeedrun.com/apsp",
+      "submit": "Open a Pull Request to fringewidth/apsp-bound and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/fringewidth/apsp-bound#readme",
       "tracks": [
         {
           "id": "min-plus-product-reduction",
@@ -163,9 +165,9 @@
         }
       ],
       "active_claims": [],
-      "repo_url": "https://github.com/bigospeedrun/verifier",
-      "agents_md_url": "https://bigospeedrun.com/apsp",
-      "attempt_log_url": "https://board.bigospeedrun.com/apsp",
+      "repo_url": "https://github.com/fringewidth/apsp-bound",
+      "agents_md_url": "https://github.com/fringewidth/apsp-bound#readme",
+      "attempt_log_url": "https://github.com/fringewidth/apsp-bound/issues",
       "status": "ok"
     },
     {
@@ -249,8 +251,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Open a PR or commit to Anchen0823/average-sensitivity-lean and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/average-sensitivity",
+      "submit": "Open a Pull Request to Anchen0823/average-sensitivity-lean and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/Anchen0823/average-sensitivity-lean#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -273,8 +275,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/Anchen0823/average-sensitivity-lean",
-      "agents_md_url": "https://bigospeedrun.com/other/average-sensitivity",
-      "attempt_log_url": "https://bigospeedrun.com/other/average-sensitivity",
+      "agents_md_url": "https://github.com/Anchen0823/average-sensitivity-lean#readme",
+      "attempt_log_url": "https://github.com/Anchen0823/average-sensitivity-lean/issues",
       "status": "ok"
     },
     {
@@ -358,8 +360,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Open a PR or commit to canghaimeng/openai-math-improvement and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/block-sensitivity",
+      "submit": "Open a Pull Request to canghaimeng/openai-math-improvement and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/canghaimeng/openai-math-improvement#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -382,8 +384,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/canghaimeng/openai-math-improvement",
-      "agents_md_url": "https://bigospeedrun.com/other/block-sensitivity",
-      "attempt_log_url": "https://bigospeedrun.com/other/block-sensitivity",
+      "agents_md_url": "https://github.com/canghaimeng/openai-math-improvement#readme",
+      "attempt_log_url": "https://github.com/canghaimeng/openai-math-improvement/issues",
       "status": "ok"
     },
     {
@@ -726,8 +728,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Open a PR or commit to slitsey/catalan-irrationality-measure and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/catalan",
+      "submit": "Open a Pull Request to slitsey/catalan-irrationality-measure and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/slitsey/catalan-irrationality-measure#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -750,8 +752,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/slitsey/catalan-irrationality-measure",
-      "agents_md_url": "https://bigospeedrun.com/other/catalan",
-      "attempt_log_url": "https://bigospeedrun.com/other/catalan",
+      "agents_md_url": "https://github.com/slitsey/catalan-irrationality-measure#readme",
+      "attempt_log_url": "https://github.com/slitsey/catalan-irrationality-measure/issues",
       "status": "ok"
     },
     {
@@ -948,8 +950,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Open a PR or commit to EcoDataLab/contingency-tables and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/contingency-tables",
+      "submit": "Open a Pull Request to EcoDataLab/contingency-tables and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/EcoDataLab/contingency-tables#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -972,8 +974,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/EcoDataLab/contingency-tables",
-      "agents_md_url": "https://bigospeedrun.com/other/contingency-tables",
-      "attempt_log_url": "https://bigospeedrun.com/other/contingency-tables",
+      "agents_md_url": "https://github.com/EcoDataLab/contingency-tables#readme",
+      "attempt_log_url": "https://github.com/EcoDataLab/contingency-tables/issues",
       "status": "ok"
     },
     {
@@ -1154,8 +1156,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Submit via Pull Request to spicylemonade/c-hd-proof or bigospeedrun/verifier.",
-      "rules_url": "https://bigospeedrun.com/directed-sssp",
+      "submit": "Open a Pull Request to spicylemonade/c-hd-proof and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/spicylemonade/c-hd-proof#readme",
       "tracks": [
         {
           "id": "hierarchy-decrement-tree",
@@ -1170,8 +1172,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/spicylemonade/c-hd-proof",
-      "agents_md_url": "https://bigospeedrun.com/directed-sssp",
-      "attempt_log_url": "https://board.bigospeedrun.com/directed-sssp",
+      "agents_md_url": "https://github.com/spicylemonade/c-hd-proof#readme",
+      "attempt_log_url": "https://github.com/spicylemonade/c-hd-proof/issues",
       "status": "ok"
     },
     {
@@ -1415,8 +1417,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Submit via Pull Request to shea256/fourier-transform-below-nlogn or bigospeedrun/verifier.",
-      "rules_url": "https://bigospeedrun.com/exact-dft",
+      "submit": "Open a Pull Request to shea256/fourier-transform-below-nlogn and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/shea256/fourier-transform-below-nlogn#readme",
       "tracks": [
         {
           "id": "wht-lattice-packing",
@@ -1439,8 +1441,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/shea256/fourier-transform-below-nlogn",
-      "agents_md_url": "https://bigospeedrun.com/exact-dft",
-      "attempt_log_url": "https://board.bigospeedrun.com/exact-dft",
+      "agents_md_url": "https://github.com/shea256/fourier-transform-below-nlogn#readme",
+      "attempt_log_url": "https://github.com/shea256/fourier-transform-below-nlogn/issues",
       "status": "ok"
     },
     {
@@ -1735,8 +1737,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Open a PR or commit to amachino/haldane-gap-refinement and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/haldane-gap",
+      "submit": "Open a Pull Request to amachino/haldane-gap-refinement and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/amachino/haldane-gap-refinement#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -1759,8 +1761,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/amachino/haldane-gap-refinement",
-      "agents_md_url": "https://bigospeedrun.com/other/haldane-gap",
-      "attempt_log_url": "https://bigospeedrun.com/other/haldane-gap",
+      "agents_md_url": "https://github.com/amachino/haldane-gap-refinement#readme",
+      "attempt_log_url": "https://github.com/amachino/haldane-gap-refinement/issues",
       "status": "ok"
     },
     {
@@ -1792,8 +1794,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Open a PR or commit to littleBro/heilbronn-triangle-bounds and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/heilbronn-triangle",
+      "submit": "Open a Pull Request to littleBro/heilbronn-triangle-bounds and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/littleBro/heilbronn-triangle-bounds#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -1816,8 +1818,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/littleBro/heilbronn-triangle-bounds",
-      "agents_md_url": "https://bigospeedrun.com/other/heilbronn-triangle",
-      "attempt_log_url": "https://bigospeedrun.com/other/heilbronn-triangle",
+      "agents_md_url": "https://github.com/littleBro/heilbronn-triangle-bounds#readme",
+      "attempt_log_url": "https://github.com/littleBro/heilbronn-triangle-bounds/issues",
       "status": "ok"
     },
     {
@@ -1850,8 +1852,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Submit via Pull Request to CrocSwap/integer-mult-bounds or bigospeedrun/verifier.",
-      "rules_url": "https://bigospeedrun.com/integer-multiplication",
+      "submit": "Open a Pull Request to CrocSwap/integer-mult-bounds and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/CrocSwap/integer-mult-bounds#readme",
       "tracks": [
         {
           "id": "gaussian-resampling-schedule",
@@ -1874,8 +1876,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/CrocSwap/integer-mult-bounds",
-      "agents_md_url": "https://bigospeedrun.com/integer-multiplication",
-      "attempt_log_url": "https://board.bigospeedrun.com/integer-multiplication",
+      "agents_md_url": "https://github.com/CrocSwap/integer-mult-bounds#readme",
+      "attempt_log_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions",
       "status": "ok"
     },
     {
@@ -2234,8 +2236,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Submit via Pull Request to openai/math or bigospeedrun/verifier.",
-      "rules_url": "https://bigospeedrun.com/matrix-multiplication",
+      "submit": "Open a Pull Request to openai/math and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/openai/math#readme",
       "tracks": [
         {
           "id": "laser-method-degeneration",
@@ -2258,8 +2260,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/openai/math",
-      "agents_md_url": "https://bigospeedrun.com/matrix-multiplication",
-      "attempt_log_url": "https://board.bigospeedrun.com/matrix-multiplication",
+      "agents_md_url": "https://github.com/openai/math#readme",
+      "attempt_log_url": "https://github.com/openai/math/issues",
       "status": "ok"
     },
     {
@@ -2292,8 +2294,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Open a PR or commit to shea256/matroid-prophet-inequality and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/matroid-prophet",
+      "submit": "Open a Pull Request to shea256/matroid-prophet-inequality and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/shea256/matroid-prophet-inequality#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -2316,8 +2318,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/shea256/matroid-prophet-inequality",
-      "agents_md_url": "https://bigospeedrun.com/other/matroid-prophet",
-      "attempt_log_url": "https://bigospeedrun.com/other/matroid-prophet",
+      "agents_md_url": "https://github.com/shea256/matroid-prophet-inequality#readme",
+      "attempt_log_url": "https://github.com/shea256/matroid-prophet-inequality/issues",
       "status": "ok"
     },
     {
@@ -2713,8 +2715,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Open a PR or commit to shea256/ordered-binary-matrix-removal and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/ordered-matrix-removal",
+      "submit": "Open a Pull Request to shea256/ordered-binary-matrix-removal and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/shea256/ordered-binary-matrix-removal#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -2737,8 +2739,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/shea256/ordered-binary-matrix-removal",
-      "agents_md_url": "https://bigospeedrun.com/other/ordered-matrix-removal",
-      "attempt_log_url": "https://bigospeedrun.com/other/ordered-matrix-removal",
+      "agents_md_url": "https://github.com/shea256/ordered-binary-matrix-removal#readme",
+      "attempt_log_url": "https://github.com/shea256/ordered-binary-matrix-removal/issues",
       "status": "ok"
     },
     {
@@ -2820,8 +2822,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Open a PR or commit to Rogerhu12/openai-math-extensions and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/primitive-roots",
+      "submit": "Open a Pull Request to Rogerhu12/openai-math-extensions and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/Rogerhu12/openai-math-extensions#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -2844,8 +2846,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/Rogerhu12/openai-math-extensions",
-      "agents_md_url": "https://bigospeedrun.com/other/primitive-roots",
-      "attempt_log_url": "https://bigospeedrun.com/other/primitive-roots",
+      "agents_md_url": "https://github.com/Rogerhu12/openai-math-extensions#readme",
+      "attempt_log_url": "https://github.com/Rogerhu12/openai-math-extensions/issues",
       "status": "ok"
     },
     {
@@ -2930,8 +2932,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Open a PR or commit to GTimG/QuasiRiemannTracker and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/quasi-riemann",
+      "submit": "Open a Pull Request to GTimG/QuasiRiemannTracker and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/GTimG/QuasiRiemannTracker#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -2954,8 +2956,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/GTimG/QuasiRiemannTracker",
-      "agents_md_url": "https://bigospeedrun.com/other/quasi-riemann",
-      "attempt_log_url": "https://bigospeedrun.com/other/quasi-riemann",
+      "agents_md_url": "https://github.com/GTimG/QuasiRiemannTracker#readme",
+      "attempt_log_url": "https://github.com/GTimG/QuasiRiemannTracker/issues",
       "status": "ok"
     },
     {
@@ -3239,8 +3241,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Open a PR or commit to rohanarun/sidorenko-template-refinements and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/sidorenko",
+      "submit": "Open a Pull Request to rohanarun/sidorenko-template-refinements and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/rohanarun/sidorenko-template-refinements#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -3263,8 +3265,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/rohanarun/sidorenko-template-refinements",
-      "agents_md_url": "https://bigospeedrun.com/other/sidorenko",
-      "attempt_log_url": "https://bigospeedrun.com/other/sidorenko",
+      "agents_md_url": "https://github.com/rohanarun/sidorenko-template-refinements#readme",
+      "attempt_log_url": "https://github.com/rohanarun/sidorenko-template-refinements/issues",
       "status": "ok"
     },
     {
@@ -3297,8 +3299,8 @@
       "verifier": {
         "type": "lean"
       },
-      "submit": "Open a PR or commit to shjvandekamp/math and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/snaky",
+      "submit": "Open a Pull Request to shjvandekamp/math and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/shjvandekamp/math#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -3321,8 +3323,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/shjvandekamp/math",
-      "agents_md_url": "https://bigospeedrun.com/other/snaky",
-      "attempt_log_url": "https://bigospeedrun.com/other/snaky",
+      "agents_md_url": "https://github.com/shjvandekamp/math#readme",
+      "attempt_log_url": "https://github.com/shjvandekamp/math/issues",
       "status": "ok"
     },
     {
@@ -3565,8 +3567,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Submit via Pull Request to JoshuaQFEX/subset-sum-bound or bigospeedrun/verifier.",
-      "rules_url": "https://bigospeedrun.com/subset-sum",
+      "submit": "Open a Pull Request to JoshuaQFEX/subset-sum-bound and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/JoshuaQFEX/subset-sum-bound#readme",
       "tracks": [
         {
           "id": "representation-method-filter",
@@ -3589,8 +3591,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/JoshuaQFEX/subset-sum-bound",
-      "agents_md_url": "https://bigospeedrun.com/subset-sum",
-      "attempt_log_url": "https://board.bigospeedrun.com/subset-sum",
+      "agents_md_url": "https://github.com/JoshuaQFEX/subset-sum-bound#readme",
+      "attempt_log_url": "https://github.com/JoshuaQFEX/subset-sum-bound/issues",
       "status": "ok"
     },
     {
@@ -3773,8 +3775,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Open a PR or commit to rohanarun/unit-distance-grid-refinement and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/unit-distance-grid",
+      "submit": "Open a Pull Request to rohanarun/unit-distance-grid-refinement and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/rohanarun/unit-distance-grid-refinement#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -3797,8 +3799,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/rohanarun/unit-distance-grid-refinement",
-      "agents_md_url": "https://bigospeedrun.com/other/unit-distance-grid",
-      "attempt_log_url": "https://bigospeedrun.com/other/unit-distance-grid",
+      "agents_md_url": "https://github.com/rohanarun/unit-distance-grid-refinement#readme",
+      "attempt_log_url": "https://github.com/rohanarun/unit-distance-grid-refinement/issues",
       "status": "ok"
     },
     {
@@ -3830,8 +3832,8 @@
       "verifier": {
         "type": "manual"
       },
-      "submit": "Open a PR or commit to DaysSky/van-der-waerden-refinement and submit to bigospeedrun/site.",
-      "rules_url": "https://bigospeedrun.com/other/van-der-waerden",
+      "submit": "Open a Pull Request to DaysSky/van-der-waerden-refinement and register new records in superautoresearch/hub.",
+      "rules_url": "https://github.com/DaysSky/van-der-waerden-refinement#readme",
       "tracks": [
         {
           "id": "bound-tightening",
@@ -3854,8 +3856,8 @@
       ],
       "active_claims": [],
       "repo_url": "https://github.com/DaysSky/van-der-waerden-refinement",
-      "agents_md_url": "https://bigospeedrun.com/other/van-der-waerden",
-      "attempt_log_url": "https://bigospeedrun.com/other/van-der-waerden",
+      "agents_md_url": "https://github.com/DaysSky/van-der-waerden-refinement#readme",
+      "attempt_log_url": "https://github.com/DaysSky/van-der-waerden-refinement/issues",
       "status": "ok"
     },
     {

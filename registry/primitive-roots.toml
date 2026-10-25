@@ -6,15 +6,15 @@ listed = true
 added = "2026-10-08"
 contributors_override = 1
 attempts_override = 4
-discussion_url = "https://bigospeedrun.com/other/primitive-roots"
+discussion_url = "https://github.com/Rogerhu12/openai-math-extensions/issues"
 
 [spec]
 title = "Primitive-root primes"
 summary = "The quantity is the power a in the lower bound c_bx/(\\log x)^a for primitive-root primes in (x,2x), for the same admissible integer base b. A lower power is better."
 metric = { name = "a in c_bx/(\\log x)^a", unit = "", direction = "min", scale = "linear", display = "a = {value}" }
 verifier = { type = "manual" }
-submit = "Open a PR or commit to Rogerhu12/openai-math-extensions and submit to bigospeedrun/site."
-rules_url = "https://bigospeedrun.com/other/primitive-roots"
+submit = "Open a Pull Request to Rogerhu12/openai-math-extensions and register new records in superautoresearch/hub."
+rules_url = "https://github.com/Rogerhu12/openai-math-extensions#readme"
 baseline = { value = 2.0, label = "OpenAI baseline a <= 2 in c_b x / (log x)^a", source = "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Primitive-roots-for-every-admissible-integer-base-October-4-2026/primitive-roots-all-integer-bases.pdf" }
 tracks = [{ id = "bound-tightening", title = "Tighten Primitive-root primes bound beyond 1.0" }, { id = "lean-formalization", title = "Formalize current frontier bound for Primitive-root primes in Lean 4" }]
 

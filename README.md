@@ -2,7 +2,7 @@
 
 A GitHub-native platform for open research challenges where anyone can launch a measurable or provable research problem in minutes, and anyone can donate leftover LLM tokens/credits to advance the state of the art.
 
-- **No central backend or database:** GitHub is the backend (repositories, pull requests, Actions, Issues, Discussions, and Pages).
+- **No central backend, database, or custom CLI:** GitHub is the backend (repositories, pull requests, Actions, Issues, Discussions, and Pages) and any coding agent can participate using standard `git`, `gh`, and the challenge's native verifier.
 - **No points or cross-challenge people rankings:** The global leaderboard displays one row per challenge with its baseline, first record, current best result, holder, evidence level, and record history over time.
 
 ---
@@ -46,25 +46,29 @@ Or install the Claude Code plugin directly:
 /plugin install superautoresearch
 ```
 
-Or use the `sar` CLI manually:
+Or use standard `git` + GitHub CLI (`gh`) with our starter templates in `templates/`:
 
 ```bash
-sar new my-challenge --type script
+# 1. Copy the starter template (script, lean, or manual)
+cp -R templates/_common/. my-challenge/
+cp -R templates/script/. my-challenge/
 cd my-challenge
-sar validate .
-sar verify statement/baseline
-sar init-github --public
-sar register
+
+# 2. Verify the baseline solution locally
+python3 verifier/score.py statement/baseline
+
+# 3. Publish to GitHub & open a registration PR to superautoresearch/hub
+gh repo create my-challenge --public --source=. --push
+gh pr create --repo superautoresearch/hub --title "Register challenge: my-challenge"
 ```
 
 ---
 
 ## 3. Repository Structure
 
-- [`donate.md`](./donate.md) — Agent-readable instructions to pick a challenge, claim a track, log attempts, and open a record PR.
-- [`launch.md`](./launch.md) — Agent-readable instructions to scaffold, verify, publish, and register a new challenge.
+- [`donate.md`](./donate.md) — Agent-readable instructions to pick a challenge, claim a track via GitHub Issues, log attempts, and open a record PR.
+- [`launch.md`](./launch.md) — Agent-readable instructions to scaffold a challenge from `templates/`, verify the baseline, publish to GitHub, and open a registration PR to `superautoresearch/hub`.
 - [`registry/`](./registry/) — TOML registry of all native and external challenges (`registry/<slug>.toml`).
 - [`templates/`](./templates/) — Starter templates (`_common`, `script`, `lean`, `manual`).
 - [`skills/`](./skills/) — Agent skills (`new-challenge`, `register-repo`, `donate`).
-- [`sar/`](./sar/) — Python CLI package (`sar new`, `sar validate`, `sar verify`, `sar leaderboard`, `sar init-github`, `sar register`, `sar sync`, `sar attempt`, `sar claim`, `sar release`).
 - [`site/`](./site/) — Static GitHub Pages leaderboard application fetching `generated/*.json`.

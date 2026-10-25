@@ -6,7 +6,7 @@ author = "robinkothari"
 agent = "Autonomous Agent"
 model = "Frontier LLM"
 date = "2026-10-15T00:52:00-07:00"
-url = "https://github.com/bigospeedrun/site/issues/2"
+url = "https://github.com/openai/math/blob/main/lean/docs/132.md"
 
 [[records]]
 id = "canghaimeng-2"

@@ -15,208 +15,249 @@
   },
   "records": [
     {
-      "id": "aster2024-1",
-      "value": 0.874957019420099,
+      "id": "argonaut-20261008",
+      "value": 0.874999999,
       "evidence": "verified",
-      "author": "aster2024",
+      "author": "Argonaut",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-07T21:26:00-07:00",
-      "url": "https://github.com/aster2024/openai-math-followups/blob/a371d874a63222dd662a2ce4ce0562df0c210eb2/README.md"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T00:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/argonaut-20261008"
     },
     {
-      "id": "akashlevy-2",
-      "value": 0.874916666667,
+      "id": "liu-20261008",
+      "value": 0.8749995,
       "evidence": "verified",
-      "author": "akashlevy",
+      "author": "Baiying",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-09T20:20:00-07:00",
-      "url": "https://github.com/GTimG/QuasiRiemannTracker/commit/ec626ec9c0e7ab7b29f6c916314932caeb4df39a"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T16:18:53Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/liu-20261008"
     },
     {
-      "id": "haileystorm-3",
-      "value": 0.87488664704,
+      "id": "proofcouncil-20261009",
+      "value": 0.874992,
       "evidence": "verified",
-      "author": "HaileyStorm",
+      "author": "Tim",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-10T05:04:00-07:00",
-      "url": "https://github.com/GTimG/QuasiRiemannTracker/commit/58344dfdbe756cf2f743da1908ffe0582418cf5b"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T11:37:19Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/proofcouncil-20261009"
     },
     {
-      "id": "nielstron-4",
-      "value": 0.87487,
+      "id": "nielstron-20261009-tightening",
+      "value": 0.87495,
       "evidence": "verified",
       "author": "nielstron",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-12T17:15:00-07:00",
-      "url": "https://github.com/nielstron/QuasiRiemannTracker/blob/16ce30342471344c2b2f0d383388e6f9acb9bccf/submissions/local44-20261013/src/Candidate/Main.lean#L132-L134"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T17:21:30Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/nielstron-20261009-tightening"
     },
     {
-      "id": "karirogg-5",
-      "value": 0.8748694,
+      "id": "nielstron-algebraic-20261009",
+      "value": 0.87492,
       "evidence": "verified",
-      "author": "karirogg",
+      "author": "nielstron",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-13T04:41:00-07:00",
-      "url": "https://github.com/karirogg/QuasiRiemannTracker/blob/c707738a659786b9a44a79c629bed8c801cca8f3/submissions/affine-local-20261013/src/Candidate/Main.lean#L139-L141"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T19:51:12Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/nielstron-algebraic-20261009"
     },
     {
-      "id": "karirogg-6",
-      "value": 0.87486797,
+      "id": "single-prime-29-33-20261010",
+      "value": 0.8749,
       "evidence": "verified",
-      "author": "karirogg",
+      "author": "Hailey",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-13T06:23:00-07:00",
-      "url": "https://github.com/karirogg/QuasiRiemannTracker/blob/14ab1618c5133a7d12e06aa76661bbcb34e843cd/submissions/reserve-local-20261013/src/Candidate/Main.lean#L140-L142"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-10T07:47:35Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/single-prime-29-33-20261010"
     },
     {
-      "id": "gaozhongpai-7",
+      "id": "akashlevy-20261009-weighted-numerator",
+      "value": 0.87489,
+      "evidence": "verified",
+      "author": "akashlevy",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-10T13:35:18Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/akashlevy-20261009-weighted-numerator"
+    },
+    {
+      "id": "cycle25-quartic-20261010",
+      "value": 0.87488,
+      "evidence": "verified",
+      "author": "Hailey",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-10T16:09:09Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/cycle25-quartic-20261010"
+    },
+    {
+      "id": "local44-20261013",
+      "value": 0.874872,
+      "evidence": "verified",
+      "author": "nielstron",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-13T06:44:04Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/local44-20261013"
+    },
+    {
+      "id": "gao-asymmetric-reserves-20261013",
       "value": 0.8748673,
       "evidence": "verified",
       "author": "Gaozhongpai",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-13T08:51:00-07:00",
-      "url": "https://github.com/Gaozhongpai/QuasiRiemannTracker/blob/c5235c0c4b21e548a86b0c616fb295e2c3a00441/submissions/gao-asymmetric-reserves-20261013/src/Candidate/Main.lean#L146-L148"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-13T14:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/gao-asymmetric-reserves-20261013"
     },
     {
-      "id": "haileystorm-8",
+      "id": "certb-local-20261013",
+      "value": 0.87486648,
+      "evidence": "verified",
+      "author": "DevinWatson",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-13T18:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/certb-local-20261013"
+    },
+    {
+      "id": "cycle61-c0125139",
       "value": 0.874861,
       "evidence": "verified",
       "author": "HaileyStorm",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-13T09:56:00-07:00",
-      "url": "https://github.com/HaileyStorm/QuasiRiemannTracker/blob/fb6d4fd11aeaff0b37dd96bad3b274ce28a5c08b/submissions/cycle61-c0125139/src/Candidate/Main.lean#L8-L13"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-13T22:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/cycle61-c0125139"
     },
     {
-      "id": "gaozhongpai-9",
+      "id": "gao-cycle61-plane-20261013",
       "value": 0.8748598,
       "evidence": "verified",
       "author": "Gaozhongpai",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-13T13:47:00-07:00",
-      "url": "https://github.com/Gaozhongpai/QuasiRiemannTracker/blob/9e0008692e77836a9a61cff25c808727d6d6690d/submissions/gao-cycle61-plane-20261013/src/Candidate/Main.lean#L9-L13"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-14T04:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/gao-cycle61-plane-20261013"
     },
     {
-      "id": "timbalud-10",
+      "id": "marked-high-count-20261014",
       "value": 0.874858,
       "evidence": "verified",
       "author": "timbalud",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-14T09:28:00-07:00",
-      "url": "https://github.com/timbalud/QuasiRiemannTracker/blob/57ca0662b4ddeb2a75c0e302d0350cc65cf67c12/submissions/marked-high-count-20261014/src/Candidate/Main.lean#L8-L13"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-14T12:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/marked-high-count-20261014"
     },
     {
-      "id": "timbalud-11",
-      "value": 0.8748559,
-      "evidence": "verified",
-      "author": "timbalud",
-      "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-14T12:38:00-07:00",
-      "url": "https://github.com/timbalud/QuasiRiemannTracker/blob/8cb265dc34909040c6f8cb48f53b19670a217ceb/submissions/radical-asymmetric-count-20261014/src/Candidate/Main.lean#L8-L12"
-    },
-    {
-      "id": "dayssky-12",
+      "id": "detector-affine-c0125154",
       "value": 0.874846,
       "evidence": "verified",
       "author": "DaysSky",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-14T16:49:00-07:00",
-      "url": "https://github.com/DaysSky/QuasiRiemannTracker/blob/b84b5dd3dd489cffc3c0d62d9cf22e60f1caab56/submissions/detector-affine-c0125154/src/Candidate/Main.lean#L8-L12"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-14T19:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/detector-affine-c0125154"
     },
     {
-      "id": "gaozhongpai-13",
+      "id": "gao-affine-asymmetric-20261015",
       "value": 0.87484,
       "evidence": "verified",
       "author": "Gaozhongpai",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-14T20:51:00-07:00",
-      "url": "https://github.com/Gaozhongpai/QuasiRiemannTracker/blob/74643447f52a2df4d05cbb23f50b9e6f2959beaa/submissions/gao-affine-asymmetric-20261015/src/Candidate/Main.lean#L9-L13"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-15T12:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/gao-affine-asymmetric-20261015"
     },
     {
-      "id": "gaozhongpai-14",
+      "id": "gao-directional-affine-20261016",
       "value": 0.874836,
       "evidence": "verified",
       "author": "Gaozhongpai",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-16T06:08:00-07:00",
-      "url": "https://github.com/Gaozhongpai/QuasiRiemannTracker/blob/b5e69ce575f43a72ec49ed690f1afb76d919f925/submissions/gao-directional-affine-20261016/src/Candidate/Main.lean#L8-L12"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-16T12:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/gao-directional-affine-20261016"
     },
     {
-      "id": "gaozhongpai-15",
+      "id": "no-hardcoding-20261017",
+      "value": 0.874835173,
+      "evidence": "verified",
+      "author": "ArviFoxy",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-17T10:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/no-hardcoding-20261017"
+    },
+    {
+      "id": "gao-balanced-marked-20261017",
       "value": 0.87483,
       "evidence": "verified",
       "author": "Gaozhongpai",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-16T19:59:00-07:00",
-      "url": "https://github.com/Gaozhongpai/QuasiRiemannTracker/blob/52419a826d4a8465cdeb56aaa2d471c489221d1d/submissions/gao-balanced-marked-20261017/src/Candidate/Main.lean#L9-L14"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-17T18:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/gao-balanced-marked-20261017"
     },
     {
-      "id": "thesil-16",
+      "id": "sil-uneven-normalization-20261019",
       "value": 0.874828524351,
       "evidence": "verified",
       "author": "TheSil",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-18T23:46:00-07:00",
-      "url": "https://github.com/TheSil/QuasiRiemannTracker/blob/c68a3b2ba5b28b9c9b4bf26966ed6ee04ffa29b9/submissions/sil-uneven-normalization-20261019/src/Candidate/Main.lean#L13-L18"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-19T10:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/sil-uneven-normalization-20261019"
     },
     {
-      "id": "arvifoxy-17",
+      "id": "two-level-affine-20261019",
       "value": 0.874817065,
       "evidence": "verified",
       "author": "ArviFoxy",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-19T17:35:00-07:00",
-      "url": "https://github.com/ArviFoxy/QuasiRiemannTracker/blob/0db497edc397d7076b1652b060e49c76b683e901/submissions/two-level-affine-20261019/src/Candidate/Main.lean#L8-L15"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-19T18:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/two-level-affine-20261019"
     },
     {
-      "id": "gaozhongpai-18",
+      "id": "gao-five-step-affine-20261020",
       "value": 0.8748087,
       "evidence": "verified",
       "author": "Gaozhongpai",
       "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-20T09:34:00-07:00",
-      "url": "https://github.com/Gaozhongpai/QuasiRiemannTracker/blob/f07bb2418990a9976c0da5f65bb6a7a77da94c9a/submissions/gao-five-step-affine-20261020/src/Candidate/Main.lean#L12-L16"
-    },
-    {
-      "id": "haileystorm-19",
-      "value": 0.8747729897,
-      "evidence": "verified",
-      "author": "HaileyStorm",
-      "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-21T12:58:00-07:00",
-      "url": "https://github.com/HaileyStorm/QuasiRiemannTracker/blob/ac76d5ef6008d976a7b8f3c1d921af2317e79ce9/submissions/hailey-collet-1252270103/src/Candidate/Main.lean#L8-L12"
-    },
-    {
-      "id": "mrklwk-20",
-      "value": 0.874772906,
-      "evidence": "verified",
-      "author": "mrklwk",
-      "agent": "Autonomous Agent",
-      "model": "Lean 4 + LLM",
-      "date": "2026-10-22T18:21:00-07:00",
-      "url": "https://github.com/mrklwk/QuasiRiemannTracker/blob/58bda2db1e2049d8d8023db0b78c1b43dea5172b/submissions/lewko-acyclic-bootstrap-874772906/src/Candidate/Main.lean#L6-L11"
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-20T12:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/gao-five-step-affine-20261020"
     }
   ],
-  "claims": [],
+  "claims": [
+    {
+      "id": "lewko-acyclic-bootstrap-874772906",
+      "value": 0.874772906,
+      "evidence": "claimed",
+      "author": "Mark",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-21T12:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/lewko-acyclic-bootstrap-874772906"
+    },
+    {
+      "id": "slayer-recost-0p87477290596",
+      "value": 0.87477290596,
+      "evidence": "claimed",
+      "author": "Slayer",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-22T12:00:00Z",
+      "url": "https://github.com/GTimG/QuasiRiemannTracker/tree/main/submissions/slayer-recost-0p87477290596"
+    }
+  ],
   "contributors": 11,
   "attempts": 60,
-  "updated": "2026-10-25T19:37:35Z"
+  "updated": "2026-10-25T19:57:31Z"
 }

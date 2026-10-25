@@ -15,18 +15,48 @@
   },
   "records": [
     {
-      "id": "amachino-1",
+      "id": "amachino-haldane-v1-2",
+      "value": 0.063,
+      "evidence": "verified",
+      "author": "amachino",
+      "agent": "Autonomous Agent",
+      "model": "GPT-6 Astra Max",
+      "date": "2026-10-06T12:00:00Z",
+      "url": "https://github.com/amachino/haldane-gap-refinement/blob/main/README.md"
+    },
+    {
+      "id": "amachino-haldane-v1-4",
+      "value": 0.119,
+      "evidence": "verified",
+      "author": "amachino",
+      "agent": "Autonomous Agent",
+      "model": "GPT-6 Astra Max",
+      "date": "2026-10-07T08:00:00Z",
+      "url": "https://github.com/amachino/haldane-gap-refinement/blob/main/README.md"
+    },
+    {
+      "id": "amachino-haldane-v1-6",
+      "value": 0.145,
+      "evidence": "verified",
+      "author": "amachino",
+      "agent": "Autonomous Agent",
+      "model": "GPT-6 Astra Max",
+      "date": "2026-10-07T20:00:00Z",
+      "url": "https://github.com/amachino/haldane-gap-refinement/blob/main/README.md"
+    },
+    {
+      "id": "amachino-haldane-v1-7",
       "value": 0.1515,
       "evidence": "verified",
       "author": "amachino",
       "agent": "Autonomous Agent",
-      "model": "Frontier LLM",
-      "date": "2026-10-07T22:04:00-07:00",
-      "url": "https://github.com/amachino/haldane-gap-refinement/blob/15909bdc15e947795b6fba946008dd8530bb3477/README.md"
+      "model": "GPT-6 Astra Max",
+      "date": "2026-10-08T12:00:00Z",
+      "url": "https://github.com/amachino/haldane-gap-refinement/blob/main/paper/note.tex"
     }
   ],
   "claims": [],
   "contributors": 1,
   "attempts": 4,
-  "updated": "2026-10-25T19:37:35Z"
+  "updated": "2026-10-25T19:57:31Z"
 }

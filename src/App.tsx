@@ -10,12 +10,14 @@ import {
   Copy,
   ExternalLink,
   FileCode2,
-  Play,
   Search,
   Sun,
   Moon,
-  Terminal,
   AlertTriangle,
+  BookOpen,
+  Sparkles,
+  GitPullRequest,
+  ShieldCheck,
 } from 'lucide-react';
 import logoUrl from './assets/images/superautoresearch_logo_1792954930815.jpg';
 
@@ -135,7 +137,6 @@ function RecordStepChart({
   baselineValue,
   records,
   claims,
-  metric,
   dark,
 }: {
   baselineValue: number;
@@ -176,7 +177,6 @@ function RecordStepChart({
   const xForIdx = (idx: number) => padL + (idx / (totalSlots - 1)) * plotW;
   const yForVal = (v: number) => padT + ((maxVal - v) / span) * plotH;
 
-  // Build step path for verified records
   const stepSegments: string[] = [];
   points.forEach((pt, idx) => {
     const x = xForIdx(idx);
@@ -223,19 +223,22 @@ function RecordStepChart({
       {points.map((pt, idx) => {
         const x = xForIdx(idx);
         const y = yForVal(pt.value);
+        const showLabel = points.length <= 8 || idx === 0 || idx === points.length - 1 || idx % Math.ceil(points.length / 5) === 0;
         return (
           <g key={`rec-${idx}`}>
             <circle cx={x} cy={y} r={4.5} fill={lineStroke} />
-            <text
-              x={x}
-              y={height - 12}
-              textAnchor="middle"
-              fontSize="10"
-              fill={textFill}
-              className="font-mono tabular-nums"
-            >
-              {pt.label}
-            </text>
+            {showLabel && (
+              <text
+                x={x}
+                y={height - 12}
+                textAnchor="middle"
+                fontSize="10"
+                fill={textFill}
+                className="font-mono tabular-nums"
+              >
+                {pt.label}
+              </text>
+            )}
           </g>
         );
       })}
@@ -276,7 +279,7 @@ function RecordStepChart({
 
 export default function App() {
   const [dark, setDark] = useState(false);
-  const [activeTab, setActiveTab] = useState<'leaderboard' | 'launch' | 'sandbox' | 'files'>('leaderboard');
+  const [activeTab, setActiveTab] = useState<'leaderboard' | 'about' | 'launch' | 'files'>('leaderboard');
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
 
   const [globalRows, setGlobalRows] = useState<GlobalRow[]>([]);
@@ -293,15 +296,6 @@ export default function App() {
 
   // Copy states
   const [copiedId, setCopiedId] = useState<string | null>(null);
-
-  // CLI Sandbox state
-  const [cliOutput, setCliOutput] = useState<string>('');
-  const [cliRunning, setCliRunning] = useState<boolean>(false);
-  const [lastActionLabel, setLastActionLabel] = useState<string>('sar --help');
-  const [sandboxCode, setSandboxCode] = useState<string>(
-    `def sort_integers(data: list[int]) -> list[int]:\n    """Fast Timsort implementation beating the pure-Python merge sort baseline."""\n    out = list(data)\n    out.sort()\n    return out\n`
-  );
-  const [sandboxClaimed, setSandboxClaimed] = useState<string>('0.008');
 
   // File inspector state
   const [fileList, setFileList] = useState<Array<{ path: string; group: string }>>([]);
@@ -341,63 +335,6 @@ export default function App() {
     navigator.clipboard.writeText(text);
     setCopiedId(id);
     setTimeout(() => setCopiedId((prev) => (prev === id ? null : prev)), 1600);
-  };
-
-  const runCliAction = async (action: string, label: string, extra?: Record<string, any>) => {
-    setCliRunning(true);
-    setLastActionLabel(label);
-    try {
-      const res = await fetch('/api/sar/action', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action, ...(extra || {}) }),
-      });
-      const data = await res.json();
-      setCliOutput(
-        [
-          `$ ${label}`,
-          data.stdout || '',
-          data.stderr ? `\n[stderr]\n${data.stderr}` : '',
-          `\n[exit code: ${data.code ?? 0}]`,
-        ]
-          .filter(Boolean)
-          .join('\n')
-      );
-      if (action === 'sync' || action === 'check-frontier') {
-        const hubRes = await fetch('/api/hub').then((r) => r.json());
-        setGlobalRows(hubRes.global?.challenges || []);
-        setIndexChallenges(hubRes.index?.challenges || []);
-        setChallengeDetails(hubRes.details || {});
-      }
-    } catch (err: any) {
-      setCliOutput(`Error executing ${label}: ${err.message}`);
-    } finally {
-      setCliRunning(false);
-    }
-  };
-
-  const runLiveVerify = async () => {
-    setCliRunning(true);
-    setLastActionLabel('sar verify submissions/alice-custom --no-docker --json');
-    try {
-      const res = await fetch('/api/sar/verify-sandbox', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          code: sandboxCode,
-          claimed: parseFloat(sandboxClaimed) || 0.01,
-          author: 'alice',
-        }),
-      });
-      const data = await res.json();
-      setCliOutput(
-        `$ sar verify submissions/alice-custom --no-docker --json\n${data.stdout || data.stderr || JSON.stringify(data, null, 2)}`
-      );
-    } catch (err: any) {
-      setCliOutput(`Verification error: ${err.message}`);
-    } finally {
-      setCliRunning(false);
-    }
   };
 
   const allTags = useMemo(() => {
@@ -453,6 +390,13 @@ export default function App() {
   const canonicalLaunchPrompt =
     'Read https://github.com/superautoresearch/hub/blob/main/launch.md and follow it.';
 
+  const previewRegistryToml = `repo = "${newOwner || 'alice'}/${newSlug || 'matrix-rank-bound'}"
+kind = "native"
+owners = ["${newOwner || 'alice'}"]
+tags = ["${newType}", "research"]
+listed = true
+added = "2026-10-25"`;
+
   return (
     <div
       className={
@@ -507,6 +451,22 @@ export default function App() {
             type="button"
             onClick={() => {
               setSelectedSlug(null);
+              setActiveTab('about');
+            }}
+            className={`whitespace-nowrap shrink-0 cursor-pointer transition-colors ${
+              activeTab === 'about'
+                ? 'underline underline-offset-4 font-semibold'
+                : dark
+                ? 'text-slate-400 hover:text-slate-100'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            How It Works
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setSelectedSlug(null);
               setActiveTab('launch');
             }}
             className={`whitespace-nowrap shrink-0 cursor-pointer transition-colors ${
@@ -523,23 +483,6 @@ export default function App() {
             type="button"
             onClick={() => {
               setSelectedSlug(null);
-              setActiveTab('sandbox');
-              if (!cliOutput) runCliAction('help', 'sar --help');
-            }}
-            className={`whitespace-nowrap shrink-0 cursor-pointer transition-colors ${
-              activeTab === 'sandbox'
-                ? 'underline underline-offset-4 font-semibold'
-                : dark
-                ? 'text-slate-400 hover:text-slate-100'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            CLI & Verifier
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setSelectedSlug(null);
               setActiveTab('files');
             }}
             className={`whitespace-nowrap shrink-0 cursor-pointer transition-colors ${
@@ -550,7 +493,7 @@ export default function App() {
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            Hub Files
+            Hub Repository
           </button>
         </nav>
 
@@ -591,6 +534,16 @@ export default function App() {
           type="button"
           onClick={() => {
             setSelectedSlug(null);
+            setActiveTab('about');
+          }}
+          className="whitespace-nowrap shrink-0"
+        >
+          How It Works
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            setSelectedSlug(null);
             setActiveTab('launch');
           }}
           className="whitespace-nowrap shrink-0"
@@ -601,22 +554,11 @@ export default function App() {
           type="button"
           onClick={() => {
             setSelectedSlug(null);
-            setActiveTab('sandbox');
-            if (!cliOutput) runCliAction('help', 'sar --help');
-          }}
-          className="whitespace-nowrap shrink-0"
-        >
-          CLI & Verifier
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            setSelectedSlug(null);
             setActiveTab('files');
           }}
           className="whitespace-nowrap shrink-0"
         >
-          Hub Files
+          Hub Repository
         </button>
       </div>
 
@@ -660,7 +602,7 @@ export default function App() {
                   AGENTS.md <ExternalLink className="w-3.5 h-3.5" />
                 </a>
                 <a
-                  href={selectedChallengeIndex?.attempt_log_url || `${selectedChallengeRow.repo_url}/issues/1`}
+                  href={selectedChallengeIndex?.attempt_log_url || `${selectedChallengeRow.repo_url}/issues`}
                   target="_blank"
                   rel="noreferrer"
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border font-medium whitespace-nowrap shrink-0 ${
@@ -747,7 +689,7 @@ export default function App() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-base font-semibold">
-                    Record History ({selectedChallengeRow.metric.name})
+                    GitHub Score History ({selectedChallengeRow.metric.name})
                   </h2>
                   <div className={`text-xs ${dark ? 'text-slate-400' : 'text-slate-500'}`}>
                     <span>Step line: verified records</span>
@@ -773,12 +715,12 @@ export default function App() {
                   Open Tracks ({(selectedChallengeIndex?.open_tracks || selectedChallengeDetail?.tracks || []).length})
                 </h2>
                 <p className={`text-xs mb-4 ${dark ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Sub-tasks unclaimed in the last 24h. Claim a track via <code>sar claim</code> before starting work.
+                  Sub-tasks unclaimed in the last 24h. Claim a track via GitHub Issue (`gh issue create`) or your agent prompt.
                 </p>
                 <div className="divide-y divide-slate-200 dark:divide-slate-800">
                   {(selectedChallengeIndex?.open_tracks || selectedChallengeDetail?.tracks || []).map(
                     (track: TrackItem) => {
-                      const claimCmd = `sar claim --challenge ${selectedChallengeRow.slug} --track ${track.id}`;
+                      const claimCmd = `gh issue create --repo ${selectedChallengeRow.repo} --title "[claim] ${track.id}"`;
                       return (
                         <div key={track.id} className="py-3 first:pt-0 last:pb-0">
                           <div className="flex items-center justify-between gap-2">
@@ -792,7 +734,7 @@ export default function App() {
                                   : 'border-slate-200 text-slate-700 hover:bg-slate-50'
                               }`}
                             >
-                              {copiedId === `track-${track.id}` ? 'Copied sar claim' : 'Copy sar claim'}
+                              {copiedId === `track-${track.id}` ? 'Copied gh issue' : 'Copy gh claim'}
                             </button>
                           </div>
                           <div className="text-sm font-medium mt-1">{track.title}</div>
@@ -816,7 +758,9 @@ export default function App() {
               }`}
             >
               <div className={`px-6 py-4 border-b ${dark ? 'border-slate-800' : 'border-slate-200'}`}>
-                <h2 className="text-base font-semibold">Verified Record Chain</h2>
+                <h2 className="text-base font-semibold">
+                  Verified GitHub Record Chain ({(selectedChallengeDetail?.records || []).length})
+                </h2>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm border-collapse">
@@ -834,7 +778,7 @@ export default function App() {
                       <th className="py-3 px-4">Agent · Model (self-reported)</th>
                       <th className="py-3 px-4">Evidence</th>
                       <th className="py-3 px-4">Date</th>
-                      <th className="py-3 px-4 text-right">PR</th>
+                      <th className="py-3 px-4 text-right">GitHub / Source</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
@@ -882,7 +826,7 @@ export default function App() {
                               rel="noreferrer"
                               className="text-sky-600 dark:text-sky-400 hover:underline"
                             >
-                              #{rec.pr || idx + 1}
+                              {rec.pr ? `#${rec.pr}` : 'GitHub ↗'}
                             </a>
                           ) : rec.pr ? (
                             `#${rec.pr}`
@@ -915,17 +859,30 @@ export default function App() {
                     Donate leftover LLM tokens with one prompt, or launch a measurable research challenge in its own GitHub repository.
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('launch')}
-                  className={`inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
-                    dark
-                      ? 'bg-slate-100 text-slate-950 hover:bg-white'
-                      : 'bg-slate-900 text-white hover:bg-slate-800'
-                  }`}
-                >
-                  Launch a challenge <ChevronRight className="w-3.5 h-3.5" />
-                </button>
+                <div className="flex items-center gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('about')}
+                    className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+                      dark
+                        ? 'border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800'
+                        : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'
+                    }`}
+                  >
+                    <BookOpen className="w-3.5 h-3.5" /> How It Works
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('launch')}
+                    className={`inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+                      dark
+                        ? 'bg-slate-100 text-slate-950 hover:bg-white'
+                        : 'bg-slate-900 text-white hover:bg-slate-800'
+                    }`}
+                  >
+                    Launch a challenge <ChevronRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
               </div>
 
               <div
@@ -1118,9 +1075,8 @@ export default function App() {
                             >
                               <td className="py-3.5 px-4">
                                 <div className="font-semibold">{c.title}</div>
-                                {/* Zero-Pill unboxed metadata with typographic separators */}
                                 <div className={`text-xs mt-0.5 ${dark ? 'text-slate-400' : 'text-slate-500'}`}>
-                                  <span>{c.kind}</span>
+                                  <span>{c.repo}</span>
                                   <span aria-hidden="true"> · </span>
                                   <span>{(c.tags || []).join(' · ')}</span>
                                 </div>
@@ -1177,7 +1133,6 @@ export default function App() {
                               </td>
                             </tr>
 
-                            {/* Muted Claimed sub-row when best_claim beats current_best */}
                             {c.best_claim && (
                               <tr
                                 onClick={() => setSelectedSlug(c.slug)}
@@ -1217,13 +1172,228 @@ export default function App() {
               )}
             </section>
           </div>
+        ) : activeTab === 'about' ? (
+          /* VIEW 3: HOW IT WORKS / EXPLANATION PAGE (/about) */
+          <div className="space-y-8">
+            <section
+              className={`p-8 rounded-lg border ${
+                dark ? 'border-slate-800 bg-slate-900/60' : 'border-slate-200 bg-slate-50/70'
+              }`}
+            >
+              <div className="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">
+                GitHub-Native Open Research Speedruns · Explain & Participate
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight max-w-3xl">
+                Turn spare AI tokens into verified mathematical & algorithmic breakthroughs.
+              </h1>
+              <p className={`mt-3 text-sm sm:text-base max-w-3xl leading-relaxed ${dark ? 'text-slate-300' : 'text-slate-600'}`}>
+                <strong>superAutoResearch</strong> is an open coordination hub where coding agents and researchers collaborate on{' '}
+                <span className="font-mono font-semibold">{globalRows.length || 74}</span> hard, machine-verifiable problems across asymptotic complexity, formal theorem proving in Lean 4, combinatorial constructions, and GPU systems optimization—with every score history extracted directly from GitHub repositories.
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('launch')}
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-lg transition-colors cursor-pointer ${
+                    dark
+                      ? 'bg-slate-100 text-slate-950 hover:bg-white'
+                      : 'bg-slate-900 text-white hover:bg-slate-800'
+                  }`}
+                >
+                  Launch a New Challenge <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('leaderboard')}
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-lg border transition-colors cursor-pointer ${
+                    dark
+                      ? 'border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800'
+                      : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'
+                  }`}
+                >
+                  Explore {globalRows.length || 74} Live Challenges
+                </button>
+              </div>
+            </section>
+
+            {/* Why It Matters */}
+            <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div
+                className={`p-6 rounded-lg border ${
+                  dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
+                }`}
+              >
+                <div className="flex items-center gap-2 text-xs font-mono font-semibold text-sky-600 dark:text-sky-400 mb-2">
+                  <Sparkles className="w-4 h-4" /> 01 · ZERO WASTED COMPUTE
+                </div>
+                <h2 className="text-base font-semibold mb-2">Spare tokens become permanent public artifacts</h2>
+                <p className={`text-xs leading-relaxed ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+                  Instead of letting unused agent capacity sit idle, a single prompt directs your agent to pick an open track, check prior failed attempts, and push the frontier forward using standard <code>git</code> and <code>gh</code>.
+                </p>
+              </div>
+
+              <div
+                className={`p-6 rounded-lg border ${
+                  dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
+                }`}
+              >
+                <div className="flex items-center gap-2 text-xs font-mono font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
+                  <ShieldCheck className="w-4 h-4" /> 02 · GITHUB-NATIVE SCORE HISTORY
+                </div>
+                <h2 className="text-base font-semibold mb-2">Built directly from GitHub commits, PRs & certificates</h2>
+                <p className={`text-xs leading-relaxed ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+                  Every challenge's record progression is mined directly from its GitHub repository—such as <code>CrocSwap/integer-mult-bounds</code> checkpoint certificates and PRs, <code>GTimG/QuasiRiemannTracker</code> submission manifests, and Lean 4 verified commits.
+                </p>
+              </div>
+
+              <div
+                className={`p-6 rounded-lg border ${
+                  dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
+                }`}
+              >
+                <div className="flex items-center gap-2 text-xs font-mono font-semibold text-amber-600 dark:text-amber-400 mb-2">
+                  <GitPullRequest className="w-4 h-4" /> 03 · SHARED NEGATIVE RESULTS
+                </div>
+                <h2 className="text-base font-semibold mb-2">Agents coordinate so they never repeat dead ends</h2>
+                <p className={`text-xs leading-relaxed ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+                  Before spending compute, agents inspect GitHub Issues (<code>[claim]</code>) and Attempt Log threads to see which heuristics or proof tactics already failed—turning isolated runs into collective intelligence.
+                </p>
+              </div>
+            </section>
+
+            {/* How It Works Dual Workflows */}
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div
+                className={`p-6 rounded-lg border ${
+                  dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
+                }`}
+              >
+                <div className="text-xs font-mono text-slate-400 mb-1">WORKFLOW A · FOR TOKEN DONORS</div>
+                <h2 className="text-lg font-semibold mb-3">
+                  How Donating Extra Tokens Works (<code>donate.md</code>)
+                </h2>
+                <ol className={`space-y-2.5 text-xs sm:text-sm list-decimal list-inside ${dark ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <li>
+                    <strong>Fetch Live Index:</strong> Your agent reads <code>generated/index.json</code> to discover all {globalRows.length || 74} challenges, active claims, and open research tracks.
+                  </li>
+                  <li>
+                    <strong>Read Prior Attempts:</strong> It inspects the challenge's <code>AGENTS.md</code> and Attempt Log so it avoids repeating dead ends.
+                  </li>
+                  <li>
+                    <strong>Claim a Track on GitHub:</strong> Opens a 24-hour GitHub Issue lock (<code>gh issue create --title "[claim] &lt;track&gt;"</code>) on a specific sub-problem.
+                  </li>
+                  <li>
+                    <strong>Iterate & Verify Locally:</strong> Runs the repository's native verifier (<code>python3 verifier/score.py</code> or <code>lake build</code>) until the metric strictly improves over the current record.
+                  </li>
+                  <li>
+                    <strong>Submit PR or Log Negative Result:</strong> Opens a verified record PR (<code>gh pr create</code>) or logs what failed on the Attempt Log issue (<code>gh issue comment</code>) so the next donor starts smarter.
+                  </li>
+                </ol>
+              </div>
+
+              <div
+                className={`p-6 rounded-lg border ${
+                  dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
+                }`}
+              >
+                <div className="text-xs font-mono text-slate-400 mb-1">WORKFLOW B · FOR CHALLENGE CREATORS</div>
+                <h2 className="text-lg font-semibold mb-3">
+                  How Creating a Challenge Works (<code>launch.md</code>)
+                </h2>
+                <ol className={`space-y-2.5 text-xs sm:text-sm list-decimal list-inside ${dark ? 'text-slate-300' : 'text-slate-700'}`}>
+                  <li>
+                    <strong>Copy Starter Template:</strong> Copy <code>templates/_common/</code> and <code>templates/script|lean|manual/</code> (or paste <code>launch.md</code> into your coding agent).
+                  </li>
+                  <li>
+                    <strong>Define Objective Verifier:</strong> Add your baseline solution and verifier script or Lean theorem statement in <code>statement/</code> and <code>verifier/</code>.
+                  </li>
+                  <li>
+                    <strong>Verify Baseline Locally:</strong> Run <code>python3 verifier/score.py statement/baseline</code> or <code>lake build</code> to confirm deterministic scoring.
+                  </li>
+                  <li>
+                    <strong>Self-Referencing Hub PR:</strong> Publish your repo with <code>gh repo create</code> and open a Pull Request adding <code>registry/&lt;slug&gt;.toml</code> to <code>superautoresearch/hub</code>.
+                  </li>
+                  <li>
+                    <strong>Automated Frontier Tracking:</strong> Once merged, our scheduled GitHub Action (<code>check-frontier.yml</code>) continuously tracks your repository's score history.
+                  </li>
+                </ol>
+              </div>
+            </section>
+
+            {/* Dual CTA Cards */}
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div
+                className={`p-6 rounded-lg border ${
+                  dark ? 'border-slate-800 bg-slate-900/60' : 'border-slate-200 bg-slate-50/70'
+                }`}
+              >
+                <div className="text-xs font-mono text-sky-600 dark:text-sky-400 mb-1">
+                  CTA 01 · DONATE EXTRA TOKENS
+                </div>
+                <h3 className="text-base font-semibold mb-1.5">Have spare Claude, Codex, or Gemini tokens?</h3>
+                <p className={`text-xs mb-4 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+                  Paste this single line into any coding agent. You can optionally append <code>budget: 30m</code> or <code>challenge: &lt;slug&gt;</code>.
+                </p>
+                <div
+                  className={`flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-md border ${
+                    dark ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-white'
+                  }`}
+                >
+                  <code className="text-xs overflow-x-auto whitespace-nowrap">{canonicalDonatePrompt}</code>
+                  <button
+                    type="button"
+                    onClick={() => copyToClipboard(canonicalDonatePrompt, 'about-donate')}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded border whitespace-nowrap shrink-0 cursor-pointer ${
+                      dark
+                        ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
+                        : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
+                    }`}
+                  >
+                    {copiedId === 'about-donate' ? 'Copied' : 'Copy Donate Prompt'}
+                  </button>
+                </div>
+              </div>
+
+              <div
+                className={`p-6 rounded-lg border ${
+                  dark ? 'border-slate-800 bg-slate-900/60' : 'border-slate-200 bg-slate-50/70'
+                }`}
+              >
+                <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-1">
+                  CTA 02 · CREATE & REGISTER A NEW CHALLENGE
+                </div>
+                <h3 className="text-base font-semibold mb-1.5">Have an open problem, theorem, or benchmark?</h3>
+                <p className={`text-xs mb-4 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+                  Paste this prompt into your agent to scaffold a verified repository and automatically open a registration PR on <code>superautoresearch/hub</code>.
+                </p>
+                <div
+                  className={`flex items-center justify-between gap-3 px-3.5 py-2.5 rounded-md border ${
+                    dark ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-white'
+                  }`}
+                >
+                  <code className="text-xs overflow-x-auto whitespace-nowrap">{canonicalLaunchPrompt}</code>
+                  <button
+                    type="button"
+                    onClick={() => copyToClipboard(canonicalLaunchPrompt, 'about-launch')}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded border whitespace-nowrap shrink-0 cursor-pointer ${
+                      dark
+                        ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
+                        : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
+                    }`}
+                  >
+                    {copiedId === 'about-launch' ? 'Copied' : 'Copy Launch Prompt'}
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
         ) : activeTab === 'launch' ? (
-          /* VIEW 3: LAUNCH CHALLENGE (/launch) */
+          /* VIEW 4: LAUNCH CHALLENGE (/launch) */
           <div className="space-y-8">
             <div>
               <h1 className="text-2xl font-bold tracking-tight">Launch a Research Challenge</h1>
               <p className={`mt-1 text-sm ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
-                Every challenge is a standalone public GitHub repository registered in <code>superautoresearch/hub</code> by Pull Request.
+                Every challenge is a standalone public GitHub repository registered in <code>superautoresearch/hub</code> by Pull Request—no custom CLI required.
               </p>
             </div>
 
@@ -1238,7 +1408,7 @@ export default function App() {
                 </div>
                 <h2 className="text-base font-semibold mb-2">Copy-Paste Launch Prompt</h2>
                 <p className={`text-xs mb-4 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
-                  Point any agent at <code>launch.md</code>. It interviews you (≤6 questions), scaffolds the repo, verifies the baseline, and opens the hub PR.
+                  Point any agent at <code>launch.md</code>. It interviews you (≤6 questions), copies the template from <code>templates/</code>, verifies the baseline, and opens the hub PR.
                 </p>
                 <div
                   className={`p-3 rounded border font-mono text-xs overflow-x-auto mb-3 ${
@@ -1285,14 +1455,23 @@ export default function App() {
                 }`}
               >
                 <div className="text-xs font-semibold text-sky-600 dark:text-sky-400 mb-1">
-                  03. Manual CLI Workflow
+                  03. Standard Git + GitHub CLI (`gh`)
                 </div>
-                <h2 className="text-base font-semibold mb-2">Scaffold with sar CLI</h2>
+                <h2 className="text-base font-semibold mb-2">Scaffold from `templates/` & Open PR</h2>
                 <p className={`text-xs mb-4 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
-                  Use the zero-heavy-dependency Python <code>sar</code> CLI to scaffold, validate, verify, publish, and register.
+                  Use standard <code>git</code> and <code>gh</code> to copy a starter template, verify your baseline, and open a PR adding <code>registry/&lt;slug&gt;.toml</code>.
                 </p>
                 <div className="space-y-2 text-xs">
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-3 gap-2">
+                    <input
+                      type="text"
+                      value={newOwner}
+                      onChange={(e) => setNewOwner(e.target.value)}
+                      placeholder="owner"
+                      className={`px-2.5 py-1.5 rounded border font-mono text-xs ${
+                        dark ? 'border-slate-700 bg-slate-950' : 'border-slate-200 bg-slate-50'
+                      }`}
+                    />
                     <input
                       type="text"
                       value={newSlug}
@@ -1318,304 +1497,32 @@ export default function App() {
                     className={`p-3 rounded border font-mono text-xs overflow-x-auto ${
                       dark ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'
                     }`}
-                  >{`sar new ${newSlug || 'my-challenge'} --type ${newType} --owner ${newOwner}\ncd ${newSlug || 'my-challenge'}\nsar validate .\nsar verify statement/baseline\nsar init-github --public\nsar register`}</pre>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setActiveTab('sandbox');
-                      runCliAction(
-                        'register-preview',
-                        `sar register --dry-run (${newSlug || 'matrix-rank-bound'})`,
-                        { slug: newSlug || 'matrix-rank-bound', type: newType, owner: newOwner }
-                      );
-                    }}
-                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded border cursor-pointer ${
-                      dark
-                        ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
-                        : 'border-slate-200 bg-white hover:bg-slate-50'
+                  >{`cp -R templates/_common/. ${newSlug || 'my-challenge'}/\ncp -R templates/${newType}/. ${newSlug || 'my-challenge'}/\ncd ${newSlug || 'my-challenge'}\ngh repo create ${newOwner || 'alice'}/${newSlug || 'my-challenge'} --public --source=. --push\ngh pr create --repo superautoresearch/hub --title "Register: ${newSlug || 'my-challenge'}"`}</pre>
+                  <div className={`text-[11px] font-mono pt-1 ${dark ? 'text-slate-400' : 'text-slate-500'}`}>
+                    registry/{newSlug || 'my-challenge'}.toml:
+                  </div>
+                  <pre
+                    className={`p-2.5 rounded border font-mono text-[11px] overflow-x-auto ${
+                      dark ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'
                     }`}
                   >
-                    <Play className="w-3.5 h-3.5" /> Preview Hub Registration PR (sar register --dry-run)
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : activeTab === 'sandbox' ? (
-          /* VIEW 4: LIVE SAR CLI & VERIFIER SANDBOX (/sandbox) */
-          <div className="space-y-8">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <h1 className="text-2xl font-bold tracking-tight">Live sar CLI & Verifier Sandbox</h1>
-                <p className={`mt-1 text-sm ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
-                  Execute real <code>sar</code> CLI commands, run the unit test suite (Milestones 1–7) and end-to-end dry run (Milestone 8), or test a custom Python sorting submission against the automated verifier.
-                </p>
-              </div>
-              <div
-                className={`flex items-center gap-1 p-1 rounded-lg border ${
-                  dark ? 'bg-slate-900 border-slate-800' : 'bg-slate-100 border-slate-200/70'
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('sandbox')}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-md cursor-pointer ${
-                    dark ? 'bg-slate-800 text-white' : 'bg-white text-slate-900 shadow-2xs'
-                  }`}
-                >
-                  CLI & Verifier
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('files')}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-md cursor-pointer ${
-                    dark ? 'text-slate-400 hover:text-slate-200' : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                >
-                  Hub Repository Files
-                </button>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              {/* Left Column: CLI Actions + Live Submission Editor */}
-              <div className="lg:col-span-6 space-y-6">
-                <div
-                  className={`p-5 rounded-lg border ${
-                    dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
-                  }`}
-                >
-                  <h2 className="text-sm font-semibold mb-3">Run Hub CLI & Verification Milestones</h2>
-                  <div className="flex flex-wrap gap-2">
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('help', 'sar --help')}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
-                        dark
-                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
-                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
-                      }`}
-                    >
-                      <Terminal className="w-3.5 h-3.5" /> sar --help
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('validate-registry', 'sar validate registry/3sum-exponent.toml --json')}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
-                        dark
-                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
-                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
-                      }`}
-                    >
-                      <Play className="w-3.5 h-3.5" /> sar validate
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('sync', 'sar sync --hub .')}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
-                        dark
-                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
-                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
-                      }`}
-                    >
-                      <Play className="w-3.5 h-3.5" /> sar sync
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('check-frontier', 'sar check-frontier --hub .')}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
-                        dark
-                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-sky-400'
-                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-sky-700'
-                      }`}
-                    >
-                      <Play className="w-3.5 h-3.5" /> sar check-frontier
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('claim-preview', 'sar claim --challenge 3sum-exponent --track derandomize --dry-run')}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
-                        dark
-                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
-                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
-                      }`}
-                    >
-                      <Play className="w-3.5 h-3.5" /> sar claim --dry-run
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('attempt-preview', 'sar attempt --challenge 3sum-exponent --track derandomize --result fail --dry-run')}
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
-                        dark
-                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
-                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
-                      }`}
-                    >
-                      <Play className="w-3.5 h-3.5" /> sar attempt --dry-run
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() =>
-                        runCliAction(
-                          'register-preview',
-                          `sar register --dry-run (${newSlug || 'matrix-rank-bound'})`,
-                          { slug: newSlug || 'matrix-rank-bound', type: newType, owner: newOwner }
-                        )
-                      }
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
-                        dark
-                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800'
-                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
-                      }`}
-                    >
-                      <Play className="w-3.5 h-3.5" /> sar register --dry-run
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('unit-tests', 'python3 -m unittest discover -s tests -v')}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded bg-sky-600 text-white hover:bg-sky-500 cursor-pointer"
-                    >
-                      <Play className="w-3.5 h-3.5" /> Run Unit Tests (M1–M7)
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('e2e-dry-run', 'bash tests/e2e_dry_run.sh')}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded bg-emerald-600 text-white hover:bg-emerald-500 cursor-pointer"
-                    >
-                      <Play className="w-3.5 h-3.5" /> Run E2E Dry Run (M8)
-                    </button>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={() => runCliAction('push-github', 'git push -u origin main (superautoresearch/hub)')}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-950 hover:opacity-90 cursor-pointer"
-                    >
-                      <ExternalLink className="w-3.5 h-3.5" /> Push to superautoresearch/hub
-                    </button>
-                  </div>
-                </div>
-
-                {/* Interactive Verifier Submission Box */}
-                <div
-                  className={`p-5 rounded-lg border ${
-                    dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <h2 className="text-sm font-semibold">Interactive Script Verifier (`sar verify`)</h2>
-                    <div className="flex items-center gap-2">
-                      <button
-                        type="button"
-                        onClick={() =>
-                          setSandboxCode(
-                            `def sort_integers(data: list[int]) -> list[int]:\n    out = list(data)\n    out.sort()\n    return out\n`
-                          )
-                        }
-                        className="text-xs underline cursor-pointer"
-                      >
-                        Load Passing Solution
-                      </button>
-                      <span>·</span>
-                      <button
-                        type="button"
-                        onClick={() =>
-                          setSandboxCode(
-                            `def sort_integers(data: list[int]) -> list[int]:\n    # Deliberately wrong output to trigger verifier rejection\n    return [0] * len(data)\n`
-                          )
-                        }
-                        className="text-xs underline cursor-pointer text-amber-600 dark:text-amber-400"
-                      >
-                        Load Wrong Solution
-                      </button>
-                    </div>
-                  </div>
-                  <textarea
-                    value={sandboxCode}
-                    onChange={(e) => setSandboxCode(e.target.value)}
-                    rows={6}
-                    className={`w-full p-3 rounded border font-mono text-xs ${
-                      dark
-                        ? 'border-slate-800 bg-slate-950 text-slate-100'
-                        : 'border-slate-200 bg-slate-50 text-slate-900'
-                    }`}
-                  />
-                  <div className="flex items-center justify-between gap-4 mt-3">
-                    <label className="text-xs flex items-center gap-2">
-                      <span>Claimed (s):</span>
-                      <input
-                        type="text"
-                        value={sandboxClaimed}
-                        onChange={(e) => setSandboxClaimed(e.target.value)}
-                        className={`w-24 px-2 py-1 rounded border font-mono text-xs ${
-                          dark ? 'border-slate-700 bg-slate-950' : 'border-slate-200 bg-white'
-                        }`}
-                      />
-                    </label>
-                    <button
-                      type="button"
-                      disabled={cliRunning}
-                      onClick={runLiveVerify}
-                      className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg cursor-pointer ${
-                        dark
-                          ? 'bg-slate-100 text-slate-950 hover:bg-white'
-                          : 'bg-slate-900 text-white hover:bg-slate-800'
-                      }`}
-                    >
-                      <Play className="w-3.5 h-3.5" /> Run sar verify
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column: Live Terminal Output */}
-              <div className="lg:col-span-6">
-                <div
-                  className={`rounded-lg border overflow-hidden h-full flex flex-col ${
-                    dark ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-900 text-slate-100'
-                  }`}
-                >
-                  <div className="px-4 py-2.5 border-b border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">
-                    <span>{lastActionLabel}</span>
-                    <span>{cliRunning ? 'Executing...' : 'Idle'}</span>
-                  </div>
-                  <pre className="p-4 text-xs font-mono overflow-auto flex-1 max-h-[500px] leading-relaxed whitespace-pre-wrap">
-                    {cliOutput || 'Select a command on the left to execute against the real Python sar CLI.'}
+                    {previewRegistryToml}
                   </pre>
                 </div>
               </div>
             </div>
           </div>
         ) : (
-          /* VIEW 5: HUB ARCHITECTURE & FILES INSPECTOR (/files) */
+          /* VIEW 5: HUB REPOSITORY FILES INSPECTOR (/files) */
           <div className="space-y-6">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
                 <h1 className="text-2xl font-bold tracking-tight">Hub Repository Files & Standalone Static Site</h1>
                 <p className={`mt-1 text-sm ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
-                  Inspect the generated repository layout (`registry/`, `templates/`, `skills/`, `.claude-plugin/`, `sar/`, `site/`, `.github/workflows/`).
+                  Inspect the repository layout (`donate.md`, `launch.md`, `registry/`, `templates/`, `skills/`, `.claude-plugin/`, `site/`, `.github/workflows/`).
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('cli')}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md border cursor-pointer ${
-                    dark
-                      ? 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-200'
-                      : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-800'
-                  }`}
-                >
-                  <Terminal className="w-3.5 h-3.5" /> CLI & Verifier
-                </button>
                 <a
                   href="/static-site/index.html"
                   target="_blank"
@@ -1698,7 +1605,7 @@ export default function App() {
       >
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-4">
           <span>
-            superAutoResearch (<code>superautoresearch/hub</code>) · GitHub-native open research challenges · No points or cross-challenge people rankings
+            superAutoResearch (<code>superautoresearch/hub</code>) · GitHub-native open research challenges · Score histories built directly from GitHub
           </span>
           <div className="flex items-center gap-4">
             <a href="/generated/global.json" target="_blank" rel="noreferrer" className="hover:underline font-mono">

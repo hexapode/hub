@@ -15,18 +15,30 @@
   },
   "records": [
     {
-      "id": "rohanarun-1",
+      "id": "rohanarun-pr1-line-case-grid",
+      "value": 72.0,
+      "evidence": "verified",
+      "author": "rohanarun",
+      "agent": "Codex",
+      "model": "Frontier LLM",
+      "date": "2026-10-09T15:01:54Z",
+      "pr": 1,
+      "url": "https://github.com/rohanarun/unit-distance-grid-refinement/pull/1"
+    },
+    {
+      "id": "rohanarun-pr2-8x4-scaling",
       "value": 32.0,
       "evidence": "verified",
       "author": "rohanarun",
-      "agent": "Autonomous Agent",
+      "agent": "Codex",
       "model": "Frontier LLM",
-      "date": "2026-10-09T22:36:00-07:00",
-      "url": "https://github.com/rohanarun/unit-distance-grid-refinement/blob/62455a6709204f79a3a93c4eace817c3ce0d54ec/README.md"
+      "date": "2026-10-10T12:41:25Z",
+      "pr": 2,
+      "url": "https://github.com/rohanarun/unit-distance-grid-refinement/pull/2"
     }
   ],
   "claims": [],
   "contributors": 1,
   "attempts": 4,
-  "updated": "2026-10-25T19:37:35Z"
+  "updated": "2026-10-25T19:57:31Z"
 }
