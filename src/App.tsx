@@ -17,6 +17,7 @@ import {
   Terminal,
   AlertTriangle,
 } from 'lucide-react';
+import logoUrl from './assets/images/superautoresearch_logo_1792954930815.jpg';
 
 interface MetricSpec {
   name: string;
@@ -101,13 +102,22 @@ function formatEvidenceLabel(verifierType: string, evidence?: string): string {
   return 'Verified';
 }
 
+function formatNumericValue(value: number): string {
+  if (!Number.isFinite(value)) return String(value);
+  if (Math.abs(value) > 0 && (Math.abs(value) < 1e-4 || Math.abs(value) >= 1e6)) {
+    return value.toExponential(4);
+  }
+  return String(Number(value.toPrecision(6)));
+}
+
 function MetricDisplay({ value, metric }: { value: number | null | undefined; metric: MetricSpec }) {
   if (value === null || value === undefined) return <span>—</span>;
+  const formattedVal = formatNumericValue(value);
   const display = metric?.display || '{value}';
   const unit = metric?.unit || '';
-  let raw = display.replace('{value}', String(value));
+  let raw = display.replace('{value}', formattedVal);
   if (!metric?.display && unit) {
-    raw = `${value} ${unit}`;
+    raw = `${formattedVal} ${unit}`;
   }
   const needsKatex = raw.includes('^') || raw.includes('_') || raw.includes('\\');
   if (needsKatex && typeof window !== 'undefined' && window.katex) {
@@ -353,10 +363,11 @@ export default function App() {
           .filter(Boolean)
           .join('\n')
       );
-      if (action === 'sync') {
+      if (action === 'sync' || action === 'check-frontier') {
         const hubRes = await fetch('/api/hub').then((r) => r.json());
         setGlobalRows(hubRes.global?.challenges || []);
         setIndexChallenges(hubRes.index?.challenges || []);
+        setChallengeDetails(hubRes.details || {});
       }
     } catch (err: any) {
       setCliOutput(`Error executing ${label}: ${err.message}`);
@@ -456,16 +467,22 @@ export default function App() {
           dark ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-white'
         }`}
       >
-        {/* Zone 1: Single text element wordmark */}
+        {/* Zone 1: Brand mark + wordmark */}
         <button
           type="button"
           onClick={() => {
             setSelectedSlug(null);
             setActiveTab('leaderboard');
           }}
-          className="text-lg font-bold tracking-tight whitespace-nowrap shrink-0 cursor-pointer"
+          className="inline-flex items-center gap-2.5 text-lg font-bold tracking-tight whitespace-nowrap shrink-0 cursor-pointer"
         >
-          superAutoResearch
+          <img
+            src={logoUrl}
+            alt="superAutoResearch logo"
+            className="w-7 h-7 rounded-md object-cover shrink-0"
+            referrerPolicy="no-referrer"
+          />
+          <span>superAutoResearch</span>
         </button>
 
         {/* Zone 2: 4 concise single-line text navigation links */}
@@ -1361,6 +1378,18 @@ export default function App() {
                       }`}
                     >
                       <Play className="w-3.5 h-3.5" /> sar sync
+                    </button>
+                    <button
+                      type="button"
+                      disabled={cliRunning}
+                      onClick={() => runCliAction('check-frontier', 'sar check-frontier --hub .')}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded border cursor-pointer ${
+                        dark
+                          ? 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-sky-400'
+                          : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-sky-700'
+                      }`}
+                    >
+                      <Play className="w-3.5 h-3.5" /> sar check-frontier
                     </button>
                     <button
                       type="button"

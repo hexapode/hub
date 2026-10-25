@@ -1,0 +1,109 @@
+[[records]]
+id = "anthropic-2026"
+value = 2.99942
+evidence = "verified"
+author = "Josh"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-05T17:44:29Z"
+url = "https://github.com/anthropics/formal-math/blob/e1a4e6508154ea59f030480661590a9fe3018011/3sum-apsp/EndStatement.lean"
+
+[[records]]
+id = "prove2me-apsp-2-9983"
+value = 2.9983
+evidence = "verified"
+author = "wurtle"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-06T16:59:46Z"
+url = "https://prove2.me/theorems/9c4150fb-2e87-4412-bdd9-52c25d6283eb"
+
+[[records]]
+id = "prove2me-apsp-2-99791"
+value = 2.99791
+evidence = "verified"
+author = "xuanji"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-06T23:55:43Z"
+url = "https://prove2.me/theorems/6bdc9821-d8c3-42ef-b58c-7932ad0f6d18"
+
+[[records]]
+id = "prove2me-apsp-2-996001"
+value = 2.996001
+evidence = "verified"
+author = "xuanji"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-07T06:45:53Z"
+url = "https://prove2.me/theorems/6ea60950-8945-4892-82b5-598a60b0ae1b"
+
+[[records]]
+id = "direct-pr-6"
+value = 2.995561
+evidence = "verified"
+author = "ldct"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-12T01:30:55Z"
+url = "https://github.com/bigospeedrun/verifier/pull/6"
+
+[[records]]
+id = "direct-pr-13"
+value = 2.99556085
+evidence = "verified"
+author = "fringewidth"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-15T13:04:04Z"
+url = "https://github.com/bigospeedrun/verifier/pull/13"
+
+[[records]]
+id = "direct-issue-25"
+value = 2.995560766
+evidence = "verified"
+author = "JoshuaQFEX"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-20T14:14:28Z"
+url = "https://github.com/bigospeedrun/verifier/issues/25"
+
+[[records]]
+id = "direct-issue-32"
+value = 2.995560764781
+evidence = "verified"
+author = "fringewidth"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-21T02:14:33Z"
+url = "https://github.com/bigospeedrun/verifier/issues/32"
+
+[[claims]]
+id = "majdoddin-apsp-2026"
+value = 2.9945
+evidence = "claimed"
+author = "Ruhollah"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-12T21:34:07Z"
+url = "https://arxiv.org/abs/2610.17420v1"
+
+[[claims]]
+id = "shreshth-s-apsp-2026"
+value = 2.99294792
+evidence = "claimed"
+author = "shresh"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-16T21:33:49Z"
+url = "https://github.com/shreshth-s/thin-matrix-results/blob/8a21eaae81599913dba562727e03a9b48c36a5b9/outputs/exponent-improvement.tex#L3132-L3137"
+
+[[claims]]
+id = "joshuaqfex-apsp-2026"
+value = 2.992947918709
+evidence = "claimed"
+author = "Joshua"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-20T11:38:02Z"
+url = "https://github.com/JoshuaQFEX/apsp-bound/blob/5dafbb186851aa80da58fb40a5e6857f4129b4fc/apsp_refinement.tex#L197-L202"

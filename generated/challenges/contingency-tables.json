@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "slug": "contingency-tables",
+  "metric": {
+    "name": "A d^p",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "O(d^{{value}})"
+  },
+  "baseline": {
+    "value": 126.0,
+    "label": "OpenAI baseline 98,560 d^126 (degree 126)",
+    "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026/main.pdf"
+  },
+  "records": [
+    {
+      "id": "ecodatalab-1",
+      "value": 17.0,
+      "evidence": "verified",
+      "author": "EcoDataLab",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 + LLM",
+      "date": "2026-10-08T22:47:00-07:00",
+      "url": "https://github.com/EcoDataLab/contingency-tables/blob/fe72b20170e7f85e399368e56baf65b8782b4b50/README.md"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 4,
+  "updated": "2026-10-25T19:09:49Z"
+}

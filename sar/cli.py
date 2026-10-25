@@ -168,6 +168,14 @@ def build_parser() -> argparse.ArgumentParser:
     p_rep.add_argument("--artifact", required=True, help="Path to result.json artifact")
     p_rep.add_argument("--challenge-dir", default=".", help="Path to challenge repo")
 
+    # 12. sar check-frontier [--hub PATH] [--json]
+    p_front = subparsers.add_parser(
+        "check-frontier",
+        help="Check upstream frontier across all listed challenges (including Big O Speedrun) and sync generated/",
+    )
+    p_front.add_argument("--hub", default=".", help="Path to hub repository root")
+    p_front.add_argument("--json", action="store_true", help="Print frontier report JSON")
+
     return parser
 
 
@@ -321,6 +329,25 @@ def main(argv: list[str] | None = None) -> int:
             )
             rep = generate_pr_report(artifact_raw, lb, spec)
             print(json.dumps(rep, indent=2))
+            return 0
+
+        if args.command == "check-frontier":
+            from sar.frontier import check_all_frontiers
+
+            rep = check_all_frontiers(hub_dir=Path(args.hub))
+            if args.json:
+                print(json.dumps(rep, indent=2))
+            else:
+                print(
+                    f"Checked frontier for {rep['total_challenges']} challenges "
+                    f"({rep['ok_count']} ok) at {rep['checked_at']}."
+                )
+                for ch in rep["challenges"]:
+                    print(
+                        f"  - {ch['slug']:26s} | best: {str(ch.get('frontier_best')):14s} "
+                        f"| records: {ch.get('verified_records', 0):2d} "
+                        f"| claims: {ch.get('open_claims', 0):2d} | status: {ch.get('status')}"
+                    )
             return 0
 
     except ValidationError as exc:

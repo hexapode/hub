@@ -1,0 +1,592 @@
+{
+  "schema": 1,
+  "slug": "integer-multiplication",
+  "metric": {
+    "name": "log-saving kappa",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\kappa = {value}"
+  },
+  "baseline": {
+    "value": 0.0,
+    "label": "Harvey-van der Hoeven O(n log n) (kappa = 0)"
+  },
+  "records": [
+    {
+      "id": "swapnil-round-6",
+      "value": 3.6665656e-05,
+      "evidence": "verified",
+      "author": "Swapnil-jain",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T14:01:26Z",
+      "url": "https://github.com/Swapnil-jain/integer-mult-kappa/blob/f2176bc1124821bf17eb63725bd366d7bdc020a3/README.md"
+    }
+  ],
+  "claims": [
+    {
+      "id": "crocswap-pr-36",
+      "value": 3.84569e-05,
+      "evidence": "claimed",
+      "author": "icekylinx",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T12:27:27Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/36"
+    },
+    {
+      "id": "crocswap-pr-37",
+      "value": 3.850771e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T12:39:52Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/37"
+    },
+    {
+      "id": "crocswap-pr-38",
+      "value": 3.886224e-05,
+      "evidence": "claimed",
+      "author": "DominikScholz",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T12:49:21Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/38"
+    },
+    {
+      "id": "crocswap-pr-39",
+      "value": 3.8866759e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T12:58:44Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/39"
+    },
+    {
+      "id": "crocswap-pr-40",
+      "value": 3.9187349e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T13:15:57Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/40"
+    },
+    {
+      "id": "crocswap-pr-41",
+      "value": 4.0341681e-05,
+      "evidence": "claimed",
+      "author": "hipotures",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T13:33:05Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/41"
+    },
+    {
+      "id": "crocswap-pr-42",
+      "value": 4.0994945e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T13:51:36Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/42"
+    },
+    {
+      "id": "crocswap-pr-43",
+      "value": 4.09953e-05,
+      "evidence": "claimed",
+      "author": "chafreaky",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T13:55:52Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/43"
+    },
+    {
+      "id": "crocswap-pr-44",
+      "value": 4.1006293e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T14:24:20Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/44"
+    },
+    {
+      "id": "crocswap-pr-46",
+      "value": 4.1006295e-05,
+      "evidence": "claimed",
+      "author": "chafreaky",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T14:44:04Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/46"
+    },
+    {
+      "id": "crocswap-pr-47",
+      "value": 4.1051066e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T14:56:35Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/47"
+    },
+    {
+      "id": "crocswap-pr-48",
+      "value": 4.1186254e-05,
+      "evidence": "claimed",
+      "author": "chafreaky",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T15:14:53Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/48"
+    },
+    {
+      "id": "crocswap-pr-49",
+      "value": 4.123864e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T15:36:58Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/49"
+    },
+    {
+      "id": "crocswap-pr-50",
+      "value": 4.1294187e-05,
+      "evidence": "claimed",
+      "author": "gupt1156",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T16:03:12Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/50"
+    },
+    {
+      "id": "crocswap-pr-51",
+      "value": 4.1712118e-05,
+      "evidence": "claimed",
+      "author": "hipotures",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T16:18:29Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/51"
+    },
+    {
+      "id": "crocswap-pr-53",
+      "value": 4.498144e-05,
+      "evidence": "claimed",
+      "author": "ikeboy",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T16:31:14Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/53"
+    },
+    {
+      "id": "crocswap-pr-54",
+      "value": 4.5290407e-05,
+      "evidence": "claimed",
+      "author": "chafreaky",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T16:41:24Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/54"
+    },
+    {
+      "id": "crocswap-pr-55",
+      "value": 4.541011e-05,
+      "evidence": "claimed",
+      "author": "gupt1156",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T17:05:20Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/55"
+    },
+    {
+      "id": "crocswap-pr-56",
+      "value": 4.5486714e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T17:06:10Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/56"
+    },
+    {
+      "id": "crocswap-pr-57",
+      "value": 4.6694424e-05,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T17:07:21Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/57"
+    },
+    {
+      "id": "crocswap-pr-58",
+      "value": 4.7507357e-05,
+      "evidence": "claimed",
+      "author": "chafreaky",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T17:24:40Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/58"
+    },
+    {
+      "id": "crocswap-pr-60",
+      "value": 4.7645133e-05,
+      "evidence": "claimed",
+      "author": "chafreaky",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T17:40:30Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/60"
+    },
+    {
+      "id": "crocswap-pr-61",
+      "value": 5.101692e-05,
+      "evidence": "claimed",
+      "author": "alejandrozu",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T17:41:13Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/61"
+    },
+    {
+      "id": "crocswap-pr-63",
+      "value": 5.102757e-05,
+      "evidence": "claimed",
+      "author": "DominikScholz",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T18:05:25Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/63"
+    },
+    {
+      "id": "crocswap-pr-65",
+      "value": 5.1028985e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T18:24:54Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/65"
+    },
+    {
+      "id": "crocswap-pr-67",
+      "value": 5.1033761e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T18:39:26Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/67"
+    },
+    {
+      "id": "crocswap-pr-68",
+      "value": 5.1035127e-05,
+      "evidence": "claimed",
+      "author": "DominikScholz",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T18:40:15Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/68"
+    },
+    {
+      "id": "crocswap-pr-69",
+      "value": 5.1368375e-05,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T19:01:51Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/69"
+    },
+    {
+      "id": "crocswap-pr-71",
+      "value": 5.1414646e-05,
+      "evidence": "claimed",
+      "author": "chafreaky",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T19:06:56Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/71"
+    },
+    {
+      "id": "crocswap-pr-74",
+      "value": 7.8089817e-05,
+      "evidence": "claimed",
+      "author": "tomdif",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T19:26:36Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/74"
+    },
+    {
+      "id": "crocswap-pr-108",
+      "value": 7.9882893e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T23:54:10Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/108"
+    },
+    {
+      "id": "crocswap-pr-109",
+      "value": 7.9961717e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-08T23:59:38Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/109"
+    },
+    {
+      "id": "crocswap-pr-110",
+      "value": 8.58478e-05,
+      "evidence": "claimed",
+      "author": "ikeboy",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T00:02:51Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/110"
+    },
+    {
+      "id": "crocswap-pr-113",
+      "value": 9.39074e-05,
+      "evidence": "claimed",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T00:13:34Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/113"
+    },
+    {
+      "id": "crocswap-pr-114",
+      "value": 0.000123988198,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T00:23:37Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/114"
+    },
+    {
+      "id": "crocswap-pr-129",
+      "value": 0.000129186206,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T02:07:28Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/129"
+    },
+    {
+      "id": "crocswap-pr-130",
+      "value": 0.0003146011,
+      "evidence": "claimed",
+      "author": "icekylinx",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T02:29:02Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/130"
+    },
+    {
+      "id": "crocswap-pr-131",
+      "value": 0.000332205399,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T02:41:54Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/131"
+    },
+    {
+      "id": "crocswap-pr-132",
+      "value": 0.0003416202,
+      "evidence": "claimed",
+      "author": "ikeboy",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T02:46:41Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/132"
+    },
+    {
+      "id": "crocswap-pr-134",
+      "value": 0.000348102,
+      "evidence": "claimed",
+      "author": "GamingPuzzled",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T02:52:00Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/134"
+    },
+    {
+      "id": "crocswap-pr-135",
+      "value": 0.000362108223,
+      "evidence": "claimed",
+      "author": "DanieleCorso",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T02:58:07Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/135"
+    },
+    {
+      "id": "crocswap-pr-136",
+      "value": 0.000362108585,
+      "evidence": "claimed",
+      "author": "geckods",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T03:13:24Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/136"
+    },
+    {
+      "id": "crocswap-pr-137",
+      "value": 0.000413596234,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T03:18:33Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/137"
+    },
+    {
+      "id": "crocswap-pr-138",
+      "value": 0.000413596659,
+      "evidence": "claimed",
+      "author": "geckods",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T03:24:38Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/138"
+    },
+    {
+      "id": "crocswap-pr-139",
+      "value": 0.000450198447,
+      "evidence": "claimed",
+      "author": "DanieleCorso",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T03:29:04Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/139"
+    },
+    {
+      "id": "crocswap-pr-144",
+      "value": 0.0004609169,
+      "evidence": "claimed",
+      "author": "icekylinx",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T04:19:35Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/144"
+    },
+    {
+      "id": "crocswap-pr-146",
+      "value": 0.000461028509,
+      "evidence": "claimed",
+      "author": "Th0rgal",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T04:45:27Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/146"
+    },
+    {
+      "id": "crocswap-pr-147",
+      "value": 0.0004646633,
+      "evidence": "claimed",
+      "author": "hpst3r",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T04:49:26Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/147"
+    },
+    {
+      "id": "crocswap-pr-150",
+      "value": 0.000471809569,
+      "evidence": "claimed",
+      "author": "DaysSky",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T05:25:46Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/150"
+    },
+    {
+      "id": "crocswap-pr-151",
+      "value": 0.000472154791,
+      "evidence": "claimed",
+      "author": "SovereignSteak",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T05:45:33Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/151"
+    },
+    {
+      "id": "crocswap-pr-152",
+      "value": 0.0005108289,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T06:05:07Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/152"
+    },
+    {
+      "id": "crocswap-pr-153",
+      "value": 0.0005108294,
+      "evidence": "claimed",
+      "author": "geckods",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T06:11:37Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/153"
+    },
+    {
+      "id": "crocswap-pr-155",
+      "value": 0.0005508074,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T06:40:26Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/155"
+    },
+    {
+      "id": "crocswap-pr-157",
+      "value": 0.0005555021,
+      "evidence": "claimed",
+      "author": "eumemic",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T06:54:05Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/157"
+    },
+    {
+      "id": "crocswap-pr-158",
+      "value": 0.0005557315,
+      "evidence": "claimed",
+      "author": "geckods",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T07:07:00Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/158"
+    },
+    {
+      "id": "crocswap-pr-159",
+      "value": 0.127865,
+      "evidence": "claimed",
+      "author": "CarrotCultivator",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-09T07:11:47Z",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/159"
+    }
+  ],
+  "contributors": 84,
+  "attempts": 2325,
+  "updated": "2026-10-25T19:09:49Z"
+}

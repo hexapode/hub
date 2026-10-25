@@ -1,0 +1,9 @@
+[[records]]
+id = "rogerhu12-1"
+value = 1.0
+evidence = "verified"
+author = "Rogerhu12"
+agent = "Autonomous Agent"
+model = "Frontier LLM"
+date = "2026-10-07T12:52:00-07:00"
+url = "https://github.com/Rogerhu12/openai-math-extensions/blob/8e94120c0e9eecfe3d4991eb2102d4da8ede96cf/README.md"

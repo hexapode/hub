@@ -1,0 +1,19 @@
+[[records]]
+id = "anchen0823-2"
+value = 3.762
+evidence = "verified"
+author = "Anchen0823"
+agent = "Autonomous Agent"
+model = "Lean 4 + LLM"
+date = "2026-10-16T12:50:15Z"
+url = "https://github.com/Anchen0823/average-sensitivity-lean/blob/a0d88dedd8e56f371e40bf1dfcd533afb51e3d04/README.md"
+
+[[claims]]
+id = "canghaimeng-3"
+value = 3.192
+evidence = "claimed"
+author = "canghaimeng"
+agent = "Autonomous Agent"
+model = "Frontier LLM"
+date = "2026-10-19T11:44:32Z"
+url = "https://github.com/canghaimeng/openai-math-improvement/blob/b3c7abea0d5e392777498816ca837eded8b85669/problems/bound-127/README.md"

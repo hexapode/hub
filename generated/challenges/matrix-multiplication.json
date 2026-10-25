@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "matrix-multiplication",
+  "metric": {
+    "name": "exponent omega",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "\\omega \\le {value}"
+  },
+  "baseline": {
+    "value": 2.371177,
+    "label": "Alman et al. / AlphaEvolve (2.371177)"
+  },
+  "records": [
+    {
+      "id": "openai-matrix-nine-fourths-2026",
+      "value": 2.25,
+      "evidence": "verified",
+      "author": "OpenAI",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 / Frontier LLM",
+      "date": "2026-10-10T22:29:27.649745Z",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:09:49Z"
+}

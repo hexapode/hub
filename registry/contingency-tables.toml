@@ -1,0 +1,22 @@
+repo = "EcoDataLab/contingency-tables"
+kind = "external"
+owners = ["EcoDataLab"]
+tags = ["lean", "mcmc", "sampling"]
+listed = true
+added = "2026-10-08"
+contributors_override = 1
+attempts_override = 4
+discussion_url = "https://bigospeedrun.com/other/contingency-tables"
+
+[spec]
+title = "Contingency-table sampling"
+summary = "The quantity is the ideal auxiliary-chain inverse-gap upper bound A d^p, where d=10+(m+1)(n+1)\\ge10. Lower p is better, with A also tracked. This is an internal bound, not the complete algorithm runtime."
+metric = { name = "A d^p", unit = "", direction = "min", scale = "linear", display = "O(d^{{value}})" }
+verifier = { type = "lean" }
+submit = "Open a PR or commit to EcoDataLab/contingency-tables and submit to bigospeedrun/site."
+rules_url = "https://bigospeedrun.com/other/contingency-tables"
+baseline = { value = 126.0, label = "OpenAI baseline 98,560 d^126 (degree 126)", source = "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026/main.pdf" }
+tracks = [{ id = "bound-tightening", title = "Tighten Contingency-table sampling bound beyond 17.0" }, { id = "lean-formalization", title = "Formalize current frontier bound for Contingency-table sampling in Lean 4" }]
+
+[spec.records_source]
+type = "hub"

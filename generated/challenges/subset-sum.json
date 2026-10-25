@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "slug": "subset-sum",
+  "metric": {
+    "name": "exponent alpha",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "O(2^{{value}n})"
+  },
+  "baseline": {
+    "value": 0.5,
+    "label": "Horowitz-Sahni meet-in-the-middle O(2^(0.5n)) (1974)"
+  },
+  "records": [
+    {
+      "id": "subset-sum-2026",
+      "value": 0.49,
+      "evidence": "verified",
+      "author": "openai",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-08T21:34:39.207006Z",
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Subset-Sum-in-Time-2-power-0-49n-October-4-2026/README.md"
+    },
+    {
+      "id": "a-kapila-subset-sum-0-4877-2026",
+      "value": 0.4877,
+      "evidence": "verified",
+      "author": "Annanay",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-14T14:55:32Z",
+      "url": "https://github.com/a-kapila/maths-proofs/blob/44c34961b56784c220a6e913cc068d57dc37c5a3/subset-sum/PROOF_0.4877.tex#L56-L66"
+    },
+    {
+      "id": "joshuaqfex-subset-sum-0-487676-2026",
+      "value": 0.487676,
+      "evidence": "verified",
+      "author": "Joshua",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-20T11:38:36Z",
+      "url": "https://github.com/JoshuaQFEX/subset-sum-bound/blob/dcb002174cb1e06213e171c9f5ff6b063fdf2c40/paper.tex#L65-L81"
+    },
+    {
+      "id": "yannouli-subset-sum-0-4876723-2026",
+      "value": 0.4876723,
+      "evidence": "verified",
+      "author": "Yanni",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-21T17:10:35Z",
+      "url": "https://github.com/yannouli/subset-sum-conditional-refinement/blob/bf1f50f066f2c71a53293791f693f505a67a1540/paper.tex#L87-L97"
+    }
+  ],
+  "claims": [],
+  "contributors": 4,
+  "attempts": 15,
+  "updated": "2026-10-25T19:09:49Z"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "slug": "block-sensitivity",
+  "metric": {
+    "name": "\\alpha in \\mathrm{bs(f)\\ge s(f)^{\\alpha-o(1)",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\alpha = {value}"
+  },
+  "baseline": {
+    "value": 2.000252,
+    "label": "OpenAI superquadratic separation alpha = 2.000252",
+    "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/paper.pdf"
+  },
+  "records": [
+    {
+      "id": "robinkothari-1",
+      "value": 2.00647,
+      "evidence": "verified",
+      "author": "robinkothari",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-15T00:52:00-07:00",
+      "url": "https://github.com/bigospeedrun/site/issues/2"
+    },
+    {
+      "id": "canghaimeng-2",
+      "value": 2.032085561497,
+      "evidence": "verified",
+      "author": "canghaimeng",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-19T11:44:32Z",
+      "url": "https://github.com/canghaimeng/openai-math-improvement/blob/b3c7abea0d5e392777498816ca837eded8b85669/problems/bound-132/README.md"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 6,
+  "updated": "2026-10-25T19:09:49Z"
+}

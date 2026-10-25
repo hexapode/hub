@@ -1,0 +1,22 @@
+repo = "openai/math"
+kind = "external"
+owners = ["openai"]
+tags = ["lean", "algorithms", "big-o", "linear-algebra"]
+listed = true
+added = "2026-10-08"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://board.bigospeedrun.com/matrix-multiplication"
+
+[spec]
+title = "Matrix Multiplication Exponent"
+summary = "Minimize the asymptotic matrix multiplication exponent omega over complex arithmetic circuits O(n^(omega+epsilon))."
+metric = { name = "exponent omega", unit = "", direction = "min", scale = "linear", display = "\\omega \\le {value}" }
+verifier = { type = "lean" }
+submit = "Submit via Pull Request to openai/math or bigospeedrun/verifier."
+rules_url = "https://bigospeedrun.com/matrix-multiplication"
+baseline = { value = 2.371177, label = "Alman et al. / AlphaEvolve (2.371177)" }
+tracks = [{ id = "laser-method-degeneration", title = "Analyze higher-power Coppersmith-Winograd tensor degenerations" }, { id = "asymmetric-hashing", title = "Refine global modulus compensation in laser method" }]
+
+[spec.records_source]
+type = "hub"

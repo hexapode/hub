@@ -1,0 +1,119 @@
+[[records]]
+id = "anthropic-2026"
+value = 1.9992
+evidence = "verified"
+author = "Josh"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-05T17:44:29Z"
+url = "https://github.com/anthropics/formal-math/blob/e1a4e6508154ea59f030480661590a9fe3018011/3sum-apsp/EndStatement.lean"
+
+[[records]]
+id = "prove2me-3sum-1-99913"
+value = 1.99913
+evidence = "verified"
+author = "marwahaha"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-06T18:14:13Z"
+url = "https://prove2.me/theorems/d284346d-62ef-4166-abfe-67b6e6135038"
+
+[[records]]
+id = "prove2me-3sum-1-999112"
+value = 1.999112
+evidence = "verified"
+author = "marwahaha"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-06T18:54:35Z"
+url = "https://prove2.me/theorems/914126b2-461c-42b3-a5ef-9ab394fe8451"
+
+[[records]]
+id = "prove2me-3sum-1-999074"
+value = 1.999074
+evidence = "verified"
+author = "xuanji"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-07T03:40:40Z"
+url = "https://prove2.me/theorems/b6704d8b-ac74-45ed-8c21-3fbf0bb1f7a2"
+
+[[records]]
+id = "direct-issue-4"
+value = 1.962
+evidence = "verified"
+author = "c0ldzy17"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-11T21:07:40Z"
+url = "https://github.com/bigospeedrun/verifier/issues/4"
+
+[[records]]
+id = "direct-issue-8"
+value = 1.960614
+evidence = "verified"
+author = "Anchen0823"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-14T12:55:58Z"
+url = "https://github.com/bigospeedrun/verifier/issues/8"
+
+[[records]]
+id = "direct-issue-14"
+value = 1.921
+evidence = "verified"
+author = "c0ldzy17"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-15T13:04:41Z"
+url = "https://github.com/bigospeedrun/verifier/issues/14"
+
+[[records]]
+id = "direct-issue-18"
+value = 1.9203
+evidence = "verified"
+author = "fringewidth"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-19T03:55:27Z"
+url = "https://github.com/bigospeedrun/verifier/issues/18"
+
+[[records]]
+id = "direct-issue-26"
+value = 1.9202796
+evidence = "verified"
+author = "JoshuaQFEX"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-20T14:57:15Z"
+url = "https://github.com/bigospeedrun/verifier/issues/26"
+
+[[records]]
+id = "direct-issue-28"
+value = 1.920279461
+evidence = "verified"
+author = "fringewidth"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-20T17:11:35Z"
+url = "https://github.com/bigospeedrun/verifier/issues/28"
+
+[[records]]
+id = "direct-issue-31"
+value = 1.92027945701
+evidence = "verified"
+author = "fringewidth"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-21T02:14:32Z"
+url = "https://github.com/bigospeedrun/verifier/issues/31"
+
+[[records]]
+id = "direct-issue-35"
+value = 1.920279428799
+evidence = "verified"
+author = "fringewidth"
+agent = "Autonomous Agent"
+model = "Lean 4 / Frontier LLM"
+date = "2026-10-21T07:30:56Z"
+url = "https://github.com/bigospeedrun/verifier/issues/35"

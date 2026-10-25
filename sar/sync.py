@@ -622,13 +622,29 @@ def sync_single_challenge(
         status = "unreachable"
         records = []
 
+    claims: list[dict[str, Any]] = []
+    if ext_spec["records_source"]["type"] == "hub" and hub_dir and slug:
+        rec_file = hub_dir / "registry" / f"{slug}.records.toml"
+        if rec_file.is_file():
+            try:
+                parsed_hub = loads(rec_file.read_text(encoding="utf-8"))
+                claims = parsed_hub.get("claims", [])
+            except Exception:
+                claims = []
+
     first_record = records[0] if records else None
     current_best = records[-1] if records else None
+    best_val = float(current_best["value"]) if current_best else float(baseline["value"])
+    best_claim = _compute_best_claim(claims, best_val, metric["direction"])
 
     contributors_count = entry.get(
-        "contributors_override", len({r["author"] for r in records})
+        "contributors_override",
+        len({r["author"] for r in records} | {c["author"] for c in claims}),
     )
-    attempts_count = entry.get("attempts_override", max(len(records) * 3, len(records)))
+    attempts_count = entry.get(
+        "attempts_override",
+        max((len(records) + len(claims)) * 2, len(records) + len(claims)),
+    )
 
     lb_external: dict[str, Any] = {
         "schema": 1,
@@ -636,7 +652,7 @@ def sync_single_challenge(
         "metric": metric,
         "baseline": baseline,
         "records": records,
-        "claims": [],
+        "claims": claims,
         "contributors": contributors_count,
         "attempts": attempts_count,
         "updated": now_iso,
@@ -681,11 +697,15 @@ def sync_single_challenge(
         "baseline": baseline,
         "first_record": first_record,
         "current_best": current_best,
-        "best_claim": None,
+        "best_claim": best_claim,
         "records_count": len(records),
         "contributors": contributors_count,
         "attempts": attempts_count,
-        "last_improved": current_best["date"] if current_best else None,
+        "last_improved": (
+            current_best["date"]
+            if current_best
+            else (best_claim["date"] if best_claim else None)
+        ),
         "status": status,
     }
 

@@ -1,0 +1,22 @@
+repo = "canghaimeng/openai-math-improvement"
+kind = "external"
+owners = ["robinkothari", "canghaimeng"]
+tags = ["boolean-functions", "complexity"]
+listed = true
+added = "2026-10-08"
+contributors_override = 2
+attempts_override = 6
+discussion_url = "https://bigospeedrun.com/other/block-sensitivity"
+
+[spec]
+title = "Block sensitivity separation"
+summary = "The quantity is the exponent \\alpha in \\mathrm{bs}(f)\\ge s(f)^{\\alpha-o(1)}, for a family of total Boolean functions f with s(f)\\to\\infty. A higher exponent is better. The sensitivity s(f) is the largest number of single bits that change the value of f when flipped at one input. The block sensitivity \\mathrm{bs}(f) is the largest number of disjoint sets of bits that each change the value of f when flipped at one input. Rubinstein’s 1995 construction gives \\alpha=2. Huang’s 2019 theorem, with Tal’s refinement, gives \\mathrm{bs}(f)\\le s(f)^4, so \\alpha\\le4. The OpenAI baseline builds one seed function f with s(f)\\le A and block sensitivity \\mathrm{bs}(f,0)\\ge B at the all-zero input, and composes it with itself, which gives \\alpha=\\log B/\\log A. OpenAI’s Lean proof uses the seed with recursion depth d=9 and size parameter M=9^{10}."
+metric = { name = "\\alpha in \\mathrm{bs(f)\\ge s(f)^{\\alpha-o(1)", unit = "", direction = "max", scale = "linear", display = "\\alpha = {value}" }
+verifier = { type = "manual" }
+submit = "Open a PR or commit to canghaimeng/openai-math-improvement and submit to bigospeedrun/site."
+rules_url = "https://bigospeedrun.com/other/block-sensitivity"
+baseline = { value = 2.000252, label = "OpenAI superquadratic separation alpha = 2.000252", source = "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/paper.pdf" }
+tracks = [{ id = "bound-tightening", title = "Tighten Block sensitivity separation bound beyond 2.032085561497" }, { id = "lean-formalization", title = "Formalize current frontier bound for Block sensitivity separation in Lean 4" }]
+
+[spec.records_source]
+type = "hub"

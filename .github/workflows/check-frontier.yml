@@ -1,0 +1,38 @@
+name: check-frontier
+
+on:
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  check-frontier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out hub
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check upstream frontiers across all listed challenges
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 -m sar check-frontier --hub .
+
+      - name: Commit updated frontier records and generated index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet registry/ generated/; then
+            git add registry/ generated/
+            git commit -m "chore(frontier): update challenge frontiers and leaderboard [skip ci]"
+            git push
+          fi

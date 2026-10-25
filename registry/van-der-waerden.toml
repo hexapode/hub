@@ -1,0 +1,22 @@
+repo = "DaysSky/van-der-waerden-refinement"
+kind = "external"
+owners = ["DaysSky", "rohanarun"]
+tags = ["combinatorics", "ramsey-theory"]
+listed = true
+added = "2026-10-08"
+contributors_override = 3
+attempts_override = 12
+discussion_url = "https://bigospeedrun.com/other/van-der-waerden"
+
+[spec]
+title = "Van der Waerden numbers"
+summary = "The quantity is the coefficient c in W_r(k)>k^{ck\\lfloor\\log_2r\\rfloor}, for sufficiently large k, uniformly in r. A higher coefficient is better. Each claim assumes the upstream OpenAI transfer and states the lemmas it adds. The current region allows every fixed c<1/8; 1/8 is not an attained value."
+metric = { name = "c in W_r(k)>k^{ck\\lfloor\\log_2r\\rfloor", unit = "", direction = "max", scale = "linear", display = "c = {value}" }
+verifier = { type = "manual" }
+submit = "Open a PR or commit to DaysSky/van-der-waerden-refinement and submit to bigospeedrun/site."
+rules_url = "https://bigospeedrun.com/other/van-der-waerden"
+baseline = { value = 1e-05, label = "OpenAI baseline c = 1/100000", source = "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf" }
+tracks = [{ id = "bound-tightening", title = "Tighten Van der Waerden numbers bound beyond 0.111111111111" }, { id = "lean-formalization", title = "Formalize current frontier bound for Van der Waerden numbers in Lean 4" }]
+
+[spec.records_source]
+type = "hub"

@@ -1,71 +1,231 @@
 {
   "schema": 1,
   "hub": "superautoresearch/hub",
-  "updated": "2026-10-25T18:24:00Z",
+  "updated": "2026-10-25T19:09:49Z",
   "challenges": [
     {
       "slug": "3sum-exponent",
-      "title": "3SUM exponent",
-      "summary": "Lower the exponent of the best provable 3SUM algorithm in the word-RAM model.",
-      "kind": "native",
-      "repo": "alice/3sum-exponent",
-      "repo_url": "https://github.com/alice/3sum-exponent",
+      "title": "3SUM Exponent",
+      "summary": "Deterministic word-RAM algorithm deciding if three integers sum to zero in O(n^alpha) time.",
+      "kind": "external",
+      "repo": "bigospeedrun/verifier",
+      "repo_url": "https://github.com/bigospeedrun/verifier",
       "tags": [
         "lean",
         "algorithms",
-        "fine-grained-complexity"
+        "big-o",
+        "word-ram"
       ],
       "verifier_type": "lean",
       "metric": {
-        "name": "exponent",
+        "name": "time exponent alpha",
         "unit": "",
         "direction": "min",
         "scale": "linear",
-        "display": "n^{value}"
+        "display": "O(n^{{value}})"
       },
       "baseline": {
         "value": 2.0,
-        "label": "Classic O(n^2)"
+        "label": "Classic O(n^2) (Gajentaan & Overmars 1995)"
       },
       "first_record": {
-        "id": "carol-first-break",
+        "id": "anthropic-2026",
         "value": 1.9992,
         "evidence": "verified",
-        "author": "carol",
-        "agent": "Codex",
-        "model": "gpt-5-codex",
-        "date": "2026-10-08T07:01:00Z",
-        "pr": 12,
-        "commit": "abc1234",
-        "url": "https://github.com/alice/3sum-exponent/pull/12"
+        "author": "Josh",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-05T17:44:29Z",
+        "url": "https://github.com/anthropics/formal-math/blob/e1a4e6508154ea59f030480661590a9fe3018011/3sum-apsp/EndStatement.lean"
       },
       "current_best": {
-        "id": "alice-fused-band",
-        "value": 1.9203,
+        "id": "direct-issue-35",
+        "value": 1.920279428799,
         "evidence": "verified",
-        "author": "alice",
-        "agent": "Claude Code",
-        "model": "claude-opus-5-5",
-        "date": "2026-10-23T18:40:00Z",
-        "pr": 27,
-        "commit": "9012fed",
-        "url": "https://github.com/alice/3sum-exponent/pull/27"
+        "author": "fringewidth",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-21T07:30:56Z",
+        "url": "https://github.com/bigospeedrun/verifier/issues/35"
+      },
+      "best_claim": null,
+      "records_count": 12,
+      "contributors": 11,
+      "attempts": 51,
+      "last_improved": "2026-10-21T07:30:56Z",
+      "status": "ok"
+    },
+    {
+      "slug": "apsp-exponent",
+      "title": "All-Pairs Shortest Paths (APSP)",
+      "summary": "Deterministic directed All-Pairs Shortest Paths with polynomially bounded integer weights in O(n^alpha) time.",
+      "kind": "external",
+      "repo": "bigospeedrun/verifier",
+      "repo_url": "https://github.com/bigospeedrun/verifier",
+      "tags": [
+        "lean",
+        "algorithms",
+        "big-o",
+        "graphs"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "time exponent alpha",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "O(n^{{value}})"
+      },
+      "baseline": {
+        "value": 3.0,
+        "label": "Floyd-Warshall O(n^3) (1962)"
+      },
+      "first_record": {
+        "id": "anthropic-2026",
+        "value": 2.99942,
+        "evidence": "verified",
+        "author": "Josh",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-05T17:44:29Z",
+        "url": "https://github.com/anthropics/formal-math/blob/e1a4e6508154ea59f030480661590a9fe3018011/3sum-apsp/EndStatement.lean"
+      },
+      "current_best": {
+        "id": "direct-issue-32",
+        "value": 2.995560764781,
+        "evidence": "verified",
+        "author": "fringewidth",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-21T02:14:33Z",
+        "url": "https://github.com/bigospeedrun/verifier/issues/32"
       },
       "best_claim": {
-        "id": "dave-wild-idea",
-        "value": 1.91,
+        "id": "joshuaqfex-apsp-2026",
+        "value": 2.992947918709,
         "evidence": "claimed",
-        "author": "dave",
-        "agent": "Claude Code",
-        "model": "claude-opus-5-5",
-        "pr": 31,
-        "date": "2026-10-25T09:30:00Z",
-        "url": "https://github.com/alice/3sum-exponent/pull/31"
+        "author": "Joshua",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-20T11:38:02Z",
+        "url": "https://github.com/JoshuaQFEX/apsp-bound/blob/5dafbb186851aa80da58fb40a5e6857f4129b4fc/apsp_refinement.tex#L197-L202"
       },
-      "records_count": 3,
-      "contributors": 9,
-      "attempts": 57,
-      "last_improved": "2026-10-23T18:40:00Z",
+      "records_count": 8,
+      "contributors": 11,
+      "attempts": 42,
+      "last_improved": "2026-10-21T02:14:33Z",
+      "status": "ok"
+    },
+    {
+      "slug": "average-sensitivity",
+      "title": "Average sensitivity",
+      "summary": "The quantity is the universal coefficient C in \\mathrm{AS}(f)\\le Cd\\sqrt n for polynomial threshold functions of degree at most d, with 1\\le d\\le n and \\operatorname{sign}(0)=1. A lower coefficient is better.",
+      "kind": "external",
+      "repo": "Anchen0823/average-sensitivity-lean",
+      "repo_url": "https://github.com/Anchen0823/average-sensitivity-lean",
+      "tags": [
+        "lean",
+        "boolean-functions",
+        "complexity"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "C in \\mathrm{AS(f)\\le Cd\\sqrt n",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "C = {value}"
+      },
+      "baseline": {
+        "value": 8.0,
+        "label": "OpenAI baseline AS(f) <= 8 d sqrt(n)",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Average-Sensitivity-of-Polynomial-Threshold-Functions-September-25-2026/main.pdf"
+      },
+      "first_record": {
+        "id": "anchen0823-2",
+        "value": 3.762,
+        "evidence": "verified",
+        "author": "Anchen0823",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-16T12:50:15Z",
+        "url": "https://github.com/Anchen0823/average-sensitivity-lean/blob/a0d88dedd8e56f371e40bf1dfcd533afb51e3d04/README.md"
+      },
+      "current_best": {
+        "id": "anchen0823-2",
+        "value": 3.762,
+        "evidence": "verified",
+        "author": "Anchen0823",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-16T12:50:15Z",
+        "url": "https://github.com/Anchen0823/average-sensitivity-lean/blob/a0d88dedd8e56f371e40bf1dfcd533afb51e3d04/README.md"
+      },
+      "best_claim": {
+        "id": "canghaimeng-3",
+        "value": 3.192,
+        "evidence": "claimed",
+        "author": "canghaimeng",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-19T11:44:32Z",
+        "url": "https://github.com/canghaimeng/openai-math-improvement/blob/b3c7abea0d5e392777498816ca837eded8b85669/problems/bound-127/README.md"
+      },
+      "records_count": 1,
+      "contributors": 3,
+      "attempts": 9,
+      "last_improved": "2026-10-16T12:50:15Z",
+      "status": "ok"
+    },
+    {
+      "slug": "block-sensitivity",
+      "title": "Block sensitivity separation",
+      "summary": "The quantity is the exponent \\alpha in \\mathrm{bs}(f)\\ge s(f)^{\\alpha-o(1)}, for a family of total Boolean functions f with s(f)\\to\\infty. A higher exponent is better. The sensitivity s(f) is the largest number of single bits that change the value of f when flipped at one input. The block sensitivity \\mathrm{bs}(f) is the largest number of disjoint sets of bits that each change the value of f when flipped at one input. Rubinstein\u2019s 1995 construction gives \\alpha=2. Huang\u2019s 2019 theorem, with Tal\u2019s refinement, gives \\mathrm{bs}(f)\\le s(f)^4, so \\alpha\\le4. The OpenAI baseline builds one seed function f with s(f)\\le A and block sensitivity \\mathrm{bs}(f,0)\\ge B at the all-zero input, and composes it with itself, which gives \\alpha=\\log B/\\log A. OpenAI\u2019s Lean proof uses the seed with recursion depth d=9 and size parameter M=9^{10}.",
+      "kind": "external",
+      "repo": "canghaimeng/openai-math-improvement",
+      "repo_url": "https://github.com/canghaimeng/openai-math-improvement",
+      "tags": [
+        "boolean-functions",
+        "complexity"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "\\alpha in \\mathrm{bs(f)\\ge s(f)^{\\alpha-o(1)",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\alpha = {value}"
+      },
+      "baseline": {
+        "value": 2.000252,
+        "label": "OpenAI superquadratic separation alpha = 2.000252",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/paper.pdf"
+      },
+      "first_record": {
+        "id": "robinkothari-1",
+        "value": 2.00647,
+        "evidence": "verified",
+        "author": "robinkothari",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-15T00:52:00-07:00",
+        "url": "https://github.com/bigospeedrun/site/issues/2"
+      },
+      "current_best": {
+        "id": "canghaimeng-2",
+        "value": 2.032085561497,
+        "evidence": "verified",
+        "author": "canghaimeng",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-19T11:44:32Z",
+        "url": "https://github.com/canghaimeng/openai-math-improvement/blob/b3c7abea0d5e392777498816ca837eded8b85669/problems/bound-132/README.md"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 2,
+      "attempts": 6,
+      "last_improved": "2026-10-19T11:44:32Z",
       "status": "ok"
     },
     {
@@ -134,6 +294,213 @@
       "status": "ok"
     },
     {
+      "slug": "catalan-constant",
+      "title": "Catalan\u2019s constant",
+      "summary": "The quantity is an upper bound on the irrationality exponent \\mu(G) of Catalan\u2019s constant. A lower bound is better. The release states irrationality but gives no finite exponent bound; the baseline is the trivial extended-real upper bound +\\infty.",
+      "kind": "external",
+      "repo": "slitsey/catalan-irrationality-measure",
+      "repo_url": "https://github.com/slitsey/catalan-irrationality-measure",
+      "tags": [
+        "lean",
+        "number-theory",
+        "irrationality"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "\\mu(G)",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\mu(G) \\le {value}"
+      },
+      "baseline": {
+        "value": 740.0,
+        "label": "Initial effective irrationality measure mu(G) <= 740",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Catalans-constant-is-irrational-September-24-2026/paper.pdf"
+      },
+      "first_record": {
+        "id": "slitsey-17",
+        "value": 728.0,
+        "evidence": "verified",
+        "author": "slitsey",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-23T16:18:43Z",
+        "url": "https://github.com/slitsey/catalan-irrationality-measure/blob/9c40581c55bd84d78b77d9848edcd14cca00c0bf/CatalanMeasure/G728/Final.lean#L11-L13"
+      },
+      "current_best": {
+        "id": "slitsey-18",
+        "value": 590.0,
+        "evidence": "verified",
+        "author": "slitsey",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-24T09:34:20-07:00",
+        "url": "https://github.com/slitsey/catalan-irrationality-measure/blob/54dab9e2e1caa57c031aed0447beb231294445b0/CatalanMeasure/GenD/D58/Main590.lean#L35-L41"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 3,
+      "attempts": 54,
+      "last_improved": "2026-10-24T09:34:20-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "contingency-tables",
+      "title": "Contingency-table sampling",
+      "summary": "The quantity is the ideal auxiliary-chain inverse-gap upper bound A d^p, where d=10+(m+1)(n+1)\\ge10. Lower p is better, with A also tracked. This is an internal bound, not the complete algorithm runtime.",
+      "kind": "external",
+      "repo": "EcoDataLab/contingency-tables",
+      "repo_url": "https://github.com/EcoDataLab/contingency-tables",
+      "tags": [
+        "lean",
+        "mcmc",
+        "sampling"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "A d^p",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "O(d^{{value}})"
+      },
+      "baseline": {
+        "value": 126.0,
+        "label": "OpenAI baseline 98,560 d^126 (degree 126)",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026/main.pdf"
+      },
+      "first_record": {
+        "id": "ecodatalab-1",
+        "value": 17.0,
+        "evidence": "verified",
+        "author": "EcoDataLab",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-08T22:47:00-07:00",
+        "url": "https://github.com/EcoDataLab/contingency-tables/blob/fe72b20170e7f85e399368e56baf65b8782b4b50/README.md"
+      },
+      "current_best": {
+        "id": "ecodatalab-1",
+        "value": 17.0,
+        "evidence": "verified",
+        "author": "EcoDataLab",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-08T22:47:00-07:00",
+        "url": "https://github.com/EcoDataLab/contingency-tables/blob/fe72b20170e7f85e399368e56baf65b8782b4b50/README.md"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 4,
+      "last_improved": "2026-10-08T22:47:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "directed-sssp",
+      "title": "Directed SSSP (Sparse Comparison-Addition)",
+      "summary": "Minimize the log-time exponent alpha in O(n (log n)^alpha) for deterministic directed Single-Source Shortest Paths on sparse graphs.",
+      "kind": "external",
+      "repo": "spicylemonade/c-hd-proof",
+      "repo_url": "https://github.com/spicylemonade/c-hd-proof",
+      "tags": [
+        "algorithms",
+        "big-o",
+        "graphs"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "log exponent alpha",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "O(n \\log^{{value}} n)"
+      },
+      "baseline": {
+        "value": 1.0,
+        "label": "Fredman-Tarjan Fibonacci heaps O(m + n log n) (1987)"
+      },
+      "first_record": {
+        "id": "directed-sssp-2026",
+        "value": 0.916666666667,
+        "evidence": "verified",
+        "author": "spicylemonade",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-08T21:34:39.207006Z",
+        "url": "https://github.com/spicylemonade/c-hd-proof/blob/98c53accb47a505482a1781597ae14bf67e81cec/README.md"
+      },
+      "current_best": {
+        "id": "directed-sssp-2026",
+        "value": 0.916666666667,
+        "evidence": "verified",
+        "author": "spicylemonade",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-08T21:34:39.207006Z",
+        "url": "https://github.com/spicylemonade/c-hd-proof/blob/98c53accb47a505482a1781597ae14bf67e81cec/README.md"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2026-10-08T21:34:39.207006Z",
+      "status": "ok"
+    },
+    {
+      "slug": "exact-dft",
+      "title": "Fourier Transform (Exact DFT)",
+      "summary": "Uniform exact arithmetic Discrete Fourier Transform with log-saving exponent kappa in O(n (log n)^(1-kappa)).",
+      "kind": "external",
+      "repo": "shea256/fourier-transform-below-nlogn",
+      "repo_url": "https://github.com/shea256/fourier-transform-below-nlogn",
+      "tags": [
+        "lean",
+        "algorithms",
+        "big-o",
+        "fourier-transform"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "log-saving kappa",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\kappa = {value}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "Cooley-Tukey FFT O(n log n) (kappa = 0)"
+      },
+      "first_record": {
+        "id": "openai-uniform-dft-frontier",
+        "value": 2e-11,
+        "evidence": "verified",
+        "author": "openai",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-08T05:20:00Z",
+        "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/FourierTransform/Main.lean"
+      },
+      "current_best": {
+        "id": "direct-pr-41",
+        "value": 0.0030103,
+        "evidence": "verified",
+        "author": "HalitZiyaKARTAL",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-22T11:47:46Z",
+        "url": "https://github.com/bigospeedrun/verifier/pull/41"
+      },
+      "best_claim": null,
+      "records_count": 12,
+      "contributors": 11,
+      "attempts": 57,
+      "last_improved": "2026-10-22T11:47:46Z",
+      "status": "ok"
+    },
+    {
       "slug": "fast-int-sort",
       "title": "Fast 32-bit Integer Sort",
       "summary": "Sort 1,000,000 32-bit integers as fast as possible in pure Python on a fixed-seed dataset.",
@@ -189,6 +556,283 @@
       "status": "ok"
     },
     {
+      "slug": "haldane-gap",
+      "title": "Spin-one Haldane gap",
+      "summary": "The quantity is the uniform periodic spin-one spectral-gap lower bound \\gamma_L at J=1, compared on the original domain of even L\\ge2304. A higher lower bound is better. The claim assumes the cited OpenAI spatial-transfer identities and certified finite inputs. The extension to every integer L\\ge24 is listed under Relevant repos.",
+      "kind": "external",
+      "repo": "amachino/haldane-gap-refinement",
+      "repo_url": "https://github.com/amachino/haldane-gap-refinement",
+      "tags": [
+        "mathematical-physics",
+        "spectral-gap"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "\\gamma_L at J=1",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\gamma_L = {value}"
+      },
+      "baseline": {
+        "value": 0.003821,
+        "label": "OpenAI periodic spin-one Haldane gap log(20)/784",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-periodic-spin-one-Haldane-gap-September-24-2026/paper.pdf"
+      },
+      "first_record": {
+        "id": "amachino-1",
+        "value": 0.1515,
+        "evidence": "verified",
+        "author": "amachino",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-07T22:04:00-07:00",
+        "url": "https://github.com/amachino/haldane-gap-refinement/blob/15909bdc15e947795b6fba946008dd8530bb3477/README.md"
+      },
+      "current_best": {
+        "id": "amachino-1",
+        "value": 0.1515,
+        "evidence": "verified",
+        "author": "amachino",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-07T22:04:00-07:00",
+        "url": "https://github.com/amachino/haldane-gap-refinement/blob/15909bdc15e947795b6fba946008dd8530bb3477/README.md"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 4,
+      "last_improved": "2026-10-07T22:04:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "heilbronn-triangle",
+      "title": "Heilbronn triangle",
+      "summary": "The quantity is the saving \\eta in \\Delta(n)\\ge cn^{-2+\\eta}. A higher saving is better. The baseline is \\eta=2/(45435k+16), where k=T^2+1 and T=\\binom{\\binom{163}{41}}{3}; the displayed approximation comes from the follow-up. Each claim assumes estimates from the manuscript and states them, with its proof scope.",
+      "kind": "external",
+      "repo": "littleBro/heilbronn-triangle-bounds",
+      "repo_url": "https://github.com/littleBro/heilbronn-triangle-bounds",
+      "tags": [
+        "lean",
+        "geometry",
+        "extremal-bounds"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "\\eta in \\Delta(n)\\ge cn^{-2+\\eta",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\eta = {value}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "OpenAI power improvement eta > 3.18e-236",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-power-improvement-in-the-Heilbronn-triangle-lower-bound-September-25-2026/main.pdf"
+      },
+      "first_record": {
+        "id": "littlebro-1",
+        "value": 2.92e-47,
+        "evidence": "verified",
+        "author": "littleBro",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-08T13:04:00-07:00",
+        "url": "https://github.com/littleBro/heilbronn-triangle-bounds/blob/2259fc0f9d7edc0785838bceee835829df034952/README.md"
+      },
+      "current_best": {
+        "id": "littlebro-8",
+        "value": 1.96e-08,
+        "evidence": "verified",
+        "author": "littleBro",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-15T14:07:00-07:00",
+        "url": "https://github.com/littleBro/heilbronn-triangle-bounds/blob/e29a2912f7596bb79a7811b10193751f7712b66c/README.md#L5-L12"
+      },
+      "best_claim": {
+        "id": "canghaimeng-9",
+        "value": 1.9828e-08,
+        "evidence": "claimed",
+        "author": "canghaimeng",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-19T11:44:32Z",
+        "url": "https://github.com/canghaimeng/openai-math-improvement/blob/b3c7abea0d5e392777498816ca837eded8b85669/problems/bound-191/README.md"
+      },
+      "records_count": 8,
+      "contributors": 2,
+      "attempts": 27,
+      "last_improved": "2026-10-15T14:07:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "integer-multiplication",
+      "title": "Integer Multiplication",
+      "summary": "Multitape Turing machine integer multiplication below O(n log n), maximizing log-saving kappa in O(n (log n)^(1-kappa)).",
+      "kind": "external",
+      "repo": "CrocSwap/integer-mult-bounds",
+      "repo_url": "https://github.com/CrocSwap/integer-mult-bounds",
+      "tags": [
+        "lean",
+        "algorithms",
+        "big-o",
+        "arithmetic"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "log-saving kappa",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\kappa = {value}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "Harvey-van der Hoeven O(n log n) (kappa = 0)"
+      },
+      "first_record": {
+        "id": "swapnil-round-6",
+        "value": 3.6665656e-05,
+        "evidence": "verified",
+        "author": "Swapnil-jain",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-08T14:01:26Z",
+        "url": "https://github.com/Swapnil-jain/integer-mult-kappa/blob/f2176bc1124821bf17eb63725bd366d7bdc020a3/README.md"
+      },
+      "current_best": {
+        "id": "swapnil-round-6",
+        "value": 3.6665656e-05,
+        "evidence": "verified",
+        "author": "Swapnil-jain",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-08T14:01:26Z",
+        "url": "https://github.com/Swapnil-jain/integer-mult-kappa/blob/f2176bc1124821bf17eb63725bd366d7bdc020a3/README.md"
+      },
+      "best_claim": {
+        "id": "crocswap-pr-159",
+        "value": 0.127865,
+        "evidence": "claimed",
+        "author": "CarrotCultivator",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-09T07:11:47Z",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/159"
+      },
+      "records_count": 1,
+      "contributors": 84,
+      "attempts": 2325,
+      "last_improved": "2026-10-08T14:01:26Z",
+      "status": "ok"
+    },
+    {
+      "slug": "matrix-multiplication",
+      "title": "Matrix Multiplication Exponent",
+      "summary": "Minimize the asymptotic matrix multiplication exponent omega over complex arithmetic circuits O(n^(omega+epsilon)).",
+      "kind": "external",
+      "repo": "openai/math",
+      "repo_url": "https://github.com/openai/math",
+      "tags": [
+        "lean",
+        "algorithms",
+        "big-o",
+        "linear-algebra"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "exponent omega",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\omega \\le {value}"
+      },
+      "baseline": {
+        "value": 2.371177,
+        "label": "Alman et al. / AlphaEvolve (2.371177)"
+      },
+      "first_record": {
+        "id": "openai-matrix-nine-fourths-2026",
+        "value": 2.25,
+        "evidence": "verified",
+        "author": "OpenAI",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-10T22:29:27.649745Z",
+        "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf"
+      },
+      "current_best": {
+        "id": "openai-matrix-nine-fourths-2026",
+        "value": 2.25,
+        "evidence": "verified",
+        "author": "OpenAI",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 / Frontier LLM",
+        "date": "2026-10-10T22:29:27.649745Z",
+        "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2026-10-10T22:29:27.649745Z",
+      "status": "ok"
+    },
+    {
+      "slug": "matroid-prophet",
+      "title": "One-sample matroid prophet inequality",
+      "summary": "The quantity is the guaranteed fraction of expected offline optimum, with one sample per element of an arbitrary finite matroid and the same almighty full-seed arrival-order adversary. A higher fraction is better. Computation can take exponential time.",
+      "kind": "external",
+      "repo": "shea256/matroid-prophet-inequality",
+      "repo_url": "https://github.com/shea256/matroid-prophet-inequality",
+      "tags": [
+        "algorithms",
+        "online-algorithms",
+        "matroids"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "C in \\mathbb{E[R]\\ge C\\mathbb{E[\\mathrm{OPT]",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "C \\approx {value}"
+      },
+      "baseline": {
+        "value": 1e-12,
+        "label": "OpenAI baseline 2^-310",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/One-Sample-Suffices-for-Matroid-Prophet-Inequalities-against-an-Almighty-Adversary-September-23-2026/final.pdf"
+      },
+      "first_record": {
+        "id": "shea256-1",
+        "value": 1.5141297329305954e-11,
+        "evidence": "verified",
+        "author": "shea256",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-10T04:19:11Z",
+        "url": "https://github.com/shea256/matroid-prophet-inequality/blob/7cffa2a7d49ff779f24d043c4c6d55557283d857/README.md"
+      },
+      "current_best": {
+        "id": "canghaimeng-8",
+        "value": 5.107488914317048e-10,
+        "evidence": "verified",
+        "author": "canghaimeng",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-19T11:44:32Z",
+        "url": "https://github.com/canghaimeng/openai-math-improvement/blob/b3c7abea0d5e392777498816ca837eded8b85669/problems/bound-111/README.md"
+      },
+      "best_claim": null,
+      "records_count": 7,
+      "contributors": 3,
+      "attempts": 24,
+      "last_improved": "2026-10-19T11:44:32Z",
+      "status": "ok"
+    },
+    {
       "slug": "nanogpt-speedrun",
       "title": "NanoGPT speedrun",
       "summary": "Train GPT-2 small to 3.28 val loss on FineWeb as fast as possible on 8xH100.",
@@ -237,6 +881,417 @@
       "contributors": 24,
       "attempts": 142,
       "last_improved": "2026-10-22T08:12:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "ordered-matrix-removal",
+      "title": "Ordered matrix removal",
+      "summary": "The quantity is the number of cells rc in a forbidden ordered binary pattern with r rows and c columns that has no polynomial removal bound. The goal is the smallest such pattern, measured in cells. Fewer cells are better. Later repair-distance constants do not change this quantity.",
+      "kind": "external",
+      "repo": "shea256/ordered-binary-matrix-removal",
+      "repo_url": "https://github.com/shea256/ordered-binary-matrix-removal",
+      "tags": [
+        "lean",
+        "combinatorics",
+        "matrices"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "r c cells in an r\\times c pattern",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value} cells"
+      },
+      "baseline": {
+        "value": 4356.0,
+        "label": "OpenAI 66x66 pattern (4356 cells)",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Polynomial-removal-fails-for-ordered-binary-matrices-September-25-2026/paper.pdf"
+      },
+      "first_record": {
+        "id": "erebos-labs-2",
+        "value": 16.0,
+        "evidence": "verified",
+        "author": "erebos-labs",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-09T05:40:00-07:00",
+        "url": "https://github.com/erebos-labs/ordered-matrix-removal-4x4/blob/45248e57ab1c2197419981bba04e1cde050494ca/README.md"
+      },
+      "current_best": {
+        "id": "shea256-4",
+        "value": 9.0,
+        "evidence": "verified",
+        "author": "shea256",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-12T07:10:00-07:00",
+        "url": "https://github.com/shea256/ordered-binary-matrix-removal/blob/35f5784da66428f27e568ede22a9f1163403fa9a/README.md#L7-L44"
+      },
+      "best_claim": null,
+      "records_count": 3,
+      "contributors": 3,
+      "attempts": 12,
+      "last_improved": "2026-10-12T07:10:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "primitive-roots",
+      "title": "Primitive-root primes",
+      "summary": "The quantity is the power a in the lower bound c_bx/(\\log x)^a for primitive-root primes in (x,2x), for the same admissible integer base b. A lower power is better.",
+      "kind": "external",
+      "repo": "Rogerhu12/openai-math-extensions",
+      "repo_url": "https://github.com/Rogerhu12/openai-math-extensions",
+      "tags": [
+        "number-theory",
+        "primes"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "a in c_bx/(\\log x)^a",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "a = {value}"
+      },
+      "baseline": {
+        "value": 2.0,
+        "label": "OpenAI baseline a <= 2 in c_b x / (log x)^a",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Primitive-roots-for-every-admissible-integer-base-October-4-2026/primitive-roots-all-integer-bases.pdf"
+      },
+      "first_record": {
+        "id": "rogerhu12-1",
+        "value": 1.0,
+        "evidence": "verified",
+        "author": "Rogerhu12",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-07T12:52:00-07:00",
+        "url": "https://github.com/Rogerhu12/openai-math-extensions/blob/8e94120c0e9eecfe3d4991eb2102d4da8ede96cf/README.md"
+      },
+      "current_best": {
+        "id": "rogerhu12-1",
+        "value": 1.0,
+        "evidence": "verified",
+        "author": "Rogerhu12",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-07T12:52:00-07:00",
+        "url": "https://github.com/Rogerhu12/openai-math-extensions/blob/8e94120c0e9eecfe3d4991eb2102d4da8ede96cf/README.md"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 4,
+      "last_improved": "2026-10-07T12:52:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "quasi-riemann",
+      "title": "Quasi-Riemann hypothesis",
+      "summary": "The quantity is the zero-free half-plane threshold \\theta for Dirichlet L-functions, which include zeta. A lower threshold is better. The OpenAI paper also covers finite-order Eisenstein Hecke functions over \\mathbb{Q}(\\sqrt{-3}); claims with Lean prove the Dirichlet theorem only. The claims retain the source proof conditions.",
+      "kind": "external",
+      "repo": "GTimG/QuasiRiemannTracker",
+      "repo_url": "https://github.com/GTimG/QuasiRiemannTracker",
+      "tags": [
+        "lean",
+        "number-theory",
+        "analytic-bounds"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "\\theta",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\theta \\le {value}"
+      },
+      "baseline": {
+        "value": 0.875,
+        "label": "OpenAI preprint theta <= 7/8 (0.875)",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf"
+      },
+      "first_record": {
+        "id": "aster2024-1",
+        "value": 0.874957019420099,
+        "evidence": "verified",
+        "author": "aster2024",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-07T21:26:00-07:00",
+        "url": "https://github.com/aster2024/openai-math-followups/blob/a371d874a63222dd662a2ce4ce0562df0c210eb2/README.md"
+      },
+      "current_best": {
+        "id": "mrklwk-20",
+        "value": 0.874772906,
+        "evidence": "verified",
+        "author": "mrklwk",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-22T18:21:00-07:00",
+        "url": "https://github.com/mrklwk/QuasiRiemannTracker/blob/58bda2db1e2049d8d8023db0b78c1b43dea5172b/submissions/lewko-acyclic-bootstrap-874772906/src/Candidate/Main.lean#L6-L11"
+      },
+      "best_claim": null,
+      "records_count": 20,
+      "contributors": 11,
+      "attempts": 60,
+      "last_improved": "2026-10-22T18:21:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "sidorenko-counterexample",
+      "title": "Sidorenko counterexample",
+      "summary": "The quantity is the nondirect residual constant C in the exponent -D+C. A lower constant is better. This is an internal proof step, conditional on transfer within the source orbit-counting argument. The counterexample still has 35 vertices and 66 edges; this constant does not give the full dimension.",
+      "kind": "external",
+      "repo": "rohanarun/sidorenko-template-refinements",
+      "repo_url": "https://github.com/rohanarun/sidorenko-template-refinements",
+      "tags": [
+        "combinatorics",
+        "extremal-graphs"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "C in -D+C",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "C = {value}"
+      },
+      "baseline": {
+        "value": 1641.0,
+        "label": "OpenAI Sidorenko counterexample C = 1641",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/paper.pdf"
+      },
+      "first_record": {
+        "id": "rohanarun-1",
+        "value": 189.0,
+        "evidence": "verified",
+        "author": "rohanarun",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-09T23:41:00-07:00",
+        "url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d/README.md"
+      },
+      "current_best": {
+        "id": "rohanarun-1",
+        "value": 189.0,
+        "evidence": "verified",
+        "author": "rohanarun",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-09T23:41:00-07:00",
+        "url": "https://github.com/rohanarun/sidorenko-template-refinements/blob/d1df2a5cc0cb0c9003466b1c7f8ecb77a8e72a7d/README.md"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 4,
+      "last_improved": "2026-10-09T23:41:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "snaky",
+      "title": "Snaky",
+      "summary": "The quantity is the upper bound on Maker moves needed to win Snaky on the infinite square board. Fewer moves are better. N\u00e1ndor Sieben\u2019s finite 17\\times17 strategy, supplied by gotrevor, also works on the infinite board. The separate 15\\times15 result concerns board size.",
+      "kind": "external",
+      "repo": "shjvandekamp/math",
+      "repo_url": "https://github.com/shjvandekamp/math",
+      "tags": [
+        "lean",
+        "combinatorics",
+        "positional-games"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "Maker moves",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value} moves"
+      },
+      "baseline": {
+        "value": 21.0,
+        "label": "OpenAI Snaky in 21 Maker moves",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf"
+      },
+      "first_record": {
+        "id": "gotrevor-1",
+        "value": 20.0,
+        "evidence": "verified",
+        "author": "gotrevor",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-07T06:45:00-07:00",
+        "url": "https://github.com/gotrevor/snaky-15x15/blob/1173345102f9d39472e38db0fdd810f7bfd4ed4e/README.md"
+      },
+      "current_best": {
+        "id": "shjvandekamp-2",
+        "value": 19.0,
+        "evidence": "verified",
+        "author": "shjvandekamp",
+        "agent": "Autonomous Agent",
+        "model": "Lean 4 + LLM",
+        "date": "2026-10-15T05:55:00-07:00",
+        "url": "https://github.com/shjvandekamp/math/blob/db6e1d89a0637b013a86464bd766c0a5120e454e/README.md#L32-L48"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 2,
+      "attempts": 6,
+      "last_improved": "2026-10-15T05:55:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "subset-sum",
+      "title": "Subset Sum (Randomized Word RAM)",
+      "summary": "Minimize the exponential time exponent alpha in O(2^(alpha n)) for exact Subset Sum in the randomized Word RAM model.",
+      "kind": "external",
+      "repo": "JoshuaQFEX/subset-sum-bound",
+      "repo_url": "https://github.com/JoshuaQFEX/subset-sum-bound",
+      "tags": [
+        "algorithms",
+        "big-o",
+        "fine-grained-complexity"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "exponent alpha",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "O(2^{{value}n})"
+      },
+      "baseline": {
+        "value": 0.5,
+        "label": "Horowitz-Sahni meet-in-the-middle O(2^(0.5n)) (1974)"
+      },
+      "first_record": {
+        "id": "subset-sum-2026",
+        "value": 0.49,
+        "evidence": "verified",
+        "author": "openai",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-08T21:34:39.207006Z",
+        "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Subset-Sum-in-Time-2-power-0-49n-October-4-2026/README.md"
+      },
+      "current_best": {
+        "id": "yannouli-subset-sum-0-4876723-2026",
+        "value": 0.4876723,
+        "evidence": "verified",
+        "author": "Yanni",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-21T17:10:35Z",
+        "url": "https://github.com/yannouli/subset-sum-conditional-refinement/blob/bf1f50f066f2c71a53293791f693f505a67a1540/paper.tex#L87-L97"
+      },
+      "best_claim": null,
+      "records_count": 4,
+      "contributors": 4,
+      "attempts": 15,
+      "last_improved": "2026-10-21T17:10:35Z",
+      "status": "ok"
+    },
+    {
+      "slug": "unit-distance-grid",
+      "title": "Unit-distance final grid",
+      "summary": "The quantity is the number of selected edges Nj in the final algebraic-grid proof step. Fewer edges are better. The claim assumes the upstream generic-grid and private-valuation lemmas. The line cases are separate, and no better headline unit-distance exponent is claimed.",
+      "kind": "external",
+      "repo": "rohanarun/unit-distance-grid-refinement",
+      "repo_url": "https://github.com/rohanarun/unit-distance-grid-refinement",
+      "tags": [
+        "combinatorics",
+        "geometry"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "N j",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "Nj = {value}"
+      },
+      "baseline": {
+        "value": 100.0,
+        "label": "OpenAI weak pinned planar distance N*j = 20*5 = 100",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-weak-pinned-planar-distance-theorem-September-23-2026/paper.pdf"
+      },
+      "first_record": {
+        "id": "rohanarun-1",
+        "value": 32.0,
+        "evidence": "verified",
+        "author": "rohanarun",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-09T22:36:00-07:00",
+        "url": "https://github.com/rohanarun/unit-distance-grid-refinement/blob/62455a6709204f79a3a93c4eace817c3ce0d54ec/README.md"
+      },
+      "current_best": {
+        "id": "rohanarun-1",
+        "value": 32.0,
+        "evidence": "verified",
+        "author": "rohanarun",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-09T22:36:00-07:00",
+        "url": "https://github.com/rohanarun/unit-distance-grid-refinement/blob/62455a6709204f79a3a93c4eace817c3ce0d54ec/README.md"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 4,
+      "last_improved": "2026-10-09T22:36:00-07:00",
+      "status": "ok"
+    },
+    {
+      "slug": "van-der-waerden",
+      "title": "Van der Waerden numbers",
+      "summary": "The quantity is the coefficient c in W_r(k)>k^{ck\\lfloor\\log_2r\\rfloor}, for sufficiently large k, uniformly in r. A higher coefficient is better. Each claim assumes the upstream OpenAI transfer and states the lemmas it adds. The current region allows every fixed c<1/8; 1/8 is not an attained value.",
+      "kind": "external",
+      "repo": "DaysSky/van-der-waerden-refinement",
+      "repo_url": "https://github.com/DaysSky/van-der-waerden-refinement",
+      "tags": [
+        "combinatorics",
+        "ramsey-theory"
+      ],
+      "verifier_type": "manual",
+      "metric": {
+        "name": "c in W_r(k)>k^{ck\\lfloor\\log_2r\\rfloor",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "c = {value}"
+      },
+      "baseline": {
+        "value": 1e-05,
+        "label": "OpenAI baseline c = 1/100000",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf"
+      },
+      "first_record": {
+        "id": "rohanarun-1",
+        "value": 0.04,
+        "evidence": "verified",
+        "author": "rohanarun",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-09T22:45:00-07:00",
+        "url": "https://github.com/rohanarun/van-der-waerden-refinement/blob/54ac9715fceab938ca77d5980c36ab691765a04d/README.md"
+      },
+      "current_best": {
+        "id": "dayssky-4",
+        "value": 0.111111111111,
+        "evidence": "verified",
+        "author": "DaysSky",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-10-12T19:23:00-07:00",
+        "url": "https://github.com/DaysSky/van-der-waerden-refinement/blob/987c96cfda59b65728ae4dcd5adc8a64ff95bab2/README.md#L13-L17"
+      },
+      "best_claim": null,
+      "records_count": 4,
+      "contributors": 3,
+      "attempts": 12,
+      "last_improved": "2026-10-12T19:23:00-07:00",
       "status": "ok"
     }
   ]

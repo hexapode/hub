@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "slug": "matroid-prophet",
+  "metric": {
+    "name": "C in \\mathbb{E[R]\\ge C\\mathbb{E[\\mathrm{OPT]",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "C \\approx {value}"
+  },
+  "baseline": {
+    "value": 1e-12,
+    "label": "OpenAI baseline 2^-310",
+    "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/One-Sample-Suffices-for-Matroid-Prophet-Inequalities-against-an-Almighty-Adversary-September-23-2026/final.pdf"
+  },
+  "records": [
+    {
+      "id": "shea256-1",
+      "value": 1.5141297329305954e-11,
+      "evidence": "verified",
+      "author": "shea256",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-10T04:19:11Z",
+      "url": "https://github.com/shea256/matroid-prophet-inequality/blob/7cffa2a7d49ff779f24d043c4c6d55557283d857/README.md"
+    },
+    {
+      "id": "shea256-2",
+      "value": 6.142787721646139e-11,
+      "evidence": "verified",
+      "author": "shea256",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-10T06:29:15Z",
+      "url": "https://github.com/shea256/matroid-prophet-inequality/blob/6e4180317d9c9c42c3046f20da738acb938f650f/README.md"
+    },
+    {
+      "id": "shea256-3",
+      "value": 2.415559099542104e-10,
+      "evidence": "verified",
+      "author": "shea256",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-10T06:52:50Z",
+      "url": "https://github.com/shea256/matroid-prophet-inequality/blob/ff4187f03456fe54e8dc0a68e691fdc15f6c707f/README.md"
+    },
+    {
+      "id": "shea256-5",
+      "value": 4.141702270621754e-10,
+      "evidence": "verified",
+      "author": "shea256",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-10T15:12:32Z",
+      "url": "https://github.com/shea256/matroid-prophet-inequality/blob/8ba515ab2556c49f5417de329b0cf24289568971/README.md"
+    },
+    {
+      "id": "shea256-6",
+      "value": 4.761844407341283e-10,
+      "evidence": "verified",
+      "author": "shea256",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-10T18:23:14Z",
+      "url": "https://github.com/shea256/matroid-prophet-inequality/blob/4f650d6d33ba4438ab32e85900aa1e13cf921f40/README.md"
+    },
+    {
+      "id": "shea256-7",
+      "value": 5.100145024820285e-10,
+      "evidence": "verified",
+      "author": "shea256",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-11T18:43:11Z",
+      "url": "https://github.com/shea256/matroid-prophet-inequality/blob/8cd1395994596d89ad20c2af8b69dab8e3402ee1/README.md#L15-L19"
+    },
+    {
+      "id": "canghaimeng-8",
+      "value": 5.107488914317048e-10,
+      "evidence": "verified",
+      "author": "canghaimeng",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-19T11:44:32Z",
+      "url": "https://github.com/canghaimeng/openai-math-improvement/blob/b3c7abea0d5e392777498816ca837eded8b85669/problems/bound-111/README.md"
+    }
+  ],
+  "claims": [],
+  "contributors": 3,
+  "attempts": 24,
+  "updated": "2026-10-25T19:09:49Z"
+}

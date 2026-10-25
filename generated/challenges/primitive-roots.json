@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "slug": "primitive-roots",
+  "metric": {
+    "name": "a in c_bx/(\\log x)^a",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "a = {value}"
+  },
+  "baseline": {
+    "value": 2.0,
+    "label": "OpenAI baseline a <= 2 in c_b x / (log x)^a",
+    "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Primitive-roots-for-every-admissible-integer-base-October-4-2026/primitive-roots-all-integer-bases.pdf"
+  },
+  "records": [
+    {
+      "id": "rogerhu12-1",
+      "value": 1.0,
+      "evidence": "verified",
+      "author": "Rogerhu12",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-07T12:52:00-07:00",
+      "url": "https://github.com/Rogerhu12/openai-math-extensions/blob/8e94120c0e9eecfe3d4991eb2102d4da8ede96cf/README.md"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 4,
+  "updated": "2026-10-25T19:09:49Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "slug": "unit-distance-grid",
+  "metric": {
+    "name": "N j",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "Nj = {value}"
+  },
+  "baseline": {
+    "value": 100.0,
+    "label": "OpenAI weak pinned planar distance N*j = 20*5 = 100",
+    "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-weak-pinned-planar-distance-theorem-September-23-2026/paper.pdf"
+  },
+  "records": [
+    {
+      "id": "rohanarun-1",
+      "value": 32.0,
+      "evidence": "verified",
+      "author": "rohanarun",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-09T22:36:00-07:00",
+      "url": "https://github.com/rohanarun/unit-distance-grid-refinement/blob/62455a6709204f79a3a93c4eace817c3ce0d54ec/README.md"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 4,
+  "updated": "2026-10-25T19:09:49Z"
+}

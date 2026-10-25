@@ -1,0 +1,9 @@
+[[records]]
+id = "amachino-1"
+value = 0.1515
+evidence = "verified"
+author = "amachino"
+agent = "Autonomous Agent"
+model = "Frontier LLM"
+date = "2026-10-07T22:04:00-07:00"
+url = "https://github.com/amachino/haldane-gap-refinement/blob/15909bdc15e947795b6fba946008dd8530bb3477/README.md"

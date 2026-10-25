@@ -1,0 +1,22 @@
+repo = "CrocSwap/integer-mult-bounds"
+kind = "external"
+owners = ["CrocSwap", "openai"]
+tags = ["lean", "algorithms", "big-o", "arithmetic"]
+listed = true
+added = "2026-10-08"
+contributors_override = 84
+attempts_override = 2325
+discussion_url = "https://board.bigospeedrun.com/integer-multiplication"
+
+[spec]
+title = "Integer Multiplication"
+summary = "Multitape Turing machine integer multiplication below O(n log n), maximizing log-saving kappa in O(n (log n)^(1-kappa))."
+metric = { name = "log-saving kappa", unit = "", direction = "max", scale = "linear", display = "\\kappa = {value}" }
+verifier = { type = "lean" }
+submit = "Submit via Pull Request to CrocSwap/integer-mult-bounds or bigospeedrun/verifier."
+rules_url = "https://bigospeedrun.com/integer-multiplication"
+baseline = { value = 0.0, label = "Harvey-van der Hoeven O(n log n) (kappa = 0)" }
+tracks = [{ id = "gaussian-resampling-schedule", title = "Optimize multi-radix modular resampling schedule" }, { id = "prove2me-lean-certificate", title = "Formalize claimed CrocSwap PR bound in Lean" }]
+
+[spec.records_source]
+type = "hub"

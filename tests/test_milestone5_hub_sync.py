@@ -148,6 +148,19 @@ class TestMilestone5HubSync(unittest.TestCase):
         open_ids = [t["id"] for t in summary["open_tracks"]]
         self.assertEqual(open_ids, ["track-b", "track-c"])
 
+    def test_all_listed_challenges_and_frontier_workflow(self) -> None:
+        hub_root = Path(__file__).resolve().parent.parent
+        reg_files = [
+            p for p in sorted((hub_root / "registry").glob("*.toml"))
+            if not p.name.endswith(".records.toml")
+        ]
+        self.assertEqual(len(reg_files), 24)
+        global_json = json.loads((hub_root / "generated" / "global.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(global_json["challenges"]), len(reg_files))
+        wf_path = hub_root / ".github" / "workflows" / "check-frontier.yml"
+        self.assertTrue(wf_path.exists())
+
 
 if __name__ == "__main__":
     unittest.main()
+

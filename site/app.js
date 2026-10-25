@@ -35,13 +35,23 @@
     throw new Error(`Could not load generated/${relPath}`);
   }
 
+  function formatNumericValue(val) {
+    const num = Number(val);
+    if (!Number.isFinite(num)) return String(val);
+    if (Math.abs(num) > 0 && (Math.abs(num) < 1e-4 || Math.abs(num) >= 1e6)) {
+      return num.toExponential(4);
+    }
+    return String(Number(num.toPrecision(6)));
+  }
+
   function renderMetricValue(val, metric) {
     if (val === null || val === undefined) return "—";
+    const formattedVal = formatNumericValue(val);
     const display = (metric && metric.display) || "{value}";
     const unit = (metric && metric.unit) || "";
-    let raw = display.replace("{value}", String(val));
+    let raw = display.replace("{value}", formattedVal);
     if (!metric?.display && unit) {
-      raw = `${val} ${unit}`;
+      raw = `${formattedVal} ${unit}`;
     }
     if (window.katex && (raw.includes("^") || raw.includes("_") || raw.includes("\\"))) {
       try {

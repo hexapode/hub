@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "slug": "snaky",
+  "metric": {
+    "name": "Maker moves",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "{value} moves"
+  },
+  "baseline": {
+    "value": 21.0,
+    "label": "OpenAI Snaky in 21 Maker moves",
+    "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf"
+  },
+  "records": [
+    {
+      "id": "gotrevor-1",
+      "value": 20.0,
+      "evidence": "verified",
+      "author": "gotrevor",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 + LLM",
+      "date": "2026-10-07T06:45:00-07:00",
+      "url": "https://github.com/gotrevor/snaky-15x15/blob/1173345102f9d39472e38db0fdd810f7bfd4ed4e/README.md"
+    },
+    {
+      "id": "shjvandekamp-2",
+      "value": 19.0,
+      "evidence": "verified",
+      "author": "shjvandekamp",
+      "agent": "Autonomous Agent",
+      "model": "Lean 4 + LLM",
+      "date": "2026-10-15T05:55:00-07:00",
+      "url": "https://github.com/shjvandekamp/math/blob/db6e1d89a0637b013a86464bd766c0a5120e454e/README.md#L32-L48"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 6,
+  "updated": "2026-10-25T19:09:49Z"
+}

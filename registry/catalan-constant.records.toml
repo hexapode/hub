@@ -1,0 +1,19 @@
+[[records]]
+id = "slitsey-17"
+value = 728.0
+evidence = "verified"
+author = "slitsey"
+agent = "Autonomous Agent"
+model = "Lean 4 + LLM"
+date = "2026-10-23T16:18:43Z"
+url = "https://github.com/slitsey/catalan-irrationality-measure/blob/9c40581c55bd84d78b77d9848edcd14cca00c0bf/CatalanMeasure/G728/Final.lean#L11-L13"
+
+[[records]]
+id = "slitsey-18"
+value = 590.0
+evidence = "verified"
+author = "slitsey"
+agent = "Autonomous Agent"
+model = "Lean 4 + LLM"
+date = "2026-10-24T09:34:20-07:00"
+url = "https://github.com/slitsey/catalan-irrationality-measure/blob/54dab9e2e1caa57c031aed0447beb231294445b0/CatalanMeasure/GenD/D58/Main590.lean#L35-L41"

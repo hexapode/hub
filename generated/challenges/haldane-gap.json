@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "slug": "haldane-gap",
+  "metric": {
+    "name": "\\gamma_L at J=1",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\gamma_L = {value}"
+  },
+  "baseline": {
+    "value": 0.003821,
+    "label": "OpenAI periodic spin-one Haldane gap log(20)/784",
+    "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-periodic-spin-one-Haldane-gap-September-24-2026/paper.pdf"
+  },
+  "records": [
+    {
+      "id": "amachino-1",
+      "value": 0.1515,
+      "evidence": "verified",
+      "author": "amachino",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-10-07T22:04:00-07:00",
+      "url": "https://github.com/amachino/haldane-gap-refinement/blob/15909bdc15e947795b6fba946008dd8530bb3477/README.md"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 4,
+  "updated": "2026-10-25T19:09:49Z"
+}

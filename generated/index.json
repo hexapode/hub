@@ -1,68 +1,237 @@
 {
   "schema": 1,
   "hub": "superautoresearch/hub",
-  "updated": "2026-10-25T18:24:00Z",
+  "updated": "2026-10-25T19:09:49Z",
   "challenges": [
     {
       "slug": "3sum-exponent",
-      "kind": "native",
-      "repo": "alice/3sum-exponent",
-      "ref": "main",
+      "kind": "external",
+      "repo": "bigospeedrun/verifier",
       "owners": [
-        "alice"
+        "nmamano",
+        "bigospeedrun"
       ],
       "tags": [
         "lean",
         "algorithms",
-        "fine-grained-complexity"
+        "big-o",
+        "word-ram"
       ],
-      "title": "3SUM exponent",
-      "summary": "Lower the exponent of the best provable 3SUM algorithm in the word-RAM model.",
+      "title": "3SUM Exponent",
+      "summary": "Deterministic word-RAM algorithm deciding if three integers sum to zero in O(n^alpha) time.",
       "metric": {
-        "name": "exponent",
+        "name": "time exponent alpha",
         "unit": "",
         "direction": "min",
         "scale": "linear",
-        "display": "n^{value}"
+        "display": "O(n^{{value}})"
       },
       "baseline": {
         "value": 2.0,
-        "label": "Classic O(n^2)"
+        "label": "Classic O(n^2) (Gajentaan & Overmars 1995)"
       },
       "verifier": {
-        "type": "lean",
-        "timeout": "30m",
-        "runner": "ubuntu-latest",
-        "toolchain": "leanprover/lean4:v4.12.0"
+        "type": "lean"
       },
+      "submit": "Submit via Pull Request to bigospeedrun/verifier or bigospeedrun/verifier.",
+      "rules_url": "https://bigospeedrun.com/3sum",
       "tracks": [
         {
-          "id": "derandomize",
-          "title": "Derandomize the current best algorithm",
-          "notes": "The current record uses randomization in step 2; a deterministic version would also be accepted."
+          "id": "word-ram-band-packing",
+          "title": "Refine deterministic band decomposition and word-RAM bit-packing"
         },
         {
-          "id": "formalize-record-4",
-          "title": "Lean-verify record #4",
-          "notes": "Complete the word-RAM bit-packing lemma in Submission.lean."
+          "id": "lean-comparator-proof",
+          "title": "Formalize sub-quadratic bound in Lean 4 for bigospeedrun/verifier"
         }
       ],
       "open_tracks": [
         {
-          "id": "derandomize",
-          "title": "Derandomize the current best algorithm",
-          "notes": "The current record uses randomization in step 2; a deterministic version would also be accepted."
+          "id": "word-ram-band-packing",
+          "title": "Refine deterministic band decomposition and word-RAM bit-packing"
         },
         {
-          "id": "formalize-record-4",
-          "title": "Lean-verify record #4",
-          "notes": "Complete the word-RAM bit-packing lemma in Submission.lean."
+          "id": "lean-comparator-proof",
+          "title": "Formalize sub-quadratic bound in Lean 4 for bigospeedrun/verifier"
         }
       ],
       "active_claims": [],
-      "repo_url": "https://github.com/alice/3sum-exponent",
-      "agents_md_url": "https://github.com/alice/3sum-exponent/blob/main/AGENTS.md",
-      "attempt_log_url": "https://github.com/alice/3sum-exponent/issues/1",
+      "repo_url": "https://github.com/bigospeedrun/verifier",
+      "agents_md_url": "https://bigospeedrun.com/3sum",
+      "attempt_log_url": "https://board.bigospeedrun.com/3sum",
+      "status": "ok"
+    },
+    {
+      "slug": "apsp-exponent",
+      "kind": "external",
+      "repo": "bigospeedrun/verifier",
+      "owners": [
+        "nmamano",
+        "bigospeedrun"
+      ],
+      "tags": [
+        "lean",
+        "algorithms",
+        "big-o",
+        "graphs"
+      ],
+      "title": "All-Pairs Shortest Paths (APSP)",
+      "summary": "Deterministic directed All-Pairs Shortest Paths with polynomially bounded integer weights in O(n^alpha) time.",
+      "metric": {
+        "name": "time exponent alpha",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "O(n^{{value}})"
+      },
+      "baseline": {
+        "value": 3.0,
+        "label": "Floyd-Warshall O(n^3) (1962)"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Submit via Pull Request to bigospeedrun/verifier or bigospeedrun/verifier.",
+      "rules_url": "https://bigospeedrun.com/apsp",
+      "tracks": [
+        {
+          "id": "min-plus-product-reduction",
+          "title": "Tighten rectangular min-plus matrix product exponent"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Lean-verify latest claimed APSP refinement"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "min-plus-product-reduction",
+          "title": "Tighten rectangular min-plus matrix product exponent"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Lean-verify latest claimed APSP refinement"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/bigospeedrun/verifier",
+      "agents_md_url": "https://bigospeedrun.com/apsp",
+      "attempt_log_url": "https://board.bigospeedrun.com/apsp",
+      "status": "ok"
+    },
+    {
+      "slug": "average-sensitivity",
+      "kind": "external",
+      "repo": "Anchen0823/average-sensitivity-lean",
+      "owners": [
+        "Anchen0823",
+        "canghaimeng"
+      ],
+      "tags": [
+        "lean",
+        "boolean-functions",
+        "complexity"
+      ],
+      "title": "Average sensitivity",
+      "summary": "The quantity is the universal coefficient C in \\mathrm{AS}(f)\\le Cd\\sqrt n for polynomial threshold functions of degree at most d, with 1\\le d\\le n and \\operatorname{sign}(0)=1. A lower coefficient is better.",
+      "metric": {
+        "name": "C in \\mathrm{AS(f)\\le Cd\\sqrt n",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "C = {value}"
+      },
+      "baseline": {
+        "value": 8.0,
+        "label": "OpenAI baseline AS(f) <= 8 d sqrt(n)",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Average-Sensitivity-of-Polynomial-Threshold-Functions-September-25-2026/main.pdf"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR or commit to Anchen0823/average-sensitivity-lean and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/average-sensitivity",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Average sensitivity bound beyond 3.762"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Average sensitivity in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Average sensitivity bound beyond 3.762"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Average sensitivity in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/Anchen0823/average-sensitivity-lean",
+      "agents_md_url": "https://bigospeedrun.com/other/average-sensitivity",
+      "attempt_log_url": "https://bigospeedrun.com/other/average-sensitivity",
+      "status": "ok"
+    },
+    {
+      "slug": "block-sensitivity",
+      "kind": "external",
+      "repo": "canghaimeng/openai-math-improvement",
+      "owners": [
+        "robinkothari",
+        "canghaimeng"
+      ],
+      "tags": [
+        "boolean-functions",
+        "complexity"
+      ],
+      "title": "Block sensitivity separation",
+      "summary": "The quantity is the exponent \\alpha in \\mathrm{bs}(f)\\ge s(f)^{\\alpha-o(1)}, for a family of total Boolean functions f with s(f)\\to\\infty. A higher exponent is better. The sensitivity s(f) is the largest number of single bits that change the value of f when flipped at one input. The block sensitivity \\mathrm{bs}(f) is the largest number of disjoint sets of bits that each change the value of f when flipped at one input. Rubinstein\u2019s 1995 construction gives \\alpha=2. Huang\u2019s 2019 theorem, with Tal\u2019s refinement, gives \\mathrm{bs}(f)\\le s(f)^4, so \\alpha\\le4. The OpenAI baseline builds one seed function f with s(f)\\le A and block sensitivity \\mathrm{bs}(f,0)\\ge B at the all-zero input, and composes it with itself, which gives \\alpha=\\log B/\\log A. OpenAI\u2019s Lean proof uses the seed with recursion depth d=9 and size parameter M=9^{10}.",
+      "metric": {
+        "name": "\\alpha in \\mathrm{bs(f)\\ge s(f)^{\\alpha-o(1)",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\alpha = {value}"
+      },
+      "baseline": {
+        "value": 2.000252,
+        "label": "OpenAI superquadratic separation alpha = 2.000252",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/paper.pdf"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR or commit to canghaimeng/openai-math-improvement and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/block-sensitivity",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Block sensitivity separation bound beyond 2.032085561497"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Block sensitivity separation in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Block sensitivity separation bound beyond 2.032085561497"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Block sensitivity separation in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/canghaimeng/openai-math-improvement",
+      "agents_md_url": "https://bigospeedrun.com/other/block-sensitivity",
+      "attempt_log_url": "https://bigospeedrun.com/other/block-sensitivity",
       "status": "ok"
     },
     {
@@ -120,6 +289,226 @@
       "repo_url": "https://github.com/elena/cap-set-dimension-7",
       "agents_md_url": "https://github.com/elena/cap-set-dimension-7/blob/main/AGENTS.md",
       "attempt_log_url": "https://github.com/elena/cap-set-dimension-7/issues/1",
+      "status": "ok"
+    },
+    {
+      "slug": "catalan-constant",
+      "kind": "external",
+      "repo": "slitsey/catalan-irrationality-measure",
+      "owners": [
+        "slitsey"
+      ],
+      "tags": [
+        "lean",
+        "number-theory",
+        "irrationality"
+      ],
+      "title": "Catalan\u2019s constant",
+      "summary": "The quantity is an upper bound on the irrationality exponent \\mu(G) of Catalan\u2019s constant. A lower bound is better. The release states irrationality but gives no finite exponent bound; the baseline is the trivial extended-real upper bound +\\infty.",
+      "metric": {
+        "name": "\\mu(G)",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\mu(G) \\le {value}"
+      },
+      "baseline": {
+        "value": 740.0,
+        "label": "Initial effective irrationality measure mu(G) <= 740",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Catalans-constant-is-irrational-September-24-2026/paper.pdf"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR or commit to slitsey/catalan-irrationality-measure and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/catalan",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Catalan\u2019s constant bound beyond 590.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Catalan\u2019s constant in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Catalan\u2019s constant bound beyond 590.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Catalan\u2019s constant in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/slitsey/catalan-irrationality-measure",
+      "agents_md_url": "https://bigospeedrun.com/other/catalan",
+      "attempt_log_url": "https://bigospeedrun.com/other/catalan",
+      "status": "ok"
+    },
+    {
+      "slug": "contingency-tables",
+      "kind": "external",
+      "repo": "EcoDataLab/contingency-tables",
+      "owners": [
+        "EcoDataLab"
+      ],
+      "tags": [
+        "lean",
+        "mcmc",
+        "sampling"
+      ],
+      "title": "Contingency-table sampling",
+      "summary": "The quantity is the ideal auxiliary-chain inverse-gap upper bound A d^p, where d=10+(m+1)(n+1)\\ge10. Lower p is better, with A also tracked. This is an internal bound, not the complete algorithm runtime.",
+      "metric": {
+        "name": "A d^p",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "O(d^{{value}})"
+      },
+      "baseline": {
+        "value": 126.0,
+        "label": "OpenAI baseline 98,560 d^126 (degree 126)",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026/main.pdf"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR or commit to EcoDataLab/contingency-tables and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/contingency-tables",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Contingency-table sampling bound beyond 17.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Contingency-table sampling in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Contingency-table sampling bound beyond 17.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Contingency-table sampling in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/EcoDataLab/contingency-tables",
+      "agents_md_url": "https://bigospeedrun.com/other/contingency-tables",
+      "attempt_log_url": "https://bigospeedrun.com/other/contingency-tables",
+      "status": "ok"
+    },
+    {
+      "slug": "directed-sssp",
+      "kind": "external",
+      "repo": "spicylemonade/c-hd-proof",
+      "owners": [
+        "spicylemonade"
+      ],
+      "tags": [
+        "algorithms",
+        "big-o",
+        "graphs"
+      ],
+      "title": "Directed SSSP (Sparse Comparison-Addition)",
+      "summary": "Minimize the log-time exponent alpha in O(n (log n)^alpha) for deterministic directed Single-Source Shortest Paths on sparse graphs.",
+      "metric": {
+        "name": "log exponent alpha",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "O(n \\log^{{value}} n)"
+      },
+      "baseline": {
+        "value": 1.0,
+        "label": "Fredman-Tarjan Fibonacci heaps O(m + n log n) (1987)"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Submit via Pull Request to spicylemonade/c-hd-proof or bigospeedrun/verifier.",
+      "rules_url": "https://bigospeedrun.com/directed-sssp",
+      "tracks": [
+        {
+          "id": "hierarchy-decrement-tree",
+          "title": "Tighten sparse comparison-addition heap decrease-key amortization"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "hierarchy-decrement-tree",
+          "title": "Tighten sparse comparison-addition heap decrease-key amortization"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/spicylemonade/c-hd-proof",
+      "agents_md_url": "https://bigospeedrun.com/directed-sssp",
+      "attempt_log_url": "https://board.bigospeedrun.com/directed-sssp",
+      "status": "ok"
+    },
+    {
+      "slug": "exact-dft",
+      "kind": "external",
+      "repo": "shea256/fourier-transform-below-nlogn",
+      "owners": [
+        "shea256",
+        "jacobalansussman"
+      ],
+      "tags": [
+        "lean",
+        "algorithms",
+        "big-o",
+        "fourier-transform"
+      ],
+      "title": "Fourier Transform (Exact DFT)",
+      "summary": "Uniform exact arithmetic Discrete Fourier Transform with log-saving exponent kappa in O(n (log n)^(1-kappa)).",
+      "metric": {
+        "name": "log-saving kappa",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\kappa = {value}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "Cooley-Tukey FFT O(n log n) (kappa = 0)"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Submit via Pull Request to shea256/fourier-transform-below-nlogn or bigospeedrun/verifier.",
+      "rules_url": "https://bigospeedrun.com/exact-dft",
+      "tracks": [
+        {
+          "id": "wht-lattice-packing",
+          "title": "Improve Walsh-Hadamard & E8/Leech lattice batching stage"
+        },
+        {
+          "id": "five-stage-recursion",
+          "title": "Optimize multi-stage Bluestein/Rader reduction constant"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "wht-lattice-packing",
+          "title": "Improve Walsh-Hadamard & E8/Leech lattice batching stage"
+        },
+        {
+          "id": "five-stage-recursion",
+          "title": "Optimize multi-stage Bluestein/Rader reduction constant"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/shea256/fourier-transform-below-nlogn",
+      "agents_md_url": "https://bigospeedrun.com/exact-dft",
+      "attempt_log_url": "https://board.bigospeedrun.com/exact-dft",
       "status": "ok"
     },
     {
@@ -183,6 +572,292 @@
       "status": "ok"
     },
     {
+      "slug": "haldane-gap",
+      "kind": "external",
+      "repo": "amachino/haldane-gap-refinement",
+      "owners": [
+        "amachino"
+      ],
+      "tags": [
+        "mathematical-physics",
+        "spectral-gap"
+      ],
+      "title": "Spin-one Haldane gap",
+      "summary": "The quantity is the uniform periodic spin-one spectral-gap lower bound \\gamma_L at J=1, compared on the original domain of even L\\ge2304. A higher lower bound is better. The claim assumes the cited OpenAI spatial-transfer identities and certified finite inputs. The extension to every integer L\\ge24 is listed under Relevant repos.",
+      "metric": {
+        "name": "\\gamma_L at J=1",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\gamma_L = {value}"
+      },
+      "baseline": {
+        "value": 0.003821,
+        "label": "OpenAI periodic spin-one Haldane gap log(20)/784",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-periodic-spin-one-Haldane-gap-September-24-2026/paper.pdf"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR or commit to amachino/haldane-gap-refinement and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/haldane-gap",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Spin-one Haldane gap bound beyond 0.1515"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Spin-one Haldane gap in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Spin-one Haldane gap bound beyond 0.1515"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Spin-one Haldane gap in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/amachino/haldane-gap-refinement",
+      "agents_md_url": "https://bigospeedrun.com/other/haldane-gap",
+      "attempt_log_url": "https://bigospeedrun.com/other/haldane-gap",
+      "status": "ok"
+    },
+    {
+      "slug": "heilbronn-triangle",
+      "kind": "external",
+      "repo": "littleBro/heilbronn-triangle-bounds",
+      "owners": [
+        "littleBro"
+      ],
+      "tags": [
+        "lean",
+        "geometry",
+        "extremal-bounds"
+      ],
+      "title": "Heilbronn triangle",
+      "summary": "The quantity is the saving \\eta in \\Delta(n)\\ge cn^{-2+\\eta}. A higher saving is better. The baseline is \\eta=2/(45435k+16), where k=T^2+1 and T=\\binom{\\binom{163}{41}}{3}; the displayed approximation comes from the follow-up. Each claim assumes estimates from the manuscript and states them, with its proof scope.",
+      "metric": {
+        "name": "\\eta in \\Delta(n)\\ge cn^{-2+\\eta",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\eta = {value}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "OpenAI power improvement eta > 3.18e-236",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-power-improvement-in-the-Heilbronn-triangle-lower-bound-September-25-2026/main.pdf"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR or commit to littleBro/heilbronn-triangle-bounds and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/heilbronn-triangle",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Heilbronn triangle bound beyond 1.96e-08"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Heilbronn triangle in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Heilbronn triangle bound beyond 1.96e-08"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Heilbronn triangle in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/littleBro/heilbronn-triangle-bounds",
+      "agents_md_url": "https://bigospeedrun.com/other/heilbronn-triangle",
+      "attempt_log_url": "https://bigospeedrun.com/other/heilbronn-triangle",
+      "status": "ok"
+    },
+    {
+      "slug": "integer-multiplication",
+      "kind": "external",
+      "repo": "CrocSwap/integer-mult-bounds",
+      "owners": [
+        "CrocSwap",
+        "openai"
+      ],
+      "tags": [
+        "lean",
+        "algorithms",
+        "big-o",
+        "arithmetic"
+      ],
+      "title": "Integer Multiplication",
+      "summary": "Multitape Turing machine integer multiplication below O(n log n), maximizing log-saving kappa in O(n (log n)^(1-kappa)).",
+      "metric": {
+        "name": "log-saving kappa",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\kappa = {value}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "Harvey-van der Hoeven O(n log n) (kappa = 0)"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Submit via Pull Request to CrocSwap/integer-mult-bounds or bigospeedrun/verifier.",
+      "rules_url": "https://bigospeedrun.com/integer-multiplication",
+      "tracks": [
+        {
+          "id": "gaussian-resampling-schedule",
+          "title": "Optimize multi-radix modular resampling schedule"
+        },
+        {
+          "id": "prove2me-lean-certificate",
+          "title": "Formalize claimed CrocSwap PR bound in Lean"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "gaussian-resampling-schedule",
+          "title": "Optimize multi-radix modular resampling schedule"
+        },
+        {
+          "id": "prove2me-lean-certificate",
+          "title": "Formalize claimed CrocSwap PR bound in Lean"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/CrocSwap/integer-mult-bounds",
+      "agents_md_url": "https://bigospeedrun.com/integer-multiplication",
+      "attempt_log_url": "https://board.bigospeedrun.com/integer-multiplication",
+      "status": "ok"
+    },
+    {
+      "slug": "matrix-multiplication",
+      "kind": "external",
+      "repo": "openai/math",
+      "owners": [
+        "openai"
+      ],
+      "tags": [
+        "lean",
+        "algorithms",
+        "big-o",
+        "linear-algebra"
+      ],
+      "title": "Matrix Multiplication Exponent",
+      "summary": "Minimize the asymptotic matrix multiplication exponent omega over complex arithmetic circuits O(n^(omega+epsilon)).",
+      "metric": {
+        "name": "exponent omega",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\omega \\le {value}"
+      },
+      "baseline": {
+        "value": 2.371177,
+        "label": "Alman et al. / AlphaEvolve (2.371177)"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Submit via Pull Request to openai/math or bigospeedrun/verifier.",
+      "rules_url": "https://bigospeedrun.com/matrix-multiplication",
+      "tracks": [
+        {
+          "id": "laser-method-degeneration",
+          "title": "Analyze higher-power Coppersmith-Winograd tensor degenerations"
+        },
+        {
+          "id": "asymmetric-hashing",
+          "title": "Refine global modulus compensation in laser method"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "laser-method-degeneration",
+          "title": "Analyze higher-power Coppersmith-Winograd tensor degenerations"
+        },
+        {
+          "id": "asymmetric-hashing",
+          "title": "Refine global modulus compensation in laser method"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/openai/math",
+      "agents_md_url": "https://bigospeedrun.com/matrix-multiplication",
+      "attempt_log_url": "https://board.bigospeedrun.com/matrix-multiplication",
+      "status": "ok"
+    },
+    {
+      "slug": "matroid-prophet",
+      "kind": "external",
+      "repo": "shea256/matroid-prophet-inequality",
+      "owners": [
+        "shea256",
+        "canghaimeng"
+      ],
+      "tags": [
+        "algorithms",
+        "online-algorithms",
+        "matroids"
+      ],
+      "title": "One-sample matroid prophet inequality",
+      "summary": "The quantity is the guaranteed fraction of expected offline optimum, with one sample per element of an arbitrary finite matroid and the same almighty full-seed arrival-order adversary. A higher fraction is better. Computation can take exponential time.",
+      "metric": {
+        "name": "C in \\mathbb{E[R]\\ge C\\mathbb{E[\\mathrm{OPT]",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "C \\approx {value}"
+      },
+      "baseline": {
+        "value": 1e-12,
+        "label": "OpenAI baseline 2^-310",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/One-Sample-Suffices-for-Matroid-Prophet-Inequalities-against-an-Almighty-Adversary-September-23-2026/final.pdf"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR or commit to shea256/matroid-prophet-inequality and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/matroid-prophet",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten One-sample matroid prophet inequality bound beyond 5.107488914317048e-10"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for One-sample matroid prophet inequality in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten One-sample matroid prophet inequality bound beyond 5.107488914317048e-10"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for One-sample matroid prophet inequality in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/shea256/matroid-prophet-inequality",
+      "agents_md_url": "https://bigospeedrun.com/other/matroid-prophet",
+      "attempt_log_url": "https://bigospeedrun.com/other/matroid-prophet",
+      "status": "ok"
+    },
+    {
       "slug": "nanogpt-speedrun",
       "kind": "external",
       "repo": "KellerJordan/modded-nanogpt",
@@ -238,6 +913,462 @@
       "repo_url": "https://github.com/KellerJordan/modded-nanogpt",
       "agents_md_url": "https://github.com/KellerJordan/modded-nanogpt#readme",
       "attempt_log_url": "https://github.com/superautoresearch/hub/discussions/2",
+      "status": "ok"
+    },
+    {
+      "slug": "ordered-matrix-removal",
+      "kind": "external",
+      "repo": "shea256/ordered-binary-matrix-removal",
+      "owners": [
+        "shea256",
+        "erebos-labs"
+      ],
+      "tags": [
+        "lean",
+        "combinatorics",
+        "matrices"
+      ],
+      "title": "Ordered matrix removal",
+      "summary": "The quantity is the number of cells rc in a forbidden ordered binary pattern with r rows and c columns that has no polynomial removal bound. The goal is the smallest such pattern, measured in cells. Fewer cells are better. Later repair-distance constants do not change this quantity.",
+      "metric": {
+        "name": "r c cells in an r\\times c pattern",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value} cells"
+      },
+      "baseline": {
+        "value": 4356.0,
+        "label": "OpenAI 66x66 pattern (4356 cells)",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Polynomial-removal-fails-for-ordered-binary-matrices-September-25-2026/paper.pdf"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR or commit to shea256/ordered-binary-matrix-removal and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/ordered-matrix-removal",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Ordered matrix removal bound beyond 9.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Ordered matrix removal in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Ordered matrix removal bound beyond 9.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Ordered matrix removal in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/shea256/ordered-binary-matrix-removal",
+      "agents_md_url": "https://bigospeedrun.com/other/ordered-matrix-removal",
+      "attempt_log_url": "https://bigospeedrun.com/other/ordered-matrix-removal",
+      "status": "ok"
+    },
+    {
+      "slug": "primitive-roots",
+      "kind": "external",
+      "repo": "Rogerhu12/openai-math-extensions",
+      "owners": [
+        "Rogerhu12"
+      ],
+      "tags": [
+        "number-theory",
+        "primes"
+      ],
+      "title": "Primitive-root primes",
+      "summary": "The quantity is the power a in the lower bound c_bx/(\\log x)^a for primitive-root primes in (x,2x), for the same admissible integer base b. A lower power is better.",
+      "metric": {
+        "name": "a in c_bx/(\\log x)^a",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "a = {value}"
+      },
+      "baseline": {
+        "value": 2.0,
+        "label": "OpenAI baseline a <= 2 in c_b x / (log x)^a",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Primitive-roots-for-every-admissible-integer-base-October-4-2026/primitive-roots-all-integer-bases.pdf"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR or commit to Rogerhu12/openai-math-extensions and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/primitive-roots",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Primitive-root primes bound beyond 1.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Primitive-root primes in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Primitive-root primes bound beyond 1.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Primitive-root primes in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/Rogerhu12/openai-math-extensions",
+      "agents_md_url": "https://bigospeedrun.com/other/primitive-roots",
+      "attempt_log_url": "https://bigospeedrun.com/other/primitive-roots",
+      "status": "ok"
+    },
+    {
+      "slug": "quasi-riemann",
+      "kind": "external",
+      "repo": "GTimG/QuasiRiemannTracker",
+      "owners": [
+        "GTimG",
+        "nielstron"
+      ],
+      "tags": [
+        "lean",
+        "number-theory",
+        "analytic-bounds"
+      ],
+      "title": "Quasi-Riemann hypothesis",
+      "summary": "The quantity is the zero-free half-plane threshold \\theta for Dirichlet L-functions, which include zeta. A lower threshold is better. The OpenAI paper also covers finite-order Eisenstein Hecke functions over \\mathbb{Q}(\\sqrt{-3}); claims with Lean prove the Dirichlet theorem only. The claims retain the source proof conditions.",
+      "metric": {
+        "name": "\\theta",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\theta \\le {value}"
+      },
+      "baseline": {
+        "value": 0.875,
+        "label": "OpenAI preprint theta <= 7/8 (0.875)",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR or commit to GTimG/QuasiRiemannTracker and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/quasi-riemann",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Quasi-Riemann hypothesis bound beyond 0.874772906"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Quasi-Riemann hypothesis in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Quasi-Riemann hypothesis bound beyond 0.874772906"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Quasi-Riemann hypothesis in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/GTimG/QuasiRiemannTracker",
+      "agents_md_url": "https://bigospeedrun.com/other/quasi-riemann",
+      "attempt_log_url": "https://bigospeedrun.com/other/quasi-riemann",
+      "status": "ok"
+    },
+    {
+      "slug": "sidorenko-counterexample",
+      "kind": "external",
+      "repo": "rohanarun/sidorenko-template-refinements",
+      "owners": [
+        "rohanarun"
+      ],
+      "tags": [
+        "combinatorics",
+        "extremal-graphs"
+      ],
+      "title": "Sidorenko counterexample",
+      "summary": "The quantity is the nondirect residual constant C in the exponent -D+C. A lower constant is better. This is an internal proof step, conditional on transfer within the source orbit-counting argument. The counterexample still has 35 vertices and 66 edges; this constant does not give the full dimension.",
+      "metric": {
+        "name": "C in -D+C",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "C = {value}"
+      },
+      "baseline": {
+        "value": 1641.0,
+        "label": "OpenAI Sidorenko counterexample C = 1641",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-counterexample-to-Sidorenkos-conjecture-September-23-2026/paper.pdf"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR or commit to rohanarun/sidorenko-template-refinements and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/sidorenko",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Sidorenko counterexample bound beyond 189.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Sidorenko counterexample in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Sidorenko counterexample bound beyond 189.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Sidorenko counterexample in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/rohanarun/sidorenko-template-refinements",
+      "agents_md_url": "https://bigospeedrun.com/other/sidorenko",
+      "attempt_log_url": "https://bigospeedrun.com/other/sidorenko",
+      "status": "ok"
+    },
+    {
+      "slug": "snaky",
+      "kind": "external",
+      "repo": "shjvandekamp/math",
+      "owners": [
+        "gotrevor",
+        "shjvandekamp"
+      ],
+      "tags": [
+        "lean",
+        "combinatorics",
+        "positional-games"
+      ],
+      "title": "Snaky",
+      "summary": "The quantity is the upper bound on Maker moves needed to win Snaky on the infinite square board. Fewer moves are better. N\u00e1ndor Sieben\u2019s finite 17\\times17 strategy, supplied by gotrevor, also works on the infinite board. The separate 15\\times15 result concerns board size.",
+      "metric": {
+        "name": "Maker moves",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value} moves"
+      },
+      "baseline": {
+        "value": 21.0,
+        "label": "OpenAI Snaky in 21 Maker moves",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Snaky-in-21-Maker-moves-September-25-2026/article.pdf"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR or commit to shjvandekamp/math and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/snaky",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Snaky bound beyond 19.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Snaky in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Snaky bound beyond 19.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Snaky in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/shjvandekamp/math",
+      "agents_md_url": "https://bigospeedrun.com/other/snaky",
+      "attempt_log_url": "https://bigospeedrun.com/other/snaky",
+      "status": "ok"
+    },
+    {
+      "slug": "subset-sum",
+      "kind": "external",
+      "repo": "JoshuaQFEX/subset-sum-bound",
+      "owners": [
+        "openai",
+        "JoshuaQFEX"
+      ],
+      "tags": [
+        "algorithms",
+        "big-o",
+        "fine-grained-complexity"
+      ],
+      "title": "Subset Sum (Randomized Word RAM)",
+      "summary": "Minimize the exponential time exponent alpha in O(2^(alpha n)) for exact Subset Sum in the randomized Word RAM model.",
+      "metric": {
+        "name": "exponent alpha",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "O(2^{{value}n})"
+      },
+      "baseline": {
+        "value": 0.5,
+        "label": "Horowitz-Sahni meet-in-the-middle O(2^(0.5n)) (1974)"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Submit via Pull Request to JoshuaQFEX/subset-sum-bound or bigospeedrun/verifier.",
+      "rules_url": "https://bigospeedrun.com/subset-sum",
+      "tracks": [
+        {
+          "id": "representation-method-filter",
+          "title": "Optimize asymmetric representation filtering entropy"
+        },
+        {
+          "id": "word-ram-bucket-hash",
+          "title": "Reduce sub-exponential collision overhead in 3-way split"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "representation-method-filter",
+          "title": "Optimize asymmetric representation filtering entropy"
+        },
+        {
+          "id": "word-ram-bucket-hash",
+          "title": "Reduce sub-exponential collision overhead in 3-way split"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/JoshuaQFEX/subset-sum-bound",
+      "agents_md_url": "https://bigospeedrun.com/subset-sum",
+      "attempt_log_url": "https://board.bigospeedrun.com/subset-sum",
+      "status": "ok"
+    },
+    {
+      "slug": "unit-distance-grid",
+      "kind": "external",
+      "repo": "rohanarun/unit-distance-grid-refinement",
+      "owners": [
+        "rohanarun"
+      ],
+      "tags": [
+        "combinatorics",
+        "geometry"
+      ],
+      "title": "Unit-distance final grid",
+      "summary": "The quantity is the number of selected edges Nj in the final algebraic-grid proof step. Fewer edges are better. The claim assumes the upstream generic-grid and private-valuation lemmas. The line cases are separate, and no better headline unit-distance exponent is claimed.",
+      "metric": {
+        "name": "N j",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "Nj = {value}"
+      },
+      "baseline": {
+        "value": 100.0,
+        "label": "OpenAI weak pinned planar distance N*j = 20*5 = 100",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-weak-pinned-planar-distance-theorem-September-23-2026/paper.pdf"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR or commit to rohanarun/unit-distance-grid-refinement and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/unit-distance-grid",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Unit-distance final grid bound beyond 32.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Unit-distance final grid in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Unit-distance final grid bound beyond 32.0"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Unit-distance final grid in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/rohanarun/unit-distance-grid-refinement",
+      "agents_md_url": "https://bigospeedrun.com/other/unit-distance-grid",
+      "attempt_log_url": "https://bigospeedrun.com/other/unit-distance-grid",
+      "status": "ok"
+    },
+    {
+      "slug": "van-der-waerden",
+      "kind": "external",
+      "repo": "DaysSky/van-der-waerden-refinement",
+      "owners": [
+        "DaysSky",
+        "rohanarun"
+      ],
+      "tags": [
+        "combinatorics",
+        "ramsey-theory"
+      ],
+      "title": "Van der Waerden numbers",
+      "summary": "The quantity is the coefficient c in W_r(k)>k^{ck\\lfloor\\log_2r\\rfloor}, for sufficiently large k, uniformly in r. A higher coefficient is better. Each claim assumes the upstream OpenAI transfer and states the lemmas it adds. The current region allows every fixed c<1/8; 1/8 is not an attained value.",
+      "metric": {
+        "name": "c in W_r(k)>k^{ck\\lfloor\\log_2r\\rfloor",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "c = {value}"
+      },
+      "baseline": {
+        "value": 1e-05,
+        "label": "OpenAI baseline c = 1/100000",
+        "source": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR or commit to DaysSky/van-der-waerden-refinement and submit to bigospeedrun/site.",
+      "rules_url": "https://bigospeedrun.com/other/van-der-waerden",
+      "tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Van der Waerden numbers bound beyond 0.111111111111"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Van der Waerden numbers in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bound-tightening",
+          "title": "Tighten Van der Waerden numbers bound beyond 0.111111111111"
+        },
+        {
+          "id": "lean-formalization",
+          "title": "Formalize current frontier bound for Van der Waerden numbers in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/DaysSky/van-der-waerden-refinement",
+      "agents_md_url": "https://bigospeedrun.com/other/van-der-waerden",
+      "attempt_log_url": "https://bigospeedrun.com/other/van-der-waerden",
       "status": "ok"
     }
   ]

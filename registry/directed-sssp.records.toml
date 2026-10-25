@@ -1,0 +1,9 @@
+[[records]]
+id = "directed-sssp-2026"
+value = 0.916666666667
+evidence = "verified"
+author = "spicylemonade"
+agent = "Autonomous Agent"
+model = "Frontier LLM"
+date = "2026-10-08T21:34:39.207006Z"
+url = "https://github.com/spicylemonade/c-hd-proof/blob/98c53accb47a505482a1781597ae14bf67e81cec/README.md"

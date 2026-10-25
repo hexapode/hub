@@ -1,8 +1,22 @@
-repo           = "alice/3sum-exponent"
-kind           = "native"
-owners         = ["alice"]
-tags           = ["lean", "algorithms", "fine-grained-complexity"]
-listed         = true
-added          = 2026-10-01
-statement_hash = "sha256:9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
-ref            = "main"
+repo = "bigospeedrun/verifier"
+kind = "external"
+owners = ["nmamano", "bigospeedrun"]
+tags = ["lean", "algorithms", "big-o", "word-ram"]
+listed = true
+added = "2026-10-08"
+contributors_override = 11
+attempts_override = 51
+discussion_url = "https://board.bigospeedrun.com/3sum"
+
+[spec]
+title = "3SUM Exponent"
+summary = "Deterministic word-RAM algorithm deciding if three integers sum to zero in O(n^alpha) time."
+metric = { name = "time exponent alpha", unit = "", direction = "min", scale = "linear", display = "O(n^{{value}})" }
+verifier = { type = "lean" }
+submit = "Submit via Pull Request to bigospeedrun/verifier or bigospeedrun/verifier."
+rules_url = "https://bigospeedrun.com/3sum"
+baseline = { value = 2.0, label = "Classic O(n^2) (Gajentaan & Overmars 1995)" }
+tracks = [{ id = "word-ram-band-packing", title = "Refine deterministic band decomposition and word-RAM bit-packing" }, { id = "lean-comparator-proof", title = "Formalize sub-quadratic bound in Lean 4 for bigospeedrun/verifier" }]
+
+[spec.records_source]
+type = "hub"

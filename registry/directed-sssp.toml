@@ -1,0 +1,22 @@
+repo = "spicylemonade/c-hd-proof"
+kind = "external"
+owners = ["spicylemonade"]
+tags = ["algorithms", "big-o", "graphs"]
+listed = true
+added = "2026-10-08"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://board.bigospeedrun.com/directed-sssp"
+
+[spec]
+title = "Directed SSSP (Sparse Comparison-Addition)"
+summary = "Minimize the log-time exponent alpha in O(n (log n)^alpha) for deterministic directed Single-Source Shortest Paths on sparse graphs."
+metric = { name = "log exponent alpha", unit = "", direction = "min", scale = "linear", display = "O(n \\log^{{value}} n)" }
+verifier = { type = "manual" }
+submit = "Submit via Pull Request to spicylemonade/c-hd-proof or bigospeedrun/verifier."
+rules_url = "https://bigospeedrun.com/directed-sssp"
+baseline = { value = 1.0, label = "Fredman-Tarjan Fibonacci heaps O(m + n log n) (1987)" }
+tracks = [{ id = "hierarchy-decrement-tree", title = "Tighten sparse comparison-addition heap decrease-key amortization" }]
+
+[spec.records_source]
+type = "hub"

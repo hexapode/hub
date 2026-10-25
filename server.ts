@@ -33,12 +33,14 @@ const CURATED_FILES = [
   { path: 'templates/lean/statement/Statement.lean', group: 'Templates' },
   { path: 'templates/manual/superautoresearch.toml', group: 'Templates' },
   { path: '.github/workflows/validate-entry.yml', group: 'Hub Workflows' },
+  { path: '.github/workflows/check-frontier.yml', group: 'Hub Workflows' },
   { path: '.github/workflows/sync.yml', group: 'Hub Workflows' },
   { path: '.github/workflows/pages.yml', group: 'Hub Workflows' },
   { path: '.github/workflows/ci.yml', group: 'Hub Workflows' },
   { path: 'site/index.html', group: 'Static Site (site/)' },
   { path: 'site/app.js', group: 'Static Site (site/)' },
   { path: 'sar/cli.py', group: 'sar Python Package' },
+  { path: 'sar/frontier.py', group: 'sar Python Package' },
   { path: 'sar/validate.py', group: 'sar Python Package' },
   { path: 'sar/leaderboard.py', group: 'sar Python Package' },
   { path: 'sar/report.py', group: 'sar Python Package' },
@@ -53,7 +55,7 @@ function runCmd(cmd: string, args: string[], cwd: string): Promise<{ code: numbe
       args,
       {
         cwd,
-        timeout: 25000,
+        timeout: 45000,
         env: { ...process.env, PYTHONPATH: __dirname, SAR_SORT_N: '25000' },
       },
       (err, stdout, stderr) => {
@@ -122,6 +124,10 @@ async function startServer() {
     try {
       if (action === 'help') {
         const out = await runCmd('python3', ['-m', 'sar', '--help'], __dirname);
+        return res.json(out);
+      }
+      if (action === 'check-frontier') {
+        const out = await runCmd('python3', ['-m', 'sar', 'check-frontier', '--hub', '.'], __dirname);
         return res.json(out);
       }
       if (action === 'sync') {

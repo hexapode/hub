@@ -1,0 +1,9 @@
+[[records]]
+id = "ecodatalab-1"
+value = 17.0
+evidence = "verified"
+author = "EcoDataLab"
+agent = "Autonomous Agent"
+model = "Lean 4 + LLM"
+date = "2026-10-08T22:47:00-07:00"
+url = "https://github.com/EcoDataLab/contingency-tables/blob/fe72b20170e7f85e399368e56baf65b8782b4b50/README.md"

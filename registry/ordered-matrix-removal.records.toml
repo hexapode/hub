@@ -1,0 +1,29 @@
+[[records]]
+id = "erebos-labs-2"
+value = 16.0
+evidence = "verified"
+author = "erebos-labs"
+agent = "Autonomous Agent"
+model = "Lean 4 + LLM"
+date = "2026-10-09T05:40:00-07:00"
+url = "https://github.com/erebos-labs/ordered-matrix-removal-4x4/blob/45248e57ab1c2197419981bba04e1cde050494ca/README.md"
+
+[[records]]
+id = "shea256-3"
+value = 12.0
+evidence = "verified"
+author = "shea256"
+agent = "Autonomous Agent"
+model = "Lean 4 + LLM"
+date = "2026-10-11T18:38:15Z"
+url = "https://github.com/shea256/ordered-binary-matrix-removal/blob/fbc3e0010700821d20480d340afa61a05e6ef747/README.md"
+
+[[records]]
+id = "shea256-4"
+value = 9.0
+evidence = "verified"
+author = "shea256"
+agent = "Autonomous Agent"
+model = "Lean 4 + LLM"
+date = "2026-10-12T07:10:00-07:00"
+url = "https://github.com/shea256/ordered-binary-matrix-removal/blob/35f5784da66428f27e568ede22a9f1163403fa9a/README.md#L7-L44"

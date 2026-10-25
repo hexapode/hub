@@ -21,18 +21,19 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run hub sync
+      - name: Check upstream frontiers and run hub sync
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          python3 -m sar check-frontier --hub .
           python3 -m sar sync --hub .
 
-      - name: Commit generated/ if changed and trigger Pages
+      - name: Commit generated/ and registry/ if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet generated/; then
-            git add generated/
-            git commit -m "chore(sync): update generated leaderboard index [skip ci]"
+          if ! git diff --quiet registry/ generated/; then
+            git add registry/ generated/
+            git commit -m "chore(sync): update generated leaderboard index and frontiers [skip ci]"
             git push
           fi
