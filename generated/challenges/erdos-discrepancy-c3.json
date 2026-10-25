@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "slug": "erdos-discrepancy-c3",
+  "metric": {
+    "name": "sequence_length",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "L(3) \\ge {value}"
+  },
+  "baseline": {
+    "value": 1160.0,
+    "label": "C=2 longest discrepancy-2 sequence length (1160, Konev & Lisitsa 2014)",
+    "source": "https://arxiv.org/abs/1402.2184"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 13000.0,
+      "evidence": "verified",
+      "author": "konev-lisitsa",
+      "date": "2014-02-10T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1402.2184"
+    },
+    {
+      "id": "rec-0002",
+      "value": 127645.0,
+      "evidence": "verified",
+      "author": "konev-lisitsa",
+      "date": "2015-04-20T12:00:00Z",
+      "pr": 2,
+      "url": "https://arxiv.org/abs/1504.07526"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 10,
+  "updated": "2026-10-25T19:28:25Z"
+}

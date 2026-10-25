@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "hub": "superautoresearch/hub",
-  "updated": "2026-10-25T19:21:39Z",
+  "updated": "2026-10-25T19:28:25Z",
   "challenges": [
     {
       "slug": "3sum-exponent",
@@ -59,6 +59,55 @@
       "repo_url": "https://github.com/bigospeedrun/verifier",
       "agents_md_url": "https://bigospeedrun.com/3sum",
       "attempt_log_url": "https://board.bigospeedrun.com/3sum",
+      "status": "ok"
+    },
+    {
+      "slug": "ambidextrous-sofa-romik",
+      "kind": "external",
+      "repo": "romik/ambidextrous-sofa",
+      "owners": [
+        "romik"
+      ],
+      "tags": [
+        "geometry",
+        "optimization",
+        "analytic-bounds"
+      ],
+      "title": "Conway\u2013Romik Ambidextrous Moving Sofa Area",
+      "summary": "Maximize the area A of a rigid planar shape capable of negotiating both a 90-degree left turn and a 90-degree right turn in a unit-width corridor.",
+      "metric": {
+        "name": "ambidextrous_area",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "A \\ge {value}"
+      },
+      "baseline": {
+        "value": 1.570796,
+        "label": "Unit-diameter semi-disk / symmetric cross baseline (pi/2 = 1.570796)",
+        "source": "https://arxiv.org/abs/1606.08111"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to romik/ambidextrous-sofa or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/1606.08111",
+      "tracks": [
+        {
+          "id": "variational-envelope-search",
+          "title": "Test non-monotonic rotation schedules for ambidextrous corridor envelopes"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "variational-envelope-search",
+          "title": "Test non-monotonic rotation schedules for ambidextrous corridor envelopes"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/romik/ambidextrous-sofa",
+      "agents_md_url": "https://arxiv.org/abs/1606.08111",
+      "attempt_log_url": "https://arxiv.org/abs/1606.08111",
       "status": "ok"
     },
     {
@@ -283,6 +332,158 @@
       "repo_url": "https://github.com/canghaimeng/openai-math-improvement",
       "agents_md_url": "https://bigospeedrun.com/other/block-sensitivity",
       "attempt_log_url": "https://bigospeedrun.com/other/block-sensitivity",
+      "status": "ok"
+    },
+    {
+      "slug": "boolean-max-3sat-approx",
+      "kind": "external",
+      "repo": "karloff-zwick/max3sat-sdp",
+      "owners": [
+        "karloff",
+        "zwick"
+      ],
+      "tags": [
+        "algorithms",
+        "optimization",
+        "sdp",
+        "sat"
+      ],
+      "title": "MAX-3SAT SDP Rounding Approximation Ratio",
+      "summary": "Maximize the certified worst-case approximation ratio alpha in [0, 7/8] of semidefinite programming hyperplane rounding on 3-CNF formulas.",
+      "metric": {
+        "name": "approximation_ratio",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\alpha_{\\text{3SAT}} \\ge {value}"
+      },
+      "baseline": {
+        "value": 0.75,
+        "label": "Uniform random assignment / Goemans-Williamson LP (3/4 = 0.7500)",
+        "source": "https://epubs.siam.org/doi/10.1137/S0097539797321481"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to karloff-zwick/max3sat-sdp or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://epubs.siam.org/doi/10.1137/S0097539797321481",
+      "tracks": [
+        {
+          "id": "sos-interval-cert",
+          "title": "Formalize the computer-assisted interval-arithmetic proof of the 7/8 Karloff-Zwick bound in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "sos-interval-cert",
+          "title": "Formalize the computer-assisted interval-arithmetic proof of the 7/8 Karloff-Zwick bound in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/karloff-zwick/max3sat-sdp",
+      "agents_md_url": "https://epubs.siam.org/doi/10.1137/S0097539797321481",
+      "attempt_log_url": "https://epubs.siam.org/doi/10.1137/S0097539797321481",
+      "status": "ok"
+    },
+    {
+      "slug": "busy-beaver-bb5-deciders",
+      "kind": "external",
+      "repo": "bbchallenge/bbchallenge",
+      "owners": [
+        "tcosmo",
+        "saginaw"
+      ],
+      "tags": [
+        "coq",
+        "lean",
+        "computability",
+        "formal-verification"
+      ],
+      "title": "Busy Beaver BB(5) Undecided Holdout Machines",
+      "summary": "Minimize the number of undecided 5-state 2-symbol Turing machines in the formal verification of S(5) = 47,176,870.",
+      "metric": {
+        "name": "undecided_machines",
+        "unit": "machines",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value}\\text{ holdouts}"
+      },
+      "baseline": {
+        "value": 88664064.0,
+        "label": "bbchallenge starter seed corpus (88,664,064 machines)",
+        "source": "https://bbchallenge.org/"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR to bbchallenge/bbchallenge or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://bbchallenge.org/",
+      "tracks": [
+        {
+          "id": "bb6-cryptids-lean",
+          "title": "Port Coq/Rocq closed-tape language deciders to Lean 4 for 6-state holdouts"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "bb6-cryptids-lean",
+          "title": "Port Coq/Rocq closed-tape language deciders to Lean 4 for 6-state holdouts"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/bbchallenge/bbchallenge",
+      "agents_md_url": "https://bbchallenge.org/",
+      "attempt_log_url": "https://bbchallenge.org/",
+      "status": "ok"
+    },
+    {
+      "slug": "cages-degree7-girth6",
+      "kind": "external",
+      "repo": "exoo-jajcay/cage-graphs",
+      "owners": [
+        "exoo",
+        "jajcay"
+      ],
+      "tags": [
+        "graphs",
+        "combinatorics",
+        "sat"
+      ],
+      "title": "(7, 6)-Cage Graph Minimum Order",
+      "summary": "Minimize the number of vertices |V| in a 7-regular undirected graph with girth exactly 6 (Moore lower bound is 86).",
+      "metric": {
+        "name": "vertices",
+        "unit": "vertices",
+        "direction": "min",
+        "scale": "linear",
+        "display": "n(7,6) \\le {value}"
+      },
+      "baseline": {
+        "value": 98.0,
+        "label": "Projective plane PG(2,7) incidence modification (98 vertices)",
+        "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS16"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to exoo-jajcay/cage-graphs or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS16",
+      "tracks": [
+        {
+          "id": "voltage-graph-lift-88",
+          "title": "Exhaustive Cayley/voltage-graph search for an 88-vertex (7,6)-graph"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "voltage-graph-lift-88",
+          "title": "Exhaustive Cayley/voltage-graph search for an 88-vertex (7,6)-graph"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/exoo-jajcay/cage-graphs",
+      "agents_md_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS16",
+      "attempt_log_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS16",
       "status": "ok"
     },
     {
@@ -573,6 +774,56 @@
       "status": "ok"
     },
     {
+      "slug": "conway-thrackle-bound",
+      "kind": "external",
+      "repo": "fulek-pach/thrackle-bound",
+      "owners": [
+        "fulek",
+        "pach"
+      ],
+      "tags": [
+        "combinatorics",
+        "graphs",
+        "topological-graphs"
+      ],
+      "title": "Conway's Thrackle Edge-to-Vertex Ratio Bound",
+      "summary": "Minimize the proven asymptotic upper bound C on m/n for any thrackle (a drawing of a graph of n vertices and m edges where every pair of edges meets exactly once).",
+      "metric": {
+        "name": "edge_vertex_ratio",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "m/n \\le {value}"
+      },
+      "baseline": {
+        "value": 2.0,
+        "label": "Lov\u00e1sz, Pach & Szegedy thrackle bound (m <= 2n - 3, 1997)",
+        "source": "https://arxiv.org/abs/1008.2159"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR to fulek-pach/thrackle-bound or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/1008.2159",
+      "tracks": [
+        {
+          "id": "discharging-even-faces",
+          "title": "Automated discharging rule search in planarized thrackle arrangements"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "discharging-even-faces",
+          "title": "Automated discharging rule search in planarized thrackle arrangements"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/fulek-pach/thrackle-bound",
+      "agents_md_url": "https://arxiv.org/abs/1008.2159",
+      "attempt_log_url": "https://arxiv.org/abs/1008.2159",
+      "status": "ok"
+    },
+    {
       "slug": "directed-sssp",
       "kind": "external",
       "repo": "spicylemonade/c-hd-proof",
@@ -668,6 +919,57 @@
       "repo_url": "https://github.com/teorth/equational_theories",
       "agents_md_url": "https://github.com/teorth/equational_theories",
       "attempt_log_url": "https://github.com/teorth/equational_theories",
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-discrepancy-c3",
+      "kind": "external",
+      "repo": "konev-lisitsa/erdos-discrepancy",
+      "owners": [
+        "konev",
+        "lisitsa"
+      ],
+      "tags": [
+        "number-theory",
+        "combinatorics",
+        "erdos",
+        "sat"
+      ],
+      "title": "Erd\u0151s Discrepancy Problem C=3 Longest Witness",
+      "summary": "Maximize the length N of a {-1, +1} sequence whose partial sums along every homogeneous arithmetic progression d, 2d, ..., kd have absolute value <= 3.",
+      "metric": {
+        "name": "sequence_length",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "L(3) \\ge {value}"
+      },
+      "baseline": {
+        "value": 1160.0,
+        "label": "C=2 longest discrepancy-2 sequence length (1160, Konev & Lisitsa 2014)",
+        "source": "https://arxiv.org/abs/1402.2184"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to konev-lisitsa/erdos-discrepancy or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/1402.2184",
+      "tracks": [
+        {
+          "id": "multiplicative-chudakov-character",
+          "title": "Local repair of modified Dirichlet character sequences beyond length 130,000"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "multiplicative-chudakov-character",
+          "title": "Local repair of modified Dirichlet character sequences beyond length 130,000"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/konev-lisitsa/erdos-discrepancy",
+      "agents_md_url": "https://arxiv.org/abs/1402.2184",
+      "attempt_log_url": "https://arxiv.org/abs/1402.2184",
       "status": "ok"
     },
     {
@@ -844,6 +1146,107 @@
       "repo_url": "https://github.com/bernhard/fast-int-sort",
       "agents_md_url": "https://github.com/bernhard/fast-int-sort/blob/main/AGENTS.md",
       "attempt_log_url": "https://github.com/bernhard/fast-int-sort/issues/1",
+      "status": "ok"
+    },
+    {
+      "slug": "golomb-ruler-order-28",
+      "kind": "external",
+      "repo": "distributed-net/ogr-28",
+      "owners": [
+        "distributed-net"
+      ],
+      "tags": [
+        "combinatorics",
+        "number-theory",
+        "optimization"
+      ],
+      "title": "Optimal 28-Mark Golomb Ruler Length G(28)",
+      "summary": "Minimize the length L of a 28-mark Golomb ruler (28 integer marks 0 = a_1 < ... < a_28 = L with all 378 pairwise differences distinct).",
+      "metric": {
+        "name": "ruler_length",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "G(28) \\le {value}"
+      },
+      "baseline": {
+        "value": 599.0,
+        "label": "Atkinson, Negro & Santoro projective construction (599, 1985)",
+        "source": "https://www.distributed.net/OGR"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to distributed-net/ogr-28 or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://www.distributed.net/OGR",
+      "tracks": [
+        {
+          "id": "ogr29-upper-bound",
+          "title": "Search for a 29-mark Golomb ruler shorter than 623"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "ogr29-upper-bound",
+          "title": "Search for a 29-mark Golomb ruler shorter than 623"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/distributed-net/ogr-28",
+      "agents_md_url": "https://www.distributed.net/OGR",
+      "attempt_log_url": "https://www.distributed.net/OGR",
+      "status": "ok"
+    },
+    {
+      "slug": "hadwiger-nelson-unit-distance",
+      "kind": "external",
+      "repo": "ustas-parts/unit-distance-5chromatic",
+      "owners": [
+        "de-grey",
+        "heule",
+        "parts"
+      ],
+      "tags": [
+        "geometry",
+        "graphs",
+        "combinatorics",
+        "sat"
+      ],
+      "title": "Hadwiger\u2013Nelson 5-Chromatic Unit-Distance Graph Order",
+      "summary": "Minimize the number of vertices V in a planar unit-distance graph with chromatic number at least 5.",
+      "metric": {
+        "name": "graph_vertices",
+        "unit": "vertices",
+        "direction": "min",
+        "scale": "linear",
+        "display": "|V| \\le {value}"
+      },
+      "baseline": {
+        "value": 1581.0,
+        "label": "Aubrey de Grey 5-chromatic unit-distance graph (1581 vertices, Apr 2018)",
+        "source": "https://arxiv.org/abs/1804.02385"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to ustas-parts/unit-distance-5chromatic or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/1804.02385",
+      "tracks": [
+        {
+          "id": "moser-spindle-core-trim",
+          "title": "Unsat-core minimization of Q[sqrt(3), sqrt(15)] spindle embeddings below 500 vertices"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "moser-spindle-core-trim",
+          "title": "Unsat-core minimization of Q[sqrt(3), sqrt(15)] spindle embeddings below 500 vertices"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/ustas-parts/unit-distance-5chromatic",
+      "agents_md_url": "https://arxiv.org/abs/1804.02385",
+      "attempt_log_url": "https://arxiv.org/abs/1804.02385",
       "status": "ok"
     },
     {
@@ -1076,6 +1479,107 @@
       "status": "ok"
     },
     {
+      "slug": "lebesgue-universal-cover",
+      "kind": "external",
+      "repo": "baez-gibbs/lebesgue-universal-cover",
+      "owners": [
+        "baez",
+        "bagdasaryan",
+        "gibbs"
+      ],
+      "tags": [
+        "geometry",
+        "optimization",
+        "convex-geometry"
+      ],
+      "title": "Lebesgue's Universal Covering Problem (Unit Diameter)",
+      "summary": "Minimize the area A of a convex planar shape that covers every planar set of diameter 1 under rigid motions.",
+      "metric": {
+        "name": "convex_cover_area",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\text{Area} \\le {value}"
+      },
+      "baseline": {
+        "value": 0.866025,
+        "label": "P\u00e1l regular hexagon with inscribed circle of diameter 1 (sqrt(3)/2 = 0.866025, 1920)",
+        "source": "https://arxiv.org/abs/1502.01257"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to baez-gibbs/lebesgue-universal-cover or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/1502.01257",
+      "tracks": [
+        {
+          "id": "corner-truncation-angles",
+          "title": "Optimize asymmetric hex-corner circular truncations against Reuleaux polygons"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "corner-truncation-angles",
+          "title": "Optimize asymmetric hex-corner circular truncations against Reuleaux polygons"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/baez-gibbs/lebesgue-universal-cover",
+      "agents_md_url": "https://arxiv.org/abs/1502.01257",
+      "attempt_log_url": "https://arxiv.org/abs/1502.01257",
+      "status": "ok"
+    },
+    {
+      "slug": "littlewood-flat-polynomials",
+      "kind": "external",
+      "repo": "borwein/littlewood-polynomials",
+      "owners": [
+        "borwein",
+        "jedwab"
+      ],
+      "tags": [
+        "analytic-bounds",
+        "fourier-analysis",
+        "number-theory"
+      ],
+      "title": "Littlewood \u00b11 Polynomial Excursion Ratio",
+      "summary": "Minimize the maximum modulus excursion ratio max_{|z|=1} |P(z)| / sqrt(n+1) over degree-n polynomials with coefficients in {-1, +1}.",
+      "metric": {
+        "name": "crest_factor",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\|P\\|_\\infty / \\sqrt{n} \\le {value}"
+      },
+      "baseline": {
+        "value": 1.414214,
+        "label": "Rudin-Shapiro polynomial sequence (sqrt(2) = 1.414214, 1959)",
+        "source": "https://www.sfu.ca/~jjedwab/"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to borwein/littlewood-polynomials or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://www.sfu.ca/~jjedwab/",
+      "tracks": [
+        {
+          "id": "barker-turyn-patching",
+          "title": "Construct explicit high-degree flat Littlewood polynomials via Golay complementary pairs"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "barker-turyn-patching",
+          "title": "Construct explicit high-degree flat Littlewood polynomials via Golay complementary pairs"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/borwein/littlewood-polynomials",
+      "agents_md_url": "https://www.sfu.ca/~jjedwab/",
+      "attempt_log_url": "https://www.sfu.ca/~jjedwab/",
+      "status": "ok"
+    },
+    {
       "slug": "matmul-4x4-complex-rank",
       "kind": "external",
       "repo": "google-deepmind/alphaevolve-results",
@@ -1300,6 +1804,160 @@
       "status": "ok"
     },
     {
+      "slug": "metric-tsp-approximation-gap",
+      "kind": "external",
+      "repo": "karlin-klein-oghia/metric-tsp",
+      "owners": [
+        "karlin",
+        "klein",
+        "oghia"
+      ],
+      "tags": [
+        "algorithms",
+        "optimization",
+        "graphs",
+        "lp-relaxation"
+      ],
+      "title": "Metric TSP Polynomial-Time Approximation Factor",
+      "summary": "Minimize the proven worst-case approximation factor alpha for the symmetric Metric Traveling Salesperson Problem relative to the Held-Karp LP relaxation.",
+      "metric": {
+        "name": "approx_ratio",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\alpha_{\\text{TSP}} \\le {value}"
+      },
+      "baseline": {
+        "value": 1.5,
+        "label": "Christofides-Serdyukov algorithm (3/2 = 1.500000, 1976)",
+        "source": "https://arxiv.org/abs/2007.01409"
+      },
+      "verifier": {
+        "type": "manual"
+      },
+      "submit": "Open a PR to karlin-klein-oghia/metric-tsp or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/2007.01409",
+      "tracks": [
+        {
+          "id": "max-entropy-tree-rounding",
+          "title": "Tighten half-triangle payment analysis in max-entropy spanning tree rounding"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "max-entropy-tree-rounding",
+          "title": "Tighten half-triangle payment analysis in max-entropy spanning tree rounding"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/karlin-klein-oghia/metric-tsp",
+      "agents_md_url": "https://arxiv.org/abs/2007.01409",
+      "attempt_log_url": "https://arxiv.org/abs/2007.01409",
+      "status": "ok"
+    },
+    {
+      "slug": "moser-worm-convex-cover",
+      "kind": "external",
+      "repo": "wang-worm/moser-worm-cover",
+      "owners": [
+        "norwood",
+        "poole",
+        "wang"
+      ],
+      "tags": [
+        "geometry",
+        "optimization",
+        "packing"
+      ],
+      "title": "Moser's Worm Problem (Universal Unit-Arc Cover Area)",
+      "summary": "Minimize the area A of a planar region capable of covering every rectifiable planar curve of length 1 via rigid motions.",
+      "metric": {
+        "name": "cover_area",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\text{Area} \\le {value}"
+      },
+      "baseline": {
+        "value": 0.5,
+        "label": "Marstrand semi-disk cover (area 0.5000, 1966)",
+        "source": "https://en.wikipedia.org/wiki/Moser%27s_worm_problem"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to wang-worm/moser-worm-cover or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://en.wikipedia.org/wiki/Moser%27s_worm_problem",
+      "tracks": [
+        {
+          "id": "nonconvex-butterfly-spline",
+          "title": "Piecewise circular-arc boundary optimization for non-convex universal worm covers"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "nonconvex-butterfly-spline",
+          "title": "Piecewise circular-arc boundary optimization for non-convex universal worm covers"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/wang-worm/moser-worm-cover",
+      "agents_md_url": "https://en.wikipedia.org/wiki/Moser%27s_worm_problem",
+      "attempt_log_url": "https://en.wikipedia.org/wiki/Moser%27s_worm_problem",
+      "status": "ok"
+    },
+    {
+      "slug": "moving-sofa-gerver-constant",
+      "kind": "external",
+      "repo": "baek-sofa/moving-sofa",
+      "owners": [
+        "gerver",
+        "romik",
+        "baek"
+      ],
+      "tags": [
+        "geometry",
+        "optimization",
+        "analytic-bounds"
+      ],
+      "title": "Moving Sofa Problem Area (Moser #66)",
+      "summary": "Maximize the area A of a rigid planar shape that can maneuver around a right-angled L-shaped corridor of unit width.",
+      "metric": {
+        "name": "sofa_area",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\mu_{\\text{sofa}} \\ge {value}"
+      },
+      "baseline": {
+        "value": 2.207416,
+        "label": "Hammersley telephone-handset sofa (pi/2 + 2/pi = 2.207416, 1968)",
+        "source": "https://arxiv.org/abs/2411.19826"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to baek-sofa/moving-sofa or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/2411.19826",
+      "tracks": [
+        {
+          "id": "lean-baek-optimality",
+          "title": "Formalize Jineon Baek's 2024 optimality proof of Gerver's 18-curve sofa in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "lean-baek-optimality",
+          "title": "Formalize Jineon Baek's 2024 optimality proof of Gerver's 18-curve sofa in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/baek-sofa/moving-sofa",
+      "agents_md_url": "https://arxiv.org/abs/2411.19826",
+      "attempt_log_url": "https://arxiv.org/abs/2411.19826",
+      "status": "ok"
+    },
+    {
       "slug": "nanogpt-speedrun",
       "kind": "external",
       "repo": "KellerJordan/modded-nanogpt",
@@ -1465,6 +2123,57 @@
       "status": "ok"
     },
     {
+      "slug": "pfr-marton-constant-lean",
+      "kind": "external",
+      "repo": "teorth/pfr",
+      "owners": [
+        "teorth",
+        "YaelDillies"
+      ],
+      "tags": [
+        "lean",
+        "additive-combinatorics",
+        "formal-verification",
+        "number-theory"
+      ],
+      "title": "Polynomial Freiman\u2013Ruzsa (Marton's Conjecture) Exponent",
+      "summary": "Minimize the formally verified polynomial doubling exponent C in Lean 4 such that |A + A| <= K|A| implies A is covered by at most 2 * K^C cosets.",
+      "metric": {
+        "name": "exponent_C",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "K^{{value}}"
+      },
+      "baseline": {
+        "value": 12.0,
+        "label": "Gowers-Green-Manners-Tao initial PFR proof (C = 12, Nov 2023)",
+        "source": "https://arxiv.org/abs/2311.05762"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR to teorth/pfr or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/teorth/pfr",
+      "tracks": [
+        {
+          "id": "ruzsa-distance-entropy",
+          "title": "Formalize Jyun-Jie Liao's improved entropic Ruzsa triangle constant in Lean 4"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "ruzsa-distance-entropy",
+          "title": "Formalize Jyun-Jie Liao's improved entropic Ruzsa triangle constant in Lean 4"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/teorth/pfr",
+      "agents_md_url": "https://github.com/teorth/pfr",
+      "attempt_log_url": "https://github.com/teorth/pfr",
+      "status": "ok"
+    },
+    {
       "slug": "primitive-roots",
       "kind": "external",
       "repo": "Rogerhu12/openai-math-extensions",
@@ -1518,6 +2227,58 @@
       "repo_url": "https://github.com/Rogerhu12/openai-math-extensions",
       "agents_md_url": "https://bigospeedrun.com/other/primitive-roots",
       "attempt_log_url": "https://bigospeedrun.com/other/primitive-roots",
+      "status": "ok"
+    },
+    {
+      "slug": "pythagorean-triples-boolean-7824",
+      "kind": "external",
+      "repo": "heule-kullmann-marek/pythagorean-triples",
+      "owners": [
+        "heule",
+        "kullmann",
+        "marek"
+      ],
+      "tags": [
+        "number-theory",
+        "combinatorics",
+        "ramsey-theory",
+        "sat"
+      ],
+      "title": "Boolean Pythagorean Triples Partition Bound",
+      "summary": "Maximize the integer N such that {1, 2, ..., N} can be 2-colored with no monochromatic solution to a^2 + b^2 = c^2.",
+      "metric": {
+        "name": "max_integer_N",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "N \\ge {value}"
+      },
+      "baseline": {
+        "value": 7664.0,
+        "label": "Cooper & Poirel heuristic 2-coloring lower bound (7664, 2008)",
+        "source": "https://arxiv.org/abs/1605.00723"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to heule-kullmann-marek/pythagorean-triples or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/1605.00723",
+      "tracks": [
+        {
+          "id": "compact-lrat-certificate",
+          "title": "Compress the 200 TB cube-and-conquer unsatisfiability proof for N=7825 via symmetry breaking"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "compact-lrat-certificate",
+          "title": "Compress the 200 TB cube-and-conquer unsatisfiability proof for N=7825 via symmetry breaking"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/heule-kullmann-marek/pythagorean-triples",
+      "agents_md_url": "https://arxiv.org/abs/1605.00723",
+      "attempt_log_url": "https://arxiv.org/abs/1605.00723",
       "status": "ok"
     },
     {
@@ -1677,6 +2438,56 @@
       "repo_url": "https://github.com/google-deepmind/funsearch",
       "agents_md_url": "https://github.com/google-deepmind/funsearch",
       "attempt_log_url": "https://github.com/google-deepmind/funsearch",
+      "status": "ok"
+    },
+    {
+      "slug": "schur-number-five-witness",
+      "kind": "external",
+      "repo": "heule/schur-number-five",
+      "owners": [
+        "heule"
+      ],
+      "tags": [
+        "combinatorics",
+        "number-theory",
+        "ramsey-theory",
+        "sat"
+      ],
+      "title": "Schur Number S(5) = 160 Sum-Free 5-Coloring",
+      "summary": "Maximize the integer N such that {1, 2, ..., N} can be partitioned into 5 sum-free sets (no monochromatic x + y = z).",
+      "metric": {
+        "name": "max_integer_N",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "S(5) \\ge {value}"
+      },
+      "baseline": {
+        "value": 156.0,
+        "label": "Symmetric template sum-free 5-partition (156)",
+        "source": "https://arxiv.org/abs/1711.08076"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to heule/schur-number-five or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/1711.08076",
+      "tracks": [
+        {
+          "id": "schur-6-lower-bound",
+          "title": "Extend cyclic difference-set partitioning to improve the lower bound on S(6) >= 536"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "schur-6-lower-bound",
+          "title": "Extend cyclic difference-set partitioning to improve the lower bound on S(6) >= 536"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/heule/schur-number-five",
+      "agents_md_url": "https://arxiv.org/abs/1711.08076",
+      "attempt_log_url": "https://arxiv.org/abs/1711.08076",
       "status": "ok"
     },
     {
@@ -1852,6 +2663,56 @@
       "status": "ok"
     },
     {
+      "slug": "spherical-design-t5-d4",
+      "kind": "external",
+      "repo": "womersley/spherical-designs",
+      "owners": [
+        "womersley",
+        "bondarenko"
+      ],
+      "tags": [
+        "geometry",
+        "numerical-analysis",
+        "optimization"
+      ],
+      "title": "Minimum-Point Spherical 5-Design on S^3",
+      "summary": "Minimize the number of quadrature nodes N on the 3-sphere S^3 <= R^4 with equal weights that exactly integrate all spherical harmonics of degree <= 5.",
+      "metric": {
+        "name": "quadrature_nodes",
+        "unit": "points",
+        "direction": "min",
+        "scale": "linear",
+        "display": "N(3,5) \\le {value}"
+      },
+      "baseline": {
+        "value": 24.0,
+        "label": "24-cell regular polytope vertices on S^3 (24 points)",
+        "source": "https://web.maths.unsw.edu.au/~rsw/Sphere/"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to womersley/spherical-designs or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://web.maths.unsw.edu.au/~rsw/Sphere/",
+      "tracks": [
+        {
+          "id": "krawtchouk-interval-proof",
+          "title": "Certify existence or non-existence of 15-point spherical 5-designs on S^3"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "krawtchouk-interval-proof",
+          "title": "Certify existence or non-existence of 15-point spherical 5-designs on S^3"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/womersley/spherical-designs",
+      "agents_md_url": "https://web.maths.unsw.edu.au/~rsw/Sphere/",
+      "attempt_log_url": "https://web.maths.unsw.edu.au/~rsw/Sphere/",
+      "status": "ok"
+    },
+    {
       "slug": "subset-sum",
       "kind": "external",
       "repo": "JoshuaQFEX/subset-sum-bound",
@@ -1906,6 +2767,56 @@
       "repo_url": "https://github.com/JoshuaQFEX/subset-sum-bound",
       "agents_md_url": "https://bigospeedrun.com/subset-sum",
       "attempt_log_url": "https://board.bigospeedrun.com/subset-sum",
+      "status": "ok"
+    },
+    {
+      "slug": "tammes-13-spheres",
+      "kind": "external",
+      "repo": "musin-tarasov/tammes-13",
+      "owners": [
+        "musin",
+        "tarasov"
+      ],
+      "tags": [
+        "geometry",
+        "sphere-packing",
+        "optimization"
+      ],
+      "title": "Tammes Problem for N=13 Points on the Unit Sphere",
+      "summary": "Maximize the minimum pairwise geodesic angle theta_13 (in degrees) among 13 points placed on the unit 2-sphere S^2.",
+      "metric": {
+        "name": "min_angle_deg",
+        "unit": "deg",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\theta_{13} \\ge {value}^\\circ"
+      },
+      "baseline": {
+        "value": 55.6,
+        "label": "Sch\u00fctte & van der Waerden initial configuration (55.6 deg, 1951)",
+        "source": "https://arxiv.org/abs/1211.2448"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to musin-tarasov/tammes-13 or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://arxiv.org/abs/1211.2448",
+      "tracks": [
+        {
+          "id": "tammes-15-lean-proof",
+          "title": "Formalize linear programming enumeration of irreducible contact graphs for N=13 and N=14"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "tammes-15-lean-proof",
+          "title": "Formalize linear programming enumeration of irreducible contact graphs for N=13 and N=14"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/musin-tarasov/tammes-13",
+      "agents_md_url": "https://arxiv.org/abs/1211.2448",
+      "attempt_log_url": "https://arxiv.org/abs/1211.2448",
       "status": "ok"
     },
     {

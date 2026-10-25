@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "pythagorean-triples-boolean-7824",
+  "metric": {
+    "name": "max_integer_N",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "N \\ge {value}"
+  },
+  "baseline": {
+    "value": 7664.0,
+    "label": "Cooper & Poirel heuristic 2-coloring lower bound (7664, 2008)",
+    "source": "https://arxiv.org/abs/1605.00723"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 7824.0,
+      "evidence": "verified",
+      "author": "heule-kullmann-marek",
+      "date": "2016-05-03T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1605.00723"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:28:25Z"
+}

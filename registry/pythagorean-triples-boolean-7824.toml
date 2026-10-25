@@ -1,0 +1,22 @@
+repo = "heule-kullmann-marek/pythagorean-triples"
+kind = "external"
+owners = ["heule", "kullmann", "marek"]
+tags = ["number-theory", "combinatorics", "ramsey-theory", "sat"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://arxiv.org/abs/1605.00723"
+
+[spec]
+title = "Boolean Pythagorean Triples Partition Bound"
+summary = "Maximize the integer N such that {1, 2, ..., N} can be 2-colored with no monochromatic solution to a^2 + b^2 = c^2."
+metric = { name = "max_integer_N", unit = "", direction = "max", scale = "linear", display = "N \\ge {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to heule-kullmann-marek/pythagorean-triples or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://arxiv.org/abs/1605.00723"
+baseline = { value = 7664.0, label = "Cooper & Poirel heuristic 2-coloring lower bound (7664, 2008)", source = "https://arxiv.org/abs/1605.00723" }
+tracks = [{ id = "compact-lrat-certificate", title = "Compress the 200 TB cube-and-conquer unsatisfiability proof for N=7825 via symmetry breaking" }]
+
+[spec.records_source]
+type = "hub"

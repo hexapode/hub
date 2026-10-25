@@ -1,0 +1,26 @@
+[[records]]
+id = "rec-0001"
+value = 0.8454
+evidence = "verified"
+author = "sprague"
+date = "1936-01-01T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/1502.01257"
+
+[[records]]
+id = "rec-0002"
+value = 0.844137
+evidence = "verified"
+author = "hansen"
+date = "1992-05-01T12:00:00Z"
+pr = 2
+url = "https://arxiv.org/abs/1502.01257"
+
+[[records]]
+id = "rec-0003"
+value = 0.844093
+evidence = "verified"
+author = "baez-bagdasaryan-gibbs"
+date = "2018-10-12T12:00:00Z"
+pr = 3
+url = "https://arxiv.org/abs/1502.01257"

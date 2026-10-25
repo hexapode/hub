@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "slug": "littlewood-flat-polynomials",
+  "metric": {
+    "name": "crest_factor",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "\\|P\\|_\\infty / \\sqrt{n} \\le {value}"
+  },
+  "baseline": {
+    "value": 1.414214,
+    "label": "Rudin-Shapiro polynomial sequence (sqrt(2) = 1.414214, 1959)",
+    "source": "https://www.sfu.ca/~jjedwab/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 1.242,
+      "evidence": "verified",
+      "author": "borwein-lockhart",
+      "date": "2001-05-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://www.sfu.ca/~jjedwab/"
+    },
+    {
+      "id": "rec-0002",
+      "value": 1.171,
+      "evidence": "verified",
+      "author": "balister-bollobas",
+      "date": "2019-07-15T12:00:00Z",
+      "pr": 2,
+      "url": "https://arxiv.org/abs/1907.09464"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T19:28:25Z"
+}

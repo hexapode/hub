@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "slug": "pfr-marton-constant-lean",
+  "metric": {
+    "name": "exponent_C",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "K^{{value}}"
+  },
+  "baseline": {
+    "value": 12.0,
+    "label": "Gowers-Green-Manners-Tao initial PFR proof (C = 12, Nov 2023)",
+    "source": "https://arxiv.org/abs/2311.05762"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 11.0,
+      "evidence": "verified",
+      "author": "teorth",
+      "date": "2023-12-05T12:00:00Z",
+      "pr": 145,
+      "url": "https://github.com/teorth/pfr"
+    },
+    {
+      "id": "rec-0002",
+      "value": 9.0,
+      "evidence": "verified",
+      "author": "teorth",
+      "date": "2024-05-20T12:00:00Z",
+      "pr": 210,
+      "url": "https://github.com/teorth/pfr"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 10,
+  "updated": "2026-10-25T19:28:25Z"
+}

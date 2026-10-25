@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "golomb-ruler-order-28",
+  "metric": {
+    "name": "ruler_length",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "G(28) \\le {value}"
+  },
+  "baseline": {
+    "value": 599.0,
+    "label": "Atkinson, Negro & Santoro projective construction (599, 1985)",
+    "source": "https://www.distributed.net/OGR"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 585.0,
+      "evidence": "verified",
+      "author": "shearer-ogr28",
+      "date": "2022-11-23T12:00:00Z",
+      "pr": 1,
+      "url": "https://www.distributed.net/OGR"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:28:25Z"
+}

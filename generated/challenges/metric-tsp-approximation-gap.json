@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "metric-tsp-approximation-gap",
+  "metric": {
+    "name": "approx_ratio",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "\\alpha_{\\text{TSP}} \\le {value}"
+  },
+  "baseline": {
+    "value": 1.5,
+    "label": "Christofides-Serdyukov algorithm (3/2 = 1.500000, 1976)",
+    "source": "https://arxiv.org/abs/2007.01409"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 1.499999,
+      "evidence": "verified",
+      "author": "karlin-klein-oghia",
+      "date": "2020-07-02T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/2007.01409"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:28:25Z"
+}

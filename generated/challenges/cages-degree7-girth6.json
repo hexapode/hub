@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "cages-degree7-girth6",
+  "metric": {
+    "name": "vertices",
+    "unit": "vertices",
+    "direction": "min",
+    "scale": "linear",
+    "display": "n(7,6) \\le {value}"
+  },
+  "baseline": {
+    "value": 98.0,
+    "label": "Projective plane PG(2,7) incidence modification (98 vertices)",
+    "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS16"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 90.0,
+      "evidence": "verified",
+      "author": "okeefe-wong",
+      "date": "1981-06-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS16"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:28:24Z"
+}

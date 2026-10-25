@@ -1,0 +1,22 @@
+repo = "romik/ambidextrous-sofa"
+kind = "external"
+owners = ["romik"]
+tags = ["geometry", "optimization", "analytic-bounds"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://arxiv.org/abs/1606.08111"
+
+[spec]
+title = "Conway–Romik Ambidextrous Moving Sofa Area"
+summary = "Maximize the area A of a rigid planar shape capable of negotiating both a 90-degree left turn and a 90-degree right turn in a unit-width corridor."
+metric = { name = "ambidextrous_area", unit = "", direction = "max", scale = "linear", display = "A \\ge {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to romik/ambidextrous-sofa or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://arxiv.org/abs/1606.08111"
+baseline = { value = 1.570796, label = "Unit-diameter semi-disk / symmetric cross baseline (pi/2 = 1.570796)", source = "https://arxiv.org/abs/1606.08111" }
+tracks = [{ id = "variational-envelope-search", title = "Test non-monotonic rotation schedules for ambidextrous corridor envelopes" }]
+
+[spec.records_source]
+type = "hub"

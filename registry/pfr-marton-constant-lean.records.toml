@@ -1,0 +1,17 @@
+[[records]]
+id = "rec-0001"
+value = 11.0
+evidence = "verified"
+author = "teorth"
+date = "2023-12-05T12:00:00Z"
+pr = 145
+url = "https://github.com/teorth/pfr"
+
+[[records]]
+id = "rec-0002"
+value = 9.0
+evidence = "verified"
+author = "teorth"
+date = "2024-05-20T12:00:00Z"
+pr = 210
+url = "https://github.com/teorth/pfr"

@@ -1,0 +1,22 @@
+repo = "distributed-net/ogr-28"
+kind = "external"
+owners = ["distributed-net"]
+tags = ["combinatorics", "number-theory", "optimization"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://www.distributed.net/OGR"
+
+[spec]
+title = "Optimal 28-Mark Golomb Ruler Length G(28)"
+summary = "Minimize the length L of a 28-mark Golomb ruler (28 integer marks 0 = a_1 < ... < a_28 = L with all 378 pairwise differences distinct)."
+metric = { name = "ruler_length", unit = "", direction = "min", scale = "linear", display = "G(28) \\le {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to distributed-net/ogr-28 or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://www.distributed.net/OGR"
+baseline = { value = 599.0, label = "Atkinson, Negro & Santoro projective construction (599, 1985)", source = "https://www.distributed.net/OGR" }
+tracks = [{ id = "ogr29-upper-bound", title = "Search for a 29-mark Golomb ruler shorter than 623" }]
+
+[spec.records_source]
+type = "hub"

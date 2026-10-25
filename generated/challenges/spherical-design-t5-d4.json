@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "slug": "spherical-design-t5-d4",
+  "metric": {
+    "name": "quadrature_nodes",
+    "unit": "points",
+    "direction": "min",
+    "scale": "linear",
+    "display": "N(3,5) \\le {value}"
+  },
+  "baseline": {
+    "value": 24.0,
+    "label": "24-cell regular polytope vertices on S^3 (24 points)",
+    "source": "https://web.maths.unsw.edu.au/~rsw/Sphere/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 18.0,
+      "evidence": "verified",
+      "author": "hardin-sloane",
+      "date": "1996-03-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://web.maths.unsw.edu.au/~rsw/Sphere/"
+    },
+    {
+      "id": "rec-0002",
+      "value": 16.0,
+      "evidence": "verified",
+      "author": "womersley",
+      "date": "2017-08-10T12:00:00Z",
+      "pr": 2,
+      "url": "https://web.maths.unsw.edu.au/~rsw/Sphere/"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T19:28:25Z"
+}

@@ -1,0 +1,22 @@
+repo = "wang-worm/moser-worm-cover"
+kind = "external"
+owners = ["norwood", "poole", "wang"]
+tags = ["geometry", "optimization", "packing"]
+listed = true
+added = "2026-10-15"
+contributors_override = 3
+attempts_override = 15
+discussion_url = "https://en.wikipedia.org/wiki/Moser%27s_worm_problem"
+
+[spec]
+title = "Moser's Worm Problem (Universal Unit-Arc Cover Area)"
+summary = "Minimize the area A of a planar region capable of covering every rectifiable planar curve of length 1 via rigid motions."
+metric = { name = "cover_area", unit = "", direction = "min", scale = "linear", display = "\\text{Area} \\le {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to wang-worm/moser-worm-cover or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://en.wikipedia.org/wiki/Moser%27s_worm_problem"
+baseline = { value = 0.5, label = "Marstrand semi-disk cover (area 0.5000, 1966)", source = "https://en.wikipedia.org/wiki/Moser%27s_worm_problem" }
+tracks = [{ id = "nonconvex-butterfly-spline", title = "Piecewise circular-arc boundary optimization for non-convex universal worm covers" }]
+
+[spec.records_source]
+type = "hub"

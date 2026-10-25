@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "slug": "hadwiger-nelson-unit-distance",
+  "metric": {
+    "name": "graph_vertices",
+    "unit": "vertices",
+    "direction": "min",
+    "scale": "linear",
+    "display": "|V| \\le {value}"
+  },
+  "baseline": {
+    "value": 1581.0,
+    "label": "Aubrey de Grey 5-chromatic unit-distance graph (1581 vertices, Apr 2018)",
+    "source": "https://arxiv.org/abs/1804.02385"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 826.0,
+      "evidence": "verified",
+      "author": "heule",
+      "date": "2018-04-14T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1805.01425"
+    },
+    {
+      "id": "rec-0002",
+      "value": 553.0,
+      "evidence": "verified",
+      "author": "heule",
+      "date": "2018-05-19T12:00:00Z",
+      "pr": 2,
+      "url": "https://arxiv.org/abs/1805.01425"
+    },
+    {
+      "id": "rec-0003",
+      "value": 509.0,
+      "evidence": "verified",
+      "author": "parts",
+      "date": "2019-08-29T12:00:00Z",
+      "pr": 3,
+      "url": "https://arxiv.org/abs/2010.12665"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 15,
+  "updated": "2026-10-25T19:28:25Z"
+}

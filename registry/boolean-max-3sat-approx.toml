@@ -1,0 +1,22 @@
+repo = "karloff-zwick/max3sat-sdp"
+kind = "external"
+owners = ["karloff", "zwick"]
+tags = ["algorithms", "optimization", "sdp", "sat"]
+listed = true
+added = "2026-10-15"
+contributors_override = 2
+attempts_override = 10
+discussion_url = "https://epubs.siam.org/doi/10.1137/S0097539797321481"
+
+[spec]
+title = "MAX-3SAT SDP Rounding Approximation Ratio"
+summary = "Maximize the certified worst-case approximation ratio alpha in [0, 7/8] of semidefinite programming hyperplane rounding on 3-CNF formulas."
+metric = { name = "approximation_ratio", unit = "", direction = "max", scale = "linear", display = "\\alpha_{\\text{3SAT}} \\ge {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to karloff-zwick/max3sat-sdp or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://epubs.siam.org/doi/10.1137/S0097539797321481"
+baseline = { value = 0.75, label = "Uniform random assignment / Goemans-Williamson LP (3/4 = 0.7500)", source = "https://epubs.siam.org/doi/10.1137/S0097539797321481" }
+tracks = [{ id = "sos-interval-cert", title = "Formalize the computer-assisted interval-arithmetic proof of the 7/8 Karloff-Zwick bound in Lean 4" }]
+
+[spec.records_source]
+type = "hub"

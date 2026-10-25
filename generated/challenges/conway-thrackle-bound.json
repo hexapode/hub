@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "slug": "conway-thrackle-bound",
+  "metric": {
+    "name": "edge_vertex_ratio",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "m/n \\le {value}"
+  },
+  "baseline": {
+    "value": 2.0,
+    "label": "Lov\u00e1sz, Pach & Szegedy thrackle bound (m <= 2n - 3, 1997)",
+    "source": "https://arxiv.org/abs/1008.2159"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 1.5,
+      "evidence": "verified",
+      "author": "cairns-nikolayevsky",
+      "date": "2000-09-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1008.2159"
+    },
+    {
+      "id": "rec-0002",
+      "value": 1.428,
+      "evidence": "verified",
+      "author": "fulek-pach",
+      "date": "2011-03-01T12:00:00Z",
+      "pr": 2,
+      "url": "https://arxiv.org/abs/1008.2159"
+    },
+    {
+      "id": "rec-0003",
+      "value": 1.3984,
+      "evidence": "verified",
+      "author": "fulek-pach",
+      "date": "2017-11-15T12:00:00Z",
+      "pr": 3,
+      "url": "https://arxiv.org/abs/1711.04727"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 15,
+  "updated": "2026-10-25T19:28:25Z"
+}

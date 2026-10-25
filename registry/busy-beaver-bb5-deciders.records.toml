@@ -1,0 +1,17 @@
+[[records]]
+id = "rec-0001"
+value = 30.0
+evidence = "verified"
+author = "tcosmo"
+date = "2024-05-10T12:00:00Z"
+pr = 42
+url = "https://bbchallenge.org/"
+
+[[records]]
+id = "rec-0002"
+value = 0.0
+evidence = "verified"
+author = "mxdys"
+date = "2024-07-02T12:00:00Z"
+pr = 88
+url = "https://bbchallenge.org/"

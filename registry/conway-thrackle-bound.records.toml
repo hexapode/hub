@@ -1,0 +1,26 @@
+[[records]]
+id = "rec-0001"
+value = 1.5
+evidence = "verified"
+author = "cairns-nikolayevsky"
+date = "2000-09-01T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/1008.2159"
+
+[[records]]
+id = "rec-0002"
+value = 1.428
+evidence = "verified"
+author = "fulek-pach"
+date = "2011-03-01T12:00:00Z"
+pr = 2
+url = "https://arxiv.org/abs/1008.2159"
+
+[[records]]
+id = "rec-0003"
+value = 1.3984
+evidence = "verified"
+author = "fulek-pach"
+date = "2017-11-15T12:00:00Z"
+pr = 3
+url = "https://arxiv.org/abs/1711.04727"

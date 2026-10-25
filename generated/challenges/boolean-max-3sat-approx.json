@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "slug": "boolean-max-3sat-approx",
+  "metric": {
+    "name": "approximation_ratio",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\alpha_{\\text{3SAT}} \\ge {value}"
+  },
+  "baseline": {
+    "value": 0.75,
+    "label": "Uniform random assignment / Goemans-Williamson LP (3/4 = 0.7500)",
+    "source": "https://epubs.siam.org/doi/10.1137/S0097539797321481"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 0.801,
+      "evidence": "verified",
+      "author": "trevisan-sorkin",
+      "date": "1996-05-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://epubs.siam.org/doi/10.1137/S0097539797321481"
+    },
+    {
+      "id": "rec-0002",
+      "value": 0.875,
+      "evidence": "verified",
+      "author": "karloff-zwick",
+      "date": "1997-10-01T12:00:00Z",
+      "pr": 2,
+      "url": "https://epubs.siam.org/doi/10.1137/S0097539797321481"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T19:28:24Z"
+}

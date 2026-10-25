@@ -1,0 +1,22 @@
+repo = "karlin-klein-oghia/metric-tsp"
+kind = "external"
+owners = ["karlin", "klein", "oghia"]
+tags = ["algorithms", "optimization", "graphs", "lp-relaxation"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 6
+discussion_url = "https://arxiv.org/abs/2007.01409"
+
+[spec]
+title = "Metric TSP Polynomial-Time Approximation Factor"
+summary = "Minimize the proven worst-case approximation factor alpha for the symmetric Metric Traveling Salesperson Problem relative to the Held-Karp LP relaxation."
+metric = { name = "approx_ratio", unit = "", direction = "min", scale = "linear", display = "\\alpha_{\\text{TSP}} \\le {value}" }
+verifier = { type = "manual" }
+submit = "Open a PR to karlin-klein-oghia/metric-tsp or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://arxiv.org/abs/2007.01409"
+baseline = { value = 1.5, label = "Christofides-Serdyukov algorithm (3/2 = 1.500000, 1976)", source = "https://arxiv.org/abs/2007.01409" }
+tracks = [{ id = "max-entropy-tree-rounding", title = "Tighten half-triangle payment analysis in max-entropy spanning tree rounding" }]
+
+[spec.records_source]
+type = "hub"

@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "checked_at": "2026-10-25T19:21:39Z",
-  "total_challenges": 36,
-  "ok_count": 36,
+  "checked_at": "2026-10-25T19:28:25Z",
+  "total_challenges": 54,
+  "ok_count": 54,
   "challenges": [
     {
       "slug": "3sum-exponent",
@@ -331,6 +331,186 @@
       "verified_records": 3,
       "open_claims": 0,
       "frontier_best": 0.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "pfr-marton-constant-lean",
+      "title": "Polynomial Freiman\u2013Ruzsa (Marton's Conjecture) Exponent",
+      "source": "teorth/pfr",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 9.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "busy-beaver-bb5-deciders",
+      "title": "Busy Beaver BB(5) Undecided Holdout Machines",
+      "source": "bbchallenge/bbchallenge",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 0.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "hadwiger-nelson-unit-distance",
+      "title": "Hadwiger\u2013Nelson 5-Chromatic Unit-Distance Graph Order",
+      "source": "ustas-parts/unit-distance-5chromatic",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 509.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "moser-worm-convex-cover",
+      "title": "Moser's Worm Problem (Universal Unit-Arc Cover Area)",
+      "source": "wang-worm/moser-worm-cover",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 0.27091,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "lebesgue-universal-cover",
+      "title": "Lebesgue's Universal Covering Problem (Unit Diameter)",
+      "source": "baez-gibbs/lebesgue-universal-cover",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 0.844093,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "moving-sofa-gerver-constant",
+      "title": "Moving Sofa Problem Area (Moser #66)",
+      "source": "baek-sofa/moving-sofa",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 2.219532,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "ambidextrous-sofa-romik",
+      "title": "Conway\u2013Romik Ambidextrous Moving Sofa Area",
+      "source": "romik/ambidextrous-sofa",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 1.644955,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "conway-thrackle-bound",
+      "title": "Conway's Thrackle Edge-to-Vertex Ratio Bound",
+      "source": "fulek-pach/thrackle-bound",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 1.3984,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "golomb-ruler-order-28",
+      "title": "Optimal 28-Mark Golomb Ruler Length G(28)",
+      "source": "distributed-net/ogr-28",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 585.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "tammes-13-spheres",
+      "title": "Tammes Problem for N=13 Points on the Unit Sphere",
+      "source": "musin-tarasov/tammes-13",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 57.1367,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "littlewood-flat-polynomials",
+      "title": "Littlewood \u00b11 Polynomial Excursion Ratio",
+      "source": "borwein/littlewood-polynomials",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 1.171,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "cages-degree7-girth6",
+      "title": "(7, 6)-Cage Graph Minimum Order",
+      "source": "exoo-jajcay/cage-graphs",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 90.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "spherical-design-t5-d4",
+      "title": "Minimum-Point Spherical 5-Design on S^3",
+      "source": "womersley/spherical-designs",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 16.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "metric-tsp-approximation-gap",
+      "title": "Metric TSP Polynomial-Time Approximation Factor",
+      "source": "karlin-klein-oghia/metric-tsp",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 1.499999,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-discrepancy-c3",
+      "title": "Erd\u0151s Discrepancy Problem C=3 Longest Witness",
+      "source": "konev-lisitsa/erdos-discrepancy",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 127645.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "schur-number-five-witness",
+      "title": "Schur Number S(5) = 160 Sum-Free 5-Coloring",
+      "source": "heule/schur-number-five",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 160.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "pythagorean-triples-boolean-7824",
+      "title": "Boolean Pythagorean Triples Partition Bound",
+      "source": "heule-kullmann-marek/pythagorean-triples",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 7824.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "boolean-max-3sat-approx",
+      "title": "MAX-3SAT SDP Rounding Approximation Ratio",
+      "source": "karloff-zwick/max3sat-sdp",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 0.875,
       "best_claim": null,
       "status": "ok"
     },

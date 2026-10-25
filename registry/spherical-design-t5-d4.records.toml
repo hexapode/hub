@@ -1,0 +1,17 @@
+[[records]]
+id = "rec-0001"
+value = 18.0
+evidence = "verified"
+author = "hardin-sloane"
+date = "1996-03-01T12:00:00Z"
+pr = 1
+url = "https://web.maths.unsw.edu.au/~rsw/Sphere/"
+
+[[records]]
+id = "rec-0002"
+value = 16.0
+evidence = "verified"
+author = "womersley"
+date = "2017-08-10T12:00:00Z"
+pr = 2
+url = "https://web.maths.unsw.edu.au/~rsw/Sphere/"

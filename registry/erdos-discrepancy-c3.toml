@@ -1,0 +1,22 @@
+repo = "konev-lisitsa/erdos-discrepancy"
+kind = "external"
+owners = ["konev", "lisitsa"]
+tags = ["number-theory", "combinatorics", "erdos", "sat"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 10
+discussion_url = "https://arxiv.org/abs/1402.2184"
+
+[spec]
+title = "Erdős Discrepancy Problem C=3 Longest Witness"
+summary = "Maximize the length N of a {-1, +1} sequence whose partial sums along every homogeneous arithmetic progression d, 2d, ..., kd have absolute value <= 3."
+metric = { name = "sequence_length", unit = "", direction = "max", scale = "linear", display = "L(3) \\ge {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to konev-lisitsa/erdos-discrepancy or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://arxiv.org/abs/1402.2184"
+baseline = { value = 1160.0, label = "C=2 longest discrepancy-2 sequence length (1160, Konev & Lisitsa 2014)", source = "https://arxiv.org/abs/1402.2184" }
+tracks = [{ id = "multiplicative-chudakov-character", title = "Local repair of modified Dirichlet character sequences beyond length 130,000" }]
+
+[spec.records_source]
+type = "hub"

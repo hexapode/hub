@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "tammes-13-spheres",
+  "metric": {
+    "name": "min_angle_deg",
+    "unit": "deg",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\theta_{13} \\ge {value}^\\circ"
+  },
+  "baseline": {
+    "value": 55.6,
+    "label": "Sch\u00fctte & van der Waerden initial configuration (55.6 deg, 1951)",
+    "source": "https://arxiv.org/abs/1211.2448"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 57.1367,
+      "evidence": "verified",
+      "author": "musin-tarasov",
+      "date": "2012-11-11T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1211.2448"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:28:25Z"
+}

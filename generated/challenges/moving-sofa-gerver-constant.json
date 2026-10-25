@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "slug": "moving-sofa-gerver-constant",
+  "metric": {
+    "name": "sofa_area",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\mu_{\\text{sofa}} \\ge {value}"
+  },
+  "baseline": {
+    "value": 2.207416,
+    "label": "Hammersley telephone-handset sofa (pi/2 + 2/pi = 2.207416, 1968)",
+    "source": "https://arxiv.org/abs/2411.19826"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 2.219532,
+      "evidence": "verified",
+      "author": "gerver",
+      "date": "1992-01-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/2411.19826"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:28:25Z"
+}

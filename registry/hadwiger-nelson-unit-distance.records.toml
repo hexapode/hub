@@ -1,0 +1,26 @@
+[[records]]
+id = "rec-0001"
+value = 826.0
+evidence = "verified"
+author = "heule"
+date = "2018-04-14T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/1805.01425"
+
+[[records]]
+id = "rec-0002"
+value = 553.0
+evidence = "verified"
+author = "heule"
+date = "2018-05-19T12:00:00Z"
+pr = 2
+url = "https://arxiv.org/abs/1805.01425"
+
+[[records]]
+id = "rec-0003"
+value = 509.0
+evidence = "verified"
+author = "parts"
+date = "2019-08-29T12:00:00Z"
+pr = 3
+url = "https://arxiv.org/abs/2010.12665"

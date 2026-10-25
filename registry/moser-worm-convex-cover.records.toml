@@ -1,0 +1,26 @@
+[[records]]
+id = "rec-0001"
+value = 0.286
+evidence = "verified"
+author = "gerriets-poole"
+date = "1974-03-01T12:00:00Z"
+pr = 1
+url = "https://en.wikipedia.org/wiki/Moser%27s_worm_problem"
+
+[[records]]
+id = "rec-0002"
+value = 0.27524
+evidence = "verified"
+author = "norwood-poole"
+date = "2003-04-01T12:00:00Z"
+pr = 2
+url = "https://link.springer.com/article/10.1007/s00454-002-0774-3"
+
+[[records]]
+id = "rec-0003"
+value = 0.27091
+evidence = "verified"
+author = "wang"
+date = "2006-06-15T12:00:00Z"
+pr = 3
+url = "https://en.wikipedia.org/wiki/Moser%27s_worm_problem"
