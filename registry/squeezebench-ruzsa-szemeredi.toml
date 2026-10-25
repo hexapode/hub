@@ -1,0 +1,22 @@
+repo = "leansolving/SqueezeBench"
+kind = "external"
+owners = ["leansolving"]
+tags = ["lean", "combinatorics", "graphs", "formal-verification"]
+listed = true
+added = "2026-10-15"
+contributors_override = 2
+attempts_override = 10
+discussion_url = "https://github.com/leansolving/SqueezeBench"
+
+[spec]
+title = "SqueezeBench Lean-Verified Ruzsa–Szemerédi Locally Linear Triangles"
+summary = "Advance the dual-kernel (Lean 4 + nanoda) proved lower-bound record version for the maximum number of triangles in a locally linear n-vertex graph."
+metric = { name = "record_version", unit = "version", direction = "max", scale = "linear", display = "V{value}" }
+verifier = { type = "lean" }
+submit = "Open a PR to leansolving/SqueezeBench or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://github.com/leansolving/SqueezeBench"
+baseline = { value = 1.0, label = "SqueezeBench initial proved lower-bound theorem (V001)", source = "https://github.com/leansolving/SqueezeBench" }
+tracks = [{ id = "behrend-blowup-lean", title = "Formalize improved Behrend spherical-shell blow-up construction in Lean 4 with zero sorry" }]
+
+[spec.records_source]
+type = "hub"

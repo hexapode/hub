@@ -1,0 +1,10 @@
+[[records]]
+id = "rec-0001"
+value = 1.5384615
+evidence = "verified"
+author = "rishigajjala"
+agent = "PatternBoost"
+model = "PyTorch Transformer + HiGHS LP"
+date = "2026-07-12T12:00:00Z"
+pr = 1
+url = "https://github.com/rishigajjala/patternboost-multilevel"

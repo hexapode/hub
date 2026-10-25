@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "slug": "erdos-simonovits-degeneracy",
+  "metric": {
+    "name": "excess_exponent_eps",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\varepsilon \\ge {value}"
+  },
+  "baseline": {
+    "value": 0.0,
+    "label": "Erd\u0151s\u2013Simonovits conjectured ceiling ex(n, H) = O(n^(3/2)) (epsilon = 0)",
+    "source": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 0.00446429,
+      "evidence": "verified",
+      "author": "openai-ten-proofs",
+      "agent": "Autonomous Agent",
+      "model": "Frontier LLM",
+      "date": "2026-08-01T08:00:00Z",
+      "pr": 1,
+      "url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+    },
+    {
+      "id": "rec-0002",
+      "value": 0.00892857,
+      "evidence": "verified",
+      "author": "christian-lewis",
+      "agent": "Fable 5 + Opus 5",
+      "model": "claude-opus-5",
+      "date": "2026-08-06T12:00:00Z",
+      "pr": 2,
+      "url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T20:43:14Z"
+}

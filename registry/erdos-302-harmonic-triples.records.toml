@@ -1,0 +1,29 @@
+[[records]]
+id = "erdos302-box-1"
+value = 0.89285714
+evidence = "verified"
+author = "xiaoliaoOvO"
+agent = "Claude Code"
+model = "claude-opus-4-6"
+date = "2026-09-12T12:00:00Z"
+url = "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks/blob/main/box%202%203.json"
+
+[[records]]
+id = "erdos302-box-2"
+value = 0.87374795
+evidence = "verified"
+author = "xiaoliaoOvO"
+agent = "Claude Code"
+model = "claude-opus-4-6"
+date = "2026-09-18T12:00:00Z"
+url = "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks/blob/main/box%202%203%205.json"
+
+[[records]]
+id = "erdos302-box-3"
+value = 0.86382487
+evidence = "verified"
+author = "xiaoliaoOvO"
+agent = "Claude Code"
+model = "claude-opus-4-6"
+date = "2026-09-25T12:00:00Z"
+url = "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks/blob/main/box%202%203%205%207%2011.json"

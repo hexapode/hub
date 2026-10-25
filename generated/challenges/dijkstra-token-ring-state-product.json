@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "slug": "dijkstra-token-ring-state-product",
+  "metric": {
+    "name": "proved_ring_size_n",
+    "unit": "nodes",
+    "direction": "max",
+    "scale": "linear",
+    "display": "n = {value}"
+  },
+  "baseline": {
+    "value": 3.0,
+    "label": "Classical 3-node self-stabilizing token ring state product proof (n = 3)",
+    "source": "https://github.com/no-way-labs/minimum-state-product"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 6.0,
+      "evidence": "verified",
+      "author": "no-way-labs",
+      "agent": "Claude + GPT Dual Lineage",
+      "model": "claude-opus-4-6",
+      "date": "2026-08-20T12:00:00Z",
+      "pr": 1,
+      "url": "https://github.com/no-way-labs/minimum-state-product"
+    },
+    {
+      "id": "rec-0002",
+      "value": 9.0,
+      "evidence": "verified",
+      "author": "no-way-labs",
+      "agent": "Claude + GPT Dual Lineage",
+      "model": "claude-opus-4-6",
+      "date": "2026-10-02T12:00:00Z",
+      "pr": 2,
+      "url": "https://github.com/no-way-labs/minimum-state-product"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-0001",
+      "value": 10.0,
+      "evidence": "claimed",
+      "author": "no-way-labs",
+      "agent": "Claude + GPT Dual Lineage",
+      "model": "claude-opus-4-6",
+      "date": "2026-10-14T12:00:00Z",
+      "pr": 3,
+      "url": "https://github.com/no-way-labs/minimum-state-product"
+    }
+  ],
+  "contributors": 1,
+  "attempts": 15,
+  "updated": "2026-10-25T20:43:14Z"
+}

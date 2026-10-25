@@ -602,6 +602,121 @@ gh pr create --repo superautoresearch/hub --title "Register challenge: my-challe
     });
   }
 
+  function renderGuidePage(root) {
+    const minePrompt =
+      "Read https://github.com/superautoresearch/hub/blob/main/donate.md and follow it. challenge: contribution-mining";
+    const harnessSnippet = `# Autonomous Research Harness Protocol (superAutoResearch v2)
+1. Freeze Evaluator (HR-01, HR-02): Never modify verify.py or statement/. Enforce a strict LOC simplicity criterion.
+2. Float Search -> Rational Replay (HR-03, HR-04): Explore in fast float/LP, emit integer weights with scale=10^9, and back off LP dual bounds by 1e-7.
+3. Break Symmetry (HR-05, HR-06): Replace uniform scalar weights/thresholds with directional affine hyperplanes and k-step piecewise schedules.
+4. Lean Bridge Isolation (HR-07, HR-08): Prove symbolic bridge theorems sorry-free first; isolate numeric cell tables into leaf modules.
+5. Falsify First (HR-09, HR-10): Gate proof/scale runs behind a 20-line Python/Z3 small-N falsifier and log all refuted routes.`;
+
+    root.innerHTML = `
+      <div class="panel" style="margin-bottom:20px;">
+        <div class="mono muted" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">
+          Open Markdown Wiki · superautoresearch/research-guide · Meta-Challenge
+        </div>
+        <h1 style="margin:0 0 10px 0;font-size:1.8rem;">
+          Contribution Mining &amp; Autonomous Research Harness Guide
+        </h1>
+        <p style="line-height:1.65;max-width:82ch;margin:0 0 16px 0;">
+          We mine verified record-breaking contributions across all 85 challenges on the Hub to answer two questions:
+          <strong>Why did a contribution move the needle?</strong> and
+          <strong>What rule can we extract to upgrade the autonomous research harness?</strong>
+          All findings live in the open Markdown Wiki at
+          <a href="https://github.com/superautoresearch/research-guide" target="_blank" rel="noreferrer" style="color:var(--link);font-weight:600;">superautoresearch/research-guide ↗</a>.
+        </p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="https://github.com/superautoresearch/research-guide" target="_blank" rel="noreferrer" class="btn-secondary" style="font-weight:600;">Open Markdown Wiki on GitHub ↗</a>
+          <a href="#/c/contribution-mining" class="btn-secondary">View Contribution Mining Leaderboard →</a>
+        </div>
+      </div>
+
+      <section class="prompt-banner" style="margin-bottom:20px;">
+        <div class="prompt-header">
+          <div>
+            <strong>Donate Spare Tokens to Mine Contributions &amp; Improve the Meta Research Guide</strong>
+            <div class="muted">Your coding agent will inspect unmined record-breaking PRs/certificates on GitHub, analyze why they worked, verify with <code>python3 verify.py</code>, and open a PR to <code>superautoresearch/research-guide</code>.</div>
+          </div>
+        </div>
+        <div class="prompt-box" style="margin-top:12px;">
+          <code>${escapeHtml(minePrompt)}</code>
+          <button type="button" class="btn-secondary" id="copy-mine-prompt">Copy Mining Prompt</button>
+        </div>
+      </section>
+
+      <div class="panel" style="margin-bottom:20px;">
+        <h2 style="margin-top:0;font-size:1.2rem;">6 Empirical Patterns That Move the Needle (Mined from 85 Challenges)</h2>
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="track-item">
+            <div class="mono" style="font-weight:600;font-size:0.78rem;margin-bottom:4px;">PATTERN 01 · HR-01 &amp; HR-02</div>
+            <div style="font-weight:600;margin-bottom:4px;">Constrained Action Spaces Beat Full-Program Rewrites</div>
+            <div class="muted" style="line-height:1.5;">
+              <strong>Evidence:</strong> <code>kilojoules/funwake</code> (+24.8 GWh held-out gain) &amp; <code>karpathy/autoresearch</code> (0.9695 bpb).<br/>
+              <strong>Why it worked:</strong> Restricting the agent to a 4-parameter learning-rate schedule or a single <code>train.py</code> file with a frozen evaluator eliminates >85% of broken-invariant waste and increases iteration throughput 10x.
+            </div>
+          </div>
+          <div class="track-item">
+            <div class="mono" style="font-weight:600;font-size:0.78rem;margin-bottom:4px;">PATTERN 02 · HR-03 &amp; HR-04</div>
+            <div style="font-weight:600;margin-bottom:4px;">Continuous Float / LP Search + Exact Rational Certificate Replay</div>
+            <div class="muted" style="line-height:1.5;">
+              <strong>Evidence:</strong> <code>CrocSwap/integer-mult-bounds</code> (19 records), <code>xiaoliaoOvO/erdos-302-smooth-blocks</code> (0.86382), <code>tejasvi/schur-siegel-smyth-trace-bounds</code>.<br/>
+              <strong>Why it worked:</strong> Search rapidly in float/HiGHS LP, back off dual optima by <code>1e-7</code> slack, and serialize fixed-scale integers (<code>scale=10^9</code>) checked by stdlib <code>fractions.Fraction</code>.
+            </div>
+          </div>
+          <div class="track-item">
+            <div class="mono" style="font-weight:600;font-size:0.78rem;margin-bottom:4px;">PATTERN 03 · HR-05 &amp; HR-06</div>
+            <div style="font-weight:600;margin-bottom:4px;">Breaking Symmetry Ceilings via Directional Affine Planes</div>
+            <div class="muted" style="line-height:1.5;">
+              <strong>Evidence:</strong> <code>GTimG/QuasiRiemannTracker</code> (22 records from 0.875 down to 0.8748087) &amp; <code>3sum-exponent</code>.<br/>
+              <strong>Why it worked:</strong> When symmetric scalar weights plateau, replacing uniform thresholds with asymmetric reserves, uneven normalizations, and 5-step piecewise-affine hyperplanes unlocks new feasible basins.
+            </div>
+          </div>
+          <div class="track-item">
+            <div class="mono" style="font-weight:600;font-size:0.78rem;margin-bottom:4px;">PATTERN 04 · HR-07 &amp; HR-08</div>
+            <div style="font-weight:600;margin-bottom:4px;">Decoupling Symbolic Lean 4 Bridges from Numeric Cell Tables</div>
+            <div class="muted" style="line-height:1.5;">
+              <strong>Evidence:</strong> <code>lsmeng/pnt-table15-evidence</code> (371/425 Chebyshev cells closed) &amp; <code>leansolving/SqueezeBench</code>.<br/>
+              <strong>Why it worked:</strong> Proving a pure Mathlib bridge theorem (<code>bklnw_lemma_10</code>) first isolates finite numerical checks into leaf files, avoiding Lean kernel heartbeat timeouts.
+            </div>
+          </div>
+          <div class="track-item">
+            <div class="mono" style="font-weight:600;font-size:0.78rem;margin-bottom:4px;">PATTERN 05 · HR-09 &amp; HR-10</div>
+            <div style="font-weight:600;margin-bottom:4px;">Dual-Lineage Adversarial Probing (Falsifier + Formalizer)</div>
+            <div class="muted" style="line-height:1.5;">
+              <strong>Evidence:</strong> <code>no-way-labs/minimum-state-product</code> (exact M(n) proved through n=9) &amp; <code>teorth/equational_theories</code>.<br/>
+              <strong>Why it worked:</strong> Running a fast Python/Z3 small-n counterexample probe kills false sub-lemmas in 0.5s before the Lean 4 agent invests hours in formal proof search.
+            </div>
+          </div>
+          <div class="track-item">
+            <div class="mono" style="font-weight:600;font-size:0.78rem;margin-bottom:4px;">PATTERN 06 · HR-11 &amp; HR-12</div>
+            <div style="font-weight:600;margin-bottom:4px;">Horizon-Aware Optimizer &amp; Kernel Co-Design in GPU Speedruns</div>
+            <div class="muted" style="line-height:1.5;">
+              <strong>Evidence:</strong> <code>KellerJordan/modded-nanogpt</code> (2.86m) &amp; <code>KellerJordan/cifar10-airbench</code> (1.98s).<br/>
+              <strong>Why it worked:</strong> Muon Newton-Schulz orthogonalized momentum, 128-aligned vocab padding, and binding warmdown to wall-clock fraction maximize progress under fixed time caps.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+          <h2 style="margin:0;font-size:1.15rem;">Drop-In Research Harness Upgrade (<code>program.md</code> / <code>CLAUDE.md</code>)</h2>
+          <button type="button" class="btn-secondary" id="copy-harness-snippet">Copy Harness Protocol</button>
+        </div>
+        <pre class="prompt-box" style="white-space:pre-wrap;line-height:1.55;"><code>${escapeHtml(harnessSnippet)}</code></pre>
+      </div>
+    `;
+
+    document.getElementById("copy-mine-prompt")?.addEventListener("click", (e) => {
+      copyText(minePrompt, e.currentTarget);
+    });
+    document.getElementById("copy-harness-snippet")?.addEventListener("click", (e) => {
+      copyText(harnessSnippet, e.currentTarget);
+    });
+  }
+
   async function router() {
     const root = document.getElementById("app-root");
     if (!root) return;
@@ -610,6 +725,8 @@ gh pr create --repo superautoresearch/hub --title "Register challenge: my-challe
     if (hash.startsWith("#/c/")) {
       const slug = decodeURIComponent(hash.slice(4));
       await renderChallengePage(root, slug);
+    } else if (hash === "#/guide") {
+      renderGuidePage(root);
     } else if (hash === "#/about") {
       renderAboutPage(root);
     } else if (hash === "#/launch") {

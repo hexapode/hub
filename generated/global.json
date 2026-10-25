@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "hub": "superautoresearch/hub",
-  "updated": "2026-10-25T19:57:31Z",
+  "updated": "2026-10-25T20:43:14Z",
   "challenges": [
     {
       "slug": "3sum-exponent",
@@ -966,6 +966,62 @@
       "status": "ok"
     },
     {
+      "slug": "contribution-mining",
+      "title": "Contribution Mining & Meta Research Harness Guide",
+      "summary": "Mine verified breakthroughs across open challenges to uncover why needle-moving contributions work and synthesize actionable upgrades for autonomous research harnesses in the open Markdown Wiki.",
+      "kind": "external",
+      "repo": "superautoresearch/research-guide",
+      "repo_url": "https://github.com/superautoresearch/research-guide",
+      "tags": [
+        "meta-research",
+        "harness",
+        "wiki",
+        "autoresearch",
+        "benchmarks"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "mined_breakthroughs",
+        "unit": "studies",
+        "direction": "max",
+        "scale": "linear",
+        "display": "{value}\\text{ mined breakthroughs}"
+      },
+      "baseline": {
+        "value": 3.0,
+        "label": "Initial seed wiki (3 breakthrough case studies)",
+        "source": "https://github.com/superautoresearch/research-guide"
+      },
+      "first_record": {
+        "id": "seed-v1-wiki",
+        "value": 5.0,
+        "evidence": "verified",
+        "author": "superautoresearch",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-10-20T12:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/superautoresearch/research-guide/tree/main/cases"
+      },
+      "current_best": {
+        "id": "seed-v2-harness-rules",
+        "value": 8.0,
+        "evidence": "verified",
+        "author": "superautoresearch",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-10-25T12:00:00Z",
+        "pr": 2,
+        "url": "https://github.com/superautoresearch/research-guide/blob/main/HARNESS_GUIDE.md"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 1,
+      "attempts": 10,
+      "last_improved": "2026-10-25T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "conway-thrackle-bound",
       "title": "Conway's Thrackle Edge-to-Vertex Ratio Bound",
       "summary": "Minimize the proven asymptotic upper bound C on m/n for any thrackle (a drawing of a graph of n vertices and m edges where every pair of edges meets exactly once).",
@@ -1116,6 +1172,71 @@
       "status": "ok"
     },
     {
+      "slug": "dijkstra-token-ring-state-product",
+      "title": "Dijkstra Self-Stabilizing Token Ring Minimum State Product",
+      "summary": "Maximize the ring size n for which the exact minimum state product M(n) of a self-stabilizing token ring is formally proved sorry-free in Lean 4.",
+      "kind": "external",
+      "repo": "no-way-labs/minimum-state-product",
+      "repo_url": "https://github.com/no-way-labs/minimum-state-product",
+      "tags": [
+        "lean",
+        "distributed-systems",
+        "combinatorics",
+        "formal-verification"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "proved_ring_size_n",
+        "unit": "nodes",
+        "direction": "max",
+        "scale": "linear",
+        "display": "n = {value}"
+      },
+      "baseline": {
+        "value": 3.0,
+        "label": "Classical 3-node self-stabilizing token ring state product proof (n = 3)",
+        "source": "https://github.com/no-way-labs/minimum-state-product"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 6.0,
+        "evidence": "verified",
+        "author": "no-way-labs",
+        "agent": "Claude + GPT Dual Lineage",
+        "model": "claude-opus-4-6",
+        "date": "2026-08-20T12:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/no-way-labs/minimum-state-product"
+      },
+      "current_best": {
+        "id": "rec-0002",
+        "value": 9.0,
+        "evidence": "verified",
+        "author": "no-way-labs",
+        "agent": "Claude + GPT Dual Lineage",
+        "model": "claude-opus-4-6",
+        "date": "2026-10-02T12:00:00Z",
+        "pr": 2,
+        "url": "https://github.com/no-way-labs/minimum-state-product"
+      },
+      "best_claim": {
+        "id": "claim-0001",
+        "value": 10.0,
+        "evidence": "claimed",
+        "author": "no-way-labs",
+        "agent": "Claude + GPT Dual Lineage",
+        "model": "claude-opus-4-6",
+        "date": "2026-10-14T12:00:00Z",
+        "pr": 3,
+        "url": "https://github.com/no-way-labs/minimum-state-product"
+      },
+      "records_count": 2,
+      "contributors": 1,
+      "attempts": 15,
+      "last_improved": "2026-10-02T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "directed-sssp",
       "title": "Directed SSSP (Sparse Comparison-Addition)",
       "summary": "Minimize the log-time exponent alpha in O(n (log n)^alpha) for deterministic directed Single-Source Shortest Paths on sparse graphs.",
@@ -1167,6 +1288,61 @@
       "status": "ok"
     },
     {
+      "slug": "endless-exam-constructions",
+      "title": "The Endless Exam Uncapped Mathematical Construction Frontier",
+      "summary": "Maximize mean relative construction quality across 69 mathematical construction instances spanning 14 families (where 1.00 matches the published reference frontier).",
+      "kind": "external",
+      "repo": "ricolalemon/endless-exam",
+      "repo_url": "https://github.com/ricolalemon/endless-exam",
+      "tags": [
+        "combinatorics",
+        "geometry",
+        "coding-theory",
+        "benchmark"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "relative_quality",
+        "unit": "x",
+        "direction": "max",
+        "scale": "linear",
+        "display": "{value}\\times"
+      },
+      "baseline": {
+        "value": 1.0,
+        "label": "Published reference frontier construction parity (1.000x)",
+        "source": "https://github.com/ricolalemon/endless-exam"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 1.018,
+        "evidence": "verified",
+        "author": "ricolalemon",
+        "agent": "Claude Opus 5.5",
+        "model": "claude-opus-5.5",
+        "date": "2026-09-25T12:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/ricolalemon/endless-exam"
+      },
+      "current_best": {
+        "id": "rec-0002",
+        "value": 1.042,
+        "evidence": "verified",
+        "author": "ricolalemon",
+        "agent": "Astra + Opus 5.5",
+        "model": "claude-opus-5.5",
+        "date": "2026-10-12T12:00:00Z",
+        "pr": 2,
+        "url": "https://github.com/ricolalemon/endless-exam"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 1,
+      "attempts": 10,
+      "last_improved": "2026-10-12T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "equational-theories-implications",
       "title": "Magma Equational Theories Implication Graph",
       "summary": "Minimize the number of unresolved directed implication pairs among 4,694 single-law magma equations (22,028,942 total pairs) formalized in Lean 4.",
@@ -1215,6 +1391,59 @@
       "contributors": 2,
       "attempts": 15,
       "last_improved": "2024-11-14T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-302-harmonic-triples",
+      "title": "Erd\u0151s #302 Harmonic Triple-Free Asymptotic Density",
+      "summary": "Minimize the upper bound on the asymptotic density lim sup f(N)/N of a subset of {1..N} containing no harmonic triple 1/a + 1/b = 1/c via smooth-number fractional packing certificates.",
+      "kind": "external",
+      "repo": "xiaoliaoOvO/erdos-302-smooth-blocks",
+      "repo_url": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks",
+      "tags": [
+        "number-theory",
+        "erdos",
+        "combinatorics",
+        "analytic-bounds"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "density_upper_bound",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\limsup f(N)/N \\le {value}"
+      },
+      "baseline": {
+        "value": 0.95,
+        "label": "Elementary disjoint harmonic triple deletion bound (0.950000)",
+        "source": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks"
+      },
+      "first_record": {
+        "id": "erdos302-box-1",
+        "value": 0.89285714,
+        "evidence": "verified",
+        "author": "xiaoliaoOvO",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-09-12T12:00:00Z",
+        "url": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks/blob/main/box%202%203.json"
+      },
+      "current_best": {
+        "id": "erdos302-box-3",
+        "value": 0.86382487,
+        "evidence": "verified",
+        "author": "xiaoliaoOvO",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-09-25T12:00:00Z",
+        "url": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks/blob/main/box%202%203%205%207%2011.json"
+      },
+      "best_claim": null,
+      "records_count": 3,
+      "contributors": 1,
+      "attempts": 15,
+      "last_improved": "2026-09-25T12:00:00Z",
       "status": "ok"
     },
     {
@@ -1319,6 +1548,61 @@
       "contributors": 2,
       "attempts": 15,
       "last_improved": "2025-05-14T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-simonovits-degeneracy",
+      "title": "Erd\u0151s\u2013Simonovits Bipartite Degeneracy Excess Exponent (r=2)",
+      "summary": "Maximize the excess exponent epsilon > 0 such that there exists a 2-degenerate bipartite graph H with Tur\u00e1n extremal number ex(n, H) = Omega(n^(3/2 + epsilon)), refuting ex(n, H) = O(n^(3/2)).",
+      "kind": "external",
+      "repo": "EvolvingPrograms/erdos-simonovits-degeneracy",
+      "repo_url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy",
+      "tags": [
+        "combinatorics",
+        "graphs",
+        "erdos",
+        "turan-numbers"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "excess_exponent_eps",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\varepsilon \\ge {value}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "Erd\u0151s\u2013Simonovits conjectured ceiling ex(n, H) = O(n^(3/2)) (epsilon = 0)",
+        "source": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 0.00446429,
+        "evidence": "verified",
+        "author": "openai-ten-proofs",
+        "agent": "Autonomous Agent",
+        "model": "Frontier LLM",
+        "date": "2026-08-01T08:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+      },
+      "current_best": {
+        "id": "rec-0002",
+        "value": 0.00892857,
+        "evidence": "verified",
+        "author": "christian-lewis",
+        "agent": "Fable 5 + Opus 5",
+        "model": "claude-opus-5",
+        "date": "2026-08-06T12:00:00Z",
+        "pr": 2,
+        "url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 2,
+      "attempts": 10,
+      "last_improved": "2026-08-06T12:00:00Z",
       "status": "ok"
     },
     {
@@ -1477,6 +1761,61 @@
       "contributors": 6,
       "attempts": 29,
       "last_improved": "2026-10-21T16:50:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "funwake-wind-farm-aep",
+      "title": "FunWake Held-Out Wind Farm Layout Optimization AEP Gain",
+      "summary": "Maximize held-out annual energy production (AEP) gain in GWh over a 500-multistart baseline by evolving a constrained 4-parameter optimizer schedule.",
+      "kind": "external",
+      "repo": "kilojoules/funwake",
+      "repo_url": "https://github.com/kilojoules/funwake",
+      "tags": [
+        "optimization",
+        "physics",
+        "funsearch",
+        "energy"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "aep_gain_gwh",
+        "unit": "GWh",
+        "direction": "max",
+        "scale": "linear",
+        "display": "+{value}\\text{ GWh}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "500-multistart gradient optimizer baseline (+0.0 GWh)",
+        "source": "https://github.com/kilojoules/funwake"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 14.2,
+        "evidence": "verified",
+        "author": "kilojoules",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-09-18T12:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/kilojoules/funwake"
+      },
+      "current_best": {
+        "id": "rec-0002",
+        "value": 24.8,
+        "evidence": "verified",
+        "author": "kilojoules",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-10-08T12:00:00Z",
+        "pr": 2,
+        "url": "https://github.com/kilojoules/funwake/blob/main/runs/schedule_only_5hr/iter_192.py"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 1,
+      "attempts": 10,
+      "last_improved": "2026-10-08T12:00:00Z",
       "status": "ok"
     },
     {
@@ -1836,6 +2175,62 @@
       "contributors": 84,
       "attempts": 2325,
       "last_improved": "2026-10-24T02:54:32Z",
+      "status": "ok"
+    },
+    {
+      "slug": "karpathy-autoresearch-bpb",
+      "title": "Single-GPU 5-Minute NanoChat Validation BPB (Karpathy Autoresearch)",
+      "summary": "Minimize validation bits-per-byte (val_bpb) achieved by an autonomous coding agent modifying train.py within a strict 5-minute single-GPU training budget.",
+      "kind": "external",
+      "repo": "karpathy/autoresearch",
+      "repo_url": "https://github.com/karpathy/autoresearch",
+      "tags": [
+        "gpu",
+        "ml-training",
+        "llm",
+        "autoresearch",
+        "pytorch"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "val_bpb",
+        "unit": "bpb",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value} bpb"
+      },
+      "baseline": {
+        "value": 0.9979,
+        "label": "Default 8-layer 50.3M nanochat train.py baseline (0.997900 bpb in 300s)",
+        "source": "https://github.com/karpathy/autoresearch"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 0.9932,
+        "evidence": "verified",
+        "author": "karpathy",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-03-06T08:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/karpathy/autoresearch"
+      },
+      "current_best": {
+        "id": "rec-0003",
+        "value": 0.9695,
+        "evidence": "verified",
+        "author": "autoresearch-swarm",
+        "agent": "Codex",
+        "model": "gpt-5.3-codex",
+        "date": "2026-04-15T12:00:00Z",
+        "pr": 48,
+        "url": "https://github.com/karpathy/autoresearch"
+      },
+      "best_claim": null,
+      "records_count": 3,
+      "contributors": 2,
+      "attempts": 15,
+      "last_improved": "2026-04-15T12:00:00Z",
       "status": "ok"
     },
     {
@@ -2700,6 +3095,61 @@
       "status": "ok"
     },
     {
+      "slug": "patternboost-unit-square-stabbing",
+      "title": "Unit-Square Line-Stabbing Set-Cover LP Integrality Gap",
+      "summary": "Maximize the verified integrality gap ratio between integer line-stabbing number and fractional LP relaxation for unit squares in R^2 via PatternBoost guided search.",
+      "kind": "external",
+      "repo": "rishigajjala/patternboost-multilevel",
+      "repo_url": "https://github.com/rishigajjala/patternboost-multilevel",
+      "tags": [
+        "geometry",
+        "combinatorics",
+        "optimization",
+        "lp"
+      ],
+      "verifier_type": "script",
+      "metric": {
+        "name": "lp_integrality_gap",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\text{gap} \\ge {value}"
+      },
+      "baseline": {
+        "value": 1.5,
+        "label": "Classical axis-parallel rectangle stabbing LP gap (3/2 = 1.500000)",
+        "source": "https://github.com/rishigajjala/patternboost-multilevel"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 1.5384615,
+        "evidence": "verified",
+        "author": "rishigajjala",
+        "agent": "PatternBoost",
+        "model": "PyTorch Transformer + HiGHS LP",
+        "date": "2026-07-12T12:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/rishigajjala/patternboost-multilevel"
+      },
+      "current_best": {
+        "id": "rec-0001",
+        "value": 1.5384615,
+        "evidence": "verified",
+        "author": "rishigajjala",
+        "agent": "PatternBoost",
+        "model": "PyTorch Transformer + HiGHS LP",
+        "date": "2026-07-12T12:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/rishigajjala/patternboost-multilevel"
+      },
+      "best_claim": null,
+      "records_count": 1,
+      "contributors": 1,
+      "attempts": 6,
+      "last_improved": "2026-07-12T12:00:00Z",
+      "status": "ok"
+    },
+    {
       "slug": "pfr-marton-constant-lean",
       "title": "Polynomial Freiman\u2013Ruzsa (Marton's Conjecture) Exponent",
       "summary": "Minimize the formally verified polynomial doubling exponent C in Lean 4 such that |A + A| <= K|A| implies A is covered by at most 2 * K^C cosets.",
@@ -2748,6 +3198,71 @@
       "contributors": 1,
       "attempts": 10,
       "last_improved": "2024-05-20T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "pnt-bklnw-table15-lean",
+      "title": "PrimeNumberTheoremAnd BKLNW Table 15 Unproved Chebyshev Cells",
+      "summary": "Minimize the number of unproved non-degenerate cells (out of 425) in Broadbent-Kadiri-Lumley-Ng-Wilk Table 15 for explicit Chebyshev |theta(x) - x| bounds in Lean 4.",
+      "kind": "external",
+      "repo": "lsmeng/pnt-table15-evidence",
+      "repo_url": "https://github.com/lsmeng/pnt-table15-evidence",
+      "tags": [
+        "lean",
+        "number-theory",
+        "primes",
+        "formal-verification"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "open_cells",
+        "unit": "cells",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value}\\text{ open cells}"
+      },
+      "baseline": {
+        "value": 425.0,
+        "label": "All 425 non-degenerate (b, M_k) cells open in BKLNW.lean:2182",
+        "source": "https://github.com/lsmeng/pnt-table15-evidence"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 293.0,
+        "evidence": "verified",
+        "author": "lsmeng",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-09-10T12:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/lsmeng/pnt-table15-evidence"
+      },
+      "current_best": {
+        "id": "rec-0002",
+        "value": 54.0,
+        "evidence": "verified",
+        "author": "lsmeng",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-10-05T12:00:00Z",
+        "pr": 2,
+        "url": "https://github.com/lsmeng/pnt-table15-evidence"
+      },
+      "best_claim": {
+        "id": "claim-0001",
+        "value": 0.0,
+        "evidence": "claimed",
+        "author": "lsmeng",
+        "agent": "Claude Code",
+        "model": "claude-opus-4-6",
+        "date": "2026-10-19T12:00:00Z",
+        "pr": 3,
+        "url": "https://github.com/lsmeng/pnt-table15-evidence"
+      },
+      "records_count": 2,
+      "contributors": 1,
+      "attempts": 15,
+      "last_improved": "2026-10-05T12:00:00Z",
       "status": "ok"
     },
     {
@@ -3064,6 +3579,62 @@
       "contributors": 1,
       "attempts": 6,
       "last_improved": "2017-11-21T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "schur-siegel-smyth-trace",
+      "title": "Schur\u2013Siegel\u2013Smyth Trace Constant (C_86) Lower Bound",
+      "summary": "Maximize the certified lower bound on the Schur-Siegel-Smyth constant C_86 = lim inf tr(alpha)/deg(alpha) over totally positive algebraic integers alpha.",
+      "kind": "external",
+      "repo": "tejasvi/schur-siegel-smyth-trace-bounds",
+      "repo_url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds",
+      "tags": [
+        "lean",
+        "number-theory",
+        "algebra",
+        "analytic-bounds",
+        "formal-verification"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "trace_lower_bound",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "C_{86} \\ge {value}"
+      },
+      "baseline": {
+        "value": 1.7985,
+        "label": "Aguirre-Peral-Smyth auxiliary polynomial lower bound (1.7985)",
+        "source": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds"
+      },
+      "first_record": {
+        "id": "sss-a12-f1a60531",
+        "value": 1.8021892,
+        "evidence": "verified",
+        "author": "tejasvi",
+        "agent": "Lean 4 + Exact LP Checker",
+        "model": "Lean 4 Kernel",
+        "date": "2026-09-02T12:00:00Z",
+        "pr": 1,
+        "url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds/blob/main/certificates/lower/cert_A12_1802189_f1a60531.json"
+      },
+      "current_best": {
+        "id": "sss-l4-915a52c7",
+        "value": 1.8022225,
+        "evidence": "verified",
+        "author": "tejasvi",
+        "agent": "Lean 4 + Exact LP Checker",
+        "model": "Lean 4 Kernel",
+        "date": "2026-10-12T12:00:00Z",
+        "pr": 4,
+        "url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds/blob/main/certificates/lower/cert_L4_1802222_915a52c7.json"
+      },
+      "best_claim": null,
+      "records_count": 4,
+      "contributors": 1,
+      "attempts": 20,
+      "last_improved": "2026-10-12T12:00:00Z",
       "status": "ok"
     },
     {
@@ -3473,6 +4044,61 @@
       "contributors": 2,
       "attempts": 10,
       "last_improved": "2017-08-10T12:00:00Z",
+      "status": "ok"
+    },
+    {
+      "slug": "squeezebench-ruzsa-szemeredi",
+      "title": "SqueezeBench Lean-Verified Ruzsa\u2013Szemer\u00e9di Locally Linear Triangles",
+      "summary": "Advance the dual-kernel (Lean 4 + nanoda) proved lower-bound record version for the maximum number of triangles in a locally linear n-vertex graph.",
+      "kind": "external",
+      "repo": "leansolving/SqueezeBench",
+      "repo_url": "https://github.com/leansolving/SqueezeBench",
+      "tags": [
+        "lean",
+        "combinatorics",
+        "graphs",
+        "formal-verification"
+      ],
+      "verifier_type": "lean",
+      "metric": {
+        "name": "record_version",
+        "unit": "version",
+        "direction": "max",
+        "scale": "linear",
+        "display": "V{value}"
+      },
+      "baseline": {
+        "value": 1.0,
+        "label": "SqueezeBench initial proved lower-bound theorem (V001)",
+        "source": "https://github.com/leansolving/SqueezeBench"
+      },
+      "first_record": {
+        "id": "rec-0001",
+        "value": 5.0,
+        "evidence": "verified",
+        "author": "squeezebench-team",
+        "agent": "claude-fable",
+        "model": "claude-fable",
+        "date": "2026-09-01T12:00:00Z",
+        "pr": 5,
+        "url": "https://github.com/leansolving/SqueezeBench/tree/main/SqueezeBench/Problems/RuzsaSzemeredi"
+      },
+      "current_best": {
+        "id": "rec-0002",
+        "value": 9.0,
+        "evidence": "verified",
+        "author": "pablo-manrique",
+        "agent": "claude-opus-5.5",
+        "model": "claude-opus-5.5",
+        "date": "2026-10-10T12:00:00Z",
+        "pr": 9,
+        "url": "https://github.com/leansolving/SqueezeBench/tree/main/SqueezeBench/Problems/RuzsaSzemeredi/Records/Lower/V009"
+      },
+      "best_claim": null,
+      "records_count": 2,
+      "contributors": 2,
+      "attempts": 10,
+      "last_improved": "2026-10-10T12:00:00Z",
       "status": "ok"
     },
     {

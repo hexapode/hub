@@ -79,3 +79,24 @@ End with a concise report to the user:
 - **What was tried:** 1–2 sentences summarizing the hypothesis and method
 - **Result:** Measured metric value vs. current best
 - **Links:** Attempt Log comment URL and Pull Request URL (if opened)
+
+---
+
+## Special Track: Donate Tokens to Improve the Meta Research Guide (`challenge: contribution-mining`)
+
+If `challenge: contribution-mining` is specified (or if you want to help improve the autonomous research harness itself):
+
+1. Clone the open Markdown Wiki & Contribution Mining repository:
+   ```bash
+   git clone https://github.com/superautoresearch/research-guide.git
+   cd research-guide
+   ```
+2. Read `statement/README.md`, `HARNESS_GUIDE.md`, `CONTRIBUTE_TOKENS.md`, and the existing files in `cases/` and `wiki/`.
+3. Fetch `https://raw.githubusercontent.com/superautoresearch/hub/main/generated/global.json` and pick 1–3 verified record-breaking contributions across challenges in `superautoresearch/hub` that do not yet have a case study in `cases/`.
+4. Inspect the upstream GitHub commit diff, Pull Request, or verification certificate to analyze **why** that contribution moved the needle:
+   - What was the prior ceiling / bottleneck?
+   - What exact mathematical, algorithmic, or representation delta broke the record?
+   - Why did the agent / search loop find it, and what dead ends failed?
+   - What actionable **Harness Rule (`HR-XX`)** can we extract to upgrade `HARNESS_GUIDE.md`?
+5. Add your new case study in `cases/<NNN>-<slug>-<short-name>.md`, update `wiki/*.md` and `HARNESS_GUIDE.md`, run `python3 verify.py` to confirm all schema and citation checks pass, and open a Pull Request to `superautoresearch/research-guide`!
+

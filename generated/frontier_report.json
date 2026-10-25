@@ -1,29 +1,9 @@
 {
   "schema": 1,
-  "checked_at": "2026-10-25T19:57:31Z",
-  "total_challenges": 74,
-  "ok_count": 74,
+  "checked_at": "2026-10-25T20:43:14Z",
+  "total_challenges": 85,
+  "ok_count": 85,
   "challenges": [
-    {
-      "slug": "integer-multiplication",
-      "title": "Integer Multiplication",
-      "source": "CrocSwap/integer-mult-bounds",
-      "verified_records": 19,
-      "open_claims": 0,
-      "frontier_best": 0.003027288235,
-      "best_claim": null,
-      "status": "ok"
-    },
-    {
-      "slug": "van-der-waerden",
-      "title": "Van der Waerden numbers",
-      "source": "DaysSky/van-der-waerden-refinement",
-      "verified_records": 3,
-      "open_claims": 0,
-      "frontier_best": 0.04,
-      "best_claim": null,
-      "status": "ok"
-    },
     {
       "slug": "cifar10-airbench-speedrun",
       "title": "CIFAR-10 94% Accuracy Speedrun (Airbench)",
@@ -521,6 +501,136 @@
       "verified_records": 1,
       "open_claims": 0,
       "frontier_best": 2.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "karpathy-autoresearch-bpb",
+      "title": "Single-GPU 5-Minute NanoChat Validation BPB (Karpathy Autoresearch)",
+      "source": "karpathy/autoresearch",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 0.9695,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-302-harmonic-triples",
+      "title": "Erd\u0151s #302 Harmonic Triple-Free Asymptotic Density",
+      "source": "xiaoliaoOvO/erdos-302-smooth-blocks",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 0.86382487,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "schur-siegel-smyth-trace",
+      "title": "Schur\u2013Siegel\u2013Smyth Trace Constant (C_86) Lower Bound",
+      "source": "tejasvi/schur-siegel-smyth-trace-bounds",
+      "verified_records": 4,
+      "open_claims": 0,
+      "frontier_best": 1.8022225,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-simonovits-degeneracy",
+      "title": "Erd\u0151s\u2013Simonovits Bipartite Degeneracy Excess Exponent (r=2)",
+      "source": "EvolvingPrograms/erdos-simonovits-degeneracy",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 0.00892857,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "pnt-bklnw-table15-lean",
+      "title": "PrimeNumberTheoremAnd BKLNW Table 15 Unproved Chebyshev Cells",
+      "source": "lsmeng/pnt-table15-evidence",
+      "verified_records": 2,
+      "open_claims": 1,
+      "frontier_best": 54.0,
+      "best_claim": 0.0,
+      "status": "ok"
+    },
+    {
+      "slug": "dijkstra-token-ring-state-product",
+      "title": "Dijkstra Self-Stabilizing Token Ring Minimum State Product",
+      "source": "no-way-labs/minimum-state-product",
+      "verified_records": 2,
+      "open_claims": 1,
+      "frontier_best": 9.0,
+      "best_claim": 10.0,
+      "status": "ok"
+    },
+    {
+      "slug": "patternboost-unit-square-stabbing",
+      "title": "Unit-Square Line-Stabbing Set-Cover LP Integrality Gap",
+      "source": "rishigajjala/patternboost-multilevel",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 1.5384615,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "squeezebench-ruzsa-szemeredi",
+      "title": "SqueezeBench Lean-Verified Ruzsa\u2013Szemer\u00e9di Locally Linear Triangles",
+      "source": "leansolving/SqueezeBench",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 9.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "funwake-wind-farm-aep",
+      "title": "FunWake Held-Out Wind Farm Layout Optimization AEP Gain",
+      "source": "kilojoules/funwake",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 24.8,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "endless-exam-constructions",
+      "title": "The Endless Exam Uncapped Mathematical Construction Frontier",
+      "source": "ricolalemon/endless-exam",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 1.042,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "contribution-mining",
+      "title": "Contribution Mining & Meta Research Harness Guide",
+      "source": "superautoresearch/research-guide",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 8.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "integer-multiplication",
+      "title": "Integer Multiplication",
+      "source": "CrocSwap/integer-mult-bounds",
+      "verified_records": 19,
+      "open_claims": 0,
+      "frontier_best": 0.003027288235,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "van-der-waerden",
+      "title": "Van der Waerden numbers",
+      "source": "DaysSky/van-der-waerden-refinement",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 0.04,
       "best_claim": null,
       "status": "ok"
     },

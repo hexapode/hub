@@ -1,0 +1,22 @@
+repo = "tejasvi/schur-siegel-smyth-trace-bounds"
+kind = "external"
+owners = ["tejasvi"]
+tags = ["lean", "number-theory", "algebra", "analytic-bounds", "formal-verification"]
+listed = true
+added = "2026-10-15"
+contributors_override = 1
+attempts_override = 20
+discussion_url = "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds"
+
+[spec]
+title = "Schur–Siegel–Smyth Trace Constant (C_86) Lower Bound"
+summary = "Maximize the certified lower bound on the Schur-Siegel-Smyth constant C_86 = lim inf tr(alpha)/deg(alpha) over totally positive algebraic integers alpha."
+metric = { name = "trace_lower_bound", unit = "", direction = "max", scale = "linear", display = "C_{86} \\ge {value}" }
+verifier = { type = "lean" }
+submit = "Open a PR to tejasvi/schur-siegel-smyth-trace-bounds or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds"
+baseline = { value = 1.7985, label = "Aguirre-Peral-Smyth auxiliary polynomial lower bound (1.7985)", source = "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds" }
+tracks = [{ id = "degree-12-irreducible-factors", title = "Include degree-12 totally positive irreducible polynomials in logarithmic potential LP" }, { id = "upper-bound-equilibrium-measure", title = "Tighten piecewise-linear measure mu_0 on [0, 6] below 1.8070809" }]
+
+[spec.records_source]
+type = "hub"

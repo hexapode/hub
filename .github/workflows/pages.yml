@@ -1,15 +1,19 @@
 name: pages
 
 on:
+  schedule:
+    - cron: "*/15 * * * *"
   push:
     branches: [main]
     paths:
       - "site/**"
       - "generated/**"
+      - "registry/**"
+      - "sar/**"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -26,6 +30,31 @@ jobs:
     steps:
       - name: Check out hub
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Sync upstream GitHub frontiers and build score histories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 -m sar check-frontier --hub .
+          python3 -m sar sync --hub .
+
+      - name: Commit updated registry and generated index if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet registry/ generated/; then
+            git add registry/ generated/
+            git commit -m "chore(sync): auto-update challenge frontiers and score histories [skip ci]"
+            git pull --rebase origin main || true
+            git push origin HEAD:main || true
+          fi
 
       - name: Assemble static site bundle
         run: |
@@ -44,3 +73,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "slug": "contribution-mining",
+  "metric": {
+    "name": "mined_breakthroughs",
+    "unit": "studies",
+    "direction": "max",
+    "scale": "linear",
+    "display": "{value}\\text{ mined breakthroughs}"
+  },
+  "baseline": {
+    "value": 3.0,
+    "label": "Initial seed wiki (3 breakthrough case studies)",
+    "source": "https://github.com/superautoresearch/research-guide"
+  },
+  "records": [
+    {
+      "id": "seed-v1-wiki",
+      "value": 5.0,
+      "evidence": "verified",
+      "author": "superautoresearch",
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "date": "2026-10-20T12:00:00Z",
+      "pr": 1,
+      "url": "https://github.com/superautoresearch/research-guide/tree/main/cases"
+    },
+    {
+      "id": "seed-v2-harness-rules",
+      "value": 8.0,
+      "evidence": "verified",
+      "author": "superautoresearch",
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "date": "2026-10-25T12:00:00Z",
+      "pr": 2,
+      "url": "https://github.com/superautoresearch/research-guide/blob/main/HARNESS_GUIDE.md"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 10,
+  "updated": "2026-10-25T20:43:14Z"
+}

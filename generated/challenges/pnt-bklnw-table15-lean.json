@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "slug": "pnt-bklnw-table15-lean",
+  "metric": {
+    "name": "open_cells",
+    "unit": "cells",
+    "direction": "min",
+    "scale": "linear",
+    "display": "{value}\\text{ open cells}"
+  },
+  "baseline": {
+    "value": 425.0,
+    "label": "All 425 non-degenerate (b, M_k) cells open in BKLNW.lean:2182",
+    "source": "https://github.com/lsmeng/pnt-table15-evidence"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 293.0,
+      "evidence": "verified",
+      "author": "lsmeng",
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "date": "2026-09-10T12:00:00Z",
+      "pr": 1,
+      "url": "https://github.com/lsmeng/pnt-table15-evidence"
+    },
+    {
+      "id": "rec-0002",
+      "value": 54.0,
+      "evidence": "verified",
+      "author": "lsmeng",
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "date": "2026-10-05T12:00:00Z",
+      "pr": 2,
+      "url": "https://github.com/lsmeng/pnt-table15-evidence"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-0001",
+      "value": 0.0,
+      "evidence": "claimed",
+      "author": "lsmeng",
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "date": "2026-10-19T12:00:00Z",
+      "pr": 3,
+      "url": "https://github.com/lsmeng/pnt-table15-evidence"
+    }
+  ],
+  "contributors": 1,
+  "attempts": 15,
+  "updated": "2026-10-25T20:43:14Z"
+}

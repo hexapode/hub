@@ -156,11 +156,15 @@ class TestMilestone5HubSync(unittest.TestCase):
             p for p in sorted((hub_root / "registry").glob("*.toml"))
             if not p.name.endswith(".records.toml")
         ]
-        self.assertEqual(len(reg_files), 74)
+        self.assertEqual(len(reg_files), 85)
+        self.assertTrue((hub_root / "registry" / "contribution-mining.toml").is_file())
         global_json = json.loads((hub_root / "generated" / "global.json").read_text(encoding="utf-8"))
         self.assertEqual(len(global_json["challenges"]), len(reg_files))
         wf_path = hub_root / ".github" / "workflows" / "check-frontier.yml"
         self.assertTrue(wf_path.exists())
+        self.assertIn("*/15 * * * *", wf_path.read_text(encoding="utf-8"))
+        pages_wf = hub_root / ".github" / "workflows" / "pages.yml"
+        self.assertIn("*/15 * * * *", pages_wf.read_text(encoding="utf-8"))
 
         with tempfile.TemporaryDirectory() as tmp:
             chal_dir = create_challenge("self-ref-test", "script", target_dir=Path(tmp), owner="alice")

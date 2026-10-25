@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "slug": "funwake-wind-farm-aep",
+  "metric": {
+    "name": "aep_gain_gwh",
+    "unit": "GWh",
+    "direction": "max",
+    "scale": "linear",
+    "display": "+{value}\\text{ GWh}"
+  },
+  "baseline": {
+    "value": 0.0,
+    "label": "500-multistart gradient optimizer baseline (+0.0 GWh)",
+    "source": "https://github.com/kilojoules/funwake"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 14.2,
+      "evidence": "verified",
+      "author": "kilojoules",
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "date": "2026-09-18T12:00:00Z",
+      "pr": 1,
+      "url": "https://github.com/kilojoules/funwake"
+    },
+    {
+      "id": "rec-0002",
+      "value": 24.8,
+      "evidence": "verified",
+      "author": "kilojoules",
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "date": "2026-10-08T12:00:00Z",
+      "pr": 2,
+      "url": "https://github.com/kilojoules/funwake/blob/main/runs/schedule_only_5hr/iter_192.py"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 10,
+  "updated": "2026-10-25T20:43:14Z"
+}

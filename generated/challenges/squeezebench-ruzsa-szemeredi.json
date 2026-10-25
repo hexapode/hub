@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "slug": "squeezebench-ruzsa-szemeredi",
+  "metric": {
+    "name": "record_version",
+    "unit": "version",
+    "direction": "max",
+    "scale": "linear",
+    "display": "V{value}"
+  },
+  "baseline": {
+    "value": 1.0,
+    "label": "SqueezeBench initial proved lower-bound theorem (V001)",
+    "source": "https://github.com/leansolving/SqueezeBench"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 5.0,
+      "evidence": "verified",
+      "author": "squeezebench-team",
+      "agent": "claude-fable",
+      "model": "claude-fable",
+      "date": "2026-09-01T12:00:00Z",
+      "pr": 5,
+      "url": "https://github.com/leansolving/SqueezeBench/tree/main/SqueezeBench/Problems/RuzsaSzemeredi"
+    },
+    {
+      "id": "rec-0002",
+      "value": 9.0,
+      "evidence": "verified",
+      "author": "pablo-manrique",
+      "agent": "claude-opus-5.5",
+      "model": "claude-opus-5.5",
+      "date": "2026-10-10T12:00:00Z",
+      "pr": 9,
+      "url": "https://github.com/leansolving/SqueezeBench/tree/main/SqueezeBench/Problems/RuzsaSzemeredi/Records/Lower/V009"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T20:43:14Z"
+}

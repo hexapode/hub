@@ -1,0 +1,22 @@
+repo = "EvolvingPrograms/erdos-simonovits-degeneracy"
+kind = "external"
+owners = ["EvolvingPrograms", "christian-lewis"]
+tags = ["combinatorics", "graphs", "erdos", "turan-numbers"]
+listed = true
+added = "2026-10-15"
+contributors_override = 2
+attempts_override = 10
+discussion_url = "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+
+[spec]
+title = "Erdős–Simonovits Bipartite Degeneracy Excess Exponent (r=2)"
+summary = "Maximize the excess exponent epsilon > 0 such that there exists a 2-degenerate bipartite graph H with Turán extremal number ex(n, H) = Omega(n^(3/2 + epsilon)), refuting ex(n, H) = O(n^(3/2))."
+metric = { name = "excess_exponent_eps", unit = "", direction = "max", scale = "linear", display = "\\varepsilon \\ge {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to EvolvingPrograms/erdos-simonovits-degeneracy or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+baseline = { value = 0.0, label = "Erdős–Simonovits conjectured ceiling ex(n, H) = O(n^(3/2)) (epsilon = 0)", source = "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy" }
+tracks = [{ id = "hamming-ball-radius-tuning", title = "Optimize layered Hamming-ball tower parameters to push epsilon above 1/112 = 0.00892857" }]
+
+[spec.records_source]
+type = "hub"

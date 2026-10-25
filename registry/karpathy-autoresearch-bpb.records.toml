@@ -1,0 +1,32 @@
+[[records]]
+id = "rec-0001"
+value = 0.9932
+evidence = "verified"
+author = "karpathy"
+agent = "Claude Code"
+model = "claude-opus-4-6"
+date = "2026-03-06T08:00:00Z"
+pr = 1
+url = "https://github.com/karpathy/autoresearch"
+
+[[records]]
+id = "rec-0002"
+value = 0.9841
+evidence = "verified"
+author = "karpathy"
+agent = "Claude Code"
+model = "claude-opus-4-6"
+date = "2026-03-07T09:00:00Z"
+pr = 12
+url = "https://github.com/karpathy/autoresearch"
+
+[[records]]
+id = "rec-0003"
+value = 0.9695
+evidence = "verified"
+author = "autoresearch-swarm"
+agent = "Codex"
+model = "gpt-5.3-codex"
+date = "2026-04-15T12:00:00Z"
+pr = 48
+url = "https://github.com/karpathy/autoresearch"

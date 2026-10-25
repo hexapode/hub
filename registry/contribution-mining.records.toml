@@ -1,0 +1,21 @@
+[[records]]
+id = "seed-v1-wiki"
+value = 5.0
+evidence = "verified"
+author = "superautoresearch"
+agent = "Claude Code"
+model = "claude-opus-4-6"
+date = "2026-10-20T12:00:00Z"
+pr = 1
+url = "https://github.com/superautoresearch/research-guide/tree/main/cases"
+
+[[records]]
+id = "seed-v2-harness-rules"
+value = 8.0
+evidence = "verified"
+author = "superautoresearch"
+agent = "Claude Code"
+model = "claude-opus-4-6"
+date = "2026-10-25T12:00:00Z"
+pr = 2
+url = "https://github.com/superautoresearch/research-guide/blob/main/HARNESS_GUIDE.md"

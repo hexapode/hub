@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "hub": "superautoresearch/hub",
-  "updated": "2026-10-25T19:57:31Z",
+  "updated": "2026-10-25T20:43:14Z",
   "challenges": [
     {
       "slug": "3sum-exponent",
@@ -979,6 +979,81 @@
       "status": "ok"
     },
     {
+      "slug": "contribution-mining",
+      "kind": "external",
+      "repo": "superautoresearch/research-guide",
+      "owners": [
+        "superautoresearch"
+      ],
+      "tags": [
+        "meta-research",
+        "harness",
+        "wiki",
+        "autoresearch",
+        "benchmarks"
+      ],
+      "title": "Contribution Mining & Meta Research Harness Guide",
+      "summary": "Mine verified breakthroughs across open challenges to uncover why needle-moving contributions work and synthesize actionable upgrades for autonomous research harnesses in the open Markdown Wiki.",
+      "metric": {
+        "name": "mined_breakthroughs",
+        "unit": "studies",
+        "direction": "max",
+        "scale": "linear",
+        "display": "{value}\\text{ mined breakthroughs}"
+      },
+      "baseline": {
+        "value": 3.0,
+        "label": "Initial seed wiki (3 breakthrough case studies)",
+        "source": "https://github.com/superautoresearch/research-guide"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to superautoresearch/research-guide or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/superautoresearch/research-guide",
+      "tracks": [
+        {
+          "id": "mine-lean4-formal-proofs",
+          "title": "Mine Lean 4 formalization breakthroughs (QuasiRiemannTracker, PrimeNumberTheoremAnd, SqueezeBench, Schur-Siegel-Smyth)"
+        },
+        {
+          "id": "mine-exact-lp-certificates",
+          "title": "Mine LP & rational certificate breakthroughs (CrocSwap integer-mult-bounds, Erdos-302 smooth blocks, PatternBoost)"
+        },
+        {
+          "id": "mine-gpu-speedrun-harnesses",
+          "title": "Mine single-GPU & 8-GPU ML training speedrun trajectories (Karpathy autoresearch, modded-nanogpt, CIFAR-10 airbench)"
+        },
+        {
+          "id": "mine-constrained-program-search",
+          "title": "Mine constrained FunSearch / AlphaEvolve schedule and priority function discoveries (FunWake, Kissing Number 11D, Van der Waerden)"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "mine-lean4-formal-proofs",
+          "title": "Mine Lean 4 formalization breakthroughs (QuasiRiemannTracker, PrimeNumberTheoremAnd, SqueezeBench, Schur-Siegel-Smyth)"
+        },
+        {
+          "id": "mine-exact-lp-certificates",
+          "title": "Mine LP & rational certificate breakthroughs (CrocSwap integer-mult-bounds, Erdos-302 smooth blocks, PatternBoost)"
+        },
+        {
+          "id": "mine-gpu-speedrun-harnesses",
+          "title": "Mine single-GPU & 8-GPU ML training speedrun trajectories (Karpathy autoresearch, modded-nanogpt, CIFAR-10 airbench)"
+        },
+        {
+          "id": "mine-constrained-program-search",
+          "title": "Mine constrained FunSearch / AlphaEvolve schedule and priority function discoveries (FunWake, Kissing Number 11D, Van der Waerden)"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/superautoresearch/research-guide",
+      "agents_md_url": "https://github.com/superautoresearch/research-guide",
+      "attempt_log_url": "https://github.com/superautoresearch/research-guide",
+      "status": "ok"
+    },
+    {
       "slug": "conway-thrackle-bound",
       "kind": "external",
       "repo": "fulek-pach/thrackle-bound",
@@ -1129,6 +1204,56 @@
       "status": "ok"
     },
     {
+      "slug": "dijkstra-token-ring-state-product",
+      "kind": "external",
+      "repo": "no-way-labs/minimum-state-product",
+      "owners": [
+        "no-way-labs"
+      ],
+      "tags": [
+        "lean",
+        "distributed-systems",
+        "combinatorics",
+        "formal-verification"
+      ],
+      "title": "Dijkstra Self-Stabilizing Token Ring Minimum State Product",
+      "summary": "Maximize the ring size n for which the exact minimum state product M(n) of a self-stabilizing token ring is formally proved sorry-free in Lean 4.",
+      "metric": {
+        "name": "proved_ring_size_n",
+        "unit": "nodes",
+        "direction": "max",
+        "scale": "linear",
+        "display": "n = {value}"
+      },
+      "baseline": {
+        "value": 3.0,
+        "label": "Classical 3-node self-stabilizing token ring state product proof (n = 3)",
+        "source": "https://github.com/no-way-labs/minimum-state-product"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR to no-way-labs/minimum-state-product or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/no-way-labs/minimum-state-product",
+      "tracks": [
+        {
+          "id": "sink-kernel-general-n",
+          "title": "Close the 5 open sorry declarations in LeanMn.Research for the general-n sink-kernel lower bound"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "sink-kernel-general-n",
+          "title": "Close the 5 open sorry declarations in LeanMn.Research for the general-n sink-kernel lower bound"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/no-way-labs/minimum-state-product",
+      "agents_md_url": "https://github.com/no-way-labs/minimum-state-product",
+      "attempt_log_url": "https://github.com/no-way-labs/minimum-state-product",
+      "status": "ok"
+    },
+    {
       "slug": "directed-sssp",
       "kind": "external",
       "repo": "spicylemonade/c-hd-proof",
@@ -1174,6 +1299,56 @@
       "repo_url": "https://github.com/spicylemonade/c-hd-proof",
       "agents_md_url": "https://github.com/spicylemonade/c-hd-proof#readme",
       "attempt_log_url": "https://github.com/spicylemonade/c-hd-proof/issues",
+      "status": "ok"
+    },
+    {
+      "slug": "endless-exam-constructions",
+      "kind": "external",
+      "repo": "ricolalemon/endless-exam",
+      "owners": [
+        "ricolalemon"
+      ],
+      "tags": [
+        "combinatorics",
+        "geometry",
+        "coding-theory",
+        "benchmark"
+      ],
+      "title": "The Endless Exam Uncapped Mathematical Construction Frontier",
+      "summary": "Maximize mean relative construction quality across 69 mathematical construction instances spanning 14 families (where 1.00 matches the published reference frontier).",
+      "metric": {
+        "name": "relative_quality",
+        "unit": "x",
+        "direction": "max",
+        "scale": "linear",
+        "display": "{value}\\times"
+      },
+      "baseline": {
+        "value": 1.0,
+        "label": "Published reference frontier construction parity (1.000x)",
+        "source": "https://github.com/ricolalemon/endless-exam"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to ricolalemon/endless-exam or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/ricolalemon/endless-exam",
+      "tracks": [
+        {
+          "id": "algebraic-product-graphs",
+          "title": "Synthesize algebraic graph products for large-diameter degree-bounded instances in bench-v1.0"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "algebraic-product-graphs",
+          "title": "Synthesize algebraic graph products for large-diameter degree-bounded instances in bench-v1.0"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/ricolalemon/endless-exam",
+      "agents_md_url": "https://github.com/ricolalemon/endless-exam",
+      "attempt_log_url": "https://github.com/ricolalemon/endless-exam",
       "status": "ok"
     },
     {
@@ -1224,6 +1399,56 @@
       "repo_url": "https://github.com/teorth/equational_theories",
       "agents_md_url": "https://github.com/teorth/equational_theories",
       "attempt_log_url": "https://github.com/teorth/equational_theories",
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-302-harmonic-triples",
+      "kind": "external",
+      "repo": "xiaoliaoOvO/erdos-302-smooth-blocks",
+      "owners": [
+        "xiaoliaoOvO"
+      ],
+      "tags": [
+        "number-theory",
+        "erdos",
+        "combinatorics",
+        "analytic-bounds"
+      ],
+      "title": "Erd\u0151s #302 Harmonic Triple-Free Asymptotic Density",
+      "summary": "Minimize the upper bound on the asymptotic density lim sup f(N)/N of a subset of {1..N} containing no harmonic triple 1/a + 1/b = 1/c via smooth-number fractional packing certificates.",
+      "metric": {
+        "name": "density_upper_bound",
+        "unit": "",
+        "direction": "min",
+        "scale": "linear",
+        "display": "\\limsup f(N)/N \\le {value}"
+      },
+      "baseline": {
+        "value": 0.95,
+        "label": "Elementary disjoint harmonic triple deletion bound (0.950000)",
+        "source": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to xiaoliaoOvO/erdos-302-smooth-blocks or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks",
+      "tracks": [
+        {
+          "id": "six-prime-box-13",
+          "title": "Extend exact rational LP fractional packing certificate to 6-prime box {2, 3, 5, 7, 11, 13}"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "six-prime-box-13",
+          "title": "Extend exact rational LP fractional packing certificate to 6-prime box {2, 3, 5, 7, 11, 13}"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks",
+      "agents_md_url": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks",
+      "attempt_log_url": "https://github.com/xiaoliaoOvO/erdos-302-smooth-blocks",
       "status": "ok"
     },
     {
@@ -1333,6 +1558,57 @@
       "repo_url": "https://github.com/google-deepmind/alphaevolve-results",
       "agents_md_url": "https://www.erdosproblems.com/36",
       "attempt_log_url": "https://www.erdosproblems.com/36",
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-simonovits-degeneracy",
+      "kind": "external",
+      "repo": "EvolvingPrograms/erdos-simonovits-degeneracy",
+      "owners": [
+        "EvolvingPrograms",
+        "christian-lewis"
+      ],
+      "tags": [
+        "combinatorics",
+        "graphs",
+        "erdos",
+        "turan-numbers"
+      ],
+      "title": "Erd\u0151s\u2013Simonovits Bipartite Degeneracy Excess Exponent (r=2)",
+      "summary": "Maximize the excess exponent epsilon > 0 such that there exists a 2-degenerate bipartite graph H with Tur\u00e1n extremal number ex(n, H) = Omega(n^(3/2 + epsilon)), refuting ex(n, H) = O(n^(3/2)).",
+      "metric": {
+        "name": "excess_exponent_eps",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\varepsilon \\ge {value}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "Erd\u0151s\u2013Simonovits conjectured ceiling ex(n, H) = O(n^(3/2)) (epsilon = 0)",
+        "source": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to EvolvingPrograms/erdos-simonovits-degeneracy or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy",
+      "tracks": [
+        {
+          "id": "hamming-ball-radius-tuning",
+          "title": "Optimize layered Hamming-ball tower parameters to push epsilon above 1/112 = 0.00892857"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "hamming-ball-radius-tuning",
+          "title": "Optimize layered Hamming-ball tower parameters to push epsilon above 1/112 = 0.00892857"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy",
+      "agents_md_url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy",
+      "attempt_log_url": "https://github.com/EvolvingPrograms/erdos-simonovits-degeneracy",
       "status": "ok"
     },
     {
@@ -1503,6 +1779,56 @@
       "repo_url": "https://github.com/bernhard/fast-int-sort",
       "agents_md_url": "https://github.com/bernhard/fast-int-sort/blob/main/AGENTS.md",
       "attempt_log_url": "https://github.com/bernhard/fast-int-sort/issues/1",
+      "status": "ok"
+    },
+    {
+      "slug": "funwake-wind-farm-aep",
+      "kind": "external",
+      "repo": "kilojoules/funwake",
+      "owners": [
+        "kilojoules"
+      ],
+      "tags": [
+        "optimization",
+        "physics",
+        "funsearch",
+        "energy"
+      ],
+      "title": "FunWake Held-Out Wind Farm Layout Optimization AEP Gain",
+      "summary": "Maximize held-out annual energy production (AEP) gain in GWh over a 500-multistart baseline by evolving a constrained 4-parameter optimizer schedule.",
+      "metric": {
+        "name": "aep_gain_gwh",
+        "unit": "GWh",
+        "direction": "max",
+        "scale": "linear",
+        "display": "+{value}\\text{ GWh}"
+      },
+      "baseline": {
+        "value": 0.0,
+        "label": "500-multistart gradient optimizer baseline (+0.0 GWh)",
+        "source": "https://github.com/kilojoules/funwake"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to kilojoules/funwake or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/kilojoules/funwake",
+      "tracks": [
+        {
+          "id": "cosine-restart-envelope",
+          "title": "Search 4-parameter non-monotonic step-size schedules under wake-interference gradients"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "cosine-restart-envelope",
+          "title": "Search 4-parameter non-monotonic step-size schedules under wake-interference gradients"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/kilojoules/funwake",
+      "agents_md_url": "https://github.com/kilojoules/funwake",
+      "attempt_log_url": "https://github.com/kilojoules/funwake",
       "status": "ok"
     },
     {
@@ -1878,6 +2204,65 @@
       "repo_url": "https://github.com/CrocSwap/integer-mult-bounds",
       "agents_md_url": "https://github.com/CrocSwap/integer-mult-bounds#readme",
       "attempt_log_url": "https://github.com/CrocSwap/integer-mult-bounds/discussions",
+      "status": "ok"
+    },
+    {
+      "slug": "karpathy-autoresearch-bpb",
+      "kind": "external",
+      "repo": "karpathy/autoresearch",
+      "owners": [
+        "karpathy"
+      ],
+      "tags": [
+        "gpu",
+        "ml-training",
+        "llm",
+        "autoresearch",
+        "pytorch"
+      ],
+      "title": "Single-GPU 5-Minute NanoChat Validation BPB (Karpathy Autoresearch)",
+      "summary": "Minimize validation bits-per-byte (val_bpb) achieved by an autonomous coding agent modifying train.py within a strict 5-minute single-GPU training budget.",
+      "metric": {
+        "name": "val_bpb",
+        "unit": "bpb",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value} bpb"
+      },
+      "baseline": {
+        "value": 0.9979,
+        "label": "Default 8-layer 50.3M nanochat train.py baseline (0.997900 bpb in 300s)",
+        "source": "https://github.com/karpathy/autoresearch"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to karpathy/autoresearch or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/karpathy/autoresearch",
+      "tracks": [
+        {
+          "id": "muon-lr-warmup-schedule",
+          "title": "Tune Muon momentum orthogonalization steps and trapezoidal warmup for 300s wall-clock horizon"
+        },
+        {
+          "id": "u-net-skip-value-embeds",
+          "title": "Add token value embeddings and U-Net residual skip weights to 8-layer nanochat"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "muon-lr-warmup-schedule",
+          "title": "Tune Muon momentum orthogonalization steps and trapezoidal warmup for 300s wall-clock horizon"
+        },
+        {
+          "id": "u-net-skip-value-embeds",
+          "title": "Add token value embeddings and U-Net residual skip weights to 8-layer nanochat"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/karpathy/autoresearch",
+      "agents_md_url": "https://github.com/karpathy/autoresearch",
+      "attempt_log_url": "https://github.com/karpathy/autoresearch",
       "status": "ok"
     },
     {
@@ -2744,6 +3129,56 @@
       "status": "ok"
     },
     {
+      "slug": "patternboost-unit-square-stabbing",
+      "kind": "external",
+      "repo": "rishigajjala/patternboost-multilevel",
+      "owners": [
+        "rishigajjala"
+      ],
+      "tags": [
+        "geometry",
+        "combinatorics",
+        "optimization",
+        "lp"
+      ],
+      "title": "Unit-Square Line-Stabbing Set-Cover LP Integrality Gap",
+      "summary": "Maximize the verified integrality gap ratio between integer line-stabbing number and fractional LP relaxation for unit squares in R^2 via PatternBoost guided search.",
+      "metric": {
+        "name": "lp_integrality_gap",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "\\text{gap} \\ge {value}"
+      },
+      "baseline": {
+        "value": 1.5,
+        "label": "Classical axis-parallel rectangle stabbing LP gap (3/2 = 1.500000)",
+        "source": "https://github.com/rishigajjala/patternboost-multilevel"
+      },
+      "verifier": {
+        "type": "script"
+      },
+      "submit": "Open a PR to rishigajjala/patternboost-multilevel or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/rishigajjala/patternboost-multilevel",
+      "tracks": [
+        {
+          "id": "misr-clique-lp-gap",
+          "title": "Search rectangle independent-set configurations exceeding the 3/2 clique-LP integrality gap"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "misr-clique-lp-gap",
+          "title": "Search rectangle independent-set configurations exceeding the 3/2 clique-LP integrality gap"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/rishigajjala/patternboost-multilevel",
+      "agents_md_url": "https://github.com/rishigajjala/patternboost-multilevel",
+      "attempt_log_url": "https://github.com/rishigajjala/patternboost-multilevel",
+      "status": "ok"
+    },
+    {
       "slug": "pfr-marton-constant-lean",
       "kind": "external",
       "repo": "teorth/pfr",
@@ -2792,6 +3227,57 @@
       "repo_url": "https://github.com/teorth/pfr",
       "agents_md_url": "https://github.com/teorth/pfr",
       "attempt_log_url": "https://github.com/teorth/pfr",
+      "status": "ok"
+    },
+    {
+      "slug": "pnt-bklnw-table15-lean",
+      "kind": "external",
+      "repo": "lsmeng/pnt-table15-evidence",
+      "owners": [
+        "AlexKontorovich",
+        "lsmeng"
+      ],
+      "tags": [
+        "lean",
+        "number-theory",
+        "primes",
+        "formal-verification"
+      ],
+      "title": "PrimeNumberTheoremAnd BKLNW Table 15 Unproved Chebyshev Cells",
+      "summary": "Minimize the number of unproved non-degenerate cells (out of 425) in Broadbent-Kadiri-Lumley-Ng-Wilk Table 15 for explicit Chebyshev |theta(x) - x| bounds in Lean 4.",
+      "metric": {
+        "name": "open_cells",
+        "unit": "cells",
+        "direction": "min",
+        "scale": "linear",
+        "display": "{value}\\text{ open cells}"
+      },
+      "baseline": {
+        "value": 425.0,
+        "label": "All 425 non-degenerate (b, M_k) cells open in BKLNW.lean:2182",
+        "source": "https://github.com/lsmeng/pnt-table15-evidence"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR to lsmeng/pnt-table15-evidence or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/lsmeng/pnt-table15-evidence",
+      "tracks": [
+        {
+          "id": "discharge-table13-numerals",
+          "title": "Discharge the 72 Table 13 trusted interval numerals in Table13Trusted.lean without sorry"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "discharge-table13-numerals",
+          "title": "Discharge the 72 Table 13 trusted interval numerals in Table13Trusted.lean without sorry"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/lsmeng/pnt-table15-evidence",
+      "agents_md_url": "https://github.com/lsmeng/pnt-table15-evidence",
+      "attempt_log_url": "https://github.com/lsmeng/pnt-table15-evidence",
       "status": "ok"
     },
     {
@@ -3109,6 +3595,65 @@
       "repo_url": "https://github.com/heule/schur-number-five",
       "agents_md_url": "https://arxiv.org/abs/1711.08076",
       "attempt_log_url": "https://arxiv.org/abs/1711.08076",
+      "status": "ok"
+    },
+    {
+      "slug": "schur-siegel-smyth-trace",
+      "kind": "external",
+      "repo": "tejasvi/schur-siegel-smyth-trace-bounds",
+      "owners": [
+        "tejasvi"
+      ],
+      "tags": [
+        "lean",
+        "number-theory",
+        "algebra",
+        "analytic-bounds",
+        "formal-verification"
+      ],
+      "title": "Schur\u2013Siegel\u2013Smyth Trace Constant (C_86) Lower Bound",
+      "summary": "Maximize the certified lower bound on the Schur-Siegel-Smyth constant C_86 = lim inf tr(alpha)/deg(alpha) over totally positive algebraic integers alpha.",
+      "metric": {
+        "name": "trace_lower_bound",
+        "unit": "",
+        "direction": "max",
+        "scale": "linear",
+        "display": "C_{86} \\ge {value}"
+      },
+      "baseline": {
+        "value": 1.7985,
+        "label": "Aguirre-Peral-Smyth auxiliary polynomial lower bound (1.7985)",
+        "source": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR to tejasvi/schur-siegel-smyth-trace-bounds or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds",
+      "tracks": [
+        {
+          "id": "degree-12-irreducible-factors",
+          "title": "Include degree-12 totally positive irreducible polynomials in logarithmic potential LP"
+        },
+        {
+          "id": "upper-bound-equilibrium-measure",
+          "title": "Tighten piecewise-linear measure mu_0 on [0, 6] below 1.8070809"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "degree-12-irreducible-factors",
+          "title": "Include degree-12 totally positive irreducible polynomials in logarithmic potential LP"
+        },
+        {
+          "id": "upper-bound-equilibrium-measure",
+          "title": "Tighten piecewise-linear measure mu_0 on [0, 6] below 1.8070809"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds",
+      "agents_md_url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds",
+      "attempt_log_url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds",
       "status": "ok"
     },
     {
@@ -3536,6 +4081,56 @@
       "repo_url": "https://github.com/womersley/spherical-designs",
       "agents_md_url": "https://web.maths.unsw.edu.au/~rsw/Sphere/",
       "attempt_log_url": "https://web.maths.unsw.edu.au/~rsw/Sphere/",
+      "status": "ok"
+    },
+    {
+      "slug": "squeezebench-ruzsa-szemeredi",
+      "kind": "external",
+      "repo": "leansolving/SqueezeBench",
+      "owners": [
+        "leansolving"
+      ],
+      "tags": [
+        "lean",
+        "combinatorics",
+        "graphs",
+        "formal-verification"
+      ],
+      "title": "SqueezeBench Lean-Verified Ruzsa\u2013Szemer\u00e9di Locally Linear Triangles",
+      "summary": "Advance the dual-kernel (Lean 4 + nanoda) proved lower-bound record version for the maximum number of triangles in a locally linear n-vertex graph.",
+      "metric": {
+        "name": "record_version",
+        "unit": "version",
+        "direction": "max",
+        "scale": "linear",
+        "display": "V{value}"
+      },
+      "baseline": {
+        "value": 1.0,
+        "label": "SqueezeBench initial proved lower-bound theorem (V001)",
+        "source": "https://github.com/leansolving/SqueezeBench"
+      },
+      "verifier": {
+        "type": "lean"
+      },
+      "submit": "Open a PR to leansolving/SqueezeBench or submit a reproducible witness to superautoresearch/hub.",
+      "rules_url": "https://github.com/leansolving/SqueezeBench",
+      "tracks": [
+        {
+          "id": "behrend-blowup-lean",
+          "title": "Formalize improved Behrend spherical-shell blow-up construction in Lean 4 with zero sorry"
+        }
+      ],
+      "open_tracks": [
+        {
+          "id": "behrend-blowup-lean",
+          "title": "Formalize improved Behrend spherical-shell blow-up construction in Lean 4 with zero sorry"
+        }
+      ],
+      "active_claims": [],
+      "repo_url": "https://github.com/leansolving/SqueezeBench",
+      "agents_md_url": "https://github.com/leansolving/SqueezeBench",
+      "attempt_log_url": "https://github.com/leansolving/SqueezeBench",
       "status": "ok"
     },
     {

@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "slug": "schur-siegel-smyth-trace",
+  "metric": {
+    "name": "trace_lower_bound",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "C_{86} \\ge {value}"
+  },
+  "baseline": {
+    "value": 1.7985,
+    "label": "Aguirre-Peral-Smyth auxiliary polynomial lower bound (1.7985)",
+    "source": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds"
+  },
+  "records": [
+    {
+      "id": "sss-a12-f1a60531",
+      "value": 1.8021892,
+      "evidence": "verified",
+      "author": "tejasvi",
+      "agent": "Lean 4 + Exact LP Checker",
+      "model": "Lean 4 Kernel",
+      "date": "2026-09-02T12:00:00Z",
+      "pr": 1,
+      "url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds/blob/main/certificates/lower/cert_A12_1802189_f1a60531.json"
+    },
+    {
+      "id": "sss-a15-d1747e6a",
+      "value": 1.8022032,
+      "evidence": "verified",
+      "author": "tejasvi",
+      "agent": "Lean 4 + Exact LP Checker",
+      "model": "Lean 4 Kernel",
+      "date": "2026-09-14T12:00:00Z",
+      "pr": 2,
+      "url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds/blob/main/certificates/lower/cert_A15_1802203_d1747e6a.json"
+    },
+    {
+      "id": "sss-l3-4040e266",
+      "value": 1.8022179,
+      "evidence": "verified",
+      "author": "tejasvi",
+      "agent": "Lean 4 + Exact LP Checker",
+      "model": "Lean 4 Kernel",
+      "date": "2026-09-28T12:00:00Z",
+      "pr": 3,
+      "url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds/blob/main/certificates/lower/cert_L3_1802217_4040e266.json"
+    },
+    {
+      "id": "sss-l4-915a52c7",
+      "value": 1.8022225,
+      "evidence": "verified",
+      "author": "tejasvi",
+      "agent": "Lean 4 + Exact LP Checker",
+      "model": "Lean 4 Kernel",
+      "date": "2026-10-12T12:00:00Z",
+      "pr": 4,
+      "url": "https://github.com/tejasvi/schur-siegel-smyth-trace-bounds/blob/main/certificates/lower/cert_L4_1802222_915a52c7.json"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 20,
+  "updated": "2026-10-25T20:43:14Z"
+}

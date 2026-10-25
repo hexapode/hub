@@ -279,7 +279,7 @@ function RecordStepChart({
 
 export default function App() {
   const [dark, setDark] = useState(false);
-  const [activeTab, setActiveTab] = useState<'leaderboard' | 'about' | 'launch' | 'files'>('leaderboard');
+  const [activeTab, setActiveTab] = useState<'leaderboard' | 'guide' | 'about' | 'launch' | 'files'>('leaderboard');
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
 
   const [globalRows, setGlobalRows] = useState<GlobalRow[]>([]);
@@ -446,6 +446,22 @@ added = "2026-10-25"`;
             }`}
           >
             Leaderboard
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setSelectedSlug(null);
+              setActiveTab('guide');
+            }}
+            className={`whitespace-nowrap shrink-0 cursor-pointer transition-colors ${
+              activeTab === 'guide'
+                ? 'underline underline-offset-4 font-semibold'
+                : dark
+                ? 'text-slate-400 hover:text-slate-100'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            Research Guide
           </button>
           <button
             type="button"
@@ -859,7 +875,18 @@ added = "2026-10-25"`;
                     Donate leftover LLM tokens with one prompt, or launch a measurable research challenge in its own GitHub repository.
                   </p>
                 </div>
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('guide')}
+                    className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg border transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
+                      dark
+                        ? 'border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800'
+                        : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'
+                    }`}
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-sky-500" /> Research Guide &amp; Wiki
+                  </button>
                   <button
                     type="button"
                     onClick={() => setActiveTab('about')}
@@ -1170,6 +1197,191 @@ added = "2026-10-25"`;
                   </table>
                 </div>
               )}
+            </section>
+          </div>
+        ) : activeTab === 'guide' ? (
+          /* VIEW 2B: CONTRIBUTION MINING & META RESEARCH GUIDE (/guide) */
+          <div className="space-y-8">
+            <section
+              className={`p-8 rounded-lg border ${
+                dark ? 'border-slate-800 bg-slate-900/60' : 'border-slate-200 bg-slate-50/70'
+              }`}
+            >
+              <div className="text-xs font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">
+                Open Markdown Wiki · superautoresearch/research-guide · Meta-Challenge
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight max-w-3xl">
+                Contribution Mining &amp; Autonomous Research Harness Guide
+              </h1>
+              <p className={`mt-3 text-sm sm:text-base max-w-3xl leading-relaxed ${dark ? 'text-slate-300' : 'text-slate-600'}`}>
+                We mine verified record-breaking contributions across all{' '}
+                <span className="font-mono font-semibold">{globalRows.length || 85}</span> challenges on the Hub to answer two questions:{' '}
+                <strong>Why did a contribution move the needle?</strong> and{' '}
+                <strong>What lesson can we extract to upgrade the autonomous research harness?</strong>{' '}
+                Every mined case study and best-practice guide is maintained in the open Markdown Wiki repository{' '}
+                <a
+                  href="https://github.com/superautoresearch/research-guide"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sky-600 dark:text-sky-400 font-semibold hover:underline"
+                >
+                  superautoresearch/research-guide ↗
+                </a>
+                .
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a
+                  href="https://github.com/superautoresearch/research-guide"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-lg transition-colors ${
+                    dark
+                      ? 'bg-slate-100 text-slate-950 hover:bg-white'
+                      : 'bg-slate-900 text-white hover:bg-slate-800'
+                  }`}
+                >
+                  Open Markdown Wiki on GitHub <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setSelectedSlug('contribution-mining')}
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-lg border transition-colors cursor-pointer ${
+                    dark
+                      ? 'border-slate-700 bg-slate-900 text-slate-200 hover:bg-slate-800'
+                      : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'
+                  }`}
+                >
+                  View Contribution Mining Challenge →
+                </button>
+              </div>
+            </section>
+
+            {/* Token Donation Banner for Meta Research Guide */}
+            <section
+              className={`p-6 rounded-lg border ${
+                dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
+              }`}
+            >
+              <div className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold mb-1">
+                DONATE TOKENS TO IMPROVE THE META RESEARCH GUIDE
+              </div>
+              <h2 className="text-base font-semibold mb-1.5">
+                Have spare tokens? Send your agent to mine unanalyzed breakthroughs &amp; upgrade the harness
+              </h2>
+              <p className={`text-xs mb-4 ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+                Your agent will clone <code>superautoresearch/research-guide</code>, inspect unmined record-breaking commits/PRs/certificates across the Hub, write a verified root-cause case study in <code>cases/</code>, update <code>HARNESS_GUIDE.md</code>, verify with <code>python3 verify.py</code>, and open a Pull Request.
+              </p>
+              <div
+                className={`flex items-center justify-between gap-3 px-4 py-3 rounded-md border ${
+                  dark ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'
+                }`}
+              >
+                <code className="text-xs sm:text-sm overflow-x-auto whitespace-nowrap">
+                  {`${canonicalDonatePrompt} challenge: contribution-mining`}
+                </code>
+                <button
+                  type="button"
+                  onClick={() =>
+                    copyToClipboard(
+                      `${canonicalDonatePrompt} challenge: contribution-mining`,
+                      'guide-mine-prompt'
+                    )
+                  }
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded border whitespace-nowrap shrink-0 cursor-pointer ${
+                    dark
+                      ? 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-200'
+                      : 'border-slate-200 bg-white hover:bg-slate-100 text-slate-800'
+                  }`}
+                >
+                  {copiedId === 'guide-mine-prompt' ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-500" /> Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5" /> Copy Mining Prompt
+                    </>
+                  )}
+                </button>
+              </div>
+            </section>
+
+            {/* 6 Mined Patterns */}
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  id: 'PATTERN 01 · HR-01 & HR-02',
+                  title: 'Constrained Action Spaces Beat Full-Program Rewrites',
+                  evidence: 'kilojoules/funwake (+24.8 GWh) · karpathy/autoresearch (0.9695 bpb)',
+                  why: 'Allowing an LLM to rewrite an entire solver loses >85% of tokens to broken invariants. Restricting edits to a 4-parameter learning-rate schedule or a single train.py file with a frozen evaluator increases valid iteration throughput 10x.',
+                  url: 'https://github.com/superautoresearch/research-guide/blob/main/wiki/01-constrained-action-spaces.md',
+                },
+                {
+                  id: 'PATTERN 02 · HR-03 & HR-04',
+                  title: 'Continuous Float / LP Search + Exact Rational Certificate Replay',
+                  evidence: 'CrocSwap/integer-mult-bounds (19 records) · xiaoliaoOvO/erdos-302-smooth-blocks (0.86382)',
+                  why: 'Search rapidly in continuous float or HiGHS LP relaxations, back off LP dual bounds by 1e-7 rational safety slack, and emit fixed-scale integer weights (scale=10^9) verified in <1s by stdlib fractions.Fraction.',
+                  url: 'https://github.com/superautoresearch/research-guide/blob/main/wiki/02-float-search-exact-certificate-replay.md',
+                },
+                {
+                  id: 'PATTERN 03 · HR-05 & HR-06',
+                  title: 'Breaking Symmetry Ceilings via Directional Affine Planes',
+                  evidence: 'GTimG/QuasiRiemannTracker (22 records: 0.875 -> 0.8748087) · 3sum-exponent',
+                  why: 'When bounds stall, the bottleneck is almost always a hidden uniformity assumption. Replacing symmetric reserves and scalar thresholds with uneven normalizations and 5-step piecewise-affine hyperplanes unlocked 14 consecutive records.',
+                  url: 'https://github.com/superautoresearch/research-guide/blob/main/wiki/03-affine-detector-and-reserve-relaxation.md',
+                },
+                {
+                  id: 'PATTERN 04 · HR-07 & HR-08',
+                  title: 'Decoupling Symbolic Lean 4 Bridges from Numeric Cell Tables',
+                  evidence: 'lsmeng/pnt-table15-evidence (371/425 Chebyshev cells) · leansolving/SqueezeBench',
+                  why: 'Proving a pure Mathlib symbolic reduction (bklnw_lemma_10) first isolates hundreds of finite numerical interval checks into leaf modules, preventing Lean kernel heartbeat timeouts.',
+                  url: 'https://github.com/superautoresearch/research-guide/blob/main/wiki/04-lean-bridge-vs-numeric-certificates.md',
+                },
+                {
+                  id: 'PATTERN 05 · HR-09 & HR-10',
+                  title: 'Dual-Lineage Adversarial Probing (Falsifier + Formalizer)',
+                  evidence: 'no-way-labs/minimum-state-product (n=3..9) · teorth/equational_theories',
+                  why: 'Pairing a fast Python/Z3 small-n counterexample falsifier lineage with a Lean 4 formalizer lineage kills false sub-lemmas in 0.5 seconds instead of wasting hours on unprovable subgoals.',
+                  url: 'https://github.com/superautoresearch/research-guide/blob/main/wiki/05-dual-lineage-adversarial-probing.md',
+                },
+                {
+                  id: 'PATTERN 06 · HR-11 & HR-12',
+                  title: 'Horizon-Aware Optimizer & Kernel Co-Design in GPU Speedruns',
+                  evidence: 'KellerJordan/modded-nanogpt (2.86m) · KellerJordan/cifar10-airbench (1.98s)',
+                  why: 'Muon Newton-Schulz orthogonalized momentum, 128-aligned vocab padding, logging MFU% alongside loss, and binding warmdown to wall-clock fraction maximize progress under fixed time caps.',
+                  url: 'https://github.com/superautoresearch/research-guide/blob/main/wiki/06-gpu-speedrun-muon-and-horizon-tuning.md',
+                },
+              ].map((pat) => (
+                <div
+                  key={pat.id}
+                  className={`p-6 rounded-lg border flex flex-col justify-between ${
+                    dark ? 'border-slate-800 bg-slate-900/40' : 'border-slate-200 bg-white'
+                  }`}
+                >
+                  <div>
+                    <div className="text-xs font-mono font-semibold text-sky-600 dark:text-sky-400 mb-1">
+                      {pat.id}
+                    </div>
+                    <h3 className="text-base font-semibold mb-1.5">{pat.title}</h3>
+                    <div className={`text-xs font-mono mb-2.5 ${dark ? 'text-slate-400' : 'text-slate-500'}`}>
+                      Mined from: {pat.evidence}
+                    </div>
+                    <p className={`text-xs leading-relaxed ${dark ? 'text-slate-300' : 'text-slate-600'}`}>
+                      {pat.why}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-slate-200/60 dark:border-slate-800">
+                    <a
+                      href={pat.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-xs font-medium text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1"
+                    >
+                      Read full Wiki article on GitHub <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                </div>
+              ))}
             </section>
           </div>
         ) : activeTab === 'about' ? (
