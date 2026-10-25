@@ -1344,11 +1344,37 @@ export default function App() {
         ) : activeTab === 'sandbox' ? (
           /* VIEW 4: LIVE SAR CLI & VERIFIER SANDBOX (/sandbox) */
           <div className="space-y-8">
-            <div>
-              <h1 className="text-2xl font-bold tracking-tight">Live sar CLI & Verifier Sandbox</h1>
-              <p className={`mt-1 text-sm ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
-                Execute real <code>sar</code> CLI commands, run the unit test suite (Milestones 1–7) and end-to-end dry run (Milestone 8), or test a custom Python sorting submission against the automated verifier.
-              </p>
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h1 className="text-2xl font-bold tracking-tight">Live sar CLI & Verifier Sandbox</h1>
+                <p className={`mt-1 text-sm ${dark ? 'text-slate-400' : 'text-slate-600'}`}>
+                  Execute real <code>sar</code> CLI commands, run the unit test suite (Milestones 1–7) and end-to-end dry run (Milestone 8), or test a custom Python sorting submission against the automated verifier.
+                </p>
+              </div>
+              <div
+                className={`flex items-center gap-1 p-1 rounded-lg border ${
+                  dark ? 'bg-slate-900 border-slate-800' : 'bg-slate-100 border-slate-200/70'
+                }`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('sandbox')}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md cursor-pointer ${
+                    dark ? 'bg-slate-800 text-white' : 'bg-white text-slate-900 shadow-2xs'
+                  }`}
+                >
+                  CLI & Verifier
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('files')}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md cursor-pointer ${
+                    dark ? 'text-slate-400 hover:text-slate-200' : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  Hub Repository Files
+                </button>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -1578,18 +1604,31 @@ export default function App() {
                   Inspect the generated repository layout (`registry/`, `templates/`, `skills/`, `.claude-plugin/`, `sar/`, `site/`, `.github/workflows/`).
                 </p>
               </div>
-              <a
-                href="/static-site/index.html"
-                target="_blank"
-                rel="noreferrer"
-                className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg border whitespace-nowrap shrink-0 ${
-                  dark
-                    ? 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-200'
-                    : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-800'
-                }`}
-              >
-                Open Standalone Static Site (/site/index.html) <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setActiveTab('cli')}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md border cursor-pointer ${
+                    dark
+                      ? 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-200'
+                      : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-800'
+                  }`}
+                >
+                  <Terminal className="w-3.5 h-3.5" /> CLI & Verifier
+                </button>
+                <a
+                  href="/static-site/index.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md border whitespace-nowrap shrink-0 ${
+                    dark
+                      ? 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-200'
+                      : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-800'
+                  }`}
+                >
+                  Open Standalone Static Site <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
