@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "slug": "matmul-4x4-complex-rank",
+  "metric": {
+    "name": "scalar_multiplications",
+    "unit": "muls",
+    "direction": "min",
+    "scale": "linear",
+    "display": "\\text{rank}\\langle 4,4,4\\rangle \\le {value}"
+  },
+  "baseline": {
+    "value": 49.0,
+    "label": "Two-level Strassen recursion 7^2 = 49 (1969)",
+    "source": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 48.0,
+      "evidence": "verified",
+      "author": "alphaevolve-team",
+      "agent": "AlphaEvolve",
+      "model": "gemini-2.5-pro",
+      "date": "2025-05-14T12:00:00Z",
+      "pr": 1,
+      "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:21:07Z"
+}

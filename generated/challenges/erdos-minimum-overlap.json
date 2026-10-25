@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "slug": "erdos-minimum-overlap",
+  "metric": {
+    "name": "overlap_constant_M",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "M \\le {value}"
+  },
+  "baseline": {
+    "value": 0.4,
+    "label": "Scherk & Moser elementary upper bound (0.400000, 1955)",
+    "source": "https://www.erdosproblems.com/36"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 0.382003,
+      "evidence": "verified",
+      "author": "haugland",
+      "date": "1996-04-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://www.erdosproblems.com/36"
+    },
+    {
+      "id": "rec-0002",
+      "value": 0.380927,
+      "evidence": "verified",
+      "author": "haugland",
+      "date": "2016-09-12T12:00:00Z",
+      "pr": 2,
+      "url": "https://www.erdosproblems.com/36"
+    },
+    {
+      "id": "rec-0003",
+      "value": 0.380924,
+      "evidence": "verified",
+      "author": "alphaevolve-team",
+      "agent": "AlphaEvolve",
+      "model": "gemini-2.5-pro",
+      "date": "2025-05-14T12:00:00Z",
+      "pr": 3,
+      "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 15,
+  "updated": "2026-10-25T19:21:07Z"
+}

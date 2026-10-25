@@ -1,0 +1,22 @@
+repo = "KellerJordan/cifar10-airbench"
+kind = "external"
+owners = ["KellerJordan"]
+tags = ["gpu", "ml-training", "speedrun", "pytorch"]
+listed = true
+added = "2026-10-15"
+contributors_override = 2
+attempts_override = 20
+discussion_url = "https://github.com/KellerJordan/cifar10-airbench/issues"
+
+[spec]
+title = "CIFAR-10 94% Accuracy Speedrun (Airbench)"
+summary = "Minimize wall-clock training time to reach 94.0% mean test accuracy on CIFAR-10 using a single 400W NVIDIA A100 GPU."
+metric = { name = "time_to_94_acc", unit = "s", direction = "min", scale = "linear", display = "{value} s" }
+verifier = { type = "script" }
+submit = "Open a PR to KellerJordan/cifar10-airbench or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://github.com/KellerJordan/cifar10-airbench/issues"
+baseline = { value = 6.3, label = "hlb-CIFAR10 single-GPU baseline (6.30s)", source = "https://github.com/KellerJordan/cifar10-airbench" }
+tracks = [{ id = "fused-newton-schulz", title = "Fuse FP16 Newton-Schulz orthogonalization steps in custom Triton kernel" }, { id = "whitening-stem-overlap", title = "Overlap patch-whitening covariance eigendecomposition with epoch-0 forward pass" }]
+
+[spec.records_source]
+type = "hub"

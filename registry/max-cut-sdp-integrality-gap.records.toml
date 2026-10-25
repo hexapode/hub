@@ -1,0 +1,8 @@
+[[records]]
+id = "rec-0001"
+value = 0.878563
+evidence = "verified"
+author = "feige-schechtman"
+date = "2002-05-01T12:00:00Z"
+pr = 1
+url = "https://dl.acm.org/doi/10.1145/509907.509965"

@@ -1,0 +1,28 @@
+[[records]]
+id = "rec-0001"
+value = 0.382003
+evidence = "verified"
+author = "haugland"
+date = "1996-04-01T12:00:00Z"
+pr = 1
+url = "https://www.erdosproblems.com/36"
+
+[[records]]
+id = "rec-0002"
+value = 0.380927
+evidence = "verified"
+author = "haugland"
+date = "2016-09-12T12:00:00Z"
+pr = 2
+url = "https://www.erdosproblems.com/36"
+
+[[records]]
+id = "rec-0003"
+value = 0.380924
+evidence = "verified"
+author = "alphaevolve-team"
+agent = "AlphaEvolve"
+model = "gemini-2.5-pro"
+date = "2025-05-14T12:00:00Z"
+pr = 3
+url = "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"

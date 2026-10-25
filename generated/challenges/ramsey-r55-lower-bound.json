@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "slug": "ramsey-r55-lower-bound",
+  "metric": {
+    "name": "witness_vertices",
+    "unit": "vertices",
+    "direction": "max",
+    "scale": "linear",
+    "display": "R(5,5) > {value}"
+  },
+  "baseline": {
+    "value": 37.0,
+    "label": "Kalbfleisch circulant 2-coloring on 37 vertices (1965)",
+    "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 41.0,
+      "evidence": "verified",
+      "author": "irten",
+      "date": "1979-04-01T12:00:00Z",
+      "pr": 1,
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1"
+    },
+    {
+      "id": "rec-0002",
+      "value": 42.0,
+      "evidence": "verified",
+      "author": "exoo",
+      "date": "1989-06-15T12:00:00Z",
+      "pr": 2,
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jgt.3190130113"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T19:21:07Z"
+}

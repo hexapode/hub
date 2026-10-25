@@ -1,0 +1,28 @@
+[[records]]
+id = "rec-0001"
+value = 145000.0
+evidence = "verified"
+author = "teorth"
+date = "2024-10-05T12:00:00Z"
+pr = 120
+url = "https://github.com/teorth/equational_theories"
+
+[[records]]
+id = "rec-0002"
+value = 1820.0
+evidence = "verified"
+author = "lean-automata"
+agent = "Claude Code"
+model = "claude-3-5-sonnet"
+date = "2024-10-18T12:00:00Z"
+pr = 412
+url = "https://github.com/teorth/equational_theories"
+
+[[records]]
+id = "rec-0003"
+value = 0.0
+evidence = "verified"
+author = "teorth"
+date = "2024-11-14T12:00:00Z"
+pr = 890
+url = "https://teorth.github.io/equational_theories/"

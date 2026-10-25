@@ -1,0 +1,19 @@
+[[records]]
+id = "rec-0001"
+value = 1.5053
+evidence = "verified"
+author = "cloninger-steinerberger"
+date = "2017-03-20T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/1403.7988"
+
+[[records]]
+id = "rec-0002"
+value = 1.5031
+evidence = "verified"
+author = "alphaevolve-team"
+agent = "AlphaEvolve"
+model = "gemini-2.5-pro"
+date = "2025-05-14T12:00:00Z"
+pr = 2
+url = "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"

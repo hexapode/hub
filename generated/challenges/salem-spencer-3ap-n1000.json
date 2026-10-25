@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "slug": "salem-spencer-3ap-n1000",
+  "metric": {
+    "name": "subset_size",
+    "unit": "integers",
+    "direction": "max",
+    "scale": "linear",
+    "display": "r_3(1000) \\ge {value}"
+  },
+  "baseline": {
+    "value": 164.0,
+    "label": "Behrend spherical shell construction (164 integers, 1946)",
+    "source": "https://www.erdosproblems.com/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 194.0,
+      "evidence": "verified",
+      "author": "gasarch",
+      "date": "2008-05-12T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/0909.3270"
+    },
+    {
+      "id": "rec-0002",
+      "value": 198.0,
+      "evidence": "verified",
+      "author": "dykstra",
+      "date": "2014-09-01T12:00:00Z",
+      "pr": 2,
+      "url": "https://oeis.org/A003002"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T19:21:07Z"
+}

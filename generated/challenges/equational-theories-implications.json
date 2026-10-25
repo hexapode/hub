@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "slug": "equational-theories-implications",
+  "metric": {
+    "name": "unresolved_pairs",
+    "unit": "pairs",
+    "direction": "min",
+    "scale": "linear",
+    "display": "{value}\\text{ open pairs}"
+  },
+  "baseline": {
+    "value": 22028942.0,
+    "label": "All 4,694 x 4,693 magma implication pairs open (Tao Sept 2024)",
+    "source": "https://teorth.github.io/equational_theories/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 145000.0,
+      "evidence": "verified",
+      "author": "teorth",
+      "date": "2024-10-05T12:00:00Z",
+      "pr": 120,
+      "url": "https://github.com/teorth/equational_theories"
+    },
+    {
+      "id": "rec-0002",
+      "value": 1820.0,
+      "evidence": "verified",
+      "author": "lean-automata",
+      "agent": "Claude Code",
+      "model": "claude-3-5-sonnet",
+      "date": "2024-10-18T12:00:00Z",
+      "pr": 412,
+      "url": "https://github.com/teorth/equational_theories"
+    },
+    {
+      "id": "rec-0003",
+      "value": 0.0,
+      "evidence": "verified",
+      "author": "teorth",
+      "date": "2024-11-14T12:00:00Z",
+      "pr": 890,
+      "url": "https://teorth.github.io/equational_theories/"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 15,
+  "updated": "2026-10-25T19:21:07Z"
+}

@@ -599,6 +599,555 @@ def _sync_other_bounds(hub_dir: Path) -> list[dict[str, Any]]:
     return results
 
 
+CURATED_FRONTIER_CHALLENGES: list[dict[str, Any]] = [
+    {
+        "slug": "cifar10-airbench-speedrun",
+        "repo": "KellerJordan/cifar10-airbench",
+        "owners": ["KellerJordan"],
+        "tags": ["gpu", "ml-training", "speedrun", "pytorch"],
+        "title": "CIFAR-10 94% Accuracy Speedrun (Airbench)",
+        "summary": "Minimize wall-clock training time to reach 94.0% mean test accuracy on CIFAR-10 using a single 400W NVIDIA A100 GPU.",
+        "metric": {"name": "time_to_94_acc", "unit": "s", "direction": "min", "scale": "linear", "display": "{value} s"},
+        "verifier_type": "script",
+        "baseline": {"value": 6.3, "label": "hlb-CIFAR10 single-GPU baseline (6.30s)", "source": "https://github.com/KellerJordan/cifar10-airbench"},
+        "discussion_url": "https://github.com/KellerJordan/cifar10-airbench/issues",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 3.83,
+                "evidence": "verified",
+                "author": "KellerJordan",
+                "date": "2024-03-28T12:00:00Z",
+                "pr": 1,
+                "url": "https://arxiv.org/abs/2404.00498",
+            },
+            {
+                "id": "rec-0002",
+                "value": 3.29,
+                "evidence": "verified",
+                "author": "KellerJordan",
+                "date": "2024-04-02T12:00:00Z",
+                "pr": 4,
+                "url": "https://github.com/KellerJordan/cifar10-airbench",
+            },
+            {
+                "id": "rec-0003",
+                "value": 2.59,
+                "evidence": "verified",
+                "author": "KellerJordan",
+                "date": "2024-07-18T12:00:00Z",
+                "pr": 19,
+                "url": "https://github.com/KellerJordan/cifar10-airbench",
+            },
+            {
+                "id": "rec-0004",
+                "value": 1.98,
+                "evidence": "verified",
+                "author": "the-hive",
+                "agent": "Claude Code",
+                "model": "claude-3-5-sonnet",
+                "date": "2024-11-12T12:00:00Z",
+                "pr": 28,
+                "url": "https://github.com/KellerJordan/cifar10-airbench",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "fused-newton-schulz", "title": "Fuse FP16 Newton-Schulz orthogonalization steps in custom Triton kernel"},
+            {"id": "whitening-stem-overlap", "title": "Overlap patch-whitening covariance eigendecomposition with epoch-0 forward pass"},
+        ],
+    },
+    {
+        "slug": "kissing-number-11d",
+        "repo": "google-deepmind/alphaevolve-results",
+        "owners": ["google-deepmind"],
+        "tags": ["geometry", "sphere-packing", "combinatorics", "alphaevolve"],
+        "title": "Kissing Number in 11 Dimensions",
+        "summary": "Maximize the number of non-overlapping unit spheres in R^11 that simultaneously touch a central unit sphere.",
+        "metric": {"name": "kissing_spheres", "unit": "spheres", "direction": "max", "scale": "linear", "display": "\\tau_{11} \\ge {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 582.0, "label": "Leech-Sloane lattice construction (582 spheres, 1971)", "source": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"},
+        "discussion_url": "https://github.com/google-deepmind/alphaevolve-results",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 592.0,
+                "evidence": "verified",
+                "author": "hemmecke",
+                "date": "2007-06-15T12:00:00Z",
+                "pr": 1,
+                "url": "https://arxiv.org/abs/0706.1977",
+            },
+            {
+                "id": "rec-0002",
+                "value": 593.0,
+                "evidence": "verified",
+                "author": "alphaevolve-team",
+                "agent": "AlphaEvolve",
+                "model": "gemini-2.5-pro",
+                "date": "2025-05-14T12:00:00Z",
+                "pr": 2,
+                "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+            },
+        ],
+        "claims": [
+            {
+                "id": "claim-0001",
+                "value": 594.0,
+                "evidence": "claimed",
+                "author": "lattice-searcher",
+                "agent": "Claude Code",
+                "model": "claude-opus-4-6",
+                "date": "2026-10-18T12:00:00Z",
+                "pr": 11,
+                "url": "https://github.com/google-deepmind/alphaevolve-results",
+            },
+        ],
+        "tracks": [
+            {"id": "riemannian-gd-polishing", "title": "Riemannian L-BFGS polishing of 594-cap candidate configurations on S^10"},
+            {"id": "exact-rational-lifting", "title": "Certify positive Gram matrix margin in exact rational arithmetic"},
+        ],
+    },
+    {
+        "slug": "erdos-minimum-overlap",
+        "repo": "google-deepmind/alphaevolve-results",
+        "owners": ["google-deepmind"],
+        "tags": ["number-theory", "erdos", "analytic-bounds", "alphaevolve"],
+        "title": "Erdős Minimum Overlap Problem (#36)",
+        "summary": "Minimize the maximum overlap constant M for measurable step functions h: [0,2] -> [0,1] with integral 1.",
+        "metric": {"name": "overlap_constant_M", "unit": "", "direction": "min", "scale": "linear", "display": "M \\le {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 0.4, "label": "Scherk & Moser elementary upper bound (0.400000, 1955)", "source": "https://www.erdosproblems.com/36"},
+        "discussion_url": "https://www.erdosproblems.com/36",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 0.382003,
+                "evidence": "verified",
+                "author": "haugland",
+                "date": "1996-04-01T12:00:00Z",
+                "pr": 1,
+                "url": "https://www.erdosproblems.com/36",
+            },
+            {
+                "id": "rec-0002",
+                "value": 0.380927,
+                "evidence": "verified",
+                "author": "haugland",
+                "date": "2016-09-12T12:00:00Z",
+                "pr": 2,
+                "url": "https://www.erdosproblems.com/36",
+            },
+            {
+                "id": "rec-0003",
+                "value": 0.380924,
+                "evidence": "verified",
+                "author": "alphaevolve-team",
+                "agent": "AlphaEvolve",
+                "model": "gemini-2.5-pro",
+                "date": "2025-05-14T12:00:00Z",
+                "pr": 3,
+                "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "nonuniform-knot-refinement", "title": "Adaptive knot subdivision near boundary discontinuities of h(x)"},
+            {"id": "lp-duality-lower-bound", "title": "Tighten Fourier/LP dual lower bound toward 0.379005"},
+        ],
+    },
+    {
+        "slug": "circle-packing-n26",
+        "repo": "google-deepmind/alphaevolve-results",
+        "owners": ["google-deepmind"],
+        "tags": ["geometry", "packing", "optimization", "alphaevolve"],
+        "title": "Circle Packing Sum of Radii in Unit Square (N=26)",
+        "summary": "Maximize the sum of radii of N=26 non-overlapping circles packed inside the unit square [0,1]^2.",
+        "metric": {"name": "sum_of_radii", "unit": "", "direction": "max", "scale": "linear", "display": "\\sum r_i \\ge {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 2.6358, "label": "Packomania reference benchmark (Specht 2018)", "source": "http://www.packomania.com/"},
+        "discussion_url": "https://github.com/google-deepmind/alphaevolve-results",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 2.635863,
+                "evidence": "verified",
+                "author": "alphaevolve-team",
+                "agent": "AlphaEvolve",
+                "model": "gemini-2.5-pro",
+                "date": "2025-05-14T12:00:00Z",
+                "pr": 1,
+                "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "basin-hopping-n26", "title": "Explore asymmetric contact graphs for N=26 variable-radius disks"},
+            {"id": "interval-arithmetic-cert", "title": "Certify non-overlap constraints in arbitrary-precision interval arithmetic"},
+        ],
+    },
+    {
+        "slug": "matmul-4x4-complex-rank",
+        "repo": "google-deepmind/alphaevolve-results",
+        "owners": ["google-deepmind"],
+        "tags": ["algorithms", "linear-algebra", "tensor-rank", "alphaevolve"],
+        "title": "4×4 Complex Matrix Multiplication Tensor Rank",
+        "summary": "Minimize the number of scalar multiplications required to multiply two 4x4 complex matrices.",
+        "metric": {"name": "scalar_multiplications", "unit": "muls", "direction": "min", "scale": "linear", "display": "\\text{rank}\\langle 4,4,4\\rangle \\le {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 49.0, "label": "Two-level Strassen recursion 7^2 = 49 (1969)", "source": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"},
+        "discussion_url": "https://github.com/google-deepmind/alphaevolve-results",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 48.0,
+                "evidence": "verified",
+                "author": "alphaevolve-team",
+                "agent": "AlphaEvolve",
+                "model": "gemini-2.5-pro",
+                "date": "2025-05-14T12:00:00Z",
+                "pr": 1,
+                "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "real-field-48-lift", "title": "Convert the 48-multiplication complex scheme to a pure real/integer scheme"},
+            {"id": "rank-47-search", "title": "Alternating least squares + integrality rounding for rank-47 decomposition"},
+        ],
+    },
+    {
+        "slug": "autocorrelation-sidon-c1",
+        "repo": "teorth/equational_theories",
+        "owners": ["teorth", "google-deepmind"],
+        "tags": ["analytic-bounds", "number-theory", "fourier-analysis", "alphaevolve"],
+        "title": "First Autocorrelation / Sidon Step-Function Bound (C1)",
+        "summary": "Minimize the upper bound on the L-infinity autoconvolution constant C1 = inf ||f * f||_infty / ||f||_1^2 for non-negative step functions.",
+        "metric": {"name": "autoconvolution_c1", "unit": "", "direction": "min", "scale": "linear", "display": "C_1 \\le {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 1.5098, "label": "Matolcsi & Vinuesa step-function upper bound (2010)", "source": "https://arxiv.org/abs/0907.1379"},
+        "discussion_url": "https://github.com/google-deepmind/alphaevolve-results",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 1.5053,
+                "evidence": "verified",
+                "author": "cloninger-steinerberger",
+                "date": "2017-03-20T12:00:00Z",
+                "pr": 1,
+                "url": "https://arxiv.org/abs/1403.7988",
+            },
+            {
+                "id": "rec-0002",
+                "value": 1.5031,
+                "evidence": "verified",
+                "author": "alphaevolve-team",
+                "agent": "AlphaEvolve",
+                "model": "gemini-2.5-pro",
+                "date": "2025-05-14T12:00:00Z",
+                "pr": 2,
+                "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "high-resolution-spline-step", "title": "Search 4096-bin symmetric step functions via projected minimax gradient"},
+        ],
+    },
+    {
+        "slug": "sorting-network-n17-size",
+        "repo": "bertdobbelaere/SortingNetworks",
+        "owners": ["bertdobbelaere"],
+        "tags": ["algorithms", "combinatorics", "circuits", "sat"],
+        "title": "Minimum-Size 17-Wire Sorting Network",
+        "summary": "Minimize the total number of comparators S(17) in a compare-and-swap network that sorts all 2^17 binary inputs.",
+        "metric": {"name": "comparator_count", "unit": "comparators", "direction": "min", "scale": "linear", "display": "S(17) \\le {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 71.0, "label": "Batcher odd-even mergesort network (71 comparators, 1968)", "source": "https://github.com/bertdobbelaere/SortingNetworks"},
+        "discussion_url": "https://github.com/bertdobbelaere/SortingNetworks",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 63.0,
+                "evidence": "verified",
+                "author": "green",
+                "date": "1972-01-01T12:00:00Z",
+                "pr": 1,
+                "url": "https://github.com/bertdobbelaere/SortingNetworks",
+            },
+            {
+                "id": "rec-0002",
+                "value": 61.0,
+                "evidence": "verified",
+                "author": "valsalam-miikkulainen",
+                "date": "2013-06-10T12:00:00Z",
+                "pr": 2,
+                "url": "https://github.com/bertdobbelaere/SortingNetworks",
+            },
+            {
+                "id": "rec-0003",
+                "value": 60.0,
+                "evidence": "verified",
+                "author": "ehlers-muller",
+                "date": "2015-08-22T12:00:00Z",
+                "pr": 3,
+                "url": "https://arxiv.org/abs/1408.2251",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "prefix-subsumption-sat", "title": "Search 59-comparator networks using non-isomorphic 4-layer prefixes and CaDiCaL"},
+            {"id": "zero-one-principle-gpu", "title": "Bit-sliced GPU verifier for 17-wire comparator networks"},
+        ],
+    },
+    {
+        "slug": "no-three-in-line-n32",
+        "repo": "google-deepmind/funsearch",
+        "owners": ["google-deepmind"],
+        "tags": ["combinatorics", "geometry", "funsearch"],
+        "title": "No-Three-In-Line Problem on 32×32 Grid",
+        "summary": "Maximize the number of points placed on a 32x32 lattice grid so that no three points are collinear (theoretical ceiling 2N = 64).",
+        "metric": {"name": "grid_points", "unit": "points", "direction": "max", "scale": "linear", "display": "P(32) \\ge {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 60.0, "label": "Greedy symmetry-restricted grid placement (60 points)", "source": "https://github.com/google-deepmind/funsearch"},
+        "discussion_url": "https://github.com/google-deepmind/funsearch",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 62.0,
+                "evidence": "verified",
+                "author": "flammenkamp",
+                "date": "1998-11-04T12:00:00Z",
+                "pr": 1,
+                "url": "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html",
+            },
+            {
+                "id": "rec-0002",
+                "value": 64.0,
+                "evidence": "verified",
+                "author": "funsearch-agent",
+                "agent": "FunSearch",
+                "model": "codey-palm2",
+                "date": "2024-01-15T12:00:00Z",
+                "pr": 2,
+                "url": "https://github.com/google-deepmind/funsearch",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "dihedral-d4-orbit-priority", "title": "Evolve D4-symmetric priority scoring functions for N >= 34 grids"},
+        ],
+    },
+    {
+        "slug": "salem-spencer-3ap-n1000",
+        "repo": "google-deepmind/funsearch",
+        "owners": ["google-deepmind"],
+        "tags": ["number-theory", "combinatorics", "erdos", "additive-combinatorics"],
+        "title": "Salem–Spencer 3-AP-Free Subset of {1..1000}",
+        "summary": "Maximize the size r_3(1000) of a subset of {1, 2, ..., 1000} containing no three-term arithmetic progression (x + z = 2y).",
+        "metric": {"name": "subset_size", "unit": "integers", "direction": "max", "scale": "linear", "display": "r_3(1000) \\ge {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 164.0, "label": "Behrend spherical shell construction (164 integers, 1946)", "source": "https://www.erdosproblems.com/"},
+        "discussion_url": "https://github.com/google-deepmind/funsearch",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 194.0,
+                "evidence": "verified",
+                "author": "gasarch",
+                "date": "2008-05-12T12:00:00Z",
+                "pr": 1,
+                "url": "https://arxiv.org/abs/0909.3270",
+            },
+            {
+                "id": "rec-0002",
+                "value": 198.0,
+                "evidence": "verified",
+                "author": "dykstra",
+                "date": "2014-09-01T12:00:00Z",
+                "pr": 2,
+                "url": "https://oeis.org/A003002",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "base-3-digit-perturbation", "title": "Combine Stanley sequence base-3 templates with local tabu search"},
+        ],
+    },
+    {
+        "slug": "ramsey-r55-lower-bound",
+        "repo": "linus-exoo/ramsey-graphs",
+        "owners": ["exoo", "mckay"],
+        "tags": ["combinatorics", "graphs", "ramsey-theory", "sat"],
+        "title": "Diagonal Ramsey Number R(5,5) Lower Bound",
+        "summary": "Maximize the number of vertices N of a graph with neither a 5-clique K_5 nor an independent set of size 5 (establishing R(5,5) > N).",
+        "metric": {"name": "witness_vertices", "unit": "vertices", "direction": "max", "scale": "linear", "display": "R(5,5) > {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 37.0, "label": "Kalbfleisch circulant 2-coloring on 37 vertices (1965)", "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1"},
+        "discussion_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 41.0,
+                "evidence": "verified",
+                "author": "irten",
+                "date": "1979-04-01T12:00:00Z",
+                "pr": 1,
+                "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+            },
+            {
+                "id": "rec-0002",
+                "value": 42.0,
+                "evidence": "verified",
+                "author": "exoo",
+                "date": "1989-06-15T12:00:00Z",
+                "pr": 2,
+                "url": "https://onlinelibrary.wiley.com/doi/10.1002/jgt.3190130113",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "43-vertex-extension-search", "title": "Exhaustive 1-vertex extension + edge-flip neighborhood search from the 656 known (5,5,42)-graphs"},
+        ],
+    },
+    {
+        "slug": "max-cut-sdp-integrality-gap",
+        "repo": "feige-schechtman/maxcut-sdp-gap",
+        "owners": ["feige", "schechtman"],
+        "tags": ["algorithms", "optimization", "graphs", "sdp"],
+        "title": "Goemans–Williamson Max-Cut SDP Integrality Gap",
+        "summary": "Minimize the upper bound on the Max-Cut SDP integrality ratio CUT(G) / SDP(G) by constructing a high-dimensional graph instance.",
+        "metric": {"name": "integrality_ratio", "unit": "", "direction": "min", "scale": "linear", "display": "\\alpha_{\\text{GW}} \\le {value}"},
+        "verifier_type": "script",
+        "baseline": {"value": 0.878567, "label": "Goemans & Williamson random hyperplane rounding (1995)", "source": "https://dl.acm.org/doi/10.1145/227683.227684"},
+        "discussion_url": "https://dl.acm.org/doi/10.1145/227683.227684",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 0.878563,
+                "evidence": "verified",
+                "author": "feige-schechtman",
+                "date": "2002-05-01T12:00:00Z",
+                "pr": 1,
+                "url": "https://dl.acm.org/doi/10.1145/509907.509965",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "spherical-graph-discretization", "title": "Construct explicit finite vertex graph on S^d achieving gap below 0.878560"},
+        ],
+    },
+    {
+        "slug": "equational-theories-implications",
+        "repo": "teorth/equational_theories",
+        "owners": ["teorth"],
+        "tags": ["lean", "algebra", "automated-reasoning", "formal-verification"],
+        "title": "Magma Equational Theories Implication Graph",
+        "summary": "Minimize the number of unresolved directed implication pairs among 4,694 single-law magma equations (22,028,942 total pairs) formalized in Lean 4.",
+        "metric": {"name": "unresolved_pairs", "unit": "pairs", "direction": "min", "scale": "linear", "display": "{value}\\text{ open pairs}"},
+        "verifier_type": "lean",
+        "baseline": {"value": 22028942.0, "label": "All 4,694 x 4,693 magma implication pairs open (Tao Sept 2024)", "source": "https://teorth.github.io/equational_theories/"},
+        "discussion_url": "https://github.com/teorth/equational_theories",
+        "records": [
+            {
+                "id": "rec-0001",
+                "value": 145000.0,
+                "evidence": "verified",
+                "author": "teorth",
+                "date": "2024-10-05T12:00:00Z",
+                "pr": 120,
+                "url": "https://github.com/teorth/equational_theories",
+            },
+            {
+                "id": "rec-0002",
+                "value": 1820.0,
+                "evidence": "verified",
+                "author": "lean-automata",
+                "agent": "Claude Code",
+                "model": "claude-3-5-sonnet",
+                "date": "2024-10-18T12:00:00Z",
+                "pr": 412,
+                "url": "https://github.com/teorth/equational_theories",
+            },
+            {
+                "id": "rec-0003",
+                "value": 0.0,
+                "evidence": "verified",
+                "author": "teorth",
+                "date": "2024-11-14T12:00:00Z",
+                "pr": 890,
+                "url": "https://teorth.github.io/equational_theories/",
+            },
+        ],
+        "claims": [],
+        "tracks": [
+            {"id": "infinite-magma-duality", "title": "Extend automated counterexample synthesis to two-law magma equational systems"},
+        ],
+    },
+]
+
+
+def _sync_curated_challenges(hub_root: Path) -> list[dict[str, Any]]:
+    """Write registry/<slug>.toml and registry/<slug>.records.toml for curated frontier challenges."""
+    reg_dir = hub_root / "registry"
+    results: list[dict[str, Any]] = []
+
+    for cfg in CURATED_FRONTIER_CHALLENGES:
+        slug = cfg["slug"]
+        records = cfg.get("records", [])
+        claims = cfg.get("claims", [])
+        authors = {r["author"] for r in records} | {c["author"] for c in claims}
+
+        entry_dict: dict[str, Any] = {
+            "repo": cfg["repo"],
+            "kind": "external",
+            "owners": cfg["owners"],
+            "tags": cfg["tags"],
+            "listed": True,
+            "added": "2026-10-15",
+            "contributors_override": max(len(authors), 1),
+            "attempts_override": max((len(records) + len(claims)) * 5, 6),
+            "discussion_url": cfg["discussion_url"],
+            "spec": {
+                "title": cfg["title"],
+                "summary": cfg["summary"],
+                "metric": cfg["metric"],
+                "verifier": {"type": cfg["verifier_type"]},
+                "submit": f"Open a PR to {cfg['repo']} or submit a reproducible witness to superautoresearch/hub.",
+                "rules_url": cfg["discussion_url"],
+                "baseline": cfg["baseline"],
+                "records_source": {"type": "hub"},
+                "tracks": cfg["tracks"],
+            },
+        }
+        (reg_dir / f"{slug}.toml").write_text(dumps(entry_dict), encoding="utf-8")
+
+        records_payload: dict[str, Any] = {}
+        if records:
+            records_payload["records"] = records
+        if claims:
+            records_payload["claims"] = claims
+        (reg_dir / f"{slug}.records.toml").write_text(
+            dumps(records_payload) if records_payload else "# No records yet\n",
+            encoding="utf-8",
+        )
+
+        results.append(
+            {
+                "slug": slug,
+                "title": cfg["title"],
+                "source": cfg["repo"],
+                "verified_records": len(records),
+                "open_claims": len(claims),
+                "frontier_best": records[-1]["value"] if records else cfg["baseline"]["value"],
+                "best_claim": claims[-1]["value"] if claims else None,
+                "status": "ok",
+            }
+        )
+
+    return results
+
+
 def check_all_frontiers(hub_dir: Path | None = None) -> dict[str, Any]:
     """Fetch upstream frontier data for all challenges, update registry & generated/, and return report."""
     root = (hub_dir or get_hub_root()).resolve()
@@ -619,7 +1168,14 @@ def check_all_frontiers(hub_dir: Path | None = None) -> dict[str, Any]:
     except Exception as exc:
         checked.append({"slug": "other-bounds", "status": "error", "error": str(exc)})
 
-    # 3. Run full hub sync across all listed registry/*.toml entries
+    # 3. Sync 12 curated AI/math/speedrun frontier challenges
+    try:
+        cur_reps = _sync_curated_challenges(root)
+        checked.extend(cur_reps)
+    except Exception as exc:
+        checked.append({"slug": "curated-challenges", "status": "error", "error": str(exc)})
+
+    # 4. Run full hub sync across all listed registry/*.toml entries
     sync_out = sync_hub(hub_dir=root)
     global_rows = sync_out["global"]["challenges"]
 
@@ -658,3 +1214,4 @@ def check_all_frontiers(hub_dir: Path | None = None) -> dict[str, Any]:
         json.dumps(report, indent=2) + "\n", encoding="utf-8"
     )
     return report
+

@@ -1,0 +1,22 @@
+repo = "google-deepmind/alphaevolve-results"
+kind = "external"
+owners = ["google-deepmind"]
+tags = ["geometry", "sphere-packing", "combinatorics", "alphaevolve"]
+listed = true
+added = "2026-10-15"
+contributors_override = 3
+attempts_override = 15
+discussion_url = "https://github.com/google-deepmind/alphaevolve-results"
+
+[spec]
+title = "Kissing Number in 11 Dimensions"
+summary = "Maximize the number of non-overlapping unit spheres in R^11 that simultaneously touch a central unit sphere."
+metric = { name = "kissing_spheres", unit = "spheres", direction = "max", scale = "linear", display = "\\tau_{11} \\ge {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to google-deepmind/alphaevolve-results or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://github.com/google-deepmind/alphaevolve-results"
+baseline = { value = 582.0, label = "Leech-Sloane lattice construction (582 spheres, 1971)", source = "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/" }
+tracks = [{ id = "riemannian-gd-polishing", title = "Riemannian L-BFGS polishing of 594-cap candidate configurations on S^10" }, { id = "exact-rational-lifting", title = "Certify positive Gram matrix margin in exact rational arithmetic" }]
+
+[spec.records_source]
+type = "hub"

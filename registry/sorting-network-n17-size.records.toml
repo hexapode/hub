@@ -1,0 +1,26 @@
+[[records]]
+id = "rec-0001"
+value = 63.0
+evidence = "verified"
+author = "green"
+date = "1972-01-01T12:00:00Z"
+pr = 1
+url = "https://github.com/bertdobbelaere/SortingNetworks"
+
+[[records]]
+id = "rec-0002"
+value = 61.0
+evidence = "verified"
+author = "valsalam-miikkulainen"
+date = "2013-06-10T12:00:00Z"
+pr = 2
+url = "https://github.com/bertdobbelaere/SortingNetworks"
+
+[[records]]
+id = "rec-0003"
+value = 60.0
+evidence = "verified"
+author = "ehlers-muller"
+date = "2015-08-22T12:00:00Z"
+pr = 3
+url = "https://arxiv.org/abs/1408.2251"

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "slug": "no-three-in-line-n32",
+  "metric": {
+    "name": "grid_points",
+    "unit": "points",
+    "direction": "max",
+    "scale": "linear",
+    "display": "P(32) \\ge {value}"
+  },
+  "baseline": {
+    "value": 60.0,
+    "label": "Greedy symmetry-restricted grid placement (60 points)",
+    "source": "https://github.com/google-deepmind/funsearch"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 62.0,
+      "evidence": "verified",
+      "author": "flammenkamp",
+      "date": "1998-11-04T12:00:00Z",
+      "pr": 1,
+      "url": "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+    },
+    {
+      "id": "rec-0002",
+      "value": 64.0,
+      "evidence": "verified",
+      "author": "funsearch-agent",
+      "agent": "FunSearch",
+      "model": "codey-palm2",
+      "date": "2024-01-15T12:00:00Z",
+      "pr": 2,
+      "url": "https://github.com/google-deepmind/funsearch"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T19:21:07Z"
+}

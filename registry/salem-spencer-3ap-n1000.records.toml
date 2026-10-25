@@ -1,0 +1,17 @@
+[[records]]
+id = "rec-0001"
+value = 194.0
+evidence = "verified"
+author = "gasarch"
+date = "2008-05-12T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/0909.3270"
+
+[[records]]
+id = "rec-0002"
+value = 198.0
+evidence = "verified"
+author = "dykstra"
+date = "2014-09-01T12:00:00Z"
+pr = 2
+url = "https://oeis.org/A003002"

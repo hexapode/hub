@@ -1,0 +1,22 @@
+repo = "bertdobbelaere/SortingNetworks"
+kind = "external"
+owners = ["bertdobbelaere"]
+tags = ["algorithms", "combinatorics", "circuits", "sat"]
+listed = true
+added = "2026-10-15"
+contributors_override = 3
+attempts_override = 15
+discussion_url = "https://github.com/bertdobbelaere/SortingNetworks"
+
+[spec]
+title = "Minimum-Size 17-Wire Sorting Network"
+summary = "Minimize the total number of comparators S(17) in a compare-and-swap network that sorts all 2^17 binary inputs."
+metric = { name = "comparator_count", unit = "comparators", direction = "min", scale = "linear", display = "S(17) \\le {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to bertdobbelaere/SortingNetworks or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://github.com/bertdobbelaere/SortingNetworks"
+baseline = { value = 71.0, label = "Batcher odd-even mergesort network (71 comparators, 1968)", source = "https://github.com/bertdobbelaere/SortingNetworks" }
+tracks = [{ id = "prefix-subsumption-sat", title = "Search 59-comparator networks using non-isomorphic 4-layer prefixes and CaDiCaL" }, { id = "zero-one-principle-gpu", title = "Bit-sliced GPU verifier for 17-wire comparator networks" }]
+
+[spec.records_source]
+type = "hub"

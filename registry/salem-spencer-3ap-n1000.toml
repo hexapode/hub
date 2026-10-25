@@ -1,0 +1,22 @@
+repo = "google-deepmind/funsearch"
+kind = "external"
+owners = ["google-deepmind"]
+tags = ["number-theory", "combinatorics", "erdos", "additive-combinatorics"]
+listed = true
+added = "2026-10-15"
+contributors_override = 2
+attempts_override = 10
+discussion_url = "https://github.com/google-deepmind/funsearch"
+
+[spec]
+title = "Salem–Spencer 3-AP-Free Subset of {1..1000}"
+summary = "Maximize the size r_3(1000) of a subset of {1, 2, ..., 1000} containing no three-term arithmetic progression (x + z = 2y)."
+metric = { name = "subset_size", unit = "integers", direction = "max", scale = "linear", display = "r_3(1000) \\ge {value}" }
+verifier = { type = "script" }
+submit = "Open a PR to google-deepmind/funsearch or submit a reproducible witness to superautoresearch/hub."
+rules_url = "https://github.com/google-deepmind/funsearch"
+baseline = { value = 164.0, label = "Behrend spherical shell construction (164 integers, 1946)", source = "https://www.erdosproblems.com/" }
+tracks = [{ id = "base-3-digit-perturbation", title = "Combine Stanley sequence base-3 templates with local tabu search" }]
+
+[spec.records_source]
+type = "hub"

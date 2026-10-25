@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "slug": "circle-packing-n26",
+  "metric": {
+    "name": "sum_of_radii",
+    "unit": "",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\sum r_i \\ge {value}"
+  },
+  "baseline": {
+    "value": 2.6358,
+    "label": "Packomania reference benchmark (Specht 2018)",
+    "source": "http://www.packomania.com/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 2.635863,
+      "evidence": "verified",
+      "author": "alphaevolve-team",
+      "agent": "AlphaEvolve",
+      "model": "gemini-2.5-pro",
+      "date": "2025-05-14T12:00:00Z",
+      "pr": 1,
+      "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+    }
+  ],
+  "claims": [],
+  "contributors": 1,
+  "attempts": 6,
+  "updated": "2026-10-25T19:21:07Z"
+}

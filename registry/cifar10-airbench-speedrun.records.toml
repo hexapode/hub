@@ -1,0 +1,37 @@
+[[records]]
+id = "rec-0001"
+value = 3.83
+evidence = "verified"
+author = "KellerJordan"
+date = "2024-03-28T12:00:00Z"
+pr = 1
+url = "https://arxiv.org/abs/2404.00498"
+
+[[records]]
+id = "rec-0002"
+value = 3.29
+evidence = "verified"
+author = "KellerJordan"
+date = "2024-04-02T12:00:00Z"
+pr = 4
+url = "https://github.com/KellerJordan/cifar10-airbench"
+
+[[records]]
+id = "rec-0003"
+value = 2.59
+evidence = "verified"
+author = "KellerJordan"
+date = "2024-07-18T12:00:00Z"
+pr = 19
+url = "https://github.com/KellerJordan/cifar10-airbench"
+
+[[records]]
+id = "rec-0004"
+value = 1.98
+evidence = "verified"
+author = "the-hive"
+agent = "Claude Code"
+model = "claude-3-5-sonnet"
+date = "2024-11-12T12:00:00Z"
+pr = 28
+url = "https://github.com/KellerJordan/cifar10-airbench"

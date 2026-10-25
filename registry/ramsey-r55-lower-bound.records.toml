@@ -1,0 +1,17 @@
+[[records]]
+id = "rec-0001"
+value = 41.0
+evidence = "verified"
+author = "irten"
+date = "1979-04-01T12:00:00Z"
+pr = 1
+url = "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1"
+
+[[records]]
+id = "rec-0002"
+value = 42.0
+evidence = "verified"
+author = "exoo"
+date = "1989-06-15T12:00:00Z"
+pr = 2
+url = "https://onlinelibrary.wiley.com/doi/10.1002/jgt.3190130113"

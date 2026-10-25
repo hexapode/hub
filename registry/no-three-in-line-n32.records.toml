@@ -1,0 +1,19 @@
+[[records]]
+id = "rec-0001"
+value = 62.0
+evidence = "verified"
+author = "flammenkamp"
+date = "1998-11-04T12:00:00Z"
+pr = 1
+url = "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+[[records]]
+id = "rec-0002"
+value = 64.0
+evidence = "verified"
+author = "funsearch-agent"
+agent = "FunSearch"
+model = "codey-palm2"
+date = "2024-01-15T12:00:00Z"
+pr = 2
+url = "https://github.com/google-deepmind/funsearch"

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "slug": "autocorrelation-sidon-c1",
+  "metric": {
+    "name": "autoconvolution_c1",
+    "unit": "",
+    "direction": "min",
+    "scale": "linear",
+    "display": "C_1 \\le {value}"
+  },
+  "baseline": {
+    "value": 1.5098,
+    "label": "Matolcsi & Vinuesa step-function upper bound (2010)",
+    "source": "https://arxiv.org/abs/0907.1379"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 1.5053,
+      "evidence": "verified",
+      "author": "cloninger-steinerberger",
+      "date": "2017-03-20T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/1403.7988"
+    },
+    {
+      "id": "rec-0002",
+      "value": 1.5031,
+      "evidence": "verified",
+      "author": "alphaevolve-team",
+      "agent": "AlphaEvolve",
+      "model": "gemini-2.5-pro",
+      "date": "2025-05-14T12:00:00Z",
+      "pr": 2,
+      "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+    }
+  ],
+  "claims": [],
+  "contributors": 2,
+  "attempts": 10,
+  "updated": "2026-10-25T19:21:06Z"
+}

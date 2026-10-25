@@ -215,6 +215,126 @@
       "status": "ok"
     },
     {
+      "slug": "cifar10-airbench-speedrun",
+      "title": "CIFAR-10 94% Accuracy Speedrun (Airbench)",
+      "source": "KellerJordan/cifar10-airbench",
+      "verified_records": 4,
+      "open_claims": 0,
+      "frontier_best": 1.98,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "kissing-number-11d",
+      "title": "Kissing Number in 11 Dimensions",
+      "source": "google-deepmind/alphaevolve-results",
+      "verified_records": 2,
+      "open_claims": 1,
+      "frontier_best": 593.0,
+      "best_claim": 594.0,
+      "status": "ok"
+    },
+    {
+      "slug": "erdos-minimum-overlap",
+      "title": "Erd\u0151s Minimum Overlap Problem (#36)",
+      "source": "google-deepmind/alphaevolve-results",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 0.380924,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "circle-packing-n26",
+      "title": "Circle Packing Sum of Radii in Unit Square (N=26)",
+      "source": "google-deepmind/alphaevolve-results",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 2.635863,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "matmul-4x4-complex-rank",
+      "title": "4\u00d74 Complex Matrix Multiplication Tensor Rank",
+      "source": "google-deepmind/alphaevolve-results",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 48.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "autocorrelation-sidon-c1",
+      "title": "First Autocorrelation / Sidon Step-Function Bound (C1)",
+      "source": "teorth/equational_theories",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 1.5031,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "sorting-network-n17-size",
+      "title": "Minimum-Size 17-Wire Sorting Network",
+      "source": "bertdobbelaere/SortingNetworks",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 60.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "no-three-in-line-n32",
+      "title": "No-Three-In-Line Problem on 32\u00d732 Grid",
+      "source": "google-deepmind/funsearch",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 64.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "salem-spencer-3ap-n1000",
+      "title": "Salem\u2013Spencer 3-AP-Free Subset of {1..1000}",
+      "source": "google-deepmind/funsearch",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 198.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "ramsey-r55-lower-bound",
+      "title": "Diagonal Ramsey Number R(5,5) Lower Bound",
+      "source": "linus-exoo/ramsey-graphs",
+      "verified_records": 2,
+      "open_claims": 0,
+      "frontier_best": 42.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "max-cut-sdp-integrality-gap",
+      "title": "Goemans\u2013Williamson Max-Cut SDP Integrality Gap",
+      "source": "feige-schechtman/maxcut-sdp-gap",
+      "verified_records": 1,
+      "open_claims": 0,
+      "frontier_best": 0.878563,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
+      "slug": "equational-theories-implications",
+      "title": "Magma Equational Theories Implication Graph",
+      "source": "teorth/equational_theories",
+      "verified_records": 3,
+      "open_claims": 0,
+      "frontier_best": 0.0,
+      "best_claim": null,
+      "status": "ok"
+    },
+    {
       "slug": "cap-set-dimension-7",
       "title": "Cap Set Lower Bound in AG(7, 3)",
       "source": "elena/cap-set-dimension-7",

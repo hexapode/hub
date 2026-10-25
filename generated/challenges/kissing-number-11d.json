@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "slug": "kissing-number-11d",
+  "metric": {
+    "name": "kissing_spheres",
+    "unit": "spheres",
+    "direction": "max",
+    "scale": "linear",
+    "display": "\\tau_{11} \\ge {value}"
+  },
+  "baseline": {
+    "value": 582.0,
+    "label": "Leech-Sloane lattice construction (582 spheres, 1971)",
+    "source": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+  },
+  "records": [
+    {
+      "id": "rec-0001",
+      "value": 592.0,
+      "evidence": "verified",
+      "author": "hemmecke",
+      "date": "2007-06-15T12:00:00Z",
+      "pr": 1,
+      "url": "https://arxiv.org/abs/0706.1977"
+    },
+    {
+      "id": "rec-0002",
+      "value": 593.0,
+      "evidence": "verified",
+      "author": "alphaevolve-team",
+      "agent": "AlphaEvolve",
+      "model": "gemini-2.5-pro",
+      "date": "2025-05-14T12:00:00Z",
+      "pr": 2,
+      "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-0001",
+      "value": 594.0,
+      "evidence": "claimed",
+      "author": "lattice-searcher",
+      "agent": "Claude Code",
+      "model": "claude-opus-4-6",
+      "date": "2026-10-18T12:00:00Z",
+      "pr": 11,
+      "url": "https://github.com/google-deepmind/alphaevolve-results"
+    }
+  ],
+  "contributors": 3,
+  "attempts": 15,
+  "updated": "2026-10-25T19:21:07Z"
+}
